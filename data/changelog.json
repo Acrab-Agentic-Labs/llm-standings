@@ -1,0 +1,1129 @@
+{
+ "updated": "2026-11-11",
+ "entries": [
+  {
+   "date": "2026-11-11",
+   "kind": "highlight",
+   "text": "Claude Fable 5.2 reaches more boards: #1 on Epoch's Capabilities Index (174.2), Scale HLE-Diamond (72.4), Arena WebDev (1835.8), SemiAnalysis GDPx (16.4%), CWE-bench v2 (74.9) and Design Arena 3D (1542); ARC-AGI-2 93.8 at xhigh"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "highlight",
+   "text": "Gemini 4 Carbon is generally available since 11-10 (introductory $2 / $10 per 1M tokens) and is no longer marked restricted; ARC Prize verified it at ARC-AGI-2 94.2 (medium)"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "highlight",
+   "text": "Terminal-Bench 4.1 (same 66 tasks, stricter verifiers, 4.0 runs regraded): Claude Opus 5.5 65.8 · Claude Sonnet 5.5 63.9 · GPT-6.1 Sol 60.9 · GPT-6 Astra 60.3"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "highlight",
+   "text": "Three more Vals boards added: Access to Justice (Qwen3.8 Max 76.37), CyberOffense (Claude Opus 5.5 77.1) and the RSI Index (Claude Fable 5.2 37.88)"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "highlight",
+   "text": "Epoch revised MirrorCode (Claude Opus 5.5 79 → 96, Claude Fable 5.1 73 → 93, GPT-6 Astra 47 → 60) and re-fitted its Capabilities Index; Kimi K3.1 Pro enters it at 162.0 and debuts on Arena Text at 1483"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "highlight",
+   "text": "New models: Ling 3.2 Flash (Ant Group, 560B, API only), Spark X2.6 (iFLYTEK, 293B) and U2 Flash (Unisound, 266B; Arena WebDev 1610.6)"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "highlight",
+   "text": "Reputation: Claude Fable 5.2 sample 27 → 82 (41% positive, 55% negative; praise for design judgment and speed, complaints mostly about subscription quota). Claude Opus 5.5 315 → 360, with later discussion more positive; GPT-6.1 Sol 43 → 77; Gemini 4 Argon 92 → 109"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "highlight",
+   "text": "BenchCAD 2.1 added as vendor-reported results (so far only Claude models, run by Anthropic). OpenRouter weekly: Hy4 rises to #2 (18.8T tokens)"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "summary",
+   "text": "This update: 180 new scores, 355 best-score changes"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_scores",
+   "text": "U2 Flash gets its first scores (1)"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_bench",
+   "text": "New benchmark: Vals Access to Justice Benchmark (21 models)"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_bench",
+   "text": "New benchmark: Terminal-Bench 4.1 (19 models)"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_bench",
+   "text": "New benchmark: Vals RSI Index (19 models)"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_bench",
+   "text": "New benchmark: Vals CyberOffense (7 models)"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_bench",
+   "text": "New benchmark: BenchCAD 2.1 Core (standard harness) (5 models)"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_bench",
+   "text": "New benchmark: BenchCAD 2.1 Core (customized harness) (5 models)"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_bench",
+   "text": "+1 more new benchmarks: Gray Swan automated cyberattack queries (attack success rate)"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "chg",
+   "text": "GPT-6 Astra · MirrorCode: 47 → 60"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "chg",
+   "text": "Claude Fable 5.1 · MirrorCode: 73 → 93"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "chg",
+   "text": "Claude Opus 5.5 · MirrorCode: 79 → 96"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "chg",
+   "text": "Muse Wonder · Design Arena · Blender 3D (agents): 1174 → 1156"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "chg",
+   "text": "Muse Spark 1.3 · Design Arena · Blender 3D (agents): 1148 → 1132"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "chg",
+   "text": "GPT-6 Astra · Design Arena · Blender 3D (agents): 1427 → 1410"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "chg",
+   "text": "GPT-5.6 Sol · SimpleQA Verified: 69.2 → 70"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "chg",
+   "text": "Kimi K3 · Design Arena · Blender 3D (agents): 1168 → 1155"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "chg",
+   "text": "Nemotron 3.5 Super VL · Design Arena · 3D Design: 1126 → 1115"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "chg",
+   "text": "Grok 4.6 · Design Arena · Blender 3D (agents): 1162 → 1152"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "chg",
+   "text": "MiniMax M3 · Design Arena · Blender 3D (agents): 1098 → 1090"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "chg",
+   "text": "DeepSeek V4.1 Flash · Design Arena · 3D Design: 1354 → 1345"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_source",
+   "text": "New source: Vals RSI Index",
+   "url": "https://www.vals.ai/benchmarks/rsi_index"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_source",
+   "text": "New source: Vals – CyberOffense",
+   "url": "https://www.vals.ai/benchmarks/cyber_offense"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_source",
+   "text": "New source: Vals – Access to Justice Benchmark",
+   "url": "https://www.vals.ai/benchmarks/a2j"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_source",
+   "text": "New source: Anthropic - Claude Fable 5.2 & Claude Mythos 5.2 System Card",
+   "url": "https://assets.claude.com/27d60918d218125e7504bc7354c4b4626ec56b11.pdf"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_source",
+   "text": "New source: Google - Gemini 4 Carbon is now available",
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_model",
+   "text": "New model: U2 Flash (Unisound)",
+   "url": "https://m.gelonghui.com/p/6645947"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_model",
+   "text": "New model: Spark X2.6 (iFLYTEK)",
+   "url": "https://www.globaltimes.cn/page/202610/1372798.shtml"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_model",
+   "text": "New model: Ling 3.2 Flash (InclusionAI (Ant Group))",
+   "url": "https://developer.ant-ling.com/en/docs/getting-started/changelog"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "highlight",
+   "text": "Anthropic releases Claude Fable 5.2 (11-09, $8 / $40 per 1M tokens): #1 on the AA Intelligence Index (65 at max) and the Vals Index (71.31), ties Opus 5.5 on Vals Terminal-Bench 4.0 (65.15). Claude Mythos 5.2 (restricted) was released alongside; Fable 5.1 and Mythos 5.1 move to the previous generation"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "highlight",
+   "text": "Thinking Machines releases Inkling 2 Small (11-05, 594B total / 17B active, weights promised; replaces Inkling Small): ARC-AGI-2 81.7 · Scale SWE-Bench Pro V2 HARD 86.27 · MCP Atlas 85.4 · Design Arena 3D 1460"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "highlight",
+   "text": "Meta releases Muse Ember (11-09, closed, $0.10 / $0.50 per 1M tokens): Vals Index 60.48 · AA Intelligence Index 36 (max) · Design Arena 3D 1380"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "highlight",
+   "text": "LongCat-2.5 weights are now on Hugging Face (MIT license, plus a W4A4 build). Tencent Hy4: official launch numbers added (34, self-reported); AA Intelligence Index 35; #3 on OpenRouter's weekly ranking (16T tokens)"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "highlight",
+   "text": "Scale SWE Atlas v1.1 (new judge, not comparable with v1.0): Claude Opus 5.5 77.4 · Claude Fable 5.1 74.1 · Gemini 4 Argon 70.1; the v1.0 boards are marked superseded"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "highlight",
+   "text": "Kaggle Game Arena: Gemini 4 Carbon debuts at #1 (unified 627, chess 1643). Epoch recomputed its Capabilities Index (GPT-6.1 Sol 167.8 → 168.9, Mistral Large 4 150.6 → 154.7)"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "highlight",
+   "text": "Reputation: Claude Opus 5.5 sample 237 → 315. A large Hacker News thread (11-09) reports a perceived reasoning change since about Nov 3; users who re-ran their own tests and the LiveNerf tracker report no measurable change. Claude Fable 5.2 (27 opinions): praise for coding and speed, complaints mostly about subscription quota"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "highlight",
+   "text": "New boards: Doubleword Pokémon Showdown tournament (8 models); Plotly DataAnalyticsBench adds 7 models, including Ripple-65B Preview (35 / 43)"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "summary",
+   "text": "This update: 303 new scores, 426 best-score changes"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_scores",
+   "text": "Claude Fable 5.2 gets its first scores (37)"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_scores",
+   "text": "Claude Mythos 5.2 gets its first scores (4)"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_scores",
+   "text": "Inkling 2 Small gets its first scores (55)"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_scores",
+   "text": "Muse Ember gets its first scores (27)"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_bench",
+   "text": "New benchmark: SWE Atlas v1.1 (Overall) (16 models)"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_bench",
+   "text": "New benchmark: SWE Atlas v1.1 – Codebase QnA (16 models)"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_bench",
+   "text": "New benchmark: SWE Atlas v1.1 – Refactoring (16 models)"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_bench",
+   "text": "New benchmark: SWE Atlas v1.1 – Test Writing (16 models)"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_bench",
+   "text": "New benchmark: Doubleword Pokemon Showdown tournament (Elo) (8 models)"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_bench",
+   "text": "New benchmark: CyScenarioBench (3 models)"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_bench",
+   "text": "+3 more new benchmarks: WANDR (relaxed score), PMPP-Hard (AUC, task-hours 0-10h), PostTrainBench v1.2"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "chg",
+   "text": "gpt-oss-120b · AutomationBench-AA: 0 → 0.2"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "chg",
+   "text": "Gemini 3.1 Pro · FACTS Benchmark Suite: 60.6 → 69.1"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "chg",
+   "text": "Claude Opus 5.5 · Design Arena · Blender 3D (agents): 1275 → 1409"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "chg",
+   "text": "Claude Opus 5.5 · OSWorld 2.0: 81.8 → 87.2"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "chg",
+   "text": "Claude Opus 5.5 · AutomationBench: 40 → 42.5"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "chg",
+   "text": "GPT-6 Astra · Design Arena · Blender 3D (agents): 1351 → 1427"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "chg",
+   "text": "GPT-6.1 Sol · Design Arena · Blender 3D (agents): 1296 → 1364"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "chg",
+   "text": "gpt-oss-120b · GDP.pdf (Surge AI): 4 → 4.2"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "chg",
+   "text": "gpt-oss-120b · Humanity's Last Exam (Diamond): 4 → 3.8"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "chg",
+   "text": "GPT-6 Luna · FACTS Benchmark Suite: 62.3 → 64.8"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "chg",
+   "text": "Gemini 3.8 Flash · FACTS Benchmark Suite: 68.5 → 71.2"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "chg",
+   "text": "Claude Opus 5.5 · FACTS Benchmark Suite: 64 → 66.5"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_source",
+   "text": "New source: Tencent Hy blog: Introducing Hy4",
+   "url": "https://hy.tencent.ai/research/hy4"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_source",
+   "text": "New source: Scale Labs – SWE Atlas v1.1",
+   "url": "https://labs.scale.com/leaderboard/swe-atlas?tab=overall"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_source",
+   "text": "New source: Doubleword - I Spent $1000 Making LLMs Play Competitive Pokemon",
+   "url": "https://blog.doubleword.ai/llms-play-pokemon"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_source",
+   "text": "New source: Meta - Muse Ember launch post",
+   "url": "https://research.meta.ai/blog/muse-ember"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_source",
+   "text": "New source: Thinking Machines - Inkling 2 Small launch post",
+   "url": "https://thinkingmachines.ai/news/inkling-2-small/"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_source",
+   "text": "New source: Anthropic - Claude Fable 5.2 and Mythos 5.2 launch post",
+   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "status",
+   "text": "LongCat-2.5 now open weights",
+   "url": "https://huggingface.co/meituan-longcat/LongCat-2.5"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_model",
+   "text": "New model: Inkling 2 Small (Thinking Machines)",
+   "url": "https://thinkingmachines.ai/news/inkling-2-small/"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_model",
+   "text": "New model: Muse Ember (Meta)",
+   "url": "https://research.meta.ai/blog/muse-ember"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_model",
+   "text": "New model: Claude Mythos 5.2 (Anthropic)",
+   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  {
+   "date": "2026-11-10",
+   "kind": "new_model",
+   "text": "New model: Claude Fable 5.2 (Anthropic)",
+   "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "highlight",
+   "text": "Tencent Hy4 GA released (11-04, 770B MoE, weights pending): Vals Index 59.35 (#13, 6.1 above Hy4 preview); Hy4 preview moved to previous generation, Hy3 removed from the leaderboard"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "highlight",
+   "text": "Kimi K3.1 Pro open weights (11-04, Hugging Face, modified MIT license); an R40 Research audit (11-03) reports that it reproduces hidden benchmark test rules. Reputation sample 47→59, positive 0.47 / negative 0.30"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "highlight",
+   "text": "New board DataAnalyticsBench (Plotly, 43 data-analysis tasks, saturated at the top): GPT-6.1 Sol, GPT-6 Astra 43 · Grok 4.7, Kimi K3.1 Pro, Hy4 42"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "highlight",
+   "text": "AA CritPt v2 (dataset revised 11-04) fills in the remaining 25 models: Muse Spark 1.3 max 48 · GPT-6 Luna max 43 · GLM-5.3 max 34 · MiMo-V2.6-Pro 34"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "highlight",
+   "text": "New model Ripple-65B Preview (Ricursive Intelligence, 65B dense, Apache-2.0): self-reported Terminal-Bench 2.1 80.5, no independent evaluation yet"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "highlight",
+   "text": "LongCat-2.5 official blog scores added (31, all self-reported): Terminal-Bench 2.1 88.4 · BrowseComp 91.9 · Terminal-Bench 4.0 38.5"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "highlight",
+   "text": "Scale HLE-Diamond: GPT-6.1 Terra 35.7 and DeepSeek V4.1 Flash 20.5 restored (the 11-04 read hit a stale cached page; they were never removed)"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "summary",
+   "text": "This update: 203 new scores, 87 best-score changes"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_bench",
+   "text": "New benchmark: 3DCodeBench (Text→3D) (1 model)"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_bench",
+   "text": "New benchmark: FinSearchComp (T3) (1 model)"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_bench",
+   "text": "New benchmark: LongCat AppDev (Meituan internal) (1 model)"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_bench",
+   "text": "New benchmark: LongCatClawBench (FORTE) (1 model)"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_bench",
+   "text": "New benchmark: LongCatClawBench-MM (FORTE-MM) (1 model)"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_bench",
+   "text": "New benchmark: DataAnalyticsBench (Plotly) (33 models)"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_bench",
+   "text": "New benchmark: PosterBench (1 model)"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_scores",
+   "text": "Hy4 gets its first scores (11)"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_scores",
+   "text": "LongCat-2.5 gets its first scores (31)"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_scores",
+   "text": "Ripple-65B Preview gets its first scores (18)"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "chg",
+   "text": "MiMo-V2.6-Pro · Terminal-Bench-Science 0.1: 2.86 → 6"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "chg",
+   "text": "MiniMax M3 · Terminal-Bench 4.0: 1.01 → 2"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "chg",
+   "text": "Inkling · Terminal-Bench 4.0: 0.51 → 1"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "chg",
+   "text": "Muse Spark Open · Terminal-Bench 4.0: 6.57 → 8"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "chg",
+   "text": "MiMo-V2.6-Pro · Terminal-Bench 4.0: 31.31 → 35"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "chg",
+   "text": "Nemotron 3.5 Super VL · Vibe Code Bench v1.1: 3.54 → 3.71"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "chg",
+   "text": "Kimi K3.1 Pro · OfficeQA Pro: 64.4 → 67.4"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "chg",
+   "text": "Step 5 Preview · Terminal-Bench 4.0: 31.82 → 33"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "chg",
+   "text": "Muse Spark 1.3 · Artificial Analysis Intelligence Index v5.0: 36 → 37"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "chg",
+   "text": "Muse Spark Open · Design Arena · 3D Design: 1281 → 1263"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "chg",
+   "text": "Nemotron 3.5 Super VL · Design Arena · 3D Design: 1127 → 1133"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "chg",
+   "text": "Claude Sonnet 5 · Design Arena · Blender 3D (agents): 1005 → 1000"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_source",
+   "text": "New source: Meituan LongCat-2.5 blog (Introducing LongCat-2.5)",
+   "url": "https://longcat.ai/blog/longcat-2.5/"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_source",
+   "text": "New source: R40 Research - Kimi K3.1 Pro Recalls and Enforces Hidden Test Rules",
+   "url": "https://r40.org/papers/kimi_k31_benchmark_audit.pdf"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_source",
+   "text": "New source: DataAnalyticsBench (Plotly)",
+   "url": "https://plotly.com/blog/introducing-dataanalyticsbench/"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_source",
+   "text": "New source: Ricursive Ripple-65B Preview model card",
+   "url": "https://huggingface.co/ricursiveAI/Ripple-65B-Preview"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_source",
+   "text": "New source: Kimi K3.1 Pro model card (Hugging Face)",
+   "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "status",
+   "text": "Kimi K3.1 Pro now open weights",
+   "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_model",
+   "text": "New model: Ripple-65B Preview (Ricursive Intelligence)",
+   "url": "https://www.ricursive.com/ripple"
+  },
+  {
+   "date": "2026-11-05",
+   "kind": "new_model",
+   "text": "New model: Hy4 (Tencent)",
+   "url": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "highlight",
+   "text": "AA Index minor update v5.0.1 (CritPt v2 switched to the revised dataset): Gemini 4 Carbon high 60 · Opus 5.5 max 59 · Sonnet 5.5 max 55; old CritPt v2 data removed, 17 models retested"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "highlight",
+   "text": "New SemiAnalysis board GDPx (11-02): Opus 5.5 12.0% · Gemini 4 Carbon 10.9% · GPT-6 Astra 9.6% · Muse Wonder Full 9.0%"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "highlight",
+   "text": "CWE-bench upgraded to v2 (250 tasks, 185 vulnerability classes, not comparable with v1): Opus 5.5 67.1 · Muse Wonder 66.1 · Gemini 4 Argon 65.0; DeepSeek V4.1 Flash 57.6 at just $0.04 per run"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "highlight",
+   "text": "New model: LongCat-2.5 (Meituan, 1.6T-A48B, natively multimodal, weights pending); MiniMax M3.1 Flash scores 96.6 on SWE-Bench Pro V2 (#7)"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "highlight",
+   "text": "Kimi K3.1 Pro: weights still not on HF as of 11-04 noon (promised by 11-04); parameter count 2.8T-A104B added"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "highlight",
+   "text": "Vals renaming: the 10-29 open-weights version is now \"Mistral Large 4\", the 10-06 version is now \"Preview\" (both grouped under Mistral Large 4)"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "highlight",
+   "text": "Design Arena Blender board releases preview data: Argon 1408 · Astra 1350 · GPT-6.1 Sol 1296 (evaluation pool changed, old data removed)"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "highlight",
+   "text": "Reputation: Opus 5.5 sample 171→237; new HN feedback mostly positive, negatives center on safety-filter false positives; the earlier thread about a perceived quality drop has had no new replies since 11-02"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "highlight",
+   "text": "OpenRouter weekly: DeepSeek V4.1 Flash #1 at 50.4T · GLM-5.3 Flash #2 · GPT-6.1 Sol enters top 10 for the first time"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "summary",
+   "text": "This update: 104 new scores, 109 best-score changes"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "new_bench",
+   "text": "New benchmark: CWE-bench v2 (11 models)"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "new_bench",
+   "text": "New benchmark: CWE-bench v2 (pass@4) (11 models)"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "new_bench",
+   "text": "New benchmark: GDPx (SemiAnalysis) (13 models)"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "chg",
+   "text": "Nanbeige4.3-33B · Terminal-Bench 4.0: 23.8 → 30"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "chg",
+   "text": "Muse Wonder · Terminal-Bench-Science 0.1: 22.86 → 26"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "chg",
+   "text": "Mistral Large 4 · Vals Tax Agent Bench: 27.33 → 30.67"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "chg",
+   "text": "Grok 4.7 · Terminal-Bench-Science 0.1: 10 → 11"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "chg",
+   "text": "Gemini 4 Carbon · GDP.pdf (Surge AI): 28 → 30"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "chg",
+   "text": "Gemini 4 Carbon · Vals Tax Agent Bench: 48.86 → 51.78"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "chg",
+   "text": "Muse Wonder · Humanity's Last Exam (Diamond): 37.3 → 39"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "chg",
+   "text": "Ling 3.1 Flash · Artificial Analysis Intelligence Index v5.0: 29 → 30"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "chg",
+   "text": "DeepSeek V4.1 Flash · Artificial Analysis Intelligence Index v5.0: 32 → 33"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "chg",
+   "text": "Muse Wonder · Artificial Analysis Intelligence Index v5.0: 43 → 44"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "chg",
+   "text": "Claude Sonnet 5.5 · Artificial Analysis Intelligence Index v5.0: 54 → 55"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "chg",
+   "text": "Claude Opus 5.5 · Artificial Analysis Intelligence Index v5.0: 58 → 59"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "new_source",
+   "text": "New source: GDPx (SemiAnalysis)",
+   "url": "https://gdpx.semianalysis.com/"
+  },
+  {
+   "date": "2026-11-04",
+   "kind": "new_model",
+   "text": "New model: LongCat-2.5 (Meituan)",
+   "url": "https://longcat.ai/blog/longcat-2.5/"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "highlight",
+   "text": "Google releases Gemini 4 Carbon (10-28, restricted release): #1 on AA v5 (59) · #1 Arena text (1527.5) · #2 Vals Index (70.4) · Vals TB4 63.1"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "highlight",
+   "text": "Mistral Large 4 GA on 10-29 with open weights (1T-A52B), API cut to $0.70/$2.10; TB4 from 28 (preview) → 41"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "highlight",
+   "text": "AA v5 coverage expanded: GLM-5.3 Flash 28 · Mistral Large 4 high 26 · Qwen3.8 27B medium 17 · Mistral Small 4 4; Gemini 4 Argon cost per task doubled (at new pricing)"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "highlight",
+   "text": "Epoch ECI refit: GPT-6 Astra 169.1 rises to #1, Opus 5.5 168.4; GPT-6.1 Terra 168.1 debuts"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "highlight",
+   "text": "Kimi K3.1 Pro enters the EQ-Bench Creative Writing board for the first time at #2 (2172.6); Design Arena adds 141 entries (GPT-6.1 Terra, Beam, Mercury 3, etc.)"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "highlight",
+   "text": "New source: CWE-bench v1 (Collinear, vulnerability repair) · New model: Nanbeige4.3-33B (33B dense, open weights)"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "highlight",
+   "text": "Reputation: Opus 5.5 sample 60→171 (10-29 Ask HN thread about a perceived quality drop, unconfirmed) · Argon 56→92 (main complaint: quota drains fast) · Mistral Large 4 9→20; ranking now adjusted for sample size"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "highlight",
+   "text": "Correction: Inkling / Inkling Small have been open weights since July; Vals SAGE upgraded to v1.1 (methodology change, scores not comparable with v1)"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "highlight",
+   "text": "OpenRouter weekly: DeepSeek V4.1 Flash #1 at 47.8T; Step 5 Preview rises to #7; Opus 5.5 drops to #6"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "summary",
+   "text": "This update: 410 new scores, 257 best-score changes"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "new_bench",
+   "text": "New benchmark: Artificial Analysis Cyber Index (1 model)"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "new_bench",
+   "text": "New benchmark: CWE-bench v1 cost per rollout (11 models)"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "new_bench",
+   "text": "New benchmark: CWE-bench v1 (LLM-judge pass@4) (11 models)"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "new_bench",
+   "text": "New benchmark: CWE-bench v1 (programmatic pass@4) (11 models)"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "new_bench",
+   "text": "New benchmark: EnterpriseOps-Gym (1 model)"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "new_bench",
+   "text": "New benchmark: Finch (FinWorkBench) (1 model)"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "new_bench",
+   "text": "New benchmark: Gray Swan IPI (attack success rate) (1 model)"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "new_bench",
+   "text": "New benchmark: Lakera B3 Agent Security Benchmark (1 model)"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "new_scores",
+   "text": "Recursive Flint gets its first scores (2)"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "new_scores",
+   "text": "Gemini 4 Carbon gets its first scores (27)"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "new_scores",
+   "text": "Nanbeige4.3-33B gets its first scores (20)"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "new_source",
+   "text": "New source: Nanbeige4.3-33B model card (Hugging Face)",
+   "url": "https://huggingface.co/Nanbeige/Nanbeige4.3-33B"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "new_source",
+   "text": "New source: CWE-bench v1 (Collinear AI)",
+   "url": "https://cwe-bench.com"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "new_source",
+   "text": "New source: Google – Introducing Gemini 4 Carbon",
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "new_source",
+   "text": "New source: Mistral – Mistral Large 4 (Le Chonk) is now open weight",
+   "url": "https://mistral.ai/news/mistral-large-4-oss/"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "status",
+   "text": "Inkling Small now open weights",
+   "url": "https://huggingface.co/thinkingmachines/Inkling-Small"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "status",
+   "text": "Inkling now open weights",
+   "url": "https://huggingface.co/thinkingmachines/Inkling"
+  },
+  {
+   "date": "2026-11-02",
+   "kind": "status",
+   "text": "Mistral Large 4 now open weights",
+   "url": "https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "highlight",
+   "text": "Artificial Analysis Intelligence Index upgraded to v5.0 (9 evals, not comparable with v4.3.2): Opus 5.5 max 58 · GPT-6 Astra max 57 · GPT-6.1 Sol max 55 · Sonnet 5.5 max 54; v4.3.2 frozen",
+   "url": "https://artificialanalysis.ai/leaderboards/models"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "highlight",
+   "text": "GPT-6.1 Terra (released 10-26) enters the boards: Vals Vibe Code 84.0 · Terminal-Bench 4.0 49.5 · AA v5 51"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "highlight",
+   "text": "New models: Mercury 3 (Inception diffusion LLM) · Recursive Flint (40B code) · Solar Mini 4 · K2 Horizon 375B · North Mini Code · Gemma 4 12B"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "highlight",
+   "text": "New board: AA Code2Video (video generated via code)",
+   "url": "https://artificialanalysis.ai"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "highlight",
+   "text": "Reputation filled in for 21 models: Qwen3.8 Flash-Next n=45 · GLM-5.3 Flash n=20 · Qwen3.8 27B n=57 ...; OpenRouter weekly: Hy4 preview enters top 10 for the first time (#5)"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "highlight",
+   "text": "Fix: original \"Muse Spark\" and non-Pro \"MiMo V2.5\" no longer mis-mapped to 1.3 / V2.5-Pro (7 entries removed)"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "summary",
+   "text": "This update: 845 new scores, 39 best-score changes"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "new_bench",
+   "text": "New benchmark: Artificial Analysis Intelligence Index v5.0 (37 models)"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "new_bench",
+   "text": "New benchmark: AA-Omniscience Index v1.1 (26 models)"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "new_bench",
+   "text": "New benchmark: Code2Video-AA (27 models)"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "new_bench",
+   "text": "New benchmark: CritPt v2 (Hard Subset) (27 models)"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "new_bench",
+   "text": "New benchmark: FrontierCode 2.0 (26 models)"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "new_scores",
+   "text": "Gemma 4 12B gets its first scores (2)"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "new_scores",
+   "text": "K2 Horizon 375B A23B gets its first scores (2)"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "new_scores",
+   "text": "Mercury 3 gets its first scores (8)"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "new_scores",
+   "text": "North Mini Code gets its first scores (1)"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "new_scores",
+   "text": "Solar Mini 4 gets its first scores (1)"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "chg",
+   "text": "Muse Wonder · Harvey Legal Agent Benchmark (LAB): 10 → 23.75"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "chg",
+   "text": "Muse Wonder Full · Harvey Legal Agent Benchmark (LAB): 13.1 → 23.33"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "chg",
+   "text": "DeepSeek V4 Pro · Humanity's Last Exam (Diamond): 13.4 → 20"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "chg",
+   "text": "Claude Sonnet 5.5 · Humanity's Last Exam (Diamond): 37.5 → 53"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "chg",
+   "text": "Gemini 4 Argon · Harvey Legal Agent Benchmark (LAB): 19.6 → 27.08"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "chg",
+   "text": "Muse Spark 1.3 · Humanity's Last Exam (Diamond): 25.4 → 34"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "chg",
+   "text": "Muse Spark 1.3 · Terminal-Bench 4.0: 24.75 → 33"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "chg",
+   "text": "Claude Opus 5.5 · Humanity's Last Exam (Diamond): 55 → 68"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "chg",
+   "text": "Kimi K3 · Humanity's Last Exam (Diamond): 22.2 → 27"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "chg",
+   "text": "Gemini 3.8 Flash · Harvey Legal Agent Benchmark (LAB): 10 → 12.08"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "chg",
+   "text": "Claude Fable 5.1 · Humanity's Last Exam (Diamond): 51.3 → 60"
+  },
+  {
+   "date": "2026-10-28",
+   "kind": "chg",
+   "text": "Grok 4.7 · GDP.pdf (Surge AI): 20 → 23"
+  },
+  {
+   "date": "2026-10-27",
+   "kind": "summary",
+   "text": "Small and mid-size models filled in: 20 new models, 1081 scores; parameter counts labeled for all open-weights models"
+  },
+  {
+   "date": "2026-10-27",
+   "kind": "summary",
+   "text": "Initial data: 76 models · 3157 scores · 120 sources"
+  },
+  {
+   "date": "2026-10-26",
+   "kind": "new_model",
+   "text": "New model: GPT-6.1 Terra",
+   "url": "https://openai.com/index/introducing-gpt-6-1-terra/"
+  },
+  {
+   "date": "2026-10-23",
+   "kind": "new_model",
+   "text": "New model: Kimi K3.1 Pro",
+   "url": "https://platform.kimi.com/docs/guide/kimi-k3-1-pro-quickstart"
+  },
+  {
+   "date": "2026-10-19",
+   "kind": "new_model",
+   "text": "New model: MiniMax M3.1 Flash",
+   "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3.1-Flash"
+  },
+  {
+   "date": "2026-10-17",
+   "kind": "new_model",
+   "text": "New model: DeepSeek V4.1 Flash",
+   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"
+  },
+  {
+   "date": "2026-10-15",
+   "kind": "new_model",
+   "text": "New model: Muse Spark Open",
+   "url": "https://dev.meta.ai/models/muse-spark-open"
+  },
+  {
+   "date": "2026-10-15",
+   "kind": "new_model",
+   "text": "New model: Nemotron 3.5 Super VL",
+   "url": "https://huggingface.co/nvidia"
+  },
+  {
+   "date": "2026-10-12",
+   "kind": "new_model",
+   "text": "New model: Muse Wonder",
+   "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/"
+  },
+  {
+   "date": "2026-10-12",
+   "kind": "new_model",
+   "text": "New model: Muse Wonder Full",
+   "url": "https://research.meta.ai/blog/muse-wonder"
+  },
+  {
+   "date": "2026-10-08",
+   "kind": "new_model",
+   "text": "New model: Step 5 Preview",
+   "url": "https://github.com/stepfun-ai/Step-5-Preview"
+  },
+  {
+   "date": "2026-10-07",
+   "kind": "new_model",
+   "text": "New model: Claude Haiku 5.5",
+   "url": "https://www.anthropic.com/claude-haiku-5-5"
+  },
+  {
+   "date": "2026-10-06",
+   "kind": "new_model",
+   "text": "New model: Mistral Large 4",
+   "url": "https://mistral.ai/news/mistral-large-4/"
+  }
+ ]
+}

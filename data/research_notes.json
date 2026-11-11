@@ -1,0 +1,16 @@
+{
+ "Sources and extraction": [
+  "Vendor-reported numbers cover each vendor's own models only; competitor columns in vendor tables are not recorded.",
+  "Some vendors publish benchmark tables only as images; those values were transcribed from the images.",
+  "When a vendor page could not be read, numbers relayed by a secondary site are stored as aggregator rows, the lowest priority.",
+  "Effort 'unknown' means the source does not state the reasoning effort; 'default' means the model's default setting.",
+  "Benchmark versions are stored separately (for example Terminal-Bench 2.0 / 2.1 / 3.0 / 4.0, OSWorld 2.0 / 2.1, GDPval-AA versions) and are merged into one family only for ranking.",
+  "Elo-based boards (Arena, Design Arena, GDPval-AA, AA Briefcase) are re-fitted over time, so a model's Elo can change without a new run.",
+  "The harness matters: the same model can differ by several points between vendor CLIs (Claude Code, Codex CLI) and neutral harnesses (mini-swe-agent, Terminus 2). The harness is stored with every score.",
+  "Artificial Analysis component scores come from its comparison pages and are rounded to integers.",
+  "Arena numbers come from the official lmarena-ai/leaderboard-dataset on Hugging Face; snapshot dates are in each row's note.",
+  "Terminal-Bench boards are read from the maintainers' server-rendered mirrors, because the official pages render client-side.",
+  "Saturated boards (for example the SWE-Bench Pro V2 full split and MMMU-Pro) count at half weight in rankings; harder subsets are more informative.",
+  "Boards that are no longer maintained are marked stale and excluded from rankings."
+ ]
+}

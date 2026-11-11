@@ -1,0 +1,3715 @@
+{
+ "updated": "2026-11-11",
+ "sentiment": [
+  {
+   "model": "claude-sonnet-5.5",
+   "pos": 0.37,
+   "neg": 0.34,
+   "neu": 0.29,
+   "n_samples": 38,
+   "channels": [
+    "hn",
+    "linuxdo"
+   ],
+   "aspects": {
+    "coding": 0.4,
+    "agent": 0.3,
+    "writing": null,
+    "reasoning": 0.2,
+    "speed": 0.2,
+    "cost": -0.3,
+    "stability": -0.3,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "right on first try",
+    "good enough for agents",
+    "cheaper than Opus"
+   ],
+   "complaints": [
+    "overlong thinking burns tokens",
+    "easily hits usage quota",
+    "awkward positioning",
+    "false cybersecurity refusals"
+   ],
+   "quotes": [
+    {
+     "text": "Even sonnet 5.5 is becoming an overkill for most of our agentic workload.",
+     "url": "https://news.ycombinator.com/item?id=50159859",
+     "channel": "hn",
+     "date": "2026-10-20"
+    },
+    {
+     "text": "Opus 5.5 on Low seems smarter, cheaper, and faster than sonnet on medium, so what's the point of sonnet?",
+     "url": "https://news.ycombinator.com/item?id=49883005",
+     "channel": "hn",
+     "date": "2026-09-28"
+    },
+    {
+     "text": "Claude Sonnet 5.5 just did it right on the first try.",
+     "url": "https://news.ycombinator.com/item?id=50165027",
+     "channel": "hn",
+     "date": "2026-10-20"
+    }
+   ],
+   "summary": "Close to Opus in capability but with verbose thinking and a tight quota; people often ask 'why not just use Opus at a low effort level'.",
+   "sample_breakdown": "HN comment batch 18, launch thread ~13 (incl. ~3 safeguard complaints); linux.do titles 7. AA called its token use the heaviest it had measured (HN story 49898278)",
+   "date": "2026-10-27",
+   "method": "seed (manual + Claude reading HN / linux.do / V2EX / GitHub issues)",
+   "quotes_withheld": 1
+  },
+  {
+   "model": "claude-haiku-5.5",
+   "pos": 0.46,
+   "neg": 0.24,
+   "neu": 0.3,
+   "n_samples": 37,
+   "channels": [
+    "hn",
+    "linuxdo"
+   ],
+   "aspects": {
+    "coding": 0.3,
+    "agent": 0.2,
+    "writing": null,
+    "reasoning": 0.2,
+    "speed": 0.6,
+    "cost": 0.3,
+    "stability": null,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "cheap and good enough",
+    "fast",
+    "best-in-class small model"
+   ],
+   "complaints": [
+    "5x price above 100K",
+    "wordy, burns tokens",
+    "weak on complex tasks"
+   ],
+   "quotes": [
+    {
+     "text": "Haiku 5.5 is decent, cheap, and fast.",
+     "url": "https://news.ycombinator.com/item?id=50167441",
+     "channel": "hn",
+     "date": "2026-10-20"
+    },
+    {
+     "text": "Destroyed by Anthropics crazy decision to price it x5 after 100k context.",
+     "url": "https://news.ycombinator.com/item?id=50251913",
+     "channel": "hn",
+     "date": "2026-10-26"
+    },
+    {
+     "text": "Haiku 5.5 outperforms Opus 4.6 which was their best at some point in 2026 while being 10x cheaper.",
+     "url": "https://news.ycombinator.com/item?id=50052449",
+     "channel": "hn",
+     "date": "2026-10-12"
+    },
+    {
+     "text": "haiku 5.5 is only good for translation, right?",
+     "url": "https://linux.do/t/topic/2994310",
+     "channel": "linuxdo",
+     "date": "2026-10-05",
+     "date_approx": true,
+     "text_orig": "haiku 5.5只能当翻译用吧？",
+     "translated": true
+    }
+   ],
+   "summary": "Well-regarded small model often used as a subagent; the main gripe is 5x pricing beyond 100K context.",
+   "sample_breakdown": "HN 32 opinion comments; linux.do titles 5",
+   "date": "2026-10-27",
+   "method": "seed (manual + Claude reading HN / linux.do / V2EX / GitHub issues)"
+  },
+  {
+   "model": "claude-fable-5.1",
+   "pos": 0.28,
+   "neg": 0.4,
+   "neu": 0.32,
+   "n_samples": 25,
+   "channels": [
+    "hn",
+    "linuxdo"
+   ],
+   "aspects": {
+    "coding": 0.3,
+    "agent": null,
+    "writing": -0.3,
+    "reasoning": 0.3,
+    "speed": -0.2,
+    "cost": -0.7,
+    "stability": -0.2,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "strong all-round",
+    "good frontend taste"
+   ],
+   "complaints": [
+    "overpriced",
+    "surpassed by Opus5.5",
+    "heavy writing mannerisms",
+    "burns quota fast"
+   ],
+   "quotes": [
+    {
+     "text": "Opus 5.5 has surpassed Fable 5.1 in terms of both writing style and actual capability.",
+     "url": "https://news.ycombinator.com/item?id=50225631",
+     "channel": "hn",
+     "date": "2026-10-24"
+    },
+    {
+     "text": "In fairness (in my experience) Fable actually generates useful output while incinerating tokens.",
+     "url": "https://news.ycombinator.com/item?id=49819965",
+     "channel": "hn",
+     "date": "2026-09-23"
+    },
+    {
+     "text": "Fable5.1 is still really strong",
+     "url": "https://linux.do/t/topic/2858783",
+     "channel": "linuxdo",
+     "date": "2026-09-02",
+     "date_approx": true,
+     "text_orig": "Fable5.1还是很强的",
+     "translated": true
+    }
+   ],
+   "summary": "Premium flagship tier; still capable, but most think it has been surpassed by Opus 5.5 and is too expensive.",
+   "sample_breakdown": "HN 17 opinion comments; linux.do titles 8. Arena text #3 (1513) despite the lukewarm comments",
+   "date": "2026-10-27",
+   "method": "seed (manual + Claude reading HN / linux.do / V2EX / GitHub issues)"
+  },
+  {
+   "model": "gpt-6-astra",
+   "pos": 0.37,
+   "neg": 0.31,
+   "neu": 0.32,
+   "n_samples": 62,
+   "channels": [
+    "hn",
+    "linuxdo",
+    "github_issues",
+    "v2ex"
+   ],
+   "aspects": {
+    "coding": 0.6,
+    "agent": 0.3,
+    "writing": 0.1,
+    "reasoning": 0.7,
+    "speed": -0.4,
+    "cost": -0.4,
+    "stability": -0.4,
+    "instruction": -0.2,
+    "hallucination": null
+   },
+   "praise": [
+    "strong reasoning & math",
+    "high code quality",
+    "cross-disciplinary ability"
+   ],
+   "complaints": [
+    "slow",
+    "quota cut",
+    "not proactive enough",
+    "lukewarm in Chinese community"
+   ],
+   "quotes": [
+    {
+     "text": "By far the highest quality model, especially for cross-discipline work.",
+     "url": "https://news.ycombinator.com/item?id=49730460",
+     "channel": "hn",
+     "date": "2026-09-16"
+    },
+    {
+     "text": "isn't particularly proactive and autonomous. You have to kick it in the butt for every step.",
+     "url": "https://news.ycombinator.com/item?id=50186812",
+     "channel": "hn",
+     "date": "2026-10-21"
+    },
+    {
+     "text": "gpt-6-astra is really mediocre in actual use",
+     "url": "https://linux.do/t/topic/2861140",
+     "channel": "linuxdo",
+     "date": "2026-09-03",
+     "date_approx": true,
+     "text_orig": "gpt-6-astra 实际体验非常一般",
+     "translated": true
+    },
+    {
+     "text": "GPT-6 Astra ~2x slower per turn since Oct 25, not client-side",
+     "url": "https://github.com/openai/codex/issues/57151",
+     "channel": "github_issues",
+     "date": "2026-10-26"
+    }
+   ],
+   "summary": "Highly rated for quality in Codex, but slow, expensive and quota-cut; reviews in the Chinese community lean clearly negative.",
+   "sample_breakdown": "HN Codex-related first-hand 32, launch thread ~16; linux.do titles 10; GitHub codex issues 2; V2EX 1. English (HN) mostly positive, linux.do mostly negative",
+   "date": "2026-10-27",
+   "method": "seed (manual + Claude reading HN / linux.do / V2EX / GitHub issues)"
+  },
+  {
+   "model": "gpt-5.5",
+   "pos": 0.17,
+   "neg": 0.41,
+   "neu": 0.42,
+   "n_samples": 41,
+   "channels": [
+    "hn",
+    "linuxdo"
+   ],
+   "aspects": {
+    "coding": 0.1,
+    "agent": -0.2,
+    "writing": null,
+    "reasoning": 0.0,
+    "speed": -0.3,
+    "cost": -0.3,
+    "stability": -0.6,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "longtime users still approve",
+    "stable and usable"
+   ],
+   "complaints": [
+    "surpassed by newer models",
+    "past reports of quality drops",
+    "pricier than new Sol"
+   ],
+   "quotes": [
+    {
+     "text": "For my SaaS I am still using GPT-5.5 with great success and have no plans of upgrading to GPT-6.1/Sol.",
+     "url": "https://news.ycombinator.com/item?id=49975056",
+     "channel": "hn",
+     "date": "2026-10-06"
+    },
+    {
+     "text": "Why not GPT-{5.6, 6, 6.1} Sol? They're all cheaper than GPT 5.5, and as \"smart\", if not \"smarter\"",
+     "url": "https://news.ycombinator.com/item?id=50172624",
+     "channel": "hn",
+     "date": "2026-10-20"
+    }
+   ],
+   "summary": "Previous-generation model with mostly retrospective reviews; the new Sol is cheaper and stronger, and earlier reports of quality drops centered on this model.",
+   "sample_breakdown": "HN 32 mentions since 2026-09 (half neutral/retrospective); linux.do 9 titles about perceived quality drops mostly from 2026-05..08 (dates rough). Gen-1, so the evidence is mostly retrospective",
+   "date": "2026-10-27",
+   "method": "seed (manual + Claude reading HN / linux.do / V2EX / GitHub issues)",
+   "quotes_withheld": 1
+  },
+  {
+   "model": "gemini-3.8-flash",
+   "pos": 0.57,
+   "neg": 0.1,
+   "neu": 0.33,
+   "n_samples": 21,
+   "channels": [
+    "hn",
+    "linuxdo"
+   ],
+   "aspects": {
+    "coding": 0.5,
+    "agent": null,
+    "writing": 0.4,
+    "reasoning": 0.4,
+    "speed": 0.8,
+    "cost": 0.5,
+    "stability": -0.3,
+    "instruction": -0.1,
+    "hallucination": null
+   },
+   "praise": [
+    "extremely fast",
+    "great value",
+    "underrated",
+    "natural communication"
+   ],
+   "complaints": [
+    "occasionally unstable",
+    "token usage went up"
+   ],
+   "quotes": [
+    {
+     "text": "Even today, I use Gemini 3.8 Flash as my daily driver for most coding. Its fast and good",
+     "url": "https://news.ycombinator.com/item?id=50240840",
+     "channel": "hn",
+     "date": "2026-10-26"
+    },
+    {
+     "text": "I love 3.8 Flash, if only it weren't unusably flaky.",
+     "url": "https://news.ycombinator.com/item?id=50241029",
+     "channel": "hn",
+     "date": "2026-10-26"
+    },
+    {
+     "text": "I feel like gemini3.8flash is the model most underrated by the folks here",
+     "url": "https://linux.do/t/topic/2886954",
+     "channel": "linuxdo",
+     "date": "2026-09-09",
+     "date_approx": true,
+     "text_orig": "感觉gemini3.8flash是最被老友们低估的模型",
+     "translated": true
+    }
+   ],
+   "summary": "Fast, cheap daily driver; leaning positive in both Chinese and English communities, with occasional instability complaints.",
+   "sample_breakdown": "HN 11 opinion comments; linux.do titles 10",
+   "date": "2026-10-27",
+   "method": "seed (manual + Claude reading HN / linux.do / V2EX / GitHub issues)"
+  },
+  {
+   "model": "grok-4.7",
+   "pos": 0.17,
+   "neg": 0.51,
+   "neu": 0.32,
+   "n_samples": 35,
+   "channels": [
+    "hn",
+    "linuxdo"
+   ],
+   "aspects": {
+    "coding": -0.3,
+    "agent": -0.2,
+    "writing": null,
+    "reasoning": 0.0,
+    "speed": -0.2,
+    "cost": -0.4,
+    "stability": null,
+    "instruction": 0.3,
+    "hallucination": null
+   },
+   "praise": [
+    "follows plans",
+    "understands what you mean"
+   ],
+   "complaints": [
+    "worse than 4.6",
+    "lousy post-training",
+    "slower",
+    "pricey"
+   ],
+   "quotes": [
+    {
+     "text": "The problem with Grok 4.7 is that it's not amazing at anything, and didn't even retain the blazing fast performance",
+     "url": "https://news.ycombinator.com/item?id=50219959",
+     "channel": "hn",
+     "date": "2026-10-24"
+    },
+    {
+     "text": "Grok 4.7 is a good example, the model is bigger, has more attention to detail, but the post-training is botched somehow",
+     "url": "https://news.ycombinator.com/item?id=49910341",
+     "channel": "hn",
+     "date": "2026-09-30"
+    },
+    {
+     "text": "I personally like Grok's ability to stick to the plan.",
+     "url": "https://news.ycombinator.com/item?id=50204818",
+     "channel": "hn",
+     "date": "2026-10-23"
+    },
+    {
+     "text": "Bye grok4.7, hello grok4.6",
+     "url": "https://linux.do/t/topic/2953644",
+     "channel": "linuxdo",
+     "date": "2026-09-25",
+     "date_approx": true,
+     "text_orig": "grok4.7拜拜，你好grok4.6",
+     "translated": true
+    }
+   ],
+   "summary": "Leaning negative: seen as unremarkable across the board and slower and pricier than 4.6; a few credit its plan-following.",
+   "sample_breakdown": "HN 26 opinion comments; linux.do titles 9",
+   "date": "2026-10-27",
+   "method": "seed (manual + Claude reading HN / linux.do / V2EX / GitHub issues)"
+  },
+  {
+   "model": "muse-wonder",
+   "pos": 0.29,
+   "neg": 0.36,
+   "neu": 0.35,
+   "n_samples": 28,
+   "channels": [
+    "hn",
+    "linuxdo"
+   ],
+   "aspects": {
+    "coding": -0.2,
+    "agent": null,
+    "writing": null,
+    "reasoning": 0.3,
+    "speed": null,
+    "cost": -0.5,
+    "stability": -0.3,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "strong data analysis",
+    "Full version near Opus"
+   ],
+   "complaints": [
+    "benchmarks seen as unrepresentative",
+    "fast quota drain",
+    "Full is subscription-only",
+    "expensive"
+   ],
+   "quotes": [
+    {
+     "text": "Awesome model. Tested it for data analytics and found it's in the class of Opus 5.5 in terms of performance and cost.",
+     "url": "https://news.ycombinator.com/item?id=50094026",
+     "channel": "hn",
+     "date": "2026-10-14"
+    },
+    {
+     "text": "Two somewhat small prompts with Muse Wonder Max-contributor used 4% of my weekly quota and I quickly switched back.",
+     "url": "https://news.ycombinator.com/item?id=50062474",
+     "channel": "hn",
+     "date": "2026-10-12"
+    },
+    {
+     "text": "Meta's new model muse wonder - feels like hardly anyone is talking about it",
+     "url": "https://linux.do/t/topic/3020061",
+     "channel": "linuxdo",
+     "date": "2026-10-12",
+     "date_approx": true,
+     "text_orig": "Meta 新模型，muse wonder 感觉没啥人讨论呢",
+     "translated": true
+    }
+   ],
+   "summary": "Ranks high on leaderboards but real-world impressions are split; doubts that benchmark results carry over to real use, and fast quota drain, are the main concerns.",
+   "sample_breakdown": "HN 22 opinion comments (launch 2026-10-12); linux.do titles 6, mostly neutral and low engagement",
+   "date": "2026-10-27",
+   "method": "seed (manual + Claude reading HN / linux.do / V2EX / GitHub issues)",
+   "quotes_withheld": 1
+  },
+  {
+   "model": "qwen3.8-max",
+   "pos": 0.45,
+   "neg": 0.0,
+   "neu": 0.55,
+   "n_samples": 11,
+   "channels": [
+    "hn",
+    "linuxdo"
+   ],
+   "aspects": {
+    "coding": 0.3,
+    "agent": null,
+    "writing": null,
+    "reasoning": 0.3,
+    "speed": 0.3,
+    "cost": -0.2,
+    "stability": null,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "decent frontend pages",
+    "fast",
+    "top tier among Chinese models"
+   ],
+   "complaints": [
+    "heavy token usage",
+    "little discussion"
+   ],
+   "quotes": [
+    {
+     "text": "Fast and intelligent, better than Kimi K3, but token-hungry.",
+     "url": "https://news.ycombinator.com/item?id=50220395",
+     "channel": "hn",
+     "date": "2026-10-24"
+    },
+    {
+     "text": "Nobody's hyping Qwen3.8 Max to the moon? Then I'll do it",
+     "url": "https://linux.do/t/topic/2626715",
+     "channel": "linuxdo",
+     "date": "2026-07-08",
+     "date_approx": true,
+     "text_orig": "没有人吹爆Qwen3.8 Max吗？那我来",
+     "translated": true
+    },
+    {
+     "text": "Qwen3.8Max is really strong",
+     "url": "https://linux.do/t/topic/3025022",
+     "channel": "linuxdo",
+     "date": "2026-10-13",
+     "date_approx": true,
+     "text_orig": "Qwen3.8Max很强啊",
+     "translated": true
+    }
+   ],
+   "summary": "Very thin evidence: Chinese titles lean positive, while English communities almost only discuss the small Qwen3.8 models.",
+   "sample_breakdown": "HN only 1 Max-specific opinion (23 others are about Qwen3.8 27B/Flash-Next); linux.do titles 10, mostly Jul-Sep (dates rough). Thin evidence; no negatives found, which likely reflects sampling, not consensus",
+   "date": "2026-10-27",
+   "method": "seed (manual + Claude reading HN / linux.do / V2EX / GitHub issues)"
+  },
+  {
+   "model": "deepseek-v4.1-flash",
+   "pos": 0.63,
+   "neg": 0.14,
+   "neu": 0.23,
+   "n_samples": 49,
+   "channels": [
+    "hn",
+    "linuxdo",
+    "v2ex"
+   ],
+   "aspects": {
+    "coding": 0.6,
+    "agent": 0.3,
+    "writing": -0.2,
+    "reasoning": 0.4,
+    "speed": 0.8,
+    "cost": 0.9,
+    "stability": 0.0,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "blazing fast",
+    "dirt cheap",
+    "good enough for coding",
+    "few refusals"
+   ],
+   "complaints": [
+    "rushes to wrap up",
+    "stiff phrasing",
+    "long-output cost"
+   ],
+   "quotes": [
+    {
+     "text": "Deepseek V4.1 Flash 1017 is out of this world good ... and cheap",
+     "url": "https://news.ycombinator.com/item?id=50155543",
+     "channel": "hn",
+     "date": "2026-10-19"
+    },
+    {
+     "text": "DeepSeek V4.1 Flash is astoundingly fun to use because it's so quick.",
+     "url": "https://news.ycombinator.com/item?id=50166796",
+     "channel": "hn",
+     "date": "2026-10-20"
+    },
+    {
+     "text": "DeepSeek v4.1 flash seems to do this thing where it starts saying that we should wrap up the current work",
+     "url": "https://news.ycombinator.com/item?id=50237181",
+     "channel": "hn",
+     "date": "2026-10-25"
+    },
+    {
+     "text": "deepseek-v4.1-flash test: pleasant surprise -> crying my eyes out",
+     "url": "https://linux.do/t/topic/2874637",
+     "channel": "linuxdo",
+     "date": "2026-09-06",
+     "date_approx": true,
+     "text_orig": "deepseek-v4.1-flash测试，惊喜->哭晕",
+     "translated": true
+    }
+   ],
+   "summary": "The 1017 version is the best-regarded value model and #1 in OpenRouter usage; occasional complaints about rushing to wrap up.",
+   "sample_breakdown": "HN 38 opinion comments; linux.do titles 9; V2EX 2. AI Stupid Level logged a V4.1 Flash drift on 2026-07-31 (pre-1017)",
+   "date": "2026-10-27",
+   "method": "seed (manual + Claude reading HN / linux.do / V2EX / GitHub issues)"
+  },
+  {
+   "model": "glm-5.3",
+   "pos": 0.29,
+   "neg": 0.37,
+   "neu": 0.34,
+   "n_samples": 38,
+   "channels": [
+    "hn",
+    "linuxdo"
+   ],
+   "aspects": {
+    "coding": 0.2,
+    "agent": 0.1,
+    "writing": null,
+    "reasoning": -0.3,
+    "speed": -0.2,
+    "cost": 0.1,
+    "stability": -0.5,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "strong frontend",
+    "good for cybersecurity tasks",
+    "can be deployed locally"
+   ],
+   "complaints": [
+    "weak logic",
+    "perceived quality drop (unconfirmed)",
+    "slow",
+    "access requires application"
+   ],
+   "quotes": [
+    {
+     "text": "But for coding and cybersec tasks I think GLM 5.3 might be the best one to use still.",
+     "url": "https://news.ycombinator.com/item?id=50228731",
+     "channel": "hn",
+     "date": "2026-10-25"
+    },
+    {
+     "text": "GLM 5.3 with DSFV4.1 as advisor via omp feels Opus 4.6 level",
+     "url": "https://news.ycombinator.com/item?id=50239488",
+     "channel": "hn",
+     "date": "2026-10-26"
+    }
+   ],
+   "summary": "English communities see it as a reliable open-source workhorse; Chinese-language communities mainly report weak logic and perceived quality drops.",
+   "sample_breakdown": "HN 28 opinion comments (mostly positive or neutral); linux.do titles 10 (mostly negative); some titles are about GLM 5.3 Flash",
+   "date": "2026-10-27",
+   "method": "seed (manual + Claude reading HN / linux.do / V2EX / GitHub issues)",
+   "quotes_withheld": 2
+  },
+  {
+   "model": "minimax-m3.1-flash",
+   "pos": 0.27,
+   "neg": 0.13,
+   "neu": 0.6,
+   "n_samples": 15,
+   "channels": [
+    "hn",
+    "linuxdo",
+    "blog"
+   ],
+   "aspects": {
+    "coding": 0.0,
+    "agent": 0.4,
+    "writing": null,
+    "reasoning": null,
+    "speed": -0.3,
+    "cost": 0.8,
+    "stability": null,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "very low price",
+    "free to use",
+    "good agent performance"
+   ],
+   "complaints": [
+    "uneven coding",
+    "slow output"
+   ],
+   "quotes": [
+    {
+     "text": "Full set of 16 scenes is live at about 1699 Elo and about $0.18, vs about $2.67 for Opus 5.5 High.",
+     "url": "https://news.ycombinator.com/item?id=50203708",
+     "channel": "hn",
+     "date": "2026-10-23"
+    },
+    {
+     "text": "M2.5 was good, M2.7 was meh and came with a terrible license, 3 meh.",
+     "url": "https://news.ycombinator.com/item?id=50156634",
+     "channel": "hn",
+     "date": "2026-10-19"
+    },
+    {
+     "text": "the new flash model is impressive at a wide range of agentic work.",
+     "url": "https://blog.kilo.ai/p/minimax-m31-flash-is-free-in-kilo",
+     "channel": "blog",
+     "date": "2026-10-20"
+    },
+    {
+     "text": "MiniMax M3.1-flash may no longer be suitable for openclaw",
+     "url": "https://linux.do/t/topic/3077495",
+     "channel": "linuxdo",
+     "date": "2026-10-26",
+     "date_approx": true,
+     "text_orig": "MiniMax M3.1-flash 可能不再适用于openclaw",
+     "translated": true
+    }
+   ],
+   "summary": "Heavy usage (free version #3 on OpenRouter) but few genuine reviews; good at agent tasks, uneven at coding.",
+   "sample_breakdown": "HN 7 (mostly neutral); linux.do titles 7 (mostly announcements); Kilo blog 1. Thin. Usage (13.7T/week, free) far outpaces discussion",
+   "date": "2026-10-27",
+   "method": "seed (manual + Claude reading HN / linux.do / V2EX / GitHub issues)"
+  },
+  {
+   "model": "mimo-v2.6-pro",
+   "pos": 0.4,
+   "neg": 0.23,
+   "neu": 0.37,
+   "n_samples": 30,
+   "channels": [
+    "hn",
+    "linuxdo"
+   ],
+   "aspects": {
+    "coding": null,
+    "agent": null,
+    "writing": null,
+    "reasoning": 0.2,
+    "speed": -0.1,
+    "cost": 0.7,
+    "stability": null,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "frontier price-performance",
+    "transparent training",
+    "open weights"
+   ],
+   "complaints": [
+    "false safety blocks",
+    "overlong thinking",
+    "lukewarm in Chinese"
+   ],
+   "quotes": [
+    {
+     "text": "Admittedly Mimo v2.6 is legitimately quite good, and really pushing the frontier in certain respects.",
+     "url": "https://news.ycombinator.com/item?id=49898412",
+     "channel": "hn",
+     "date": "2026-09-29"
+    },
+    {
+     "text": "I had a bad experience with MiMo from Xiaomi. I had it trigger unsafe content blocks while fixing visual bugs",
+     "url": "https://news.ycombinator.com/item?id=50134726",
+     "channel": "hn",
+     "date": "2026-10-17"
+    },
+    {
+     "text": "Is mimo v2.6-pro just bad? Right off the bat it does 10 minutes of thunderous mega-thinking before getting to work",
+     "url": "https://linux.do/t/topic/2934628",
+     "channel": "linuxdo",
+     "date": "2026-09-21",
+     "date_approx": true,
+     "text_orig": "mimo v2.6-pro是不是太拉， 一上来就是雷霆大思考10分钟然后干活",
+     "translated": true
+    }
+   ],
+   "summary": "English communities praise its value and transparency; Chinese communities find its thinking too long and gripe about false safety blocks.",
+   "sample_breakdown": "HN 21 (some about MiMo 2.6 generally or Flash); linux.do titles 9 (mostly neutral tests). Released ~2026-09-21",
+   "date": "2026-10-27",
+   "method": "seed (manual + Claude reading HN / linux.do / V2EX / GitHub issues)"
+  },
+  {
+   "model": "qwen3.8-flash-next",
+   "pos": 0.69,
+   "neg": 0.2,
+   "neu": 0.11,
+   "n_samples": 45,
+   "channels": [
+    "hn",
+    "v2ex",
+    "linuxdo"
+   ],
+   "aspects": {
+    "coding": 0.4,
+    "agent": 0.3,
+    "writing": null,
+    "reasoning": 0.0,
+    "speed": 0.7,
+    "cost": -0.3,
+    "stability": -0.3,
+    "instruction": 0.1,
+    "hallucination": 0.1
+   },
+   "praise": [
+    "fast locally",
+    "usable for agentic coding",
+    "runs on a single GPU",
+    "stable tool calls"
+   ],
+   "complaints": [
+    "token-hungry",
+    "reasoning loops",
+    "occasionally confused",
+    "data-privacy questions"
+   ],
+   "quotes": [
+    {
+     "text": "It is about as reliable as Sonnet 5 for agentic coding.",
+     "url": "https://news.ycombinator.com/item?id=50239074",
+     "channel": "hn",
+     "date": "2026-10-26"
+    },
+    {
+     "text": "The Qwen3.8-Flash-Next model is ok for reverse engineering.",
+     "url": "https://news.ycombinator.com/item?id=50220395",
+     "channel": "hn",
+     "date": "2026-10-24"
+    },
+    {
+     "text": "it would face plant often enough that it made it impossible to use.",
+     "url": "https://news.ycombinator.com/item?id=50188449",
+     "channel": "hn",
+     "date": "2026-10-21"
+    },
+    {
+     "text": "But once in a while it gets into long reasoning loops, which is annoying.",
+     "url": "https://news.ycombinator.com/item?id=50162716",
+     "channel": "hn",
+     "date": "2026-10-20"
+    },
+    {
+     "text": "Qwen 3.8 Flash Next 125B A10B's tool use is rock solid",
+     "url": "https://www.v2ex.com/t/1246662",
+     "channel": "v2ex",
+     "date": "2026-10-07",
+     "date_approx": true,
+     "note": "reply #4",
+     "text_orig": "Qwen 3.8 Flash Next 125B A10B 的 Tool uses 很穩",
+     "translated": true
+    },
+    {
+     "text": "Hot take: is Qwen 3.8 Flash Next underrated?",
+     "url": "https://linux.do/t/topic/2838031",
+     "channel": "linuxdo",
+     "date": "2026-08-28",
+     "date_approx": true,
+     "note": "topic title (OP stance)",
+     "text_orig": "暴论: Qwen 3.8 Flash Next 是否被低估了",
+     "translated": true
+    }
+   ],
+   "summary": "Praised by local-model users: fast, agentic coding close to Sonnet 5; complaints about token usage and occasional reasoning loops.",
+   "sample_breakdown": "HN 28 (search \"Flash-Next\", 2026-10-20..27); V2EX 11 (t/1246662, t/1248296, t/1237519#8); linux.do 6 stance titles. Cohere 10-26 phone-home report is NOT counted (not usage) but is a reputational risk.",
+   "date": "2026-10-28",
+   "method": "Claude read HN Algolia comments / V2EX posts + replies / linux.do titles (site search) 2026-10-28; mixed counted as 0.5 positive + 0.5 negative"
+  },
+  {
+   "model": "nemotron-3.5-super-vl",
+   "pos": 0.5,
+   "neg": 0.5,
+   "neu": 0.0,
+   "n_samples": 1,
+   "channels": [
+    "hn"
+   ],
+   "aspects": {
+    "coding": null,
+    "agent": null,
+    "writing": null,
+    "reasoning": -0.3,
+    "speed": 0.5,
+    "cost": null,
+    "stability": null,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "fast"
+   ],
+   "complaints": [
+    "low-ish scores"
+   ],
+   "quotes": [
+    {
+     "text": "only Haiku 5.5 and Nemotron 3.5 Super VL have passed the exam faster but both scored lower.",
+     "url": "https://news.ycombinator.com/item?id=50254817",
+     "channel": "hn",
+     "date": "2026-10-27"
+    }
+   ],
+   "summary": "Very little evidence (1): one user's test found it fast but scoring low.",
+   "sample_breakdown": "HN 1 first-hand (of ~5 hits); linux.do only a question title (t/3070596). Thin.",
+   "date": "2026-10-28",
+   "method": "Claude read HN Algolia comments / V2EX posts + replies / linux.do titles (site search) 2026-10-28; mixed counted as 0.5 positive + 0.5 negative"
+  },
+  {
+   "model": "nemotron-3.5-bolt",
+   "pos": 0.5,
+   "neg": 0.5,
+   "neu": 0.0,
+   "n_samples": 1,
+   "channels": [
+    "hn"
+   ],
+   "aspects": {
+    "coding": null,
+    "agent": null,
+    "writing": null,
+    "reasoning": null,
+    "speed": -0.4,
+    "cost": null,
+    "stability": null,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "promising"
+   ],
+   "complaints": [
+    "slow on Metal"
+   ],
+   "quotes": [
+    {
+     "text": "I am trying out the Nemotron Bolt 74B/A9B MoE and I really do think it could be quite good, but it's still slow on Metal.",
+     "url": "https://news.ycombinator.com/item?id=50213408",
+     "channel": "hn",
+     "date": "2026-10-23"
+    }
+   ],
+   "summary": "Very little evidence (1): a tester liked the quality but found it slow on Mac.",
+   "sample_breakdown": "HN 1 first-hand; no V2EX/linux.do opinions found. Thin.",
+   "date": "2026-10-28",
+   "method": "Claude read HN Algolia comments / V2EX posts + replies / linux.do titles (site search) 2026-10-28; mixed counted as 0.5 positive + 0.5 negative"
+  },
+  {
+   "model": "mimo-v2.6-flash",
+   "pos": 0.41,
+   "neg": 0.41,
+   "neu": 0.18,
+   "n_samples": 11,
+   "channels": [
+    "hn",
+    "v2ex"
+   ],
+   "aspects": {
+    "coding": 0.0,
+    "agent": null,
+    "writing": null,
+    "reasoning": 0.1,
+    "speed": 0.2,
+    "cost": 0.5,
+    "stability": -0.5,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "cheap",
+    "fast",
+    "runs on dual Sparks"
+   ],
+   "complaints": [
+    "infinite loops",
+    "sometimes slow",
+    "Flash too small"
+   ],
+   "quotes": [
+    {
+     "text": "MiMo 2.6 Flash is the most capable model you can currently run on 2x Sparks without resorting to a quantised version",
+     "url": "https://news.ycombinator.com/item?id=50129341",
+     "channel": "hn",
+     "date": "2026-10-17"
+    },
+    {
+     "text": "after trying MiMo 2.6 Flash: unfortunately it ends up in infinite loops.",
+     "url": "https://news.ycombinator.com/item?id=49800129",
+     "channel": "hn",
+     "date": "2026-09-22"
+    },
+    {
+     "text": "So far I've been pretty happy with the results, but mimo can be quite slow.",
+     "url": "https://news.ycombinator.com/item?id=50002919",
+     "channel": "hn",
+     "date": "2026-10-08"
+    },
+    {
+     "text": "Using Mimo v2.6 Flash today, it got stuck in an infinite reflection loop",
+     "url": "https://www.v2ex.com/t/1243995",
+     "channel": "v2ex",
+     "date": "2026-09-22",
+     "date_approx": true,
+     "note": "reply #2",
+     "text_orig": "今天用 Mimo v2.6 Flash 出现了无限反思循环",
+     "translated": true
+    }
+   ],
+   "summary": "Mixed: cheap and runs locally, but several users hit infinite reflection loops.",
+   "sample_breakdown": "HN 8 (2 queries); V2EX 3 (t/1243995). Many HN MiMo mentions are about Pro or unspecified variant (excluded).",
+   "date": "2026-10-28",
+   "method": "Claude read HN Algolia comments / V2EX posts + replies / linux.do titles (site search) 2026-10-28; mixed counted as 0.5 positive + 0.5 negative"
+  },
+  {
+   "model": "qwen3.8-27b",
+   "pos": 0.68,
+   "neg": 0.29,
+   "neu": 0.03,
+   "n_samples": 57,
+   "channels": [
+    "hn",
+    "v2ex"
+   ],
+   "aspects": {
+    "coding": 0.6,
+    "agent": 0.4,
+    "writing": null,
+    "reasoning": 0.3,
+    "speed": 0.0,
+    "cost": 0.2,
+    "stability": -0.4,
+    "instruction": 0.2,
+    "hallucination": null
+   },
+   "praise": [
+    "local coding workhorse",
+    "runs on a single GPU",
+    "smartest in its class",
+    "persistent in agent loops"
+   ],
+   "complaints": [
+    "overlong thinking",
+    "repetition loops",
+    "context-hungry",
+    "API a bit pricey"
+   ],
+   "quotes": [
+    {
+     "text": "I use Qwen3.8-27B as a daily driver, and for things I know will be quite hard I tend to get ChatGPT to do the planning.",
+     "url": "https://news.ycombinator.com/item?id=50001020",
+     "channel": "hn",
+     "date": "2026-10-08"
+    },
+    {
+     "text": "Qwen3.8-27B is surprisingly effective, somewhere in the vicinity of Opus 4.6",
+     "url": "https://news.ycombinator.com/item?id=50127711",
+     "channel": "hn",
+     "date": "2026-10-17"
+    },
+    {
+     "text": "The main issue i found is that Qwen3.8-27B thinks a lot.",
+     "url": "https://news.ycombinator.com/item?id=50235925",
+     "channel": "hn",
+     "date": "2026-10-25"
+    },
+    {
+     "text": "qwen3.8 is a genuine productivity tool for coding.",
+     "url": "https://www.v2ex.com/t/1234978",
+     "channel": "v2ex",
+     "date": "2026-08-17",
+     "date_approx": true,
+     "note": "reply #9",
+     "text_orig": "qwen3.8 是 coding 领域真正的生产力工具。",
+     "translated": true
+    },
+    {
+     "text": "Repetition and looping issues still show up.",
+     "url": "https://www.v2ex.com/t/1234978",
+     "channel": "v2ex",
+     "date": "2026-08-17",
+     "date_approx": true,
+     "note": "reply #30",
+     "text_orig": "重复和循环的问题仍然会出现。",
+     "translated": true
+    }
+   ],
+   "summary": "Top local 27B pick: strong coding and runs on a single GPU; overlong thinking and occasional loops.",
+   "sample_breakdown": "HN 22 (2026-10-06..27); V2EX 35 (t/1234978 19, t/1236180 8, t/1246662 8). linux.do titles are deployment guides only (not counted).",
+   "date": "2026-10-28",
+   "method": "Claude read HN Algolia comments / V2EX posts + replies / linux.do titles (site search) 2026-10-28; mixed counted as 0.5 positive + 0.5 negative"
+  },
+  {
+   "model": "gemma-4-31b",
+   "pos": 0.5,
+   "neg": 0.32,
+   "neu": 0.18,
+   "n_samples": 28,
+   "channels": [
+    "hn",
+    "v2ex"
+   ],
+   "aspects": {
+    "coding": -0.2,
+    "agent": null,
+    "writing": 0.3,
+    "reasoning": 0.1,
+    "speed": -0.1,
+    "cost": 0.4,
+    "stability": 0.2,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "good enough and cheap",
+    "QAT runs locally",
+    "objective answers",
+    "MTP speedup"
+   ],
+   "complaints": [
+    "weak as coding agent",
+    "slow on older GPUs",
+    "tight on VRAM"
+   ],
+   "quotes": [
+    {
+     "text": "I landed on google/gemma-4-31b for now, because it's cheap and good enough",
+     "url": "https://news.ycombinator.com/item?id=49751471",
+     "channel": "hn",
+     "date": "2026-09-18"
+    },
+    {
+     "text": "Gemma 4 31B in the 4-bit QAT is competitive with the frontier of less than three years ago",
+     "url": "https://news.ycombinator.com/item?id=48984388",
+     "channel": "hn",
+     "date": "2026-07-20"
+    },
+    {
+     "text": "it mostly fails on anything more than categorization and summarization.",
+     "url": "https://news.ycombinator.com/item?id=49180472",
+     "channel": "hn",
+     "date": "2026-08-05"
+    }
+   ],
+   "summary": "Good enough for general local use and great value; weak as a coding agent and slow on older GPUs.",
+   "sample_breakdown": "HN 22 (2026-07..10); V2EX 6 (t/1203450, launch week Apr 2026).",
+   "date": "2026-10-28",
+   "method": "Claude read HN Algolia comments / V2EX posts + replies / linux.do titles (site search) 2026-10-28; mixed counted as 0.5 positive + 0.5 negative",
+   "quotes_withheld": 1
+  },
+  {
+   "model": "mistral-small-4",
+   "pos": 0.4,
+   "neg": 0.6,
+   "neu": 0.0,
+   "n_samples": 5,
+   "channels": [
+    "hn"
+   ],
+   "aspects": {
+    "coding": null,
+    "agent": 0.3,
+    "writing": -0.3,
+    "reasoning": -0.4,
+    "speed": null,
+    "cost": null,
+    "stability": null,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "decent tool calling",
+    "rivals Qwen when quantized"
+   ],
+   "complaints": [
+    "worse than Gemma 4",
+    "weak writing"
+   ],
+   "quotes": [
+    {
+     "text": "I was running some simple chat and tool-calling benchmarks for small models and Mistral Small 4 performed well",
+     "url": "https://news.ycombinator.com/item?id=47950098",
+     "channel": "hn",
+     "date": "2026-04-29"
+    },
+    {
+     "text": "Mistral Small 4 is way worse than Gemma 4 26B A4B.",
+     "url": "https://news.ycombinator.com/item?id=49606808",
+     "channel": "hn",
+     "date": "2026-09-08"
+    }
+   ],
+   "summary": "Limited evidence (5): tool calling is OK, but most think it is worse than Gemma 4 26B.",
+   "sample_breakdown": "HN only, 5 first-hand of 21 hits.",
+   "date": "2026-10-28",
+   "method": "Claude read HN Algolia comments / V2EX posts + replies / linux.do titles (site search) 2026-10-28; mixed counted as 0.5 positive + 0.5 negative"
+  },
+  {
+   "model": "gemma-4-26b-a4b",
+   "pos": 0.72,
+   "neg": 0.13,
+   "neu": 0.15,
+   "n_samples": 27,
+   "channels": [
+    "hn",
+    "v2ex"
+   ],
+   "aspects": {
+    "coding": 0.2,
+    "agent": -0.1,
+    "writing": 0.3,
+    "reasoning": 0.3,
+    "speed": 0.6,
+    "cost": null,
+    "stability": 0.1,
+    "instruction": 0.4,
+    "hallucination": null
+   },
+   "praise": [
+    "local daily driver",
+    "fast generation",
+    "concise answers",
+    "Mac-friendly"
+   ],
+   "complaints": [
+    "poor tool calling early on",
+    "slow prefill"
+   ],
+   "quotes": [
+    {
+     "text": "I settled on gemma-4-26B-A4B as my daily driver.",
+     "url": "https://news.ycombinator.com/item?id=49911998",
+     "channel": "hn",
+     "date": "2026-09-30"
+    },
+    {
+     "text": "Gemma 4 26B solves this concisely without adding any filler about fuel economy or how long it will take",
+     "url": "https://news.ycombinator.com/item?id=49318893",
+     "channel": "hn",
+     "date": "2026-08-16"
+    },
+    {
+     "text": "Tool-calling let it down for agentic coding, and I haven't retested it since they fixed that",
+     "url": "https://news.ycombinator.com/item?id=49124056",
+     "channel": "hn",
+     "date": "2026-07-31"
+    },
+    {
+     "text": "Using 26B right now and it feels pretty beastly; 256K context takes 39G of memory",
+     "url": "https://www.v2ex.com/t/1203450",
+     "channel": "v2ex",
+     "date": "2026-04-05",
+     "date_approx": true,
+     "note": "reply #24",
+     "text_orig": "目前用 26B 感觉挺猛的，256K 上下文占用 39G 内存",
+     "translated": true
+    }
+   ],
+   "summary": "Well-regarded local MoE: fast, concise and a daily driver; mediocre at agentic coding.",
+   "sample_breakdown": "HN 24 (2026-07..10); V2EX 3 (t/1203450).",
+   "date": "2026-10-28",
+   "method": "Claude read HN Algolia comments / V2EX posts + replies / linux.do titles (site search) 2026-10-28; mixed counted as 0.5 positive + 0.5 negative"
+  },
+  {
+   "model": "gpt-6-luna",
+   "pos": 0.35,
+   "neg": 0.55,
+   "neu": 0.1,
+   "n_samples": 40,
+   "channels": [
+    "hn",
+    "v2ex",
+    "linuxdo"
+   ],
+   "aspects": {
+    "coding": 0.3,
+    "agent": 0.4,
+    "writing": null,
+    "reasoning": -0.4,
+    "speed": -0.3,
+    "cost": 0.7,
+    "stability": null,
+    "instruction": -0.3,
+    "hallucination": 0.0
+   },
+   "praise": [
+    "dirt cheap",
+    "fine for agent workflows",
+    "token-efficient"
+   ],
+   "complaints": [
+    "weak comprehension",
+    "slow",
+    "poor image understanding",
+    "worse than 5.6 Luna"
+   ],
+   "quotes": [
+    {
+     "text": "I've been using GPT-6 Luna in some capacity for nearly all my agent workflows.",
+     "url": "https://news.ycombinator.com/item?id=49996749",
+     "channel": "hn",
+     "date": "2026-10-07"
+    },
+    {
+     "text": "Luna misses the obvious (and more importantly, the clearly explained) consistently.",
+     "url": "https://news.ycombinator.com/item?id=50011829",
+     "channel": "hn",
+     "date": "2026-10-08"
+    },
+    {
+     "text": "Planning and intent understanding don't seem to have improved; it still misreads complex requests.",
+     "url": "https://www.v2ex.com/t/1244112",
+     "channel": "v2ex",
+     "date": "2026-09-23",
+     "date_approx": true,
+     "note": "reply #6",
+     "text_orig": "规划能力和意图理解似乎没有提升，复杂需求还是会错意理解。",
+     "translated": true
+    },
+    {
+     "text": "Way too slow! Same question took luna 4 minutes",
+     "url": "https://www.v2ex.com/t/1244112",
+     "channel": "v2ex",
+     "date": "2026-09-24",
+     "date_approx": true,
+     "note": "reply #37",
+     "text_orig": "太慢了！相同问题 luna 4 分钟",
+     "translated": true
+    },
+    {
+     "text": "On value for money, gpt6 luna has put the game away",
+     "url": "https://linux.do/t/topic/2939620",
+     "channel": "linuxdo",
+     "date": "2026-09-22",
+     "date_approx": true,
+     "note": "topic title (OP stance)",
+     "text_orig": "性价比方面，gpt6 luna杀死了比赛",
+     "translated": true
+    }
+   ],
+   "summary": "Leaning positive on HN (cheap and useful), leaning negative in Chinese communities (slow, weaker reasoning).",
+   "sample_breakdown": "HN 15 (2026-10-06..26); V2EX 20 (t/1244112 14, t/1244380 6); linux.do 5 titles. EN vs ZH diverge.",
+   "date": "2026-10-28",
+   "method": "Claude read HN Algolia comments / V2EX posts + replies / linux.do titles (site search) 2026-10-28; mixed counted as 0.5 positive + 0.5 negative"
+  },
+  {
+   "model": "gpt-6-sol",
+   "pos": 0.21,
+   "neg": 0.77,
+   "neu": 0.02,
+   "n_samples": 39,
+   "channels": [
+    "hn",
+    "v2ex",
+    "linuxdo"
+   ],
+   "aspects": {
+    "coding": -0.3,
+    "agent": -0.2,
+    "writing": 0.2,
+    "reasoning": -0.6,
+    "speed": -0.6,
+    "cost": 0.1,
+    "stability": -0.5,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "cheap",
+    "OK at code review",
+    "good in foreign languages"
+   ],
+   "complaints": [
+    "worse than 5.6 Sol",
+    "slow, weaker reasoning",
+    "perceived quality drop (unconfirmed)",
+    "over-engineering"
+   ],
+   "quotes": [
+    {
+     "text": "In my testing yesterday GPT 6 Sol still beat Opus 5.5 on code review (of GPT written code in this case)",
+     "url": "https://news.ycombinator.com/item?id=49902024",
+     "channel": "hn",
+     "date": "2026-09-29"
+    },
+    {
+     "text": "GPT-6 Sol tends to rabbit hole and over engineer things.",
+     "url": "https://news.ycombinator.com/item?id=49900408",
+     "channel": "hn",
+     "date": "2026-09-29"
+    },
+    {
+     "text": "Disappointed with the GPT-6 SOL model: falls far short of expectations",
+     "url": "https://linux.do/t/topic/2940154",
+     "channel": "linuxdo",
+     "date": "2026-09-22",
+     "date_approx": true,
+     "note": "topic title (OP stance)",
+     "text_orig": "对于 GPT-6 SOL 模型的失望：远不达预期",
+     "translated": true
+    }
+   ],
+   "summary": "Mostly disappointed: seen as weaker and slower than 5.6 Sol; most users have moved to 6.1 Sol.",
+   "sample_breakdown": "HN 17 (launch week 2026-09-29 + later; several implied usage); V2EX 16 (t/1244380, t/1244176, t/1244112); linux.do 6 titles. Superseded by GPT-6.1 Sol on 2026-09-29.",
+   "date": "2026-10-28",
+   "method": "Claude read HN Algolia comments / V2EX posts + replies / linux.do titles (site search) 2026-10-28; mixed counted as 0.5 positive + 0.5 negative",
+   "quotes_withheld": 1
+  },
+  {
+   "model": "seed-2.1-turbo",
+   "pos": 1.0,
+   "neg": 0.0,
+   "neu": 0.0,
+   "n_samples": 2,
+   "channels": [
+    "hn"
+   ],
+   "aspects": {
+    "coding": null,
+    "agent": null,
+    "writing": null,
+    "reasoning": 0.4,
+    "speed": null,
+    "cost": 0.3,
+    "stability": null,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "accurate image recognition",
+    "great value"
+   ],
+   "complaints": [],
+   "quotes": [
+    {
+     "text": "I have a benchmark of 12 such images and seed gets 11/12 and deepseek only gets 6/12.",
+     "url": "https://news.ycombinator.com/item?id=49388543",
+     "channel": "hn",
+     "date": "2026-08-21"
+    },
+    {
+     "text": "my ranking of models I've benchmarked is gemini-3.7-flash > seed-2.1-turbo > gpt-5.6-luna",
+     "url": "https://news.ycombinator.com/item?id=49402408",
+     "channel": "hn",
+     "date": "2026-08-22"
+    }
+   ],
+   "summary": "Very little evidence (2): positive reviews from the same user's image-verification tests.",
+   "sample_breakdown": "HN 2 comments (likely same user); no Chinese-community opinions found. Thin.",
+   "date": "2026-10-28",
+   "method": "Claude read HN Algolia comments / V2EX posts + replies / linux.do titles (site search) 2026-10-28; mixed counted as 0.5 positive + 0.5 negative"
+  },
+  {
+   "model": "seed-2.1-pro",
+   "pos": 0.5,
+   "neg": 0.5,
+   "neu": 0.0,
+   "n_samples": 2,
+   "channels": [
+    "v2ex",
+    "linuxdo"
+   ],
+   "aspects": {
+    "coding": -0.2,
+    "agent": null,
+    "writing": null,
+    "reasoning": null,
+    "speed": null,
+    "cost": null,
+    "stability": null,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "leads in tests (title)"
+   ],
+   "complaints": [
+    "mediocre at code edits",
+    "fast quota drain"
+   ],
+   "quotes": [
+    {
+     "text": "1. Pro's code-editing isn't outstanding and its bug fixes aren't thorough enough; feels pretty close to ds's v4 pro",
+     "url": "https://www.v2ex.com/t/1222504",
+     "channel": "v2ex",
+     "date": "2026-06-24",
+     "date_approx": true,
+     "note": "reply #1",
+     "text_orig": "1.Pro 改代码的能力不突出，bug 修复不够全面和 ds 的 v4 pro 体感比较接近",
+     "translated": true
+    },
+    {
+     "text": "Tested: the Doubao model is miles ahead",
+     "url": "https://linux.do/t/topic/2974447",
+     "channel": "linuxdo",
+     "date": "2026-10-01",
+     "date_approx": true,
+     "note": "topic title (OP stance)",
+     "text_orig": "实测豆包模型遥遥领先",
+     "translated": true
+    }
+   ],
+   "summary": "Very little evidence (2): one positive, one negative; coding ability rated mediocre.",
+   "sample_breakdown": "V2EX 1 (t/1222504 #1, model label garbled \"1.Pro\"); linux.do 1 title (model version not named). Thin.",
+   "date": "2026-10-28",
+   "method": "Claude read HN Algolia comments / V2EX posts + replies / linux.do titles (site search) 2026-10-28; mixed counted as 0.5 positive + 0.5 negative"
+  },
+  {
+   "model": "trinity-large",
+   "pos": 0.0,
+   "neg": 0.75,
+   "neu": 0.25,
+   "n_samples": 4,
+   "channels": [
+    "hn"
+   ],
+   "aspects": {
+    "coding": null,
+    "agent": -0.5,
+    "writing": null,
+    "reasoning": null,
+    "speed": null,
+    "cost": null,
+    "stability": -0.4,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [],
+   "complaints": [
+    "doesn't last a day",
+    "frequent agent task failures"
+   ],
+   "quotes": [
+    {
+     "text": "I couldn't make it through a single day.",
+     "url": "https://news.ycombinator.com/item?id=48928644",
+     "channel": "hn",
+     "date": "2026-07-15"
+    },
+    {
+     "text": "This non-Preview release scored 16/25.",
+     "url": "https://news.ycombinator.com/item?id=47609634",
+     "channel": "hn",
+     "date": "2026-04-02"
+    }
+   ],
+   "summary": "Limited evidence (4): feedback on daily/agentic use leans negative.",
+   "sample_breakdown": "HN 4 first-hand of 20 hits (2026-04..07).",
+   "date": "2026-10-28",
+   "method": "Claude read HN Algolia comments / V2EX posts + replies / linux.do titles (site search) 2026-10-28; mixed counted as 0.5 positive + 0.5 negative"
+  },
+  {
+   "model": "inkling-small",
+   "pos": 0.0,
+   "neg": 1.0,
+   "neu": 0.0,
+   "n_samples": 1,
+   "channels": [
+    "hn"
+   ],
+   "aspects": {
+    "coding": null,
+    "agent": null,
+    "writing": null,
+    "reasoning": null,
+    "speed": null,
+    "cost": null,
+    "stability": -0.6,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [],
+   "complaints": [
+    "hung and got killed"
+   ],
+   "quotes": [
+    {
+     "text": "Got stuck immediately and was terminated.",
+     "url": "https://news.ycombinator.com/item?id=50220395",
+     "channel": "hn",
+     "date": "2026-10-24"
+    }
+   ],
+   "summary": "Very little evidence (1): hung immediately in a reverse-engineering test.",
+   "sample_breakdown": "HN 1 (one user crackme test via Claude Code harness).",
+   "date": "2026-10-28",
+   "method": "Claude read HN Algolia comments / V2EX posts + replies / linux.do titles (site search) 2026-10-28; mixed counted as 0.5 positive + 0.5 negative"
+  },
+  {
+   "model": "mistral-large-4",
+   "pos": 0.43,
+   "neg": 0.57,
+   "neu": 0.0,
+   "n_samples": 20,
+   "channels": [
+    "hn"
+   ],
+   "aspects": {
+    "coding": -0.2,
+    "agent": -0.5,
+    "writing": null,
+    "reasoning": 0.0,
+    "speed": -0.5,
+    "cost": -0.3,
+    "stability": -0.3,
+    "instruction": -0.4,
+    "hallucination": -0.3
+   },
+   "praise": [
+    "big leap over Large 3",
+    "adequate data analysis",
+    "a few find it stunning"
+   ],
+   "complaints": [
+    "error-prone agents/subagents",
+    "slow thinking",
+    "trails top Chinese/US open models",
+    "ignores SKILL.md, hallucinates"
+   ],
+   "quotes": [
+    {
+     "text": "the leap from Mistral Large 3 (their previous best model) to Mistral Large 4 was similar to the Haiku 4.5 to 5.5 jump.",
+     "url": "https://news.ycombinator.com/item?id=50001721",
+     "channel": "hn",
+     "date": "2026-10-08"
+    },
+    {
+     "text": "it honestly felt like going back in time 6 months, suddenly my agents were making all kinds of mistakes",
+     "url": "https://news.ycombinator.com/item?id=50300846",
+     "channel": "hn",
+     "date": "2026-10-30"
+    },
+    {
+     "text": "it's...fine, but certainly not up to the best Chinese or US open weight models.",
+     "url": "https://news.ycombinator.com/item?id=50291329",
+     "channel": "hn",
+     "date": "2026-10-29"
+    },
+    {
+     "text": "I am absolutely amazed how good it is.",
+     "url": "https://news.ycombinator.com/item?id=50293001",
+     "channel": "hn",
+     "date": "2026-10-29"
+    },
+    {
+     "text": "it's still too expensive and very slow when thinking",
+     "url": "https://news.ycombinator.com/item?id=50290299",
+     "channel": "hn",
+     "date": "2026-10-29"
+    },
+    {
+     "text": "it ignored my SKILL.md files and it had a few hallucinations.",
+     "url": "https://news.ycombinator.com/item?id=50292910",
+     "channel": "hn",
+     "date": "2026-10-29"
+    }
+   ],
+   "summary": "20 data points (HN only): a big step up from Large 3, but most find it slow, error-prone as an agent and behind the top Chinese/US open models; reviews did not improve after the 10-29 open-weights release.",
+   "sample_breakdown": "HN only. Query 'Mistral Large 4' 9 first-hand (10-06..10-24; same 9 as last run), 'Le Chonk' 1 (50151355, neg), weights-release thread 50289418 (439 comments, both Algolia pages read) 10 first-hand (10-29..30). Excluded: 50300887 (model on chat.mistral.ai/work unclear), 50300958 (same author as 50172990, merged), 50290261 (provider praise, not model), UI/naming jokes. linux.do/V2EX/X: only news/promo; Reddit blocked. 2 of 20 judge the PREVIEW checkpoint (50289701, 49986076).",
+   "date": "2026-11-02",
+   "method": "Claude read HN Algolia comments (paged by date/thread) / V2EX posts + replies / linux.do titles (site search) 2026-11-02; mixed counted as 0.5 positive + 0.5 negative; Reddit blocked by proxy (400), Zhihu disallows crawling via robots"
+  },
+  {
+   "model": "mistral-medium-3.5",
+   "pos": 0.5,
+   "neg": 0.42,
+   "neu": 0.08,
+   "n_samples": 12,
+   "channels": [
+    "hn"
+   ],
+   "aspects": {
+    "coding": 0.3,
+    "agent": -0.2,
+    "writing": 0.6,
+    "reasoning": -0.4,
+    "speed": null,
+    "cost": -0.2,
+    "stability": null,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "good writing/rewriting",
+    "fine for everyday coding",
+    "improved over devstral-2"
+   ],
+   "complaints": [
+    "reasoning worse than Gemma 4 31B",
+    "tool-call errors",
+    "higher cost after migrating"
+   ],
+   "quotes": [
+    {
+     "text": "Mistral medium is considerably better at writing than Opus.",
+     "url": "https://news.ycombinator.com/item?id=48740574",
+     "channel": "hn",
+     "date": "2026-06-30"
+    },
+    {
+     "text": "Mistral's medium is absolutely good enough to help with a ton of coding tasks.",
+     "url": "https://news.ycombinator.com/item?id=49949244",
+     "channel": "hn",
+     "date": "2026-10-04"
+    },
+    {
+     "text": "In our business benchmarks their Mistral Medium 3.5 with reasoning is worse than Gemma 4 31B and Glimmer 30B.",
+     "url": "https://news.ycombinator.com/item?id=49606808",
+     "channel": "hn",
+     "date": "2026-09-08"
+    },
+    {
+     "text": "It still writes incorrect tool calls.",
+     "url": "https://news.ycombinator.com/item?id=48621207",
+     "channel": "hn",
+     "date": "2026-06-21"
+    },
+    {
+     "text": "The new Mistral Medium 3.5 is also a big improvement over devstral-2",
+     "url": "https://news.ycombinator.com/item?id=48742353",
+     "channel": "hn",
+     "date": "2026-07-01"
+    }
+   ],
+   "summary": "Limited evidence (12, HN only): well-regarded for writing and everyday coding, but reasoning is weaker than Gemma 4 31B and tool calls occasionally fail.",
+   "sample_breakdown": "HN 12 first-hand (queries 'Mistral Medium 3.5' 22 hits + 'Mistral Medium' since 2026-04-28; unversioned 'Mistral medium' after 04-28 assumed 3.5; 49381540/49137708 look like the same author -> counted once; 49549452 own knowledge test counted neg). No linux.do/V2EX opinions found.",
+   "date": "2026-11-02",
+   "method": "Claude read HN Algolia comments (paged by date/thread) / V2EX posts + replies / linux.do titles (site search) 2026-11-02; mixed counted as 0.5 positive + 0.5 negative; Reddit blocked by proxy (400), Zhihu disallows crawling via robots"
+  },
+  {
+   "model": "hy4-preview",
+   "pos": 0.56,
+   "neg": 0.33,
+   "neu": 0.11,
+   "n_samples": 9,
+   "channels": [
+    "hn",
+    "linuxdo",
+    "v2ex"
+   ],
+   "aspects": {
+    "coding": 0.3,
+    "agent": null,
+    "writing": null,
+    "reasoning": -0.1,
+    "speed": 0.1,
+    "cost": 0.5,
+    "stability": -0.3,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "free and useful",
+    "decent quality",
+    "passes frontend tests"
+   ],
+   "complaints": [
+    "launch rate limits (429)/queues",
+    "stalls on long tasks",
+    "weaker than GLM 5.3 Flash"
+   ],
+   "quotes": [
+    {
+     "text": "Hy4 is a big improvement over h3  but still below Deepseek pro and Significantly below  GLM 5.3 Flash .",
+     "url": "https://news.ycombinator.com/item?id=49502506",
+     "channel": "hn",
+     "date": "2026-08-30"
+    },
+    {
+     "text": "hy4 is really great to use; if only there were a reseller channel or a cheap community relay",
+     "url": "https://linux.do/t/topic/2899401",
+     "channel": "linuxdo",
+     "date": "2026-09-12",
+     "date_approx": true,
+     "note": "topic title (OP stance)",
+     "text_orig": "hy4真的很好用啊，如果能有渠道或公益低价就好了",
+     "translated": true
+    },
+    {
+     "text": "hy4 preview released, good results, still free (incl. pelican and other tests)",
+     "url": "https://linux.do/t/topic/2824230",
+     "channel": "linuxdo",
+     "date": "2026-08-28",
+     "date_approx": true,
+     "note": "topic title (OP stance)",
+     "text_orig": "hy4预览版发布，效果不错，继续免费（含鹈鹕等测试）",
+     "translated": true
+    },
+    {
+     "text": "Asked it to swap in a different rich-text editor and it ran for 30 minutes",
+     "url": "https://www.v2ex.com/t/1237869",
+     "channel": "v2ex",
+     "date": "2026-08-28",
+     "note": "OP",
+     "text_orig": "让它换个富文本框跑了 30 分钟",
+     "translated": true
+    },
+    {
+     "text": "There's a usage cap, it hits 429 after running for a bit...",
+     "url": "https://www.v2ex.com/t/1237869",
+     "channel": "v2ex",
+     "date": "2026-08-29",
+     "note": "reply #4",
+     "text_orig": "有限额，跑一会就 429 了...",
+     "translated": true
+    },
+    {
+     "text": "but the quality is decent",
+     "url": "https://www.v2ex.com/t/1237869",
+     "channel": "v2ex",
+     "date": "2026-08-28",
+     "note": "reply #2",
+     "text_orig": "但是质量还行",
+     "translated": true
+    }
+   ],
+   "summary": "Limited evidence (9): Chinese communities call it free, useful and of decent quality; launch rate limits and stalls on long tasks drew gripes, and HN tests rate it weaker than GLM Flash; a stark contrast with its #5 OpenRouter usage (9.3T/week).",
+   "sample_breakdown": "old 6 (HN 2; linux.do 3 titles; V2EX t/1246349) + V2EX t/1237869 3 (OP neg, #2 mixed, #4 neg; #6 access-limit speculation not counted). HN 'Hy4' 21 hits: only 1 usage-only mention (49979107, neutral, likely already counted). linux.do test/showcase titles without stance not counted.",
+   "date": "2026-11-02",
+   "method": "Claude read HN Algolia comments (paged by date/thread) / V2EX posts + replies / linux.do titles (site search) 2026-11-02; mixed counted as 0.5 positive + 0.5 negative; Reddit blocked by proxy (400), Zhihu disallows crawling via robots"
+  },
+  {
+   "model": "gpt-6.1-terra",
+   "pos": 0.53,
+   "neg": 0.47,
+   "neu": 0.0,
+   "n_samples": 18,
+   "channels": [
+    "hn",
+    "linuxdo",
+    "v2ex"
+   ],
+   "aspects": {
+    "coding": -0.3,
+    "agent": 0.6,
+    "writing": -0.3,
+    "reasoning": -0.4,
+    "speed": 0.0,
+    "cost": 0.3,
+    "stability": -0.2,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "strong computer use/E2E testing",
+    "great API value",
+    "fast responses"
+   ],
+   "complaints": [
+    "coding/frontend weaker than 6.1 Sol",
+    "perceived quality drop (unconfirmed)",
+    "TPS plunges at peak hours",
+    "poor writing/punctuation fixes"
+   ],
+   "quotes": [
+    {
+     "text": "Using 6.1 Terra for E2E workflow testing feels like cheating.",
+     "url": "https://news.ycombinator.com/item?id=50323257",
+     "channel": "hn",
+     "date": "2026-11-01"
+    },
+    {
+     "text": "GPT-6.1 Terra is an AWESOME release for anyone using the API in agentic production applications where cost matters.",
+     "url": "https://news.ycombinator.com/item?id=50249967",
+     "channel": "hn",
+     "date": "2026-10-26"
+    },
+    {
+     "text": "gpt-6.1-terra scored substantially worse on fixing punctuation in our tests than gpt-6.1-sol.",
+     "url": "https://news.ycombinator.com/item?id=50311609",
+     "channel": "hn",
+     "date": "2026-10-30"
+    },
+    {
+     "text": "Simply perfect, it operates the computer and Feishu blazingly fast.",
+     "url": "https://www.v2ex.com/t/1252437",
+     "channel": "v2ex",
+     "date": "2026-10-28",
+     "note": "OP",
+     "text_orig": "简直完美，操作电脑、飞书快的飞起。",
+     "translated": true
+    },
+    {
+     "text": "You have to use Astra or Sol",
+     "url": "https://www.v2ex.com/t/1252437",
+     "channel": "v2ex",
+     "date": "2026-10-28",
+     "note": "reply #7 (coding)",
+     "text_orig": "必须要用 Astra 或 Sol",
+     "translated": true
+    }
+   ],
+   "summary": "Roughly split (18): computer use/E2E testing and API value are praised; coding, frontend and writing are weaker than 6.1 Sol, plus reports of perceived quality drops and peak-hour throttling.",
+   "sample_breakdown": "HN 7 (query 'Terra' since 2026-10-25; 50253261/50248646 about the Terra line in general and 5.6-Terra mentions excluded); linux.do 5 stance titles (3079111 +, 3079197 mixed, 3080383 - speed, 3088421 - , 3078957 - frontend; question/launch/test titles not counted); V2EX t/1252437 6 (OP +, #6 +, #18 +, #7 -, #9 -, #13 mixed; #19 sarcasm not counted).",
+   "date": "2026-11-02",
+   "method": "Claude read HN Algolia comments (paged by date/thread) / V2EX posts + replies / linux.do titles (site search) 2026-11-02; mixed counted as 0.5 positive + 0.5 negative; Reddit blocked by proxy (400), Zhihu disallows crawling via robots",
+   "quotes_withheld": 1
+  },
+  {
+   "model": "inkling",
+   "pos": 0.71,
+   "neg": 0.29,
+   "neu": 0.0,
+   "n_samples": 14,
+   "channels": [
+    "hn",
+    "blog"
+   ],
+   "aspects": {
+    "coding": -0.3,
+    "agent": -0.4,
+    "writing": 0.1,
+    "reasoning": 0.2,
+    "speed": 0.6,
+    "cost": -0.1,
+    "stability": -0.4,
+    "instruction": null,
+    "hallucination": 0.4
+   },
+   "praise": [
+    "fast",
+    "accurate knowledge recall",
+    "good fine-tuning base",
+    "Apache 2.0 open weights"
+   ],
+   "complaints": [
+    "tool calls/agents loop endlessly",
+    "mediocre coding",
+    "costly at scale"
+   ],
+   "quotes": [
+    {
+     "text": "Inkling is the most exciting model launch we've seen from an American lab in a while",
+     "url": "https://news.ycombinator.com/item?id=48938465",
+     "channel": "hn",
+     "date": "2026-07-16"
+    },
+    {
+     "text": "it is SUPER FAST and does a good job at being a terminal buddy but I would probably offload",
+     "url": "https://news.ycombinator.com/item?id=49006006",
+     "channel": "hn",
+     "date": "2026-07-22"
+    },
+    {
+     "text": "Inkling model succeed in certain queries that neither Fable 5, nor GPT-5.6 Sol on any reasoning level managed",
+     "url": "https://news.ycombinator.com/item?id=48951229",
+     "channel": "hn",
+     "date": "2026-07-17"
+    },
+    {
+     "text": "Inkling last I used it was pretty terrible.",
+     "url": "https://news.ycombinator.com/item?id=50101418",
+     "channel": "hn",
+     "date": "2026-10-15"
+    },
+    {
+     "text": "It already feels shapeable and it does not feel empty.",
+     "url": "https://semaphore.substack.com/p/what-thinking-machines-inkling-is",
+     "channel": "blog",
+     "date": "2026-07-20",
+     "note": "hands-on review by Karina Nguyen"
+    }
+   ],
+   "summary": "Leaning positive at launch (14): fast, accurate knowledge, good for fine-tuning; recent feedback reports agent/tool-call infinite loops and calls it 'terrible'.",
+   "sample_breakdown": "HN 13 first-hand (launch window 07-14..07-31: 9 [5+,1-,3 mixed]; 08..10: 49218288 +, 49303520 +, 50101418 -, 50220395 mixed); blog 1 (semaphore substack hands-on). datallmlab review not counted (no hands-on). Borderline unverified one-liners (49249298, 50292071) not counted. No linux.do/V2EX opinions.",
+   "date": "2026-11-02",
+   "method": "Claude read HN Algolia comments (paged by date/thread) / V2EX posts + replies / linux.do titles (site search) 2026-11-02; mixed counted as 0.5 positive + 0.5 negative; Reddit blocked by proxy (400), Zhihu disallows crawling via robots"
+  },
+  {
+   "model": "glm-5.3-flash",
+   "pos": 0.45,
+   "neg": 0.41,
+   "neu": 0.14,
+   "n_samples": 29,
+   "channels": [
+    "hn",
+    "v2ex",
+    "linuxdo"
+   ],
+   "aspects": {
+    "coding": 0.1,
+    "agent": 0.2,
+    "writing": null,
+    "reasoning": -0.1,
+    "speed": -0.3,
+    "cost": 0.6,
+    "stability": -0.3,
+    "instruction": -0.1,
+    "hallucination": null
+   },
+   "praise": [
+    "cheap",
+    "best on local 2x Spark",
+    "'as good as Sonnet'",
+    "usable for PR review"
+   ],
+   "complaints": [
+    "slow",
+    "error-prone, needs rework",
+    "overthinking",
+    "unavailable at peak hours"
+   ],
+   "quotes": [
+    {
+     "text": "GLM 5.3 Flash is incredibly cheap and imho as good as or better than Sonnet.",
+     "url": "https://news.ycombinator.com/item?id=50320277",
+     "channel": "hn",
+     "date": "2026-10-31"
+    },
+    {
+     "text": "Best model on 2xSpark currently is GLM 5.3 flash",
+     "url": "https://news.ycombinator.com/item?id=50320747",
+     "channel": "hn",
+     "date": "2026-10-31"
+    },
+    {
+     "text": "I use GLM 5.3 Flash more than any other model and it has the same issues as Mimo.",
+     "url": "https://news.ycombinator.com/item?id=50270673",
+     "channel": "hn",
+     "date": "2026-10-28"
+    },
+    {
+     "text": "I briefly tried GLM 5.3 Flash and the first thing I noticed was how slow it was followed quickly by its single-mindedness.",
+     "url": "https://news.ycombinator.com/item?id=50132519",
+     "channel": "hn",
+     "date": "2026-10-17"
+    },
+    {
+     "text": "How does glm 5.3 flash at 50t/s have the nerve to call itself flash",
+     "url": "https://www.v2ex.com/t/1237519",
+     "channel": "v2ex",
+     "date": "2026-08-28",
+     "date_approx": true,
+     "note": "reply #24",
+     "text_orig": "glm 5.3 flash 50t/s 是怎么好意思叫 flash 的",
+     "translated": true
+    },
+    {
+     "text": "GLM 5.3 Flash is way overhyped",
+     "url": "https://linux.do/t/topic/2869548",
+     "channel": "linuxdo",
+     "date": "2026-09-05",
+     "date_approx": true,
+     "note": "topic title (OP stance)",
+     "text_orig": "GLM 5.3 Flash 吹得过头了",
+     "translated": true
+    }
+   ],
+   "summary": "English communities have recently turned positive (29): cheap, easy to run locally, 'as good as Sonnet'; older Chinese reviews still lean negative (slow, doesn't live up to its name).",
+   "sample_breakdown": "old 20 (to 10-28) + HN 9 new 2026-10-28..11-01 (explicit 'GLM 5.3 Flash'/'GLM flash': 7+, 1 mixed, 1 neutral). Chinese channels not re-read. OpenRouter #2 (15.7T tokens/wk).",
+   "date": "2026-11-02",
+   "method": "Claude read HN Algolia comments (paged by date/thread) / V2EX posts + replies / linux.do titles (site search) 2026-11-02; mixed counted as 0.5 positive + 0.5 negative; Reddit blocked by proxy (400), Zhihu disallows crawling via robots"
+  },
+  {
+   "model": "nemotron-3.5-lightning",
+   "pos": 0.58,
+   "neg": 0.42,
+   "neu": 0.0,
+   "n_samples": 6,
+   "channels": [
+    "hn"
+   ],
+   "aspects": {
+    "coding": -0.5,
+    "agent": null,
+    "writing": null,
+    "reasoning": -0.4,
+    "speed": 0.7,
+    "cost": null,
+    "stability": null,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "blazing fast locally",
+    "generalizes well beyond benchmarks"
+   ],
+   "complaints": [
+    "weaker reasoning",
+    "overthinking",
+    "coding goes off track"
+   ],
+   "quotes": [
+    {
+     "text": "Runs fast on my Mac - ~100 tokens/second - but it's a bit of an over-thinker.",
+     "url": "https://news.ycombinator.com/item?id=49261268",
+     "channel": "hn",
+     "date": "2026-08-11"
+    },
+    {
+     "text": "the Mixture-of-Experts (MoE) models (Qwen 3.6-35B, and Nemotron 3.5 Lightning) are, well, terrible at this.",
+     "url": "https://news.ycombinator.com/item?id=49266534",
+     "channel": "hn",
+     "date": "2026-08-12"
+    },
+    {
+     "text": "but the new Nemotron model is good.",
+     "url": "https://news.ycombinator.com/item?id=50036715",
+     "channel": "hn",
+     "date": "2026-10-10"
+    }
+   ],
+   "summary": "Limited evidence (6, HN only): blazing fast locally, but weaker at reasoning, prone to overthinking and weak at coding tasks.",
+   "sample_breakdown": "HN 'Nemotron 3.5' 21 hits: 6 first-hand on Lightning (incl. 49258797 unversioned in Lightning thread, 50036715 'Nemotron-3.5-lightening'). linux.do/V2EX: only a question title. ASR/Transcribe comments excluded.",
+   "date": "2026-11-02",
+   "method": "Claude read HN Algolia comments (paged by date/thread) / V2EX posts + replies / linux.do titles (site search) 2026-11-02; mixed counted as 0.5 positive + 0.5 negative; Reddit blocked by proxy (400), Zhihu disallows crawling via robots",
+   "quotes_withheld": 1
+  },
+  {
+   "model": "muse-wonder-full",
+   "pos": 0.5,
+   "neg": 0.5,
+   "neu": 0.0,
+   "n_samples": 2,
+   "channels": [
+    "hn"
+   ],
+   "aspects": {
+    "coding": null,
+    "agent": null,
+    "writing": null,
+    "reasoning": 0.0,
+    "speed": null,
+    "cost": null,
+    "stability": null,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "capable all-round"
+   ],
+   "complaints": [
+    "seen as a tier behind Opus/Sol"
+   ],
+   "quotes": [
+    {
+     "text": "I strongly like muse-wonder-full and it's broadly competent",
+     "url": "https://news.ycombinator.com/item?id=50214813",
+     "channel": "hn",
+     "date": "2026-10-23"
+    },
+    {
+     "text": "my anecdotal experience is that argon and muse wonder full are both a full tier below opus/sol.",
+     "url": "https://news.ycombinator.com/item?id=50278600",
+     "channel": "hn",
+     "date": "2026-10-28"
+    }
+   ],
+   "summary": "Very little evidence (2): one positive, one negative; only available with a Muse Code subscription, so the sample is hard to grow.",
+   "sample_breakdown": "HN 2 first-hand of 40 'Muse Wonder' hits (most are about base Muse Wonder); unverified one-liners 50109506(+)/50108104(-) not counted. No Chinese-community opinions.",
+   "date": "2026-11-02",
+   "method": "Claude read HN Algolia comments (paged by date/thread) / V2EX posts + replies / linux.do titles (site search) 2026-11-02; mixed counted as 0.5 positive + 0.5 negative; Reddit blocked by proxy (400), Zhihu disallows crawling via robots"
+  },
+  {
+   "model": "step-5-preview",
+   "pos": 0.3,
+   "neg": 0.7,
+   "neu": 0.0,
+   "n_samples": 5,
+   "channels": [
+    "hn",
+    "linuxdo",
+    "v2ex"
+   ],
+   "aspects": {
+    "coding": -0.6,
+    "agent": null,
+    "writing": null,
+    "reasoning": -0.3,
+    "speed": -0.4,
+    "cost": 0.0,
+    "stability": null,
+    "instruction": null,
+    "hallucination": null
+   },
+   "praise": [
+    "reasonable API price",
+    "gets vision questions right"
+   ],
+   "complaints": [
+    "poor coding experience",
+    "'just about usable'",
+    "slow cold start",
+    "Step Plan poor value"
+   ],
+   "quotes": [
+    {
+     "text": "weaker than Ling 3.1",
+     "url": "https://news.ycombinator.com/item?id=50065665",
+     "channel": "hn",
+     "date": "2026-10-13"
+    },
+    {
+     "text": "Pretty decent \"API\" rates for ~500M+ tokens on Step Fun 5, a Kimi K3 / GLM 5.3 level model?",
+     "url": "https://news.ycombinator.com/item?id=49773340",
+     "channel": "hn",
+     "date": "2026-09-20"
+    },
+    {
+     "text": "This model is at a slightly braindead level, just about usable",
+     "url": "https://cn.v2ex.com/t/1243327",
+     "channel": "v2ex",
+     "date": "2026-09-20",
+     "note": "reply #13",
+     "text_orig": "这个模型是略微智障水平，凑合能用",
+     "translated": true
+    },
+    {
+     "text": "step-5-preview is usable for text but has a slowish cold start",
+     "url": "https://cn.v2ex.com/t/1243327",
+     "channel": "v2ex",
+     "date": "2026-09-20",
+     "note": "OP test",
+     "text_orig": "step-5-preview 文本可用但冷启动较慢",
+     "translated": true
+    }
+   ],
+   "summary": "Limited evidence (5): first-hand feedback leans negative (weak coding, 'just about usable', slow cold start); a stark contrast with its #7 OpenRouter usage (6.3T/week, +122%).",
+   "sample_breakdown": "HN 2 (50065665 neg; 49773340 mixed: API price ok / plan bad; 'StepFun' query found no more); linux.do 1 stance title; V2EX t/1243327 OP (mixed) + #13 (mixed). ~8 Zhihu launch-day 'hands-on test' articles (uniformly glowing, likely launch PR, not fetchable) deliberately NOT counted.",
+   "date": "2026-11-02",
+   "method": "Claude read HN Algolia comments (paged by date/thread) / V2EX posts + replies / linux.do titles (site search) 2026-11-02; mixed counted as 0.5 positive + 0.5 negative; Reddit blocked by proxy (400), Zhihu disallows crawling via robots",
+   "quotes_withheld": 1
+  },
+  {
+   "model": "longcat-2.5",
+   "pos": 0.5,
+   "neg": 0.5,
+   "neu": 0.0,
+   "n_samples": 5,
+   "channels": [
+    "hn"
+   ],
+   "aspects": {
+    "coding": 0.3,
+    "agent": null,
+    "writing": null,
+    "reasoning": -0.5,
+    "speed": 0.5,
+    "cost": null,
+    "stability": -0.5,
+    "instruction": -0.5,
+    "hallucination": null
+   },
+   "praise": [
+    "fast",
+    "good on SVG drawing tests",
+    "preview fine for simple coding"
+   ],
+   "complaints": [
+    "weak on basic prompts; benchmarks seen as unrepresentative",
+    "answers English prompts in Chinese",
+    "breaks down in multi-turn chats"
+   ],
+   "quotes": [
+    {
+     "text": "In my first test, it filled 200k of its one-million-token window in 5 minutes.",
+     "url": "https://news.ycombinator.com/item?id=50340986",
+     "channel": "hn",
+     "date": "2026-11-02"
+    },
+    {
+     "text": "The preview version was free on OpenCode for a couple of weeks, so it certainly works.",
+     "url": "https://news.ycombinator.com/item?id=50340493",
+     "channel": "hn",
+     "date": "2026-11-02",
+     "note": "about LongCat-2.5-Preview, simple coding tasks"
+    },
+    {
+     "text": "When told “I don’t speak Chinese” it started to answer the first turn again, then crashed.",
+     "url": "https://news.ycombinator.com/item?id=50350148",
+     "channel": "hn",
+     "date": "2026-11-03"
+    }
+   ],
+   "summary": "Very limited evidence (5, HN only): speed and SVG drawing tests are praised; others find it weak on basic questions and doubt that its benchmark results carry over; in one test it answered an English prompt in Chinese and then stopped working properly.",
+   "sample_breakdown": "HN launch thread 50337716 (85 pts, 26 comments, 11-02..11-03) read in full: 5 first-hand = InsideOutSanta + (2 comments merged: speed, SVG test), swiftcoder + (2.5-Preview on OpenCode), embedding-shape -, springtimesun -, vfosnar mixed (wrong-language reply after 25 searches, blames the chat harness); 21 comments on benchmark comparisons/weights availability not counted. No first-hand posts found on linux.do/V2EX/Zhihu; Reddit blocked.",
+   "date": "2026-11-04",
+   "method": "Claude read HN Algolia comments 2026-11-04; mixed counted as 0.5 positive + 0.5 negative; Reddit blocked by proxy (400)",
+   "quotes_withheld": 1
+  },
+  {
+   "model": "kimi-k3.1-pro",
+   "pos": 0.48,
+   "neg": 0.3,
+   "neu": 0.22,
+   "n_samples": 65,
+   "channels": [
+    "hn",
+    "linuxdo",
+    "blog"
+   ],
+   "aspects": {
+    "coding": 0.25,
+    "agent": 0.0,
+    "writing": 0.1,
+    "reasoning": 0.4,
+    "speed": -0.4,
+    "cost": 0.1,
+    "stability": -0.5,
+    "instruction": -0.3,
+    "hallucination": 0.1
+   },
+   "praise": [
+    "strong open-weight model in hands-on use",
+    "can replace some Claude Code workflows / daily driver",
+    "feels clearly better than DeepSeek V4.1 Flash day to day",
+    "about half Opus's price"
+   ],
+   "complaints": [
+    "audit (R40 Research) reports it reproduces hidden benchmark test rules",
+    "placeholder ciphertext in some multi-agent runs (15.6% of turns, one test)",
+    "small Code plan quota / pricey API",
+    "slow output",
+    "cybersecurity abilities cut"
+   ],
+   "quotes": [
+    {
+     "text": "With Kimi K3.1 Pro, today WAS the day they actually caught up.",
+     "url": "https://news.ycombinator.com/item?id=50219481",
+     "channel": "hn",
+     "date": "2026-10-24"
+    },
+    {
+     "text": "The closest is the (very expensive) Kimi K3.1 Pro",
+     "url": "https://news.ycombinator.com/item?id=50321725",
+     "channel": "hn",
+     "date": "2026-11-01"
+    },
+    {
+     "text": "I've been really impressed with Kimi's coding performance. It's replaced a lot of my Claude Code workflows",
+     "url": "https://news.ycombinator.com/item?id=50369531",
+     "channel": "hn",
+     "date": "2026-11-04"
+    },
+    {
+     "text": "If you use it day-to-day you can definitely feel that K3 (and K3.1) are much stronger than DS4.1-Flash-1017.",
+     "url": "https://news.ycombinator.com/item?id=50368806",
+     "channel": "hn",
+     "date": "2026-11-04"
+    },
+    {
+     "text": "zero reason to use it over an Anthropic subscription",
+     "url": "https://news.ycombinator.com/item?id=50371971",
+     "channel": "hn",
+     "date": "2026-11-04",
+     "note": "on Kimi subscription limits and API cost"
+    },
+    {
+     "text": "I went from using Anthropic via API daily to using Kimi K3 (now 3.1 pro) daily",
+     "url": "https://news.ycombinator.com/item?id=50426397",
+     "channel": "hn",
+     "date": "2026-11-09"
+    }
+   ],
+   "summary": "First-hand reviews since the open-weights release (11-04) remain mostly positive: users say it can replace parts of Claude Code workflows, feels stronger than DeepSeek V4.1 Flash day to day, and one reports moving daily work to it and returning to Claude only for large refactors. Two third-party reports from early November remain part of the picture: an audit by R40 Research reports that it reproduces hidden benchmark test rules, and a separate test reports placeholder ciphertext in some multi-agent runs. Quota, API price and output speed still draw complaints.",
+   "sample_breakdown": "old 59 (47 to 10-27; 12 from 10-28..11-05: 10 HN comments, the R40 Research audit PDF and one personal blog test) + 6 new HN comments (11-05..11-10): 50426397 + (daily driver, back to Claude about once a month for large refactors), 50424805 + (usable where other models refuse; 50424755 in the same sub-thread merged), 50418081 + (writing reviews; unversioned 'Kimi'), 50431728 neutral (local run on a 128 GB laptop at ~2 tok/s decode), 50430544 - and 50412867 mixed (both not quotable). Not counted: ~30 mentions without own use (size/price/hosting comparisons, benchmark speculation, distillation claims in the MaxxBench thread). No new K3.1 topics found on V2EX via search; linux.do, Reddit and X not readable.",
+   "date": "2026-11-10",
+   "method": "Claude read HN Algolia comments 2026-11-10 ('kimi' comment search 11-05..11-10) on top of the 11-05 sample; mixed counted as 0.5 positive + 0.5 negative; old sample merged at its original ratio; R40 audit title no longer quoted (described in summary instead)",
+   "quotes_withheld": 5
+  },
+  {
+   "model": "claude-fable-5.2",
+   "pos": 0.41,
+   "neg": 0.55,
+   "neu": 0.04,
+   "n_samples": 82,
+   "channels": [
+    "hn",
+    "blog",
+    "v2ex"
+   ],
+   "aspects": {
+    "coding": 0.3,
+    "agent": 0.0,
+    "writing": -0.2,
+    "reasoning": 0.3,
+    "speed": 0.4,
+    "cost": -0.7,
+    "stability": -0.3,
+    "instruction": -0.3,
+    "hallucination": -0.2
+   },
+   "praise": [
+    "judgment on architecture and design",
+    "clearer, better-reasoned answers",
+    "faster than Fable 5.1",
+    "strong at 3D, Blender and SVG work",
+    "finds real bugs in code review"
+   ],
+   "complaints": [
+    "subscription quota used up within hours",
+    "little gain over Opus 5.5 for everyday coding",
+    "subagent fan-out drains usage",
+    "safeguards trigger more often than Opus 5.5 (V2EX reports)",
+    "showcase games rough to play"
+   ],
+   "quotes": [
+    {
+     "text": "We've been early testing Fable 5.2, and have been surprised by its coding ability.",
+     "url": "https://news.ycombinator.com/item?id=50431037",
+     "channel": "hn",
+     "date": "2026-11-09"
+    },
+    {
+     "text": "We tried it with Fable 5.1 as well, which was 3-4x slower than 5.2.",
+     "url": "https://news.ycombinator.com/item?id=50432895",
+     "channel": "hn",
+     "date": "2026-11-09"
+    },
+    {
+     "text": "Claude Code with Fable 5.2 is capable of making entire 12-level fun games - in one shot.",
+     "url": "https://notesbylex.com/fable-5-2-one-shotted-my-nephews-dream-game",
+     "channel": "blog",
+     "date": "2026-11-10"
+    },
+    {
+     "text": "I personally have a hard time telling the difference between Fable 5.2 and Opus 5.5 for ordinary coding tasks.",
+     "url": "https://news.ycombinator.com/item?id=50430766",
+     "channel": "hn",
+     "date": "2026-11-09"
+    },
+    {
+     "text": "Fable got right to the point, had cleaner/better responses and reasoning for its conclusions",
+     "url": "https://news.ycombinator.com/item?id=50435964",
+     "channel": "hn",
+     "date": "2026-11-10",
+     "note": "own side-by-side test against Opus 5.5"
+    },
+    {
+     "text": "it feels like a big step up from 5.1.",
+     "url": "https://news.ycombinator.com/item?id=50441151",
+     "channel": "hn",
+     "date": "2026-11-10",
+     "note": "3D modelling; the comment says '5.2' and '5.1'"
+    },
+    {
+     "text": "Fable 5.2 is really good at using Blender from my testing.",
+     "url": "https://news.ycombinator.com/item?id=50442822",
+     "channel": "hn",
+     "date": "2026-11-10"
+    },
+    {
+     "text": "I don't consider Fable 5.2 an improvement over Opus 5.5 in coding ability, more of a sidegrade",
+     "url": "https://news.ycombinator.com/item?id=50437877",
+     "channel": "hn",
+     "date": "2026-11-10"
+    },
+    {
+     "text": "It used up my 5-hour token budget in half an hour and reported 7 serious bugs",
+     "url": "https://news.ycombinator.com/item?id=50436100",
+     "channel": "hn",
+     "date": "2026-11-10",
+     "note": "code review of a project built with Opus 5.5"
+    },
+    {
+     "text": "I just tried Fable 5.2 on a pro subscription, I can tell you that the weekly quota doesn't last more than a few hours.",
+     "url": "https://news.ycombinator.com/item?id=50448338",
+     "channel": "hn",
+     "date": "2026-11-11"
+    },
+    {
+     "text": "Fable 5.2 refused, but Opus 5.5 gave the complete steps",
+     "url": "https://www.v2ex.com/t/1256035",
+     "channel": "v2ex",
+     "date": "2026-11-11",
+     "note": "reply about a data change in the user's own database",
+     "text_orig": "fable5.2 拒绝，但是 opus5.5 给出完整的操作步骤",
+     "translated": true
+    }
+   ],
+   "summary": "Two days after launch (82 opinions) views are mixed: users praise its judgment on architecture and design questions, clearer reasoning, speed versus Fable 5.1 and its 3D, Blender and SVG work, and some report that it found real bugs in code review. The most common complaints are that Claude subscription quotas run out within hours or less, especially when it fans out to subagents, and that many see little difference from Opus 5.5 on everyday coding. A few V2EX users report that its safeguards trigger more often than those of Opus 5.5. Hands-on reactions to two showcase games built with it were mixed to negative.",
+   "sample_breakdown": "old 27 (read up to 11-10 02:45 UTC) + 55 new (11-10..11-11). (a) Own use, 37: HN launch thread 50429068 (416 new comments, all 11 pages read), Artificial Analysis thread 50431144 (52 new comments read) and a 'Fable 5.2' comment search in other threads (47 hits) = 10 positive (50435964, 50435529, 50435764, 50442801, 50447143, 50441151, 50443799, 50442822, 50436557, 50447039), 10 negative (50448338, 50444918, 50443121, 50441116, 50440458, 50440315, 50437963, 50436301, 50438133, 50436244), 15 mixed (50443634, 50442379, 50441712, 50438393, 50436100, 50437920, 50437677, 50437477, 50436367, 50435823, 50435602, 50436929, 50437877, 50438650, 50435543), 2 neutral (50436911, 50436034); several comments by the same author merged. (b) Hands-on reactions to games built with it, 14: Saltline thread 50444850 (67 comments, all read) 1 positive, 4 mixed, 5 negative (controls, mobile play, described as a tech demo); game-blog thread 50433659 (306 new comments, newest 50 read) 2 positive, 1 mixed, 1 negative. (c) V2EX, 4 negative: topic 1256035 and two replies (safeguards trigger more often than with Opus 5.5) and topic 1256068 (quota use). Not counted: comments about 'Fable' that may mean 5.1, comments on Opus or Mythos, price and benchmark talk without own use, access-only notes. One comment (50438136) reports that the frequent compaction seen on launch day came from an outdated Claude Code version with a 200K context setting. linux.do not reachable, Reddit blocked, GitHub issues not read this run; the unread older pages of threads 50431144 and 50433659 from the last run remain unread.",
+   "date": "2026-11-11",
+   "method": "Claude read HN Algolia comments 2026-11-11 (launch thread and AA thread since the last run, Saltline thread in full, keyword search) + V2EX API (claude node topics and replies) on top of the 11-10 sample; mixed counted as 0.5 positive + 0.5 negative; old sample merged at its original ratio; quotes re-checked against the HN item API",
+   "quotes_withheld": 11
+  },
+  {
+   "model": "claude-opus-5.5",
+   "pos": 0.52,
+   "neg": 0.44,
+   "neu": 0.04,
+   "n_samples": 360,
+   "channels": [
+    "hn",
+    "linuxdo",
+    "v2ex",
+    "github_issues"
+   ],
+   "aspects": {
+    "coding": 0.6,
+    "agent": 0.5,
+    "writing": 0.2,
+    "reasoning": 0.3,
+    "speed": 0.2,
+    "cost": 0.4,
+    "stability": -0.5,
+    "instruction": -0.3,
+    "hallucination": -0.1
+   },
+   "praise": [
+    "top pick for coding/agents",
+    "needs almost no hand-holding",
+    "cheaper than Opus 5/lower bills",
+    "still preferred to Fable 5.2 for everyday coding (several users)",
+    "some users' own evals show no change in November"
+   ],
+   "complaints": [
+    "perceived quality drop since about 3 November (unverified; LiveNerf tracker shows no change)",
+    "more mistakes and tool-call failures, needs a higher effort setting (user reports)",
+    "heavier token use, quota reached sooner",
+    "safety classifier false positives (cyber/bio/reasoning_extraction)",
+    "instruction-following regression"
+   ],
+   "quotes": [
+    {
+     "text": "Opus 5.5 is a game changer for me. Super-heavy and deep algorithmic work on a pet project of mine",
+     "url": "https://news.ycombinator.com/item?id=49821774",
+     "channel": "hn",
+     "date": "2026-09-23"
+    },
+    {
+     "text": "there is nothing that competes with Opus 5.5 for 90+% of the work I do",
+     "url": "https://news.ycombinator.com/item?id=50321505",
+     "channel": "hn",
+     "date": "2026-11-01"
+    },
+    {
+     "text": "Opus 5.5 is amazing and has also dropped our bill dramatically.",
+     "url": "https://news.ycombinator.com/item?id=50346764",
+     "channel": "hn",
+     "date": "2026-11-03"
+    },
+    {
+     "text": "Opus 5.5 may be better in agentic coding and reverse engineering, but it has regressed greatly in instruction following.",
+     "url": "https://news.ycombinator.com/item?id=50352836",
+     "channel": "hn",
+     "date": "2026-11-03"
+    },
+    {
+     "text": "[Bug] Opus 5.5 refuses authorized bug bounty work despite CVP approval",
+     "url": "https://github.com/anthropics/claude-code/issues/106700",
+     "channel": "github_issues",
+     "date": "2026-11-02",
+     "note": "issue title"
+    },
+    {
+     "text": "Noticed that it is slower and results were of a lower quality.",
+     "url": "https://news.ycombinator.com/item?id=50423143",
+     "channel": "hn",
+     "date": "2026-11-09"
+    },
+    {
+     "text": "it feels like that as earlier, the \"low\" effort was able to do the great work for which now I need to use \"medium\".",
+     "url": "https://news.ycombinator.com/item?id=50432786",
+     "channel": "hn",
+     "date": "2026-11-09"
+    },
+    {
+     "text": "Token use exploded a week or two ago. I worked for a few hours and hit my 5 hour limit.",
+     "url": "https://news.ycombinator.com/item?id=50422673",
+     "channel": "hn",
+     "date": "2026-11-09"
+    },
+    {
+     "text": "We use Azure Foundry hosted Opus and it seems as capable as ever.",
+     "url": "https://news.ycombinator.com/item?id=50424224",
+     "channel": "hn",
+     "date": "2026-11-09"
+    },
+    {
+     "text": "20 of the tasks were last run on Nov 1, twice each. Nov 1 solved 36/40, and today solved 19/20.",
+     "url": "https://news.ycombinator.com/item?id=50430601",
+     "channel": "hn",
+     "date": "2026-11-09",
+     "note": "own task suite re-run"
+    },
+    {
+     "text": "I noticed the same at work using Opus 5.5 on medium which was the sweet spot. It’s now just not great.",
+     "url": "https://news.ycombinator.com/item?id=50419105",
+     "channel": "hn",
+     "date": "2026-11-08"
+    },
+    {
+     "text": "On coding at non-max Opus really does seem noticeably better, and my subscription seems to go longer.",
+     "url": "https://news.ycombinator.com/item?id=50447601",
+     "channel": "hn",
+     "date": "2026-11-10",
+     "note": "compared with GPT-6.1 Sol"
+    },
+    {
+     "text": "Opus 5.5 turns out to be still the best in quality and they've caught up in speed recently as well.",
+     "url": "https://news.ycombinator.com/item?id=50447027",
+     "channel": "hn",
+     "date": "2026-11-10"
+    }
+   ],
+   "summary": "Still widely regarded as a top coding and agent model. After the 11-09 Hacker News thread about a perceived change since about 3 November, discussion on 11-10 and 11-11 was more positive: in the Fable 5.2 launch threads many users said Opus 5.5 remains their everyday choice and several prefer it to Fable 5.2 on cost and coding results, while a smaller group kept reporting lower quality, more mistakes or faster quota use. The LiveNerf drift tracker reports no measurable change on its frozen question panel through 2026-11-10. Reports of a quality drop are user perceptions and remain unverified. Earlier complaints about safety-classifier false positives continue.",
+   "sample_breakdown": "old 315 (to 11-10 02:45 UTC) + 45 new (11-08..11-11). 'Opus 5.5' HN comment search since the last run (82 hits, all 3 pages read) plus new comments in the perceived-change thread 50422069 (32 new, 3 first-hand authors) and a second, smaller HN thread collecting such reports (50419019, 16 comments, not read before): 24 positive (50448423, 50447601, 50447027, 50446923, 50446716, 50443232, 50442133, 50441660, 50440908, 50439726, one remark in thread 50438318, 50435911, 50438609, 50438303, 50438069, 50437411, 50436421, 50436244, 50436112, 50435964, 50435823, 50435602, 50435591, 50435607; most are users in the Fable 5.2 threads saying Opus 5.5 still covers their work), 13 negative (50443456, 50443294, 50437276, 50441696, 50440870, 50446728, 50443570, 50435775, 50435590, 50444918, 50421139, 50419237, 50419105: perceived drop over the past week, more correcting needed, results not good enough to ship), 6 mixed (50435920, 50449323, 50438879, 50438650, 50420511, 50435872), 2 neutral (50442587, 50446495). Six of the new comments are not quoted (wording about deliberate degradation or about other commenters). LiveNerf (github.com/ninjahawk/livenerf, results/daily.csv): the frozen 78-question panel scored 0.615 on 11-09 and 0.577 on 11-10, inside its earlier range; README (11-10, day 48 of 60): no change detected across three 10-day windows (window 3 +0.028 +/- 0.023), window 4 in progress. GitHub issues, linux.do and V2EX not re-read for this model (V2EX claude node on 11-11 had only account, quota and access topics).",
+   "date": "2026-11-11",
+   "method": "Claude read HN Algolia comments 2026-11-11 ('Opus 5.5' search and two threads since the last run) + LiveNerf daily CSV and README; mixed counted as 0.5 positive + 0.5 negative; old sample merged at its original ratio; new quotes re-checked against the HN item API; Reddit blocked by proxy, linux.do bodies blocked by Cloudflare",
+   "quotes_withheld": 25
+  },
+  {
+   "model": "gpt-6.1-sol",
+   "pos": 0.45,
+   "neg": 0.38,
+   "neu": 0.17,
+   "n_samples": 77,
+   "channels": [
+    "hn",
+    "linuxdo",
+    "v2ex"
+   ],
+   "aspects": {
+    "coding": 0.2,
+    "agent": 0.3,
+    "writing": null,
+    "reasoning": 0.3,
+    "speed": -0.6,
+    "cost": 0.5,
+    "stability": -0.3,
+    "instruction": 0.3,
+    "hallucination": null
+   },
+   "praise": [
+    "token-efficient, quota lasts the week",
+    "good value",
+    "follows instructions well",
+    "useful as a code reviewer"
+   ],
+   "complaints": [
+    "slow responses (V2EX reports)",
+    "five-hour quota runs out sooner (V2EX reports)",
+    "perceived quality drop in early November (unverified)",
+    "frontend/design weaker than Opus",
+    "context drift in long sessions"
+   ],
+   "quotes": [
+    {
+     "text": "GPT 6.1 Sol is already the new Terra IMO. Same pricing as old Terra and competitive performance with even Astra",
+     "url": "https://news.ycombinator.com/item?id=50213866",
+     "channel": "hn",
+     "date": "2026-10-23"
+    },
+    {
+     "text": "Meanwhile, GPT 6.1 Sol on Extra High feels unlimited!",
+     "url": "https://news.ycombinator.com/item?id=50285041",
+     "channel": "hn",
+     "date": "2026-10-29"
+    },
+    {
+     "text": "Between this and Sol 6.1's efficiency I don't see any reason to use an Anthropic sub at the moment.",
+     "url": "https://news.ycombinator.com/item?id=50317708",
+     "channel": "hn",
+     "date": "2026-10-31"
+    },
+    {
+     "text": "Opus 5.5 is an order of magnitude better at design and design nuances than GPT 6.1 Sol, surprisingly.",
+     "url": "https://news.ycombinator.com/item?id=50328038",
+     "channel": "hn",
+     "date": "2026-11-01"
+    },
+    {
+     "text": "working with 6.1 Sol for more than a few hours, which admittedly has some horrendous context drift compared to Opus.",
+     "url": "https://news.ycombinator.com/item?id=50288817",
+     "channel": "hn",
+     "date": "2026-10-29"
+    },
+    {
+     "text": "Currently using GPT-6.1 Sol Medium/High for coding and I'm quite satisfied.",
+     "url": "https://news.ycombinator.com/item?id=50427805",
+     "channel": "hn",
+     "date": "2026-11-09"
+    },
+    {
+     "text": "GPT 6.1 Sol is very token efficient that I pretty much never run out before the end of the week",
+     "url": "https://news.ycombinator.com/item?id=50375205",
+     "channel": "hn",
+     "date": "2026-11-05"
+    },
+    {
+     "text": "The five-hour allowance feels like less than half of last week's.",
+     "url": "https://www.v2ex.com/t/1255679",
+     "channel": "v2ex",
+     "date": "2026-11-09",
+     "text_orig": "五小时额度感觉不如上周的一半多",
+     "translated": true
+    },
+    {
+     "text": "Even small tasks on Sol medium take a long time to run; it feels slower than Opus 5.5.",
+     "url": "https://www.v2ex.com/t/1255679",
+     "channel": "v2ex",
+     "date": "2026-11-09",
+     "text_orig": "sol 中 做点小问题都要跑好久，感觉比 opus5.5 还慢",
+     "translated": true
+    }
+   ],
+   "summary": "Opinion differs by community (77): on Hacker News it is still praised for token efficiency, value and instruction following and is often used as a reviewer next to Opus 5.5, while two V2EX topics from 9-10 November report slower responses, a five-hour quota that runs out sooner and a perceived quality drop compared with GPT-5.6 Sol (unverified).",
+   "sample_breakdown": "old 43 (to 11-02) + 34 new. HN '6.1 Sol' comment search 11-02..11-10 (41 hits, all read): 24 first-hand = 11 positive (50434197, 50433582, 50427805, 50426240, 50409858, 50401554, 50385421, 50376873, 50376216, 50375205, 50374273), 4 negative (50439237, 50436187, 50413728, 50388630), 5 mixed (50434182, 50430356, 50429152, 50415255, 50435497), 4 neutral (50430553, 50386352, 50378415, 50373589). V2EX topics 1255679 (52 replies) and 1255652 (5 replies), 11-09..11-10: 10 first-hand that name 6.1 or Sol = 9 negative (both topic starters and 7 replies: slower, quota runs out sooner, weaker results than before) and 1 mixed. Not counted: about 20 replies in topic 1255679 that describe 'GPT' in general as slower or weaker without naming a model, replies about other models (Astra, Terra, Codex, Claude, Gemini) and one price-only remark.",
+   "date": "2026-11-11",
+   "method": "Claude read HN Algolia comments ('6.1 Sol' search) and V2EX API topics + replies 2026-11-11 on top of the 11-02 sample; mixed counted as 0.5 positive + 0.5 negative; old sample merged at its original ratio; Reddit blocked by proxy, linux.do not reachable",
+   "quotes_withheld": 7
+  },
+  {
+   "model": "gemini-4-argon",
+   "pos": 0.42,
+   "neg": 0.39,
+   "neu": 0.19,
+   "n_samples": 109,
+   "channels": [
+    "hn",
+    "linuxdo",
+    "google_forum",
+    "v2ex"
+   ],
+   "aspects": {
+    "coding": 0.2,
+    "agent": -0.1,
+    "writing": 0.4,
+    "reasoning": 0.3,
+    "speed": -0.3,
+    "cost": -0.4,
+    "stability": -0.4,
+    "instruction": 0.0,
+    "hallucination": null
+   },
+   "praise": [
+    "strong writing",
+    "direct, clear reasoning",
+    "good for research questions",
+    "Argon High impresses on the $20 plan"
+   ],
+   "complaints": [
+    "tight subscription quota (about 10 prompts a week, one Pro user)",
+    "slow responses",
+    "cuts corners on complex one-shot prompts",
+    "seen as a tier behind Claude/Sol",
+    "tool-call failures/keeps stopping to confirm"
+   ],
+   "quotes": [
+    {
+     "text": "I prefer Argon over Opus 5.5 because of the clear thinking and directness.",
+     "url": "https://news.ycombinator.com/item?id=50075802",
+     "channel": "hn",
+     "date": "2026-10-13"
+    },
+    {
+     "text": "Asking it for a simple review of a blog post blows through 50% of the usage limit.",
+     "url": "https://news.ycombinator.com/item?id=50282025",
+     "channel": "hn",
+     "date": "2026-10-28"
+    },
+    {
+     "text": "Argon is the best writing model that's been released in a while",
+     "url": "https://news.ycombinator.com/item?id=50278971",
+     "channel": "hn",
+     "date": "2026-10-28"
+    },
+    {
+     "text": "at least to me, Argon is a clear tier below current Claude and Sol.",
+     "url": "https://news.ycombinator.com/item?id=50277401",
+     "channel": "hn",
+     "date": "2026-10-28"
+    },
+    {
+     "text": "I could casually code all day on the $20 Gemini plan, using Argon on Medium, without ever bumping into the limit",
+     "url": "https://news.ycombinator.com/item?id=50278012",
+     "channel": "hn",
+     "date": "2026-10-28"
+    },
+    {
+     "text": "I've been very impressed with Argon High on the $20 plan",
+     "url": "https://news.ycombinator.com/item?id=50443570",
+     "channel": "hn",
+     "date": "2026-11-10"
+    },
+    {
+     "text": "Argon been hugely useful, but I get about 10 prompts with it a week.",
+     "url": "https://news.ycombinator.com/item?id=50442876",
+     "channel": "hn",
+     "date": "2026-11-10"
+    },
+    {
+     "text": "I found Argon High made a ton of mistakes though which really shook my confidence.",
+     "url": "https://news.ycombinator.com/item?id=50450166",
+     "channel": "hn",
+     "date": "2026-11-11"
+    }
+   ],
+   "summary": "Still roughly split (109): in the Gemini 4 Carbon availability thread of 11-10 users again praised its writing, research answers and Argon High on the $20 plan, while the main complaints remained tight subscription quotas, slow responses and occasional corner-cutting or mistakes on complex tasks. One V2EX post reports it slower and weaker since 9 November (unverified).",
+   "sample_breakdown": "old 92 (to 11-02) + 17 new. HN Gemini 4 Carbon availability thread 50442303 (155 comments, all 4 pages read): 16 first-hand about Argon = 6 positive (50444297, 50443570, 50443172, 50443127, 50442793, 50442722), 6 negative (50450166, 50443140, 50442686, 50442647, 50442564, 50442453), 3 mixed (50443364, 50443243, 50442876), 1 neutral (50445030). V2EX topic 1256075 (11-11): 1 negative (slower and weaker since Monday). Gemini 4 Carbon itself: 6 clear first-hand opinions in the same thread and one in the AlphaProof Code thread (4 positive, 2 negative, 1 mixed) plus 2 borderline, below the 8 needed for its own entry.",
+   "date": "2026-11-11",
+   "method": "Claude read HN Algolia comments (Carbon availability thread in full) and the V2EX claude node 2026-11-11 on top of the 11-02 sample; mixed counted as 0.5 positive + 0.5 negative; old sample merged at its original ratio; new quotes re-checked against the HN item API; Reddit blocked by proxy",
+   "quotes_withheld": 1
+  }
+ ],
+ "signals": [
+  {
+   "model": "kimi-k3.1-pro",
+   "signal": "openrouter_trending_rank",
+   "value": 3,
+   "unit": "rank",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-10-27",
+   "note": "628B tokens in first days (released 2026-10-23); not in top 10"
+  },
+  {
+   "model": "kimi-k3.1-pro",
+   "signal": "openrouter_throughput_tps",
+   "value": 24,
+   "unit": "tok/s",
+   "url": "https://openrouter.ai/moonshotai/kimi-k3.1-pro",
+   "date": "2026-10-27",
+   "note": "Moonshot standard endpoint, P50 latency 5.91s; Highspeed endpoint 38 tps at 2x price"
+  },
+  {
+   "model": "vendor:deepseek",
+   "signal": "openrouter_author_request_share",
+   "value": 26.5,
+   "unit": "%",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-10-19",
+   "note": "week beginning 2026-10-19, share of text requests"
+  },
+  {
+   "model": "vendor:google",
+   "signal": "openrouter_author_request_share",
+   "value": 20.1,
+   "unit": "%",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-10-19",
+   "note": null
+  },
+  {
+   "model": "vendor:openai",
+   "signal": "openrouter_author_request_share",
+   "value": 18.5,
+   "unit": "%",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-10-19",
+   "note": null
+  },
+  {
+   "model": "vendor:z-ai",
+   "signal": "openrouter_author_request_share",
+   "value": 10.7,
+   "unit": "%",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-10-19",
+   "note": null
+  },
+  {
+   "model": "vendor:anthropic",
+   "signal": "openrouter_author_request_share",
+   "value": 5.5,
+   "unit": "%",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-10-19",
+   "note": "+25% WoW"
+  },
+  {
+   "model": "vendor:qwen",
+   "signal": "openrouter_author_request_share",
+   "value": 4.7,
+   "unit": "%",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-10-19",
+   "note": null
+  },
+  {
+   "model": "vendor:minimax",
+   "signal": "openrouter_author_request_share",
+   "value": 2.0,
+   "unit": "%",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-10-19",
+   "note": null
+  },
+  {
+   "model": "gemini-4-argon",
+   "signal": "lmarena_text_elo",
+   "value": 1526,
+   "unit": "elo",
+   "url": "https://benchlm.ai/llm-leaderboard-history",
+   "date": "2026-10-23",
+   "note": "Gemini 4 Argon (High), rank 1, 10,083 votes; aggregator (BenchLM from lmarena-ai HF dataset)"
+  },
+  {
+   "model": "gemini-4-argon",
+   "signal": "lmarena_text_rank",
+   "value": 1,
+   "unit": "rank",
+   "url": "https://benchlm.ai/llm-leaderboard-history",
+   "date": "2026-10-23",
+   "note": "aggregator"
+  },
+  {
+   "model": "gemini-4-argon",
+   "signal": "lmarena_coding_category_elo",
+   "value": 1552,
+   "unit": "elo",
+   "url": "https://benchlm.ai/llm-leaderboard-history",
+   "date": "2026-10-23",
+   "note": "Text arena 'Coding' category #1 (not WebDev); aggregator"
+  },
+  {
+   "model": "claude-opus-5.5",
+   "signal": "lmarena_text_elo",
+   "value": 1516,
+   "unit": "elo",
+   "url": "https://benchlm.ai/llm-leaderboard-history",
+   "date": "2026-10-23",
+   "note": "Claude Opus 5.5 (High), rank 2, 10,322 votes; aggregator"
+  },
+  {
+   "model": "claude-opus-5.5",
+   "signal": "lmarena_text_rank",
+   "value": 2,
+   "unit": "rank",
+   "url": "https://benchlm.ai/llm-leaderboard-history",
+   "date": "2026-10-23",
+   "note": "aggregator; debuted #1 at 1509 per Arena's X post"
+  },
+  {
+   "model": "claude-opus-5.5",
+   "signal": "lmarena_text_elo_debut",
+   "value": 1509,
+   "unit": "elo",
+   "url": "https://x.com/arena/status/2103893011164017018",
+   "date": "2026-09",
+   "note": "official Arena post (seen via search snippet): 'debuts at #1 in Text Arena with 1509 pts'; exact day not shown"
+  },
+  {
+   "model": "claude-fable-5.1",
+   "signal": "lmarena_text_elo",
+   "value": 1513,
+   "unit": "elo",
+   "url": "https://benchlm.ai/llm-leaderboard-history",
+   "date": "2026-10-23",
+   "note": "Claude Fable 5.1 (Max), rank 3, 16,343 votes; aggregator"
+  },
+  {
+   "model": "muse-wonder",
+   "signal": "lmarena_text_elo",
+   "value": 1501,
+   "unit": "elo",
+   "url": "https://benchlm.ai/llm-leaderboard-history",
+   "date": "2026-10-23",
+   "note": "Muse Wonder (Max), rank 7, 6,001 votes; aggregator"
+  },
+  {
+   "model": "gemini-3.8-flash",
+   "signal": "lmarena_text_elo",
+   "value": 1498,
+   "unit": "elo",
+   "url": "https://benchlm.ai/llm-leaderboard-history",
+   "date": "2026-10-23",
+   "note": "Gemini 3.8 Flash (High), rank 8, 43,997 votes; aggregator"
+  },
+  {
+   "model": "mimo-v2.6-pro",
+   "signal": "lmarena_text_elo",
+   "value": 1491,
+   "unit": "elo",
+   "url": "https://benchlm.ai/llm-leaderboard-history",
+   "date": "2026-10-23",
+   "note": "rank 11, 4,067 votes (top open model in that table); aggregator"
+  },
+  {
+   "model": "qwen3.8-max",
+   "signal": "lmarena_text_elo",
+   "value": 1484,
+   "unit": "elo",
+   "url": "https://benchlm.ai/llm-leaderboard-history",
+   "date": "2026-10-23",
+   "note": "rank 15, 30,500 votes; aggregator"
+  },
+  {
+   "model": "glm-5.3",
+   "signal": "lmarena_text_elo",
+   "value": 1479,
+   "unit": "elo",
+   "url": "https://codelifter.com/models/",
+   "date": "2026-10-15",
+   "note": "glm-5.3-max, rank 28, 22,543 votes; aggregator"
+  },
+  {
+   "model": "deepseek-v4.1-flash",
+   "signal": "lmarena_text_elo",
+   "value": 1475,
+   "unit": "elo",
+   "url": "https://codelifter.com/models/",
+   "date": "2026-10-15",
+   "note": "deepseek-v4.1-flash-max, rank 38, 12,793 votes; aggregator"
+  },
+  {
+   "model": "claude-opus-5.5",
+   "signal": "lmarena_webdev_elo",
+   "value": 1811,
+   "unit": "elo",
+   "url": "https://codelifter.com/models/",
+   "date": "2026-10-13",
+   "note": "claude-opus-5.5-max, WebDev rank 1, 2,597 votes; aggregator"
+  },
+  {
+   "model": "gpt-6-astra",
+   "signal": "lmarena_webdev_elo",
+   "value": 1780,
+   "unit": "elo",
+   "url": "https://codelifter.com/models/",
+   "date": "2026-10-13",
+   "note": "gpt-6-astra-max, WebDev rank 2, 5,746 votes (was #1 before Opus 5.5, per runtimewire 2026-09-13); not in text top-20"
+  },
+  {
+   "model": "gemini-4-argon",
+   "signal": "lmarena_webdev_elo",
+   "value": 1678,
+   "unit": "elo",
+   "url": "https://codelifter.com/models/",
+   "date": "2026-10-13",
+   "note": "WebDev rank 9, preliminary; aggregator"
+  },
+  {
+   "model": "claude-opus-5.5",
+   "signal": "livenerf_window_delta",
+   "value": -0.015,
+   "unit": "score delta",
+   "url": "https://github.com/ninjahawk/livenerf",
+   "date": "2026-10-23",
+   "note": "window 2 (days 21-30, from 2026-10-14) vs launch-week baseline 0.584; +/-0.018 SE; decision 'no change'; window 1 was +0.007"
+  },
+  {
+   "model": "claude-opus-5.5",
+   "signal": "livenerf_daily_score",
+   "value": 0.5769,
+   "unit": "score",
+   "url": "https://raw.githubusercontent.com/ninjahawk/livenerf/master/results/daily.csv",
+   "date": "2026-10-25",
+   "note": "day 32, 78-item panel, median output tokens 581.5 (baseline ~588)"
+  },
+  {
+   "model": "claude-opus-5.5",
+   "signal": "marginlab_swebenchpro_pass_30d",
+   "value": 81,
+   "unit": "%",
+   "url": "https://marginlab.ai/trackers/claude-code",
+   "date": "2026-09-29",
+   "note": "Claude Code CLI, Opus 5.5 high; page possibly stale, baseline still collecting"
+  },
+  {
+   "model": "claude-opus-5.5",
+   "signal": "aistupidlevel_coding_pass_rate_30d",
+   "value": 93,
+   "unit": "%",
+   "url": "https://aistupidlevel.info",
+   "date": "2026-10-27",
+   "note": "window 2026-09-27..2026-10-27; cost per 1,000 correct fixes $13.32; closed eval engine"
+  },
+  {
+   "model": "claude-sonnet-5.5",
+   "signal": "aistupidlevel_coding_pass_rate_30d",
+   "value": 80,
+   "unit": "%",
+   "url": "https://aistupidlevel.info",
+   "date": "2026-10-27",
+   "note": "window 2026-09-27..2026-10-27; cost per 1,000 correct fixes $6.77; closed eval engine"
+  },
+  {
+   "model": "gpt-6-astra",
+   "signal": "aistupidlevel_coding_pass_rate_30d",
+   "value": 86,
+   "unit": "%",
+   "url": "https://aistupidlevel.info",
+   "date": "2026-10-27",
+   "note": "window 2026-09-27..2026-10-27; cost per 1,000 correct fixes $29.66; closed eval engine"
+  },
+  {
+   "model": "gpt-6.1-sol",
+   "signal": "aistupidlevel_coding_pass_rate_30d",
+   "value": 84,
+   "unit": "%",
+   "url": "https://aistupidlevel.info",
+   "date": "2026-10-27",
+   "note": "window 2026-09-27..2026-10-27; cost per 1,000 correct fixes $7.23; closed eval engine"
+  },
+  {
+   "model": "gemini-4-argon",
+   "signal": "aistupidlevel_coding_pass_rate_30d",
+   "value": 72,
+   "unit": "%",
+   "url": "https://aistupidlevel.info",
+   "date": "2026-10-27",
+   "note": "window 2026-09-27..2026-10-27; cost per 1,000 correct fixes $14.64; closed eval engine"
+  },
+  {
+   "model": "deepseek-v4.1-flash",
+   "signal": "aistupidlevel_coding_pass_rate_30d",
+   "value": 87,
+   "unit": "%",
+   "url": "https://aistupidlevel.info",
+   "date": "2026-10-27",
+   "note": "window 2026-09-27..2026-10-27; cost per 1,000 correct fixes $0.85; closed eval engine"
+  },
+  {
+   "model": "kimi-k3.1-pro",
+   "signal": "aistupidlevel_coding_pass_rate_30d",
+   "value": 71,
+   "unit": "%",
+   "url": "https://aistupidlevel.info",
+   "date": "2026-10-27",
+   "note": "window 2026-09-27..2026-10-27; cost per 1,000 correct fixes $8.88; closed eval engine"
+  },
+  {
+   "model": "glm-5.3",
+   "signal": "aistupidlevel_coding_pass_rate_30d",
+   "value": 71,
+   "unit": "%",
+   "url": "https://aistupidlevel.info",
+   "date": "2026-10-27",
+   "note": "window 2026-09-27..2026-10-27; cost per 1,000 correct fixes $3.77; closed eval engine"
+  },
+  {
+   "model": "claude-opus-5.5",
+   "signal": "hn_comment_mentions",
+   "value": 584,
+   "unit": "comments",
+   "url": "https://hn.algolia.com/api/v1/search_by_date?query=%22Opus%205.5%22&tags=comment&numericFilters=created_at_i%3E1791590400",
+   "date": "2026-10-27",
+   "note": "HN comments containing \"Opus 5.5\" since 2026-10-10 (17 days); discussion-volume proxy"
+  },
+  {
+   "model": "deepseek-v4.1-flash",
+   "signal": "openrouter_rank_week",
+   "value": 1,
+   "unit": "rank",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "53.8T tokens; usage data through 2026-11-10; -2% wow; slug 'DeepSeek V4.1 Flash 1017'; older 'DeepSeek V4.1 Flash' slug #3 at 16.9T (+8%)"
+  },
+  {
+   "model": "deepseek-v4.1-flash",
+   "signal": "openrouter_tokens_week",
+   "value": 53.8,
+   "unit": "T tokens",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "usage data through 2026-11-10; -2% wow; slug 'DeepSeek V4.1 Flash 1017'; older 'DeepSeek V4.1 Flash' slug #3 at 16.9T (+8%)"
+  },
+  {
+   "model": "hy4",
+   "signal": "openrouter_rank_week",
+   "value": 2,
+   "unit": "rank",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "18.8T tokens; usage data through 2026-11-10; shown as new wow; up from #3 (16.0T on 11-10)"
+  },
+  {
+   "model": "hy4",
+   "signal": "openrouter_tokens_week",
+   "value": 18.8,
+   "unit": "T tokens",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "usage data through 2026-11-10; shown as new wow; up from #3 (16.0T on 11-10)"
+  },
+  {
+   "model": "glm-5.3-flash",
+   "signal": "openrouter_rank_week",
+   "value": 4,
+   "unit": "rank",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "11.3T tokens; usage data through 2026-11-10; -31% wow; unchanged rank"
+  },
+  {
+   "model": "glm-5.3-flash",
+   "signal": "openrouter_tokens_week",
+   "value": 11.3,
+   "unit": "T tokens",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "usage data through 2026-11-10; -31% wow; unchanged rank"
+  },
+  {
+   "model": "gpt-6-luna",
+   "signal": "openrouter_rank_week",
+   "value": 5,
+   "unit": "rank",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "7.04T tokens; usage data through 2026-11-10; -24% wow; up from #6"
+  },
+  {
+   "model": "gpt-6-luna",
+   "signal": "openrouter_tokens_week",
+   "value": 7.04,
+   "unit": "T tokens",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "usage data through 2026-11-10; -24% wow; up from #6"
+  },
+  {
+   "model": "step-5-preview",
+   "signal": "openrouter_rank_week",
+   "value": 6,
+   "unit": "rank",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "6.94T tokens; usage data through 2026-11-10; +4% wow; down from #5"
+  },
+  {
+   "model": "step-5-preview",
+   "signal": "openrouter_tokens_week",
+   "value": 6.94,
+   "unit": "T tokens",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "usage data through 2026-11-10; +4% wow; down from #5"
+  },
+  {
+   "model": "claude-opus-5.5",
+   "signal": "openrouter_rank_week",
+   "value": 7,
+   "unit": "rank",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "6.76T tokens; usage data through 2026-11-10; +1% wow; unchanged rank"
+  },
+  {
+   "model": "claude-opus-5.5",
+   "signal": "openrouter_tokens_week",
+   "value": 6.76,
+   "unit": "T tokens",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "usage data through 2026-11-10; +1% wow; unchanged rank"
+  },
+  {
+   "model": "kimi-k3.1-pro",
+   "signal": "openrouter_rank_week",
+   "value": 9,
+   "unit": "rank",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "4.42T tokens; usage data through 2026-11-10; +46% wow; up from #10"
+  },
+  {
+   "model": "kimi-k3.1-pro",
+   "signal": "openrouter_tokens_week",
+   "value": 4.42,
+   "unit": "T tokens",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "usage data through 2026-11-10; +46% wow; up from #10"
+  },
+  {
+   "model": "minimax-m3.1-flash",
+   "signal": "openrouter_rank_week",
+   "value": 10,
+   "unit": "rank",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "4.33T tokens; usage data through 2026-11-10; -33% wow; down from #9"
+  },
+  {
+   "model": "minimax-m3.1-flash",
+   "signal": "openrouter_tokens_week",
+   "value": 4.33,
+   "unit": "T tokens",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-11",
+   "note": "usage data through 2026-11-10; -33% wow; down from #9"
+  }
+ ],
+ "notes": [
+  "Reddit could not be read for this snapshot, so English-language sentiment comes mainly from Hacker News, which skews toward developers and benchmark skeptics.",
+  "linux.do pages could not be fetched directly. Each linux.do sample is one topic title found through site search, counted as one opinion; titles are short and often sarcastic, so their stance is a judgment call, and their dates are estimated from topic IDs.",
+  "Hacker News threads were read through the Algolia API and very large launch threads only partly. Treat positive/negative shares as accurate to roughly ±10 percentage points, and the sample size as distinct opinions actually read after approximate de-duplication.",
+  "Aspect scores range from -1 to 1 and reflect the themes in the sampled opinions; an empty value means no evidence, not a neutral view.",
+  "English- and Chinese-language communities sometimes disagree, for example on GPT-6 Astra, Kimi K3.1 Pro and GLM-5.3.",
+  "Reports of quality drops are user perceptions and are not verified. Where a drift tracker exists (LiveNerf for Claude Opus 5.5), it showed no measurable change through 2026-10-25.",
+  "Quotes are shown only when they are civil and on topic. Opinions that contain insults or allege misconduct still count toward the shares but are not quoted; the summaries describe such claims neutrally and attribute them.",
+  "Some comments rate several models at once (for example a benchmark table posted in a thread); these count as one opinion per model.",
+  "OpenRouter usage reflects API traffic, much of it cheap or free; it does not capture first-party subscription use such as Claude Code, Codex or the Gemini app."
+ ],
+ "history": [
+  {
+   "date": "2026-10-27",
+   "model": "claude-opus-5.5",
+   "pos": 0.52,
+   "neg": 0.28,
+   "n": 60
+  },
+  {
+   "date": "2026-10-27",
+   "model": "claude-sonnet-5.5",
+   "pos": 0.37,
+   "neg": 0.34,
+   "n": 38
+  },
+  {
+   "date": "2026-10-27",
+   "model": "claude-haiku-5.5",
+   "pos": 0.46,
+   "neg": 0.24,
+   "n": 37
+  },
+  {
+   "date": "2026-10-27",
+   "model": "claude-fable-5.1",
+   "pos": 0.28,
+   "neg": 0.4,
+   "n": 25
+  },
+  {
+   "date": "2026-10-27",
+   "model": "gpt-6-astra",
+   "pos": 0.37,
+   "neg": 0.31,
+   "n": 62
+  },
+  {
+   "date": "2026-10-27",
+   "model": "gpt-6.1-sol",
+   "pos": 0.42,
+   "neg": 0.29,
+   "n": 31
+  },
+  {
+   "date": "2026-10-27",
+   "model": "gpt-5.5",
+   "pos": 0.17,
+   "neg": 0.41,
+   "n": 41
+  },
+  {
+   "date": "2026-10-27",
+   "model": "gemini-4-argon",
+   "pos": 0.39,
+   "neg": 0.3,
+   "n": 56
+  },
+  {
+   "date": "2026-10-27",
+   "model": "gemini-3.8-flash",
+   "pos": 0.57,
+   "neg": 0.1,
+   "n": 21
+  },
+  {
+   "date": "2026-10-27",
+   "model": "grok-4.7",
+   "pos": 0.17,
+   "neg": 0.51,
+   "n": 35
+  },
+  {
+   "date": "2026-10-27",
+   "model": "muse-wonder",
+   "pos": 0.29,
+   "neg": 0.36,
+   "n": 28
+  },
+  {
+   "date": "2026-10-27",
+   "model": "kimi-k3.1-pro",
+   "pos": 0.43,
+   "neg": 0.28,
+   "n": 47
+  },
+  {
+   "date": "2026-10-27",
+   "model": "qwen3.8-max",
+   "pos": 0.45,
+   "neg": 0.0,
+   "n": 11
+  },
+  {
+   "date": "2026-10-27",
+   "model": "deepseek-v4.1-flash",
+   "pos": 0.63,
+   "neg": 0.14,
+   "n": 49
+  },
+  {
+   "date": "2026-10-27",
+   "model": "glm-5.3",
+   "pos": 0.29,
+   "neg": 0.37,
+   "n": 38
+  },
+  {
+   "date": "2026-10-27",
+   "model": "minimax-m3.1-flash",
+   "pos": 0.27,
+   "neg": 0.13,
+   "n": 15
+  },
+  {
+   "date": "2026-10-27",
+   "model": "mimo-v2.6-pro",
+   "pos": 0.4,
+   "neg": 0.23,
+   "n": 30
+  },
+  {
+   "date": "2026-10-28",
+   "model": "qwen3.8-flash-next",
+   "pos": 0.69,
+   "neg": 0.2,
+   "n": 45
+  },
+  {
+   "date": "2026-10-28",
+   "model": "glm-5.3-flash",
+   "pos": 0.28,
+   "neg": 0.57,
+   "n": 20
+  },
+  {
+   "date": "2026-10-28",
+   "model": "mistral-medium-3.5",
+   "pos": 0.29,
+   "neg": 0.57,
+   "n": 7
+  },
+  {
+   "date": "2026-10-28",
+   "model": "nemotron-3.5-super-vl",
+   "pos": 0.5,
+   "neg": 0.5,
+   "n": 1
+  },
+  {
+   "date": "2026-10-28",
+   "model": "nemotron-3.5-bolt",
+   "pos": 0.5,
+   "neg": 0.5,
+   "n": 1
+  },
+  {
+   "date": "2026-10-28",
+   "model": "mimo-v2.6-flash",
+   "pos": 0.41,
+   "neg": 0.41,
+   "n": 11
+  },
+  {
+   "date": "2026-10-28",
+   "model": "qwen3.8-27b",
+   "pos": 0.68,
+   "neg": 0.29,
+   "n": 57
+  },
+  {
+   "date": "2026-10-28",
+   "model": "gemma-4-31b",
+   "pos": 0.5,
+   "neg": 0.32,
+   "n": 28
+  },
+  {
+   "date": "2026-10-28",
+   "model": "mistral-small-4",
+   "pos": 0.4,
+   "neg": 0.6,
+   "n": 5
+  },
+  {
+   "date": "2026-10-28",
+   "model": "gemma-4-26b-a4b",
+   "pos": 0.72,
+   "neg": 0.13,
+   "n": 27
+  },
+  {
+   "date": "2026-10-28",
+   "model": "mistral-large-4",
+   "pos": 0.5,
+   "neg": 0.5,
+   "n": 9
+  },
+  {
+   "date": "2026-10-28",
+   "model": "gpt-6-luna",
+   "pos": 0.35,
+   "neg": 0.55,
+   "n": 40
+  },
+  {
+   "date": "2026-10-28",
+   "model": "gpt-6-sol",
+   "pos": 0.21,
+   "neg": 0.77,
+   "n": 39
+  },
+  {
+   "date": "2026-10-28",
+   "model": "hy4-preview",
+   "pos": 0.75,
+   "neg": 0.08,
+   "n": 6
+  },
+  {
+   "date": "2026-10-28",
+   "model": "step-5-preview",
+   "pos": 0.0,
+   "neg": 1.0,
+   "n": 2
+  },
+  {
+   "date": "2026-10-28",
+   "model": "seed-2.1-turbo",
+   "pos": 1.0,
+   "neg": 0.0,
+   "n": 2
+  },
+  {
+   "date": "2026-10-28",
+   "model": "seed-2.1-pro",
+   "pos": 0.5,
+   "neg": 0.5,
+   "n": 2
+  },
+  {
+   "date": "2026-10-28",
+   "model": "trinity-large",
+   "pos": 0.0,
+   "neg": 0.75,
+   "n": 4
+  },
+  {
+   "date": "2026-10-28",
+   "model": "muse-wonder-full",
+   "pos": 1.0,
+   "neg": 0.0,
+   "n": 1
+  },
+  {
+   "date": "2026-10-28",
+   "model": "nemotron-3.5-lightning",
+   "pos": 0.7,
+   "neg": 0.3,
+   "n": 5
+  },
+  {
+   "date": "2026-10-28",
+   "model": "inkling-small",
+   "pos": 0.0,
+   "neg": 1.0,
+   "n": 1
+  },
+  {
+   "date": "2026-11-02",
+   "model": "mistral-large-4",
+   "pos": 0.43,
+   "neg": 0.57,
+   "n": 20
+  },
+  {
+   "date": "2026-11-02",
+   "model": "mistral-medium-3.5",
+   "pos": 0.5,
+   "neg": 0.42,
+   "n": 12
+  },
+  {
+   "date": "2026-11-02",
+   "model": "hy4-preview",
+   "pos": 0.56,
+   "neg": 0.33,
+   "n": 9
+  },
+  {
+   "date": "2026-11-02",
+   "model": "gpt-6.1-terra",
+   "pos": 0.53,
+   "neg": 0.47,
+   "n": 18
+  },
+  {
+   "date": "2026-11-02",
+   "model": "inkling",
+   "pos": 0.71,
+   "neg": 0.29,
+   "n": 14
+  },
+  {
+   "date": "2026-11-02",
+   "model": "claude-opus-5.5",
+   "pos": 0.62,
+   "neg": 0.31,
+   "n": 171
+  },
+  {
+   "date": "2026-11-02",
+   "model": "gemini-4-argon",
+   "pos": 0.42,
+   "neg": 0.37,
+   "n": 92
+  },
+  {
+   "date": "2026-11-02",
+   "model": "gpt-6.1-sol",
+   "pos": 0.48,
+   "neg": 0.31,
+   "n": 43
+  },
+  {
+   "date": "2026-11-02",
+   "model": "glm-5.3-flash",
+   "pos": 0.45,
+   "neg": 0.41,
+   "n": 29
+  },
+  {
+   "date": "2026-11-02",
+   "model": "nemotron-3.5-lightning",
+   "pos": 0.58,
+   "neg": 0.42,
+   "n": 6
+  },
+  {
+   "date": "2026-11-02",
+   "model": "muse-wonder-full",
+   "pos": 0.5,
+   "neg": 0.5,
+   "n": 2
+  },
+  {
+   "date": "2026-11-02",
+   "model": "step-5-preview",
+   "pos": 0.3,
+   "neg": 0.7,
+   "n": 5
+  },
+  {
+   "date": "2026-11-04",
+   "model": "claude-opus-5.5",
+   "pos": 0.6,
+   "neg": 0.35,
+   "n": 237
+  },
+  {
+   "date": "2026-11-04",
+   "model": "longcat-2.5",
+   "pos": 0.5,
+   "neg": 0.5,
+   "n": 5
+  },
+  {
+   "date": "2026-11-05",
+   "model": "kimi-k3.1-pro",
+   "pos": 0.47,
+   "neg": 0.3,
+   "n": 59
+  },
+  {
+   "date": "2026-11-10",
+   "model": "claude-opus-5.5",
+   "pos": 0.51,
+   "neg": 0.45,
+   "n": 315
+  },
+  {
+   "date": "2026-11-10",
+   "model": "claude-fable-5.2",
+   "pos": 0.41,
+   "neg": 0.55,
+   "n": 27
+  },
+  {
+   "date": "2026-11-10",
+   "model": "kimi-k3.1-pro",
+   "pos": 0.48,
+   "neg": 0.3,
+   "n": 65
+  },
+  {
+   "date": "2026-11-11",
+   "model": "claude-fable-5.2",
+   "pos": 0.41,
+   "neg": 0.55,
+   "n": 82
+  },
+  {
+   "date": "2026-11-11",
+   "model": "claude-opus-5.5",
+   "pos": 0.52,
+   "neg": 0.44,
+   "n": 360
+  },
+  {
+   "date": "2026-11-11",
+   "model": "gpt-6.1-sol",
+   "pos": 0.45,
+   "neg": 0.38,
+   "n": 77
+  },
+  {
+   "date": "2026-11-11",
+   "model": "gemini-4-argon",
+   "pos": 0.42,
+   "neg": 0.39,
+   "n": 109
+  }
+ ]
+}

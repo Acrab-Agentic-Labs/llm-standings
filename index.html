@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LLM Standings: the leaderboard of leaderboards</title>
+<meta name="description" content="LLM Standings: the leaderboard of leaderboards, built from independent evaluations of large language models. Updated daily.">
+<style>
+:root{
+  color-scheme: light;
+  --page:#f9f9f7; --surface:#fcfcfb; --card:#ffffff;
+  --ink:#0b0b0b; --ink2:#52514e; --muted:#898781;
+  --grid:#e1e0d9; --axis:#c3c2b7; --border:rgba(11,11,11,.10);
+  --closed:#2a78d6; --open:#eb6834; --accent:#6250d6;
+  --pos:#2a78d6; --neg:#e34948; --mid:#f0efec;
+  --good:#0ca30c; --warn:#fab219; --bad:#d03b3b;
+  --chip:#f1f0ec; --chip-on:#0b0b0b; --chip-on-ink:#fff;
+  --s1:#2a78d6; --s2:#eb6834; --s3:#1baf7a; --s4:#eda100; --s5:#e87ba4; --s6:#008300; --s7:#6250d6; --s8:#e34948;
+  --seq1:#cde2fb; --seq2:#86b6ef; --seq3:#3987e5; --seq4:#1c5cab; --seq5:#0d366b;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --page:#0d0d0d; --surface:#1a1a19; --card:#1a1a19;
+    --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+    --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+    --closed:#3987e5; --open:#d95926; --accent:#9085e9;
+    --pos:#3987e5; --neg:#e66767; --mid:#383835;
+    --chip:#262624; --chip-on:#f0efec; --chip-on-ink:#0b0b0b;
+    --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+    --seq1:#104281; --seq2:#1c5cab; --seq3:#2a78d6; --seq4:#6da7ec; --seq5:#cde2fb;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --page:#0d0d0d; --surface:#1a1a19; --card:#1a1a19;
+  --ink:#f0efec; --ink2:#c3c2b7; --muted:#898781;
+  --grid:#2c2c2a; --axis:#383835; --border:rgba(255,255,255,.10);
+  --closed:#3987e5; --open:#d95926; --accent:#9085e9;
+  --pos:#3987e5; --neg:#e66767; --mid:#383835;
+  --chip:#262624; --chip-on:#f0efec; --chip-on-ink:#0b0b0b;
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70; --s4:#c98500; --s5:#d55181; --s6:#008300; --s7:#9085e9; --s8:#e66767;
+  --seq1:#104281; --seq2:#1c5cab; --seq3:#2a78d6; --seq4:#6da7ec; --seq5:#cde2fb;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--page);color:var(--ink);font:14px/1.5 system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+a{color:inherit}
+.wrap{max-width:1480px;margin:0 auto;padding:0 16px}
+header{padding:18px 0 6px}
+h1{font-size:22px;margin:0;display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+h1 small{font-size:13px;color:var(--muted);font-weight:400}
+.bar{position:sticky;top:0;z-index:10;background:var(--page);border-bottom:1px solid var(--grid);padding:8px 0}
+.filters{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center;font-size:12px;color:var(--ink2)}
+.fgroup{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+.fgroup>span{color:var(--muted);margin-right:2px}
+.chip{border:1px solid var(--border);background:var(--chip);color:var(--ink);border-radius:999px;padding:2px 9px;font-size:12px;cursor:pointer;user-select:none;white-space:nowrap}
+.chip.on{background:var(--chip-on);color:var(--chip-on-ink);border-color:transparent}
+.chip.small{padding:1px 7px;font-size:11px}
+nav.tabs{display:flex;gap:2px;overflow-x:auto;margin-top:8px;scrollbar-width:none}
+nav.tabs button{border:0;background:none;color:var(--ink2);padding:6px 10px;font-size:13.5px;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap}
+nav.tabs button.on{color:var(--ink);border-bottom-color:var(--ink);font-weight:600}
+section{display:none;padding:14px 0 40px}
+section.on{display:block}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(440px,1fr));gap:12px}
+.grid.wide{grid-template-columns:repeat(auto-fill,minmax(640px,1fr))}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 12px 6px;min-width:0}
+.card h3{font-size:14px;margin:0 0 2px;display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.card h3 a{text-decoration:none}
+.card h3 a:hover{text-decoration:underline}
+.sub{font-size:12px;color:var(--ink2);margin:0 0 6px;overflow-wrap:anywhere}
+.muted{color:var(--muted)}
+.badge{font-size:10.5px;border-radius:4px;padding:0 5px;border:1px solid var(--border);color:var(--ink2);font-weight:400;white-space:nowrap}
+.badge.new{border-color:var(--s3);color:var(--s3)}
+.badge.saturated{border-color:var(--muted);color:var(--muted)}
+.badge.stale{border-color:var(--neg);color:var(--neg)}
+.badge.exp{cursor:pointer;border-color:var(--accent);color:var(--accent)}
+.chip.xtra{display:none} .fgroup.showall .chip.xtra{display:inline-block}
+#f-focus input{width:150px;padding:2px 8px;font-size:12px;border-radius:999px}
+.chip.focus{background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--ink);border-color:var(--accent)}
+.chart{width:100%}
+.legend-inline{display:flex;gap:14px;font-size:12px;color:var(--ink2);align-items:center;flex-wrap:wrap;margin:2px 0 10px}
+.sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+.tiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;margin-bottom:12px}
+.tile{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:8px 10px;cursor:pointer}
+.tile .k{font-size:11.5px;color:var(--muted)}
+.tile .v{font-size:15px;font-weight:600;line-height:1.25;margin-top:2px}
+.tile .d{font-size:11.5px;color:var(--ink2)}
+.news{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 12px;font-size:12px}
+.news .item{background:var(--chip);border-radius:6px;padding:2px 8px;color:var(--ink2)}
+.news .item b{color:var(--ink);font-weight:600}
+h2{font-size:16px;margin:18px 0 8px;display:flex;gap:8px;align-items:baseline;flex-wrap:wrap}
+h2 small{font-size:12px;color:var(--muted);font-weight:400}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th,td{padding:5px 7px;border-bottom:1px solid var(--grid);text-align:left;vertical-align:top}
+th{font-weight:600;color:var(--ink2);position:sticky;top:0;background:var(--card);z-index:1}
+td.c,th.c{text-align:center}
+.tablewrap{overflow:auto;max-height:78vh;border:1px solid var(--border);border-radius:10px;background:var(--card)}
+table.hm th.vh{min-width:50px;max-width:60px;padding:5px 4px;font-size:11px;line-height:1.25;white-space:normal;word-break:keep-all}
+table.hm td:first-child,table.hm th:first-child{position:sticky;left:0;background:var(--card);z-index:2}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%}
+.f-true{background:var(--good)} .f-partial{background:linear-gradient(90deg,var(--good) 50%,var(--grid) 50%)} .f-false{border:1.5px solid var(--axis)} .f-null{background:none;color:var(--muted);font-size:11px;width:auto;height:auto}
+.list{margin:0;padding-left:18px} .list li{margin:2px 0}
+.diffs{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:8px}
+.diff{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:8px 10px;font-size:12.5px}
+.diff b{display:block;margin-bottom:2px}
+.repcards{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:10px}
+.rc{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px;font-size:12.5px}
+.rc .top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.rc .nm{font-weight:600;font-size:14px}
+.tag{display:inline-block;border-radius:4px;padding:0 6px;margin:2px 3px 0 0;font-size:11.5px}
+.tag.p{background:color-mix(in srgb,var(--pos) 14%,transparent);color:var(--ink)}
+.tag.n{background:color-mix(in srgb,var(--neg) 16%,transparent);color:var(--ink)}
+.q{margin:5px 0 0;color:var(--ink2);font-size:12px;border-left:2px solid var(--grid);padding-left:7px}
+.q a{color:var(--muted);text-decoration:none;font-size:11px}
+.meter{display:flex;height:6px;border-radius:3px;overflow:hidden;margin:6px 0 2px;gap:2px}
+.meter i{display:block;height:100%}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:4px 0 8px}
+select{max-width:100%}
+select,input[type=search]{background:var(--card);color:var(--ink);border:1px solid var(--border);border-radius:6px;padding:4px 8px;font-size:13px}
+.more{display:block;margin:10px auto;background:var(--chip);border:1px solid var(--border);color:var(--ink);border-radius:8px;padding:5px 14px;cursor:pointer}
+details{margin-top:14px;font-size:12.5px;color:var(--ink2)} summary{cursor:pointer;color:var(--ink)}
+.empty{color:var(--muted);font-size:12.5px;padding:20px;text-align:center}
+.foot{color:var(--muted);font-size:11.5px;margin-top:30px}
+.howlink{font-size:12.5px;font-weight:400;margin-left:12px;color:var(--ink2)}
+.prose{max-width:860px;font-size:13.5px;line-height:1.6;color:var(--ink)}
+.prose h2{margin:22px 0 6px}.prose p{margin:6px 0}.prose ol,.prose ul{margin:6px 0;padding-left:22px}.prose li{margin:3px 0}
+.prose code{background:var(--chip);border-radius:4px;padding:0 4px;font-size:12.5px}
+.corr{border-left:3px solid var(--border);padding:4px 0 4px 12px;margin:10px 0}
+.corr .d{font-size:12px;color:var(--muted)} .corr.error{border-left-color:#d1495b} .corr.upstream{border-left-color:#7a8ca3}
+@media (max-width:560px){.grid,.grid.wide{grid-template-columns:1fr}h1{font-size:19px}.bar{position:static}#f-vendor{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1><span id="title">LLM Standings</span><small id="meta"></small><a class="howlink" href="#about" onclick="go('about');return false">How it works</a></h1>
+</header>
+</div>
+<div class="bar"><div class="wrap">
+  <div class="filters">
+    <div class="fgroup" id="f-gen"><span>Generation</span></div>
+    <div class="fgroup" id="f-open"><span>Weights</span></div>
+    <div class="fgroup" id="f-size"><span>Size</span></div>
+    <div class="fgroup" id="f-type"><span>Source</span></div>
+    <div class="fgroup" id="f-rank"><span>Ranking</span></div>
+    <div class="fgroup" id="f-focus"><span>Pinned</span></div>
+    <div class="fgroup" id="f-vendor"><span>Vendor</span></div>
+  </div>
+  <nav class="tabs" id="tabs"></nav>
+</div></div>
+<div class="wrap" id="main"></div>
+<script src="assets/echarts.min.js"></script>
+<script src="data.js"></script>
+<script>
+const D = window.LLM_DATA;
+if (!D || typeof echarts === 'undefined') {
+  document.getElementById('main').innerHTML = '<p style="padding:40px 0">Could not load <code>' + (!D ? 'data.js' : 'assets/echarts.min.js') +
+    '</code>. Keep <code>index.html</code>, <code>data.js</code> and the <code>assets/</code> folder together in the same folder, ' +
+    'or open the single-file copy built with <code>python3 llm_bench.py render --standalone</code>.</p>';
+  throw new Error('LLM_DATA or ECharts missing');
+}
+const CATS = [
+  ['overview','Overview'],['size','Size (~100B)','Size'],['coding','Coding'],['agentic','Agentic'],['reasoning','Reasoning & Math','Reasoning'],['knowledge','Knowledge & Pro','Knowledge'],
+  ['multimodal','Multimodal'],['webdev','Frontend & Design','Frontend'],['3d','3D & Spatial','3D'],['long_context','Long Context'],['writing','Writing & EQ','Writing'],
+  ['safety','Hallucination & Safety','Safety'],['effort','Effort'],['reputation','Reputation'],['harness','Harness'],['dict','Benchmark Glossary','Glossary'],['sources','Sources'],['about','About & Method','About']];
+// [id, full name, optional short name for the tab bar and heatmap header]
+const CAT_NAME = Object.fromEntries(CATS); CAT_NAME.overall='Composite indexes'; CAT_NAME.other='Other';
+const CAT_SHORT = Object.fromEntries(CATS.map(c=>[c[0], c[2]||c[1]])); CAT_SHORT.overall='Composite'; CAT_SHORT.other='Other';
+const RANK_CATS = ['overall','coding','agentic','reasoning','knowledge','multimodal','webdev','3d','long_context','writing','safety'];
+const EFF = ['none','minimal','low','medium','high','xhigh','max'];
+const EFF_LABEL = {none:'off',minimal:'minimal',low:'low',medium:'medium',high:'high',xhigh:'xhigh',max:'max',default:'',unknown:''};
+const TYPE_LABEL = {official:'Official',third_party:'Third-party',paper:'Paper',community:'Community',aggregator:'Aggregator'};
+const STATUS_LABEL = {active:'Active',saturated:'Saturated',new:'New',stale:'Stale'};
+const M = D.models, B = D.benchmarks, S = D.sources;
+const BID = Object.fromEntries(B.map((b,i)=>[b.id,i]));
+const MID = Object.fromEntries(M.map((m,i)=>[m.id,i]));
+const ROWS = D.scores.map(r=>({m:r[0],b:r[1],v:r[2],e:r[3],s:r[4],t:r[5],h:r[6],note:r[7],date:r[8],url:r[9]||((S[r[4]]||{}).url)||'',raw:r[10]}));
+M.forEach(m=>{ if (m.restricted) m.name = m.name + ' (restricted)'; });
+const VENDORS = [...new Set(M.map(m=>m.vendor))].sort((a,b)=>M.filter(m=>m.vendor===b).length-M.filter(m=>m.vendor===a).length);
+const SIZE_BANDS = [['s','≤40B'],['m','40–150B'],['l','150–500B'],['xl','>500B'],['na','Undisclosed']];
+const sizeBand = m => { const t=m.params_total_b; if(!t) return 'na'; return t<=40?'s':t<=150?'m':t<=500?'l':'xl'; };
+const fmtParams = m => !m.params_total_b ? '' : (m.params_total_b>=1000?(m.params_total_b/1000).toFixed(1).replace(/\.0$/,'')+'T':(+m.params_total_b).toFixed(m.params_total_b<20?1:0)+'B') + (m.params_active_b&&m.params_active_b!==m.params_total_b?'-A'+(+m.params_active_b).toFixed(m.params_active_b<10?1:0)+'B':'');
+function loadFocus(){ let ids=null; try{ ids=JSON.parse(localStorage.getItem('llmbench.focus')||'null'); }catch(e){} if(!Array.isArray(ids)) ids=D.meta.focus||[]; return new Set(ids.map(id=>MID[id]).filter(x=>x!=null)); }
+function saveFocus(){ try{ localStorage.setItem('llmbench.focus', JSON.stringify([...st.focus].map(i=>M[i].id))); }catch(e){} }
+const st = {gen: D.meta.max_gen, open:'all', types:new Set(Object.keys(TYPE_LABEL)), vendors:new Set(VENDORS), sizes:new Set(SIZE_BANDS.map(x=>x[0])), tab:'overview', showHidden:false, focus:new Set()};
+st.focus = loadFocus();
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const esc = s => String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const fmt = (v,u) => v==null?'–':(u==='$'?'$'+(+v).toFixed(v<1?3:2):(Math.abs(v)>=1000?Math.round(v).toLocaleString('en-US'):(+v).toFixed(Math.abs(v)<10&&v%1?2:1).replace(/\.0$/,'')));
+const charts = [];
+let dirty = {};
+
+// ------------------------------------------------------------------ filtering
+function modelOK(mi){
+  const m = M[mi];
+  if (m.gen > st.gen) return false;
+  if (st.focus.has(mi)) return true;            // pinned models always stay visible
+  if (m.restricted && RK.hideRestricted) return false;
+  if (m.hidden && !st.showHidden) return false;
+  if (!st.sizes.has(sizeBand(m))) return false;
+  if (st.open==='open' && !m.open_weights) return false;
+  if (st.open==='closed' && m.open_weights) return false;
+  return st.vendors.has(m.vendor);
+}
+let _rowsCache=null;
+function rowsF(){
+  if(_rowsCache) return _rowsCache;
+  _rowsCache = ROWS.filter(r=>modelOK(r.m) && st.types.has(r.t));
+  return _rowsCache;
+}
+const hb = bi => B[bi].higher_better !== false;
+// independent measurements win over self-reports; within the same tier take the best value
+const TYPE_PRI = {third_party:0, community:0, paper:1, official:2, aggregator:3};
+function better(a,b,bi){ // is row a preferred over row b
+  const pa = TYPE_PRI[a.t]??9, pb = TYPE_PRI[b.t]??9;
+  if (pa!==pb) return pa<pb;
+  if (a.v===b.v) return false;
+  return hb(bi) ? a.v>b.v : a.v<b.v;
+}
+function bestByModel(bi, rows){
+  const out = new Map();
+  for (const r of rows){ if (r.b!==bi) continue; const o=out.get(r.m); if(!o || better(r,o,bi)) out.set(r.m,r); }
+  return out;
+}
+const byBench = rows => { const g=new Map(); for(const r of rows){ if(!g.has(r.b)) g.set(r.b,[]); g.get(r.b).push(r);} return g; };
+
+// ------------------------------------------------------------------ ranking method
+// RK = how category rankings are computed (the per-benchmark charts always show every row).
+//  self:  include vendor self-reports / aggregator copies (default: independent results only)
+//  sat:   saturated boards at full weight (default: half weight; stale boards are always excluded)
+//  mode:  'rank' = percentile of rank, 'gap' = min-max scaled score (keeps the size of the gaps)
+const RK = {self:false, sat:false, mode:'rank', hideRestricted:false};
+const PUB = S.map(s=>s.publisher||'?');
+const isIndep = t => t==='third_party' || t==='community';
+const BPUB = (()=>{ const c=B.map(()=>new Map()), all=B.map(()=>new Map());
+  for (const r of ROWS){ const p=PUB[r.s]||'?'; all[r.b].set(p,(all[r.b].get(p)||0)+1); if(isIndep(r.t)) c[r.b].set(p,(c[r.b].get(p)||0)+1); }
+  return c.map((m,i)=>{ const src = m.size? m : all[i]; return [...src].sort((a,b)=>b[1]-a[1])[0]?.[0]||'?'; }); })();
+const fam = bi => B[bi].family || B[bi].id;
+const benchWeight = bi => B[bi].status==='saturated' && !RK.sat ? 0.5 : 1;
+
+// category score: per benchmark → percentile (or scaled score); versions of one eval average into one family;
+// each publisher's families average into ONE vote; votes average (saturated boards weigh half);
+// then shrink toward 50 by the number of families (k) so thin evidence can't top the list.
+function catComposite(cat, rows){
+  const g = byBench(rows), acc = new Map();
+  for (const [bi, rs0] of g){
+    const b = B[bi]; if (b.category!==cat || b.internal || b.superseded_by || b.status==='stale') continue;
+    const rs = RK.self ? rs0 : rs0.filter(r=>isIndep(r.t));
+    const best = bestByModel(bi, rs); if (best.size<4) continue;
+    const arr = [...best.values()].sort((x,y)=> hb(bi)? x.v-y.v : y.v-x.v);
+    const n = arr.length, lo = arr[0].v, hi = arr[n-1].v;
+    arr.forEach((r,i)=>{
+      const p = RK.mode==='gap' ? (hi===lo ? 50 : (r.v-lo)/(hi-lo)*100) : (n>1 ? i/(n-1)*100 : 50);
+      if(!acc.has(r.m)) acc.set(r.m,[]);
+      acc.get(r.m).push({p, bi, fam:fam(bi), pub:BPUB[bi], w:benchWeight(bi), self:!isIndep(r.t)});
+    });
+  }
+  const res = [];
+  for (const [m, es] of acc){
+    const fams = new Set(es.map(e=>e.fam)); if (fams.size<2) continue;
+    const byPub = new Map(); for (const e of es){ if(!byPub.has(e.pub)) byPub.set(e.pub,new Map()); const fm=byPub.get(e.pub); if(!fm.has(e.fam)) fm.set(e.fam,[]); fm.get(e.fam).push(e); }
+    let num=0, den=0; const pubs=[];
+    for (const [pub, fm] of byPub){
+      let pn=0, pd=0, pw=0; const names=[];
+      for (const [f, list] of fm){ const v=list.reduce((a,e)=>a+e.p,0)/list.length, w=Math.max(...list.map(e=>e.w)); pn+=v*w; pd+=w; pw=Math.max(pw,w); names.push(...list.map(e=>e.bi)); }
+      const pv = pn/pd; num += pv*pw; den += pw; pubs.push({pub, v:pv, w:pw, bs:names});
+    }
+    const raw = num/den, k = fams.size;
+    res.push({m, v:(raw*k+50*2)/(k+2), raw, k, pubs, bs:es.map(e=>e.bi), self:es.filter(e=>e.self).length/es.length});
+  }
+  return res.sort((a,b)=>b.v-a.v);
+}
+let _compCache=null;
+function allComposites(){
+  if(_compCache) return _compCache;
+  const rows=rowsF(), out={};
+  for (const c of RANK_CATS) out[c]=catComposite(c, rows);
+  const tot=new Map();
+  for (const c of RANK_CATS) for (const x of out[c]){ if(!tot.has(x.m)) tot.set(x.m,[]); tot.get(x.m).push(x); }
+  out._overall = [...tot].filter(([m,v])=>v.length>=2).map(([m,v])=>({m, v:v.reduce((a,b)=>a+b.v,0)/v.length, k:v.reduce((a,b)=>a+b.k,0), cats:v.length,
+    self:v.reduce((a,b)=>a+b.self*b.k,0)/v.reduce((a,b)=>a+b.k,0)})).sort((a,b)=>b.v-a.v);
+  _compCache=out; return out;
+}
+function compTip(x, label){
+  const m = M[x.m];
+  const head = `<b>${esc(m.name)}</b>${label?' · '+esc(label):''}<br>${RK.mode==='gap'?'Gap score':'Percentile'} ${x.v.toFixed(1)} (raw ${x.raw.toFixed(1)}, pulled toward 50 based on ${x.k} eval families)${x.self>0?`<br>Self-reported share: ${(x.self*100).toFixed(0)}%`:''}`;
+  const pubs = (x.pubs||[]).sort((a,b)=>b.v-a.v).map(p=>`<br>· <b>${esc(p.pub)}</b> ${p.v.toFixed(0)}${p.w<1?' (saturated, half weight)':''}: ${[...new Set(p.bs)].slice(0,5).map(bi=>esc(B[bi].name)).join(', ')}${new Set(p.bs).size>5?' ...':''}`).join('');
+  return head + (pubs?'<br><span style="color:'+css('--muted')+'">One vote per publisher:</span>'+pubs:'');
+}
+
+// ------------------------------------------------------------------ chart helpers
+function disposeIn(el){ for (let i=charts.length-1;i>=0;i--){ if (el.contains(charts[i].getDom())){ charts[i].dispose(); charts.splice(i,1);} } }
+function mk(el, h){
+  el.style.height = h+'px';
+  const c = echarts.init(el, null, {renderer:'canvas'});
+  charts.push(c); return c;
+}
+function baseText(){ return {color:css('--ink2'), fontSize:11}; }
+function axisStyle(){
+  return {axisLine:{lineStyle:{color:css('--axis')}}, axisTick:{show:false}, axisLabel:{color:css('--ink2'),fontSize:11},
+          splitLine:{lineStyle:{color:css('--grid')}}};
+}
+function tip(){ return {backgroundColor:css('--card'), borderColor:css('--border'), textStyle:{color:css('--ink'),fontSize:12}, confine:true, extraCssText:'max-width:360px;white-space:normal'}; }
+const mcolor = mi => M[mi].open_weights ? css('--open') : css('--closed');
+function rowTip(r){
+  const b=B[r.b], m=M[r.m], s=S[r.s]||{};
+  return `<b>${esc(m.name)}</b> <span style="color:${css('--muted')}">${esc(m.vendor)} · ${m.gen===0?'current gen':'previous gen'}${m.params_total_b?' · '+fmtParams(m):''}</span><br>`+
+    `${esc(b.name)}: <b>${fmt(r.v)}</b>${b.metric&&/%/.test(b.metric)?'%':''} ${r.e&&EFF_LABEL[r.e]!==''?'· effort '+esc(EFF_LABEL[r.e]||r.e):''}`+
+    `${r.h?'<br>Harness: '+esc(r.h):''}${r.note?'<br><span style="color:'+css('--muted')+'">'+esc(r.note)+'</span>':''}`+
+    `<br>Source: ${esc(TYPE_LABEL[r.t]||r.t)} · ${esc(s.name||'')} ${r.date?'· '+esc(r.date):''}<br><span style="color:${css('--muted')}">Click to open the source</span>`;
+}
+function effTag(e){ const l = EFF_LABEL[e]; return l===undefined ? e : l; }
+
+// one benchmark: horizontal bars (or dots for elo/index)
+const yLabel = (rows) => ({color:css('--ink'),fontSize:11.5, width:150, overflow:'truncate',
+  formatter:(v,i)=>{ const r=rows[i]; return r&&st.focus.has(r.m) ? `{f|${v}}` : v; }, rich:{f:{fontWeight:'bold', color:css('--accent'), fontSize:11.5}}});
+function withFocus(sorted, limit){       // top-N plus pinned models that fall below the cut
+  if (!limit || sorted.length<=limit) return sorted.map((r,i)=>({r, rank:i+1}));
+  const out = sorted.slice(0,limit).map((r,i)=>({r, rank:i+1}));
+  sorted.forEach((r,i)=>{ if (i>=limit && st.focus.has(r.m)) out.push({r, rank:i+1}); });
+  return out;
+}
+function benchChart(el, bi, rows, limit){
+  const best = [...bestByModel(bi, rows).values()].sort((a,b)=> hb(bi)? b.v-a.v : a.v-b.v);
+  const items = withFocus(best, limit);
+  const top = items.map(x=>x.r); const rankOf = new Map(items.map(x=>[x.r, x.rank]));
+  const b = B[bi];
+  const dotMode = /elo|rating|index|score/i.test(b.metric||'') && !/%/.test(b.metric||'') || top.some(r=>r.v>200);
+  const h = 26 + top.length*20;
+  const c = mk(el, Math.max(h, 90));
+  const names = top.map(r=>M[r.m].name).reverse();
+  const revRows = [...top].reverse();
+  const data = top.map(r=>({value:r.v, row:r, rk:rankOf.get(r), itemStyle:{color:mcolor(r.m), opacity:M[r.m].gen===0?1:.5, borderRadius:[0,4,4,0]}})).reverse();
+  const lab = p => fmt(p.value)+(effTag(p.data.row.e)?' · '+effTag(p.data.row.e):'')+(p.data.rk>(limit||1e9)?`  #${p.data.rk}/${best.length}`:'');
+  const vals = top.map(r=>r.v); const mn=Math.min(...vals), mx=Math.max(...vals);
+  const pct = /%/.test(b.metric||'') || (mx<=100 && mn>=0 && !dotMode);
+  const series = dotMode ? [{type:'scatter', data, symbolSize:9, label:{show:true, position:'right', formatter:lab, color:css('--ink2'), fontSize:10.5}},
+                            {type:'bar', data:top.map(r=>r.v).reverse(), barWidth:1, itemStyle:{color:css('--grid')}, silent:true, z:1, tooltip:{show:false}}]
+    : [{type:'bar', data, barWidth:12, label:{show:true, position:'right', formatter:lab, color:css('--ink2'), fontSize:10.5}}];
+  const pad = (mx-mn)*0.15 || Math.max(Math.abs(mn)*0.02, 1);
+  const full = pct && !dotMode && mx<=100 && mx>60;
+  c.setOption({
+    animation:false, grid:{left:8, right:78, top:4, bottom:18, containLabel:true}, tooltip:{...tip(), trigger:'item', formatter:p=>p.data&&p.data.row?rowTip(p.data.row):''},
+    xAxis:{type:'value', ...axisStyle(), axisLabel:{color:css('--ink2'),fontSize:11, showMinLabel:!dotMode, showMaxLabel:!dotMode, formatter:v=>fmt(v)},
+      min: dotMode? (v=>v.min-pad) : (hb(bi)?0:undefined), max: full?100:(dotMode?(v=>v.max+pad*0.3):undefined), interval: full?25:undefined, splitNumber:4},
+    yAxis:{type:'category', data:names, ...axisStyle(), axisLabel:yLabel(revRows), splitLine:{show:false}},
+    series
+  });
+  c.on('click', p=>{ if(p.data&&p.data.row&&p.data.row.url) window.open(p.data.row.url,'_blank'); });
+  return best.length;
+}
+
+function compositeChart(el, comp, limit, label){
+  const items = withFocus(comp, limit); const top = items.map(x=>x.r);
+  if (!top.length){ el.innerHTML='<div class="empty">Not enough data for the current filters</div>'; return; }
+  const c = mk(el, 30 + top.length*20);
+  c.setOption({
+    animation:false, grid:{left:8,right:70,top:4,bottom:18,containLabel:true},
+    tooltip:{...tip(), trigger:'item', formatter:p=>p.data.x.pubs?compTip(p.data.x, label):`<b>${esc(M[p.data.x.m].name)}</b><br>${label} ${p.data.x.v.toFixed(1)} (category average${p.data.x.cats?`, ${p.data.x.cats} categories`:`, ${p.data.x.k} evals`})`},
+    xAxis:{type:'value', min:0, max:100, ...axisStyle(), splitNumber:4},
+    yAxis:{type:'category', data:top.map(x=>M[x.m].name).reverse(), ...axisStyle(), axisLabel:yLabel([...top].reverse()), splitLine:{show:false}},
+    series:[{type:'bar', barWidth:12, data:items.map(it=>({value:+it.r.v.toFixed(1), x:it.r, rk:it.rank, itemStyle:{color:mcolor(it.r.m), opacity:M[it.r.m].gen===0?1:.5, borderRadius:[0,4,4,0]}})).reverse(),
+      label:{show:true, position:'right', color:css('--ink2'), fontSize:10.5, formatter:p=>p.value.toFixed(0)+'  · '+p.data.x.k+' evals'+(p.data.rk>limit?`  #${p.data.rk}/${comp.length}`:'')}}]
+  });
+}
+
+const legendHTML = () => `<div class="legend-inline"><span><i class="sw" style="background:${css('--closed')}"></i>Closed</span><span><i class="sw" style="background:${css('--open')}"></i>Open weights</span><span><i class="sw" style="background:${css('--closed')};opacity:.5"></i>Faded = previous gen</span><span class="muted">Label = score · effort. Hover for the source, click to open it</span></div>`;
+
+// ------------------------------------------------------------------ sections
+const R = {};
+
+R.overview = sec => {
+  const comp = allComposites();
+  const tiles = [];
+  const ov = comp._overall;
+  if (ov.length) tiles.push(['All categories', ov[0].m, ov[0].v, 'overview', ov[0].self]);
+  for (const c of RANK_CATS){ const x=comp[c][0]; if(x) tiles.push([CAT_NAME[c], x.m, x.v, c, x.self]); }
+  const openBest = ov.find(x=>M[x.m].open_weights); if (openBest) tiles.push(['Open weights', openBest.m, openBest.v, 'overview', openBest.self]);
+  const rep = repAdjust((D.reputation.sentiment||[]).filter(s=>MID[s.model]!=null && modelOK(MID[s.model]))).filter(s=>s.n_samples>=15).sort((a,b)=>b._net-a._net)[0];
+  const news = (D.changelog||[]).slice(0,12);
+  sec.innerHTML = `
+    ${news.length?`<div class="news">${news.map(n=>`<span class="item"><b>${esc(n.date)}</b> ${n.url?`<a href="${esc(n.url)}" target="_blank">${esc(n.text)}</a>`:esc(n.text)}</span>`).join('')}</div>`:''}
+    <div class="tiles">${tiles.map(t=>`<div class="tile" data-go="${t[3]}"><div class="k">#1 · ${esc(t[0])}</div><div class="v">${esc(M[t[1]].name)}</div><div class="d">${t[2].toFixed(0)} ${RK.mode==="gap"?"pts":"pctl"} · ${esc(M[t[1]].vendor)}${t[4]>0.6?' · <span style="color:var(--neg)">mostly self-reported</span>':''}</div></div>`).join('')}
+    ${rep?`<div class="tile" data-go="reputation"><div class="k">Best reputation (n ≥ 15)</div><div class="v">${esc(M[MID[rep.model]].name)}</div><div class="d">${(rep.pos*100).toFixed(0)}% positive · ${(rep.neg*100).toFixed(0)}% negative</div></div>`:''}</div>
+    <h2>Rankings by category <small>${RK.self?'includes vendor self-reports':'independent evals only'} · ${RK.mode==='gap'?'by score gap (0 = lowest on the board, 100 = highest)':'by rank percentile'} · versions of one eval count once · one vote per publisher · ${RK.sat?'saturated boards at full weight':'saturated boards at half weight'}. Faded cell = fewer than 3 evals. Hover to see which boards were used</small></h2>
+    <div class="card"><div id="ov-heat" class="chart"></div></div>
+    <h2>Overall leaderboards <small>independent composite indexes / human preference</small></h2>
+    ${legendHTML()}
+    <div class="grid" id="ov-grid"></div>
+    <h2>Vendor-reported vs third-party <small>same model, same benchmark: the 24 largest gaps</small></h2>
+    <div class="card"><div id="ov-gap" class="chart"></div></div>`;
+  sec.querySelectorAll('[data-go]').forEach(t=>t.onclick=()=>go(t.dataset.go));
+  // heatmap
+  const rowsM = withFocus(ov, 40).map(x=>x.r);
+  const cats = RANK_CATS.filter(c=>comp[c].length);
+  const el = sec.querySelector('#ov-heat');
+  if (!rowsM.length){ el.innerHTML='<div class="empty">Not enough data</div>'; }
+  else {
+    const c = mk(el, 40 + rowsM.length*22);
+    const data = [];
+    const seq = [css('--seq1'),css('--seq2'),css('--seq3'),css('--seq4'),css('--seq5')];
+    const dark = document.documentElement.dataset.theme==='dark' || (document.documentElement.dataset.theme!=='light' && matchMedia('(prefers-color-scheme: dark)').matches);
+    const ink = v => dark ? (v>60?'#0b0b0b':'#f0efec') : (v>55?'#ffffff':'#0b0b0b');
+    rowsM.forEach((x,yi)=>cats.forEach((cat,xi)=>{ const f = comp[cat].find(z=>z.m===x.m); if (f) data.push({value:[xi, rowsM.length-1-yi, +f.v.toFixed(0)], f, cat, label:{color:f.k<3?css('--ink2'):ink(f.v)}, itemStyle:{opacity:f.k<3?.38:1}}); }));
+    c.setOption({animation:false, tooltip:{...tip(), formatter:p=>compTip(p.data.f, CAT_NAME[p.data.cat])},
+      grid:{left:8,right:8,top:el.clientWidth<760?70:24,bottom:8,containLabel:true},
+      xAxis:{type:'category', position:'top', data:cats.map(c=>CAT_SHORT[c]), axisLabel:{color:css('--ink'),fontSize:12, interval:0, rotate: el.clientWidth<760?60:0}, axisLine:{show:false}, axisTick:{show:false}, splitArea:{show:false}},
+      yAxis:{type:'category', data:rowsM.map(x=>M[x.m].name).reverse(), axisLabel:yLabel([...rowsM].reverse()), axisLine:{show:false}, axisTick:{show:false}},
+      visualMap:{show:false, min:20, max:90, dimension:2, inRange:{color:seq}},
+      series:[{type:'heatmap', data, label:{show:true, fontSize:10.5, formatter:p=>p.data.value[2]}, itemStyle:{borderColor:css('--card'), borderWidth:2, borderRadius:3}}]});
+    c.on('click', p=>go(cats[p.data.value[0]]));
+  }
+  // overall benches
+  benchGrid(sec.querySelector('#ov-grid'), 'overall', 12);
+  // official vs third party
+  gapChart(sec.querySelector('#ov-gap'));
+};
+
+function gapChart(el){
+  const rows = ROWS.filter(r=>modelOK(r.m));
+  const g = new Map();
+  for (const r of rows){
+    if (!['official','third_party'].includes(r.t) || B[r.b].internal) continue;
+    if (!/%/.test(B[r.b].metric||'%')) continue;
+    const k = r.m+'|'+r.b; if(!g.has(k)) g.set(k,{official:null, third_party:null});
+    const o = g.get(k)[r.t]; if(!o || better(r,o,r.b)) g.get(k)[r.t]=r;
+  }
+  const pairs = [...g.values()].filter(x=>x.official&&x.third_party).map(x=>({o:x.official, t:x.third_party, d:x.third_party.v-x.official.v}))
+    .filter(x=>Math.abs(x.d)>0.05).sort((a,b)=>Math.abs(b.d)-Math.abs(a.d)).slice(0,24).reverse();
+  if (!pairs.length){ el.innerHTML='<div class="empty">No comparable data for the current filters</div>'; return; }
+  const c = mk(el, 40 + pairs.length*22);
+  const labels = pairs.map(p=>M[p.o.m].name+' · '+B[p.o.b].name+(p.t.h?' ('+p.t.h+')':''));
+  c.setOption({animation:false, grid:{left:8,right:30,top:26,bottom:18,containLabel:true},
+    legend:{top:0, textStyle:{color:css('--ink2')}, data:['Vendor-reported','Third-party']},
+    tooltip:{...tip(), trigger:'item', formatter:p=>p.data&&p.data.row?rowTip(p.data.row):''},
+    xAxis:{type:'value', ...axisStyle()},
+    yAxis:{type:'category', data:labels, ...axisStyle(), axisLabel:{color:css('--ink'),fontSize:11, width:330, overflow:'truncate'}, splitLine:{show:false}},
+    series:[
+      {type:'custom', renderItem:(params,api)=>{ const a=api.coord([api.value(0),api.value(2)]), b=api.coord([api.value(1),api.value(2)]); return {type:'line', shape:{x1:a[0],y1:a[1],x2:b[0],y2:b[1]}, style:{stroke:css('--axis'), lineWidth:2}}; },
+        data:pairs.map((p,i)=>[p.o.v,p.t.v,i]), encode:{x:[0,1], y:2}, silent:true, tooltip:{show:false}, z:1},
+      {name:'Vendor-reported', type:'scatter', symbolSize:9, itemStyle:{color:css('--closed')}, data:pairs.map((p,i)=>({value:[p.o.v,i], row:p.o}))},
+      {name:'Third-party', type:'scatter', symbol:'diamond', symbolSize:10, itemStyle:{color:css('--open')}, data:pairs.map((p,i)=>({value:[p.t.v,i], row:p.t})),
+        label:{show:true, position:'right', fontSize:10.5, color:css('--ink2'), formatter:p=>{const d=pairs[p.value[1]].d; return (d>0?'+':'')+d.toFixed(1);}}}]});
+  c.on('click', p=>{ if(p.data&&p.data.row) window.open(p.data.row.url,'_blank'); });
+}
+
+function benchGrid(host, cat, initial){
+  const rows = rowsF();
+  const g = byBench(rows);
+  const list = [...g.keys()].filter(bi=>B[bi].category===cat).map(bi=>({bi, n:bestByModel(bi,g.get(bi)).size}))
+    .filter(x=>x.n>=2).sort((a,b)=> (B[a.bi].internal-B[b.bi].internal) || (b.n-a.n));
+  if (!list.length){ host.innerHTML='<div class="empty">No data for the current filters</div>'; return; }
+  let shown = 0;
+  const addMore = (k)=>{
+    for (const x of list.slice(shown, shown+k)){
+      const b = B[x.bi];
+      const types = [...new Set(g.get(x.bi).map(r=>r.t))].map(t=>TYPE_LABEL[t]||t).join(' / ');
+      const card = document.createElement('div'); card.className='card';
+      const link = b.leaderboard||b.url;
+      card.innerHTML = `<h3>${link?`<a href="${esc(link)}" target="_blank">${esc(b.name)}</a>`:esc(b.name)}
+        ${b.status&&b.status!=='active'&&!b.superseded_by?`<span class="badge ${b.status}">${STATUS_LABEL[b.status]||b.status}</span>`:''}
+        ${b.internal?'<span class="badge">In-house</span>':''}${b.superseded_by&&BID[b.superseded_by]!=null?`<span class="badge stale">Replaced by ${esc(B[BID[b.superseded_by]].name)}</span>`:''}<span class="badge">${esc(types)}</span>${x.n>15?`<span class="badge exp" title="Show or hide all models">All ${x.n} ▾</span>`:`<span class="badge">${x.n} models</span>`}</h3>
+        <p class="sub">${esc(b.scope||'')}${b.metric?` <span class="muted">· ${esc(b.metric)}${b.higher_better===false?' (lower is better)':''}</span>`:''}</p><div class="chart"></div>`;
+      host.appendChild(card);
+      const el = card.querySelector('.chart'); let full = false;
+      benchChart(el, x.bi, g.get(x.bi), 15);
+      const ex = card.querySelector('.exp');
+      if (ex) ex.onclick = () => { full=!full; disposeIn(el); benchChart(el, x.bi, g.get(x.bi), full?0:15); ex.textContent = full?'Less ▴':`All ${x.n} ▾`; };
+    }
+    shown += k;
+    host.parentNode.querySelectorAll('.more[data-for="'+cat+'"]').forEach(b=>b.remove());
+    if (shown < list.length){
+      const btn = document.createElement('button'); btn.className='more'; btn.dataset.for=cat;
+      btn.textContent = `Show ${Math.min(12, list.length-shown)} more (${list.length} total)`;
+      btn.onclick = ()=>addMore(12); host.after(btn);
+    }
+  };
+  addMore(initial);
+}
+
+function catSection(cat){
+  return sec => {
+    const comp = allComposites()[cat] || [];
+    sec.innerHTML = `<h2>${CAT_NAME[cat]} · Combined ranking <small>${RK.self?'includes vendor self-reports':'independent evals only'}, ${RK.mode==='gap'?'by score gap':'by rank percentile'}. Versions of one eval are merged; one vote per publisher. Only boards with ≥4 models and models with ≥2 evals count. Hover for the breakdown</small></h2>
+      <div class="card"><div class="chart" id="c-comp"></div></div>
+      <h2>Benchmarks <small>each chart shows every model's best result (with effort); sorted by number of models</small></h2>${legendHTML()}
+      <div class="grid" id="c-grid"></div>`;
+    compositeChart(sec.querySelector('#c-comp'), comp, 25, CAT_NAME[cat]);
+    benchGrid(sec.querySelector('#c-grid'), cat, 12);
+  };
+}
+for (const c of RANK_CATS) if (c!=='overall') R[c] = catSection(c);
+
+// ------------------------------------------------------------------ size
+function rowsIgnoringSize(){
+  const keep = st.sizes; st.sizes = new Set(SIZE_BANDS.map(x=>x[0]));
+  const out = ROWS.filter(r=>modelOK(r.m) && st.types.has(r.t)); st.sizes = keep; return out;
+}
+function overallOf(rows){
+  const per = {}; for (const c of RANK_CATS) per[c] = catComposite(c, rows);
+  const tot = new Map(); for (const c of RANK_CATS) for (const x of per[c]){ if(!tot.has(x.m)) tot.set(x.m,[]); tot.get(x.m).push([x.v,x.k]); }
+  return [...tot].filter(([m,v])=>v.length>=2).map(([m,v])=>({m, v:v.reduce((a,b)=>a+b[0],0)/v.length, k:v.reduce((a,b)=>a+b[1],0), raw:v.reduce((a,b)=>a+b[0],0)/v.length, bs:[]})).sort((a,b)=>b.v-a.v);
+}
+let sizeBandSel = 'm';
+R.size = sec => {
+  const rowsAll = rowsIgnoringSize();
+  const withP = new Set(M.map((m,i)=>m.params_total_b?i:-1).filter(i=>i>=0));
+  const g = byBench(rowsAll.filter(r=>withP.has(r.m)));
+  const yopts = [['_overall','All-category avg. percentile (all sizes ranked together)']];
+  const cand = [...g].filter(([bi])=>!B[bi].internal && B[bi].category!=='meta').map(([bi,rs])=>[bi, bestByModel(bi,rs).size]).filter(x=>x[1]>=8).sort((a,b)=>b[1]-a[1]);
+  const aa = BID['aa-intelligence-index'], aa5 = BID['aa-intelligence-index-v5'];
+  for (const a of [aa5, aa]) if (a!=null && cand.some(x=>x[0]===a)) yopts.push([String(a), B[a].name]);
+  cand.filter(x=>x[0]!==aa && x[0]!==aa5).slice(0,12).forEach(([bi,n])=>yopts.push([String(bi), `${B[bi].name} (${n})`]));
+  const nBand = b => M.filter((m,i)=>sizeBand(m)===b && m.gen<=st.gen && !m.hidden).length;
+  sec.innerHTML = `
+    <h2>Size vs capability <small>x = total parameters (log scale); bigger circle = more active parameters. Most closed models don't disclose size, so they're not shown. Shaded = 40–150B (the ~100B band)</small>
+      <select id="z-y">${yopts.map(([k,l])=>`<option value="${k}">${esc(l)}</option>`).join('')}</select></h2>
+    <div class="card"><div class="chart" id="z-sc"></div></div>
+    <h2>Same-size comparison <span class="fgroup" id="z-band">${SIZE_BANDS.filter(b=>b[0]!=='na').map(([k,l])=>`<span class="chip ${k===sizeBandSel?'on':''}" data-k="${k}">${l} (${nBand(k)})</span>`).join('')}</span>
+      <small>percentiles are computed within the band only, so bigger models don't squash the scale</small></h2>
+    <div class="card"><h3>Combined ranking within the band</h3><p class="sub">Same method as the heatmap (see the "Ranking" toggles at the top): eval families merged, one vote per publisher, compared only within this band; needs at least 2 categories</p><div class="chart" id="z-comp"></div></div>
+    <div class="card" style="margin-top:12px"><h3>Specs and key scores within the band</h3><p class="sub">Each cell is the best result (independent evals first); shading = percentile within the column; <sup>*</sup> = vendor-reported; click a cell to open the source</p><div id="z-tab" class="tablewrap" style="border:0"></div></div>`;
+  const drawScatter = key => {
+    const el = sec.querySelector('#z-sc'); disposeIn(el);
+    let pts = [];
+    if (key==='_overall'){ for (const x of overallOf(rowsAll)) if (withP.has(x.m)) pts.push({m:x.m, y:x.v, row:null}); }
+    else { const bi=+key; for (const r of bestByModel(bi, g.get(bi)||[]).values()) pts.push({m:r.m, y:r.v, row:r}); }
+    if (pts.length<3){ el.innerHTML='<div class="empty">Not enough data</div>'; return; }
+    const c = mk(el, 460);
+    const sz = m => Math.max(7, Math.min(30, 4 + 3.2*Math.sqrt(M[m].params_active_b||M[m].params_total_b||10)));
+    c.setOption({animation:false, grid:{left:8,right:40,top:16,bottom:34,containLabel:true},
+      tooltip:{...tip(), formatter:p=>{ const d=p.data.p; if(!d) return ''; const m=M[d.m]; return d.row? rowTip(d.row) : `<b>${esc(m.name)}</b> · ${fmtParams(m)}<br>All-category avg. percentile ${d.y.toFixed(1)}${m.params_note?'<br><span style="color:'+css('--muted')+'">'+esc(m.params_note)+'</span>':''}`; }},
+      xAxis:{type:'log', name:'Total parameters (B)', nameLocation:'middle', nameGap:24, nameTextStyle:{color:css('--muted')}, ...axisStyle(), min:10, max:4000, axisLabel:{color:css('--ink2'), formatter:v=>v>=1000?(v/1000)+'T':v+'B'}},
+      yAxis:{type:'value', scale:true, ...axisStyle(), name: key==='_overall'?'Percentile':B[+key].metric||'', nameTextStyle:{color:css('--muted')}},
+      series:[{type:'scatter', z:3, data:pts.filter(p=>st.focus.has(p.m)).map(p=>({value:[M[p.m].params_total_b, p.y], p, symbolSize:sz(p.m),
+          itemStyle:{color:mcolor(p.m), borderColor:css('--accent'), borderWidth:2.5},
+          label:{show:true, position:'right', fontSize:11, color:css('--accent'), fontWeight:'bold', formatter:M[p.m].name}}))},
+        {type:'scatter', z:2, data:pts.filter(p=>!st.focus.has(p.m)).map(p=>({value:[M[p.m].params_total_b, p.y], p, symbolSize:sz(p.m),
+          itemStyle:{color:mcolor(p.m), opacity:M[p.m].gen===0?.85:.45, borderColor:css('--card'), borderWidth:1},
+          label:{show:true, position:'right', fontSize:10.5, color:css('--ink2'), formatter:M[p.m].name}})),
+        labelLayout:{hideOverlap:true},
+        markArea:{silent:true, itemStyle:{color:css('--accent'), opacity:.06}, label:{show:true, position:'insideTop', color:css('--muted'), fontSize:11, formatter:'~100B band'}, data:[[{xAxis:40},{xAxis:150}]]}}],
+      legend:{show:false}});
+    c.on('click', p=>{ const r=p.data&&p.data.p&&p.data.p.row; if (r&&r.url) window.open(r.url,'_blank'); });
+  };
+  const drawBand = band => {
+    const rows = rowsAll.filter(r=>sizeBand(M[r.m])===band || (st.focus.has(r.m) && sizeBand(M[r.m])===band));
+    const comp = overallOf(rows);
+    const ce = sec.querySelector('#z-comp'); disposeIn(ce); ce.innerHTML='';
+    compositeChart(ce, comp, 30, 'Within-band score');
+    // spec table
+    const ms = [...new Set(rows.map(r=>r.m))];
+    const order = [...comp.map(x=>x.m), ...ms.filter(m=>!comp.some(x=>x.m===m))];
+    const gb = byBench(rows);
+    const cols = [...gb].filter(([bi])=>!B[bi].internal && !B[bi].superseded_by && B[bi].category!=='meta').map(([bi,rs])=>[bi, bestByModel(bi,rs)])
+      .filter(([bi,mm])=>mm.size>=3).sort((a,b)=>b[1].size-a[1].size).slice(0,9);
+    const shade = (bi, mm, v) => { const vs=[...mm.values()].map(r=>r.v).sort((a,b)=>a-b); let p=vs.indexOf(v)/(Math.max(1,vs.length-1)); if(!hb(bi)) p=1-p; return `background:color-mix(in srgb,var(--closed) ${Math.round(6+p*34)}%,transparent)`; };
+    sec.querySelector('#z-tab').innerHTML = `<table><thead><tr><th>Model</th><th>Params</th><th>Released</th>${cols.map(([bi])=>`<th class="c" title="${esc(B[bi].scope||'')}">${esc(B[bi].name)}</th>`).join('')}</tr></thead><tbody>
+      ${order.map(m=>`<tr><td style="white-space:nowrap">${st.focus.has(m)?'<b style="color:var(--accent)">':'<b>'}${esc(M[m].name)}</b><div class="muted" style="font-size:11px">${esc(M[m].vendor)}${M[m].open_weights?' · open':' · closed'}</div></td>
+        <td style="white-space:nowrap">${fmtParams(M[m])||'—'}</td><td style="white-space:nowrap">${esc((M[m].released||'').slice(0,7))}</td>
+        ${cols.map(([bi,mm])=>{ const r=mm.get(m); return r?`<td class="c" style="${shade(bi,mm,r.v)};cursor:pointer" onclick="window.open('${esc(r.url)}','_blank')" title="${esc((S[r.s]||{}).name||'')} ${esc(effTag(r.e)||'')}">${fmt(r.v)}${r.t==='official'||r.t==='aggregator'?'<sup>*</sup>':''}</td>`:'<td class="c muted">·</td>'; }).join('')}</tr>`).join('')}
+      </tbody></table>`;
+  };
+  const sel = sec.querySelector('#z-y'); sel.onchange = () => drawScatter(sel.value); drawScatter(sel.value);
+  sec.querySelectorAll('#z-band .chip').forEach(ch=>ch.onclick=()=>{ sizeBandSel=ch.dataset.k; sec.querySelectorAll('#z-band .chip').forEach(x=>x.classList.toggle('on',x===ch)); drawBand(sizeBandSel); });
+  drawBand(sizeBandSel);
+};
+
+// ------------------------------------------------------------------ effort
+R.effort = sec => {
+  const rows = rowsF();
+  const sweeps = new Map(); // bi -> Map(m -> Map(e -> row))
+  for (const r of rows){
+    if (!EFF.includes(r.e)) continue;
+    if (!sweeps.has(r.b)) sweeps.set(r.b, new Map());
+    const mm = sweeps.get(r.b); if (!mm.has(r.m)) mm.set(r.m, new Map());
+    const o = mm.get(r.m).get(r.e); if (!o || better(r,o,r.b)) mm.get(r.m).set(r.e, r);
+  }
+  const cand = [...sweeps].map(([bi,mm])=>({bi, n:[...mm.values()].filter(x=>x.size>=3).length})).filter(x=>x.n>=1 && B[x.bi].category!=='meta').sort((a,b)=>b.n-a.n);
+  // AA switched its index to v5.0 on 2026-10-28; use v5 once it has enough effort sweeps with cost, else v4.3.2
+  const AAV = {v5:['aa-intelligence-index-v5','aa-cost-per-task-v5','aa-output-tokens-per-task-v5'], v4:['aa-intelligence-index','aa-cost-per-task','aa-output-tokens-per-task']};
+  const sweepN = v => { const i=BID[AAV[v][0]], c=BID[AAV[v][1]]; if (i==null||c==null||!sweeps.get(i)||!sweeps.get(c)) return 0; return [...sweeps.get(i)].filter(([m,em])=>[...em.keys()].filter(e=>sweeps.get(c).get(m)&&sweeps.get(c).get(m).has(e)).length>=2).length; };
+  if (!st.aaVer) st.aaVer = sweepN('v5')>=8 ? 'v5' : 'v4';
+  const aaIdx = BID[AAV[st.aaVer][0]];
+  const defB = aaIdx!=null && cand.find(x=>x.bi===aaIdx) ? aaIdx : (cand[0]||{}).bi;
+  sec.innerHTML = `
+    <h2>Cost vs performance <small>each line = one model from low to high effort; x = cost per task on the AA Intelligence Index (log scale). Thick line = Pareto frontier</small>
+      <span class="fgroup" id="e-aav">${['v5','v4'].filter(v=>sweepN(v)>0).map(v=>`<span class="chip small ${v===st.aaVer?'on':''}" data-v="${v}">AA ${v==='v5'?'v5.0 (new)':'v4.3.2 (old)'} · ${sweepN(v)} models</span>`).join('')}</span></h2>
+    <div class="card"><div class="chart" id="e-front"></div></div>
+    <h2>Effort curves <small>each model's score at each effort level; hover for cost / tokens</small>
+      <select id="e-sel">${cand.map(x=>`<option value="${x.bi}" ${x.bi===defB?'selected':''}>${esc(B[x.bi].name)} (${x.n} models)</option>`).join('')}</select></h2>
+    <div class="grid" id="e-mult"></div>
+    <h2>Is max effort worth it? <small>highest vs lowest effort: score gain (bars) and cost multiple (labels) · AA Intelligence Index ${st.aaVer==='v5'?'v5.0':'v4.3.2'}</small></h2>
+    <div class="card"><div class="chart" id="e-gain"></div></div>`;
+  const costBI = BID[AAV[st.aaVer][1]], idxBI = BID[AAV[st.aaVer][0]], tokBI = BID[AAV[st.aaVer][2]];
+  sec.querySelectorAll('#e-aav .chip').forEach(ch=>ch.onclick=()=>{ st.aaVer=ch.dataset.v; dirty.effort=true; show(); });
+  const lookup = (bi, m, e) => { const mm = bi!=null && sweeps.get(bi); return mm && mm.get(m) && mm.get(m).get(e); };
+  // frontier
+  const fe = sec.querySelector('#e-front');
+  if (idxBI==null || costBI==null || !sweeps.get(idxBI)){ fe.innerHTML='<div class="empty">No AA cost data</div>'; }
+  else {
+    const series=[], allPts=[];
+    for (const [m, em] of sweeps.get(idxBI)){
+      const pts = [];
+      for (const [e, r] of em){ const cr = lookup(costBI, m, e); if (cr && cr.v>0) pts.push({x:cr.v, y:r.v, e, r, cr}); }
+      if (!pts.length) continue;
+      pts.sort((a,b)=>a.x-b.x); allPts.push(...pts.map(p=>({...p,m})));
+      const top = pts.reduce((a,b)=>b.y>a.y?b:a);
+      series.push({type:'line', name:M[m].name, data:pts.map(p=>({value:[p.x,p.y], p, m, label:{show:p===top, position:'right', formatter:M[m].name, color:css('--ink2'), fontSize:10.5}})), symbolSize:6, showSymbol:true,
+        lineStyle:{width:1.5, color:mcolor(m), opacity:M[m].gen===0?.85:.4}, itemStyle:{color:mcolor(m), opacity:M[m].gen===0?1:.5},
+        emphasis:{focus:'series', lineStyle:{width:3}}, labelLayout:{hideOverlap:true}});
+    }
+    // pareto: best score reachable at or below each cost
+    const sorted=[...allPts].sort((a,b)=>a.x-b.x); const fr=[]; let best=-1e9;
+    for (const p of sorted){ if (p.y>best){ fr.push([p.x,p.y]); best=p.y; } }
+    series.push({type:'line', name:'Pareto frontier', data:fr, symbol:'none', lineStyle:{width:6, color:css('--accent'), opacity:.18, cap:'round', join:'round'}, z:0, silent:true, tooltip:{show:false}});
+    const c = mk(fe, 460);
+    c.setOption({animation:false, grid:{left:8,right:120,top:10,bottom:30,containLabel:true},
+      tooltip:{...tip(), trigger:'item', formatter:p=>{ const d=p.data&&p.data.p; if(!d) return ''; const tk=lookup(tokBI,p.data.m,d.e); return `<b>${esc(M[p.data.m].name)}</b> · effort ${esc(effTag(d.e)||d.e)}<br>AA Intelligence Index <b>${fmt(d.y)}</b><br>Cost per task $${d.x.toFixed(3)}${tk?`<br>Output tokens per task ${fmt(tk.v)}`:''}`; }},
+      xAxis:{type:'log', name:'$ per task (log)', nameLocation:'middle', nameGap:22, nameTextStyle:{color:css('--muted')}, ...axisStyle(), axisLabel:{color:css('--ink2'), formatter:v=>'$'+v}},
+      yAxis:{type:'value', name:'AA Intelligence Index', nameTextStyle:{color:css('--muted')}, scale:true, ...axisStyle()},
+      series});
+  }
+  // multiples
+  const drawMult = bi => {
+    const host = sec.querySelector('#e-mult'); host.innerHTML='';
+    const mm = sweeps.get(+bi); if (!mm) return;
+    const ms = [...mm].filter(([m,em])=>em.size>=2).sort((a,b)=>Math.max(...[...b[1].values()].map(r=>r.v))-Math.max(...[...a[1].values()].map(r=>r.v)));
+    const allv = ms.flatMap(([m,em])=>[...em.values()].map(r=>r.v)); const mn=Math.min(...allv), mx=Math.max(...allv);
+    const levels = EFF.filter(e=>ms.some(([m,em])=>em.has(e)));
+    for (const [m, em] of ms){
+      const card = document.createElement('div'); card.className='card'; card.style.paddingBottom='0';
+      const pts = levels.filter(e=>em.has(e));
+      const lo = em.get(pts[0]), hi = em.get(pts[pts.length-1]);
+      card.innerHTML = `<h3>${esc(M[m].name)} <span class="badge">${esc(M[m].vendor)}</span></h3><p class="sub">${effTag(pts[0])} → ${effTag(pts[pts.length-1])}: ${fmt(lo.v)} → <b>${fmt(hi.v)}</b> (${hi.v-lo.v>=0?'+':''}${fmt(hi.v-lo.v)})</p><div class="chart"></div>`;
+      host.appendChild(card);
+      const c = mk(card.querySelector('.chart'), 150);
+      c.setOption({animation:false, grid:{left:6,right:16,top:10,bottom:4,containLabel:true},
+        tooltip:{...tip(), trigger:'axis', formatter:ps=>{ const p=ps.find(x=>x.data&&x.data.r); if(!p) return ''; const r=p.data.r; const cr=lookup(costBI,m,r.e), tk=lookup(tokBI,m,r.e); return `<b>${esc(effTag(r.e))}</b>: ${fmt(r.v)}${cr?`<br>Cost per task $${cr.v.toFixed(3)}`:''}${tk?`<br>Output tokens per task ${fmt(tk.v)}`:''}<br><span style="color:${css('--muted')}">${esc((S[r.s]||{}).name||'')}</span>`; }},
+        xAxis:{type:'category', data:levels.map(effTag), ...axisStyle(), boundaryGap:false},
+        yAxis:{type:'value', min:Math.max(0, Math.floor((mn-(mx-mn)*.05)/10)*10), max:Math.ceil((mx+(mx-mn)*.05)/10)*10, ...axisStyle(), splitNumber:3},
+        series:[{type:'line', connectNulls:true, data:levels.map(e=>em.has(e)?{value:em.get(e).v, r:em.get(e)}:null), symbolSize:7, lineStyle:{width:2, color:mcolor(m)}, itemStyle:{color:mcolor(m)}}]});
+    }
+  };
+  const sel = sec.querySelector('#e-sel'); if (sel){ sel.onchange=()=>drawMult(sel.value); if (defB!=null) drawMult(defB); }
+  // gain
+  const ge = sec.querySelector('#e-gain');
+  const gains=[];
+  if (idxBI!=null && sweeps.get(idxBI)) for (const [m, em] of sweeps.get(idxBI)){
+    const ks = EFF.filter(e=>em.has(e)); if (ks.length<2) continue;
+    const lo=em.get(ks[0]), hi=em.get(ks[ks.length-1]); const cl=lookup(costBI,m,ks[0]), ch=lookup(costBI,m,ks[ks.length-1]);
+    gains.push({m, d:hi.v-lo.v, lo:ks[0], hi:ks[ks.length-1], ratio: cl&&ch&&cl.v>0 ? ch.v/cl.v : null});
+  }
+  gains.sort((a,b)=>b.d-a.d);
+  if (!gains.length) ge.innerHTML='<div class="empty">No data</div>';
+  else { const c = mk(ge, 30+gains.length*20);
+    c.setOption({animation:false, grid:{left:8,right:120,top:4,bottom:18,containLabel:true}, tooltip:{...tip(), formatter:p=>{const g=p.data.g; return `<b>${esc(M[g.m].name)}</b><br>${effTag(g.lo)} → ${effTag(g.hi)}: +${fmt(g.d)} pts${g.ratio?`<br>Cost ×${g.ratio.toFixed(1)}`:''}`;}},
+      xAxis:{type:'value', ...axisStyle()}, yAxis:{type:'category', data:gains.map(g=>M[g.m].name).reverse(), ...axisStyle(), axisLabel:{color:css('--ink'),fontSize:11.5}, splitLine:{show:false}},
+      series:[{type:'bar', barWidth:12, data:gains.map(g=>({value:+g.d.toFixed(1), g, itemStyle:{color:mcolor(g.m), opacity:M[g.m].gen===0?1:.5, borderRadius:[0,4,4,0]}})).reverse(),
+        label:{show:true, position:'right', fontSize:10.5, color:css('--ink2'), formatter:p=>`+${fmt(p.value)}  ${effTag(p.data.g.lo)}→${effTag(p.data.g.hi)}${p.data.g.ratio?'  cost ×'+p.data.g.ratio.toFixed(1):''}`}}]}); }
+};
+
+// ------------------------------------------------------------------ reputation
+// Small samples must not top the board: shares are shrunk toward the pooled average with a prior worth
+// REP_K opinions, and models with fewer than REP_MIN opinions are listed separately instead of ranked.
+const REP_K = 10, REP_MIN = 8;
+function repAdjust(list){
+  let P=0,N=0,T=0; for (const x of list){ const n=x.n_samples||0; P+=x.pos*n; N+=x.neg*n; T+=n; }
+  const p0 = T?P/T:0.4, n0 = T?N/T:0.3;
+  for (const x of list){ const n=x.n_samples||0; x._apos=(x.pos*n+p0*REP_K)/(n+REP_K); x._aneg=(x.neg*n+n0*REP_K)/(n+REP_K); x._net=x._apos-x._aneg; }
+  return list;
+}
+const ASPECTS = [['coding','Coding'],['agent','Agents'],['writing','Writing'],['reasoning','Reasoning'],['speed','Speed'],['cost','Price'],['stability','Stability'],['instruction','Instructions'],['hallucination','Factuality']];
+R.reputation = sec => {
+  const rep = D.reputation||{};
+  const allSent = repAdjust((rep.sentiment||[]).filter(s=>MID[s.model]!=null && modelOK(MID[s.model]))).sort((a,b)=>b._net-a._net);
+  const sent = allSent.filter(x=>x.n_samples>=REP_MIN), thin = allSent.filter(x=>x.n_samples<REP_MIN);
+  const sig = (rep.signals||[]).filter(s=>MID[s.model]!=null && modelOK(MID[s.model]));
+  sec.innerHTML = `
+    <h2>Positive vs negative <small>real user discussions (HN, Reddit, linux.do, V2EX, GitHub issues...); bars = raw shares; sorted by net positive adjusted for sample size (pulled toward the overall average with a prior of ${REP_K} opinions); n &lt; ${REP_MIN} is not ranked</small></h2>
+    <div class="card"><div class="chart" id="r-div"></div>
+    ${thin.length?`<p class="sub" style="margin:6px 4px 8px">Too few samples (n &lt; ${REP_MIN}), not ranked: ${thin.map(x=>`${esc(M[MID[x.model]].name)} <span class="muted">n=${x.n_samples} · +${(x.pos*100).toFixed(0)}% / −${(x.neg*100).toFixed(0)}%</span>`).join('; ')}</p>`:''}</div>
+    <div class="grid wide" style="margin-top:12px">
+      <div class="card"><h3>Reputation vs benchmarks</h3><p class="sub">x = average category ranking; y = adjusted net positive; bigger circle = more samples. Bottom right = strong scores but disliked; top left = average scores but well liked</p><div class="chart" id="r-vs"></div></div>
+      <div class="card"><h3>Reputation by aspect</h3><p class="sub">−1 negative ... +1 positive; blank = no evidence</p><div class="chart" id="r-asp"></div></div>
+      <div class="card"><h3>Real usage · OpenRouter weekly tokens</h3><p class="sub">API traffic only (favors cheap and free models); excludes use inside subscription apps</p><div class="chart" id="r-or"></div></div>
+      <div class="card"><h3>Blind human votes · Arena text Elo</h3><p class="sub">lmarena / arena.ai, style control on</p><div class="chart" id="r-arena"></div></div>
+    </div>
+    <h2>By model <small>tags and quotes (click a link to see the original post)</small></h2>
+    <div class="repcards" id="r-cards"></div>
+    <details><summary>Limits of the reputation data</summary><ul class="list">${(rep.notes||[]).map(n=>`<li>${esc(n)}</li>`).join('')}</ul></details>`;
+  // diverging
+  const el = sec.querySelector('#r-div');
+  if (!sent.length) el.innerHTML='<div class="empty">No reputation data (run update to generate it)</div>';
+  else { const s=[...sent].reverse(); const c=mk(el, 30+s.length*22);
+    c.setOption({animation:false, grid:{left:8,right:60,top:24,bottom:18,containLabel:true}, legend:{top:0,textStyle:{color:css('--ink2')}},
+      tooltip:{...tip(), trigger:'axis', axisPointer:{type:'shadow'}, formatter:ps=>{const x=s[ps[0].dataIndex]; return `<b>${esc(M[MID[x.model]].name)}</b><br>Positive ${(x.pos*100).toFixed(0)}% · neutral ${((x.neu||0)*100).toFixed(0)}% · negative ${(x.neg*100).toFixed(0)}%<br>Adjusted net positive ${(x._net*100).toFixed(0)} (used for sorting)<br>n=${x.n_samples} · ${esc((x.channels||[]).join(', '))}<br>${esc(x.summary||'')}`;}},
+      xAxis:{type:'value', min:-100, max:100, ...axisStyle(), axisLabel:{color:css('--ink2'), formatter:v=>Math.abs(v)+'%'}},
+      yAxis:{type:'category', data:s.map(x=>M[MID[x.model]].name), ...axisStyle(), axisLabel:{color:css('--ink'),fontSize:11.5}, splitLine:{show:false}},
+      series:[{name:'Negative', type:'bar', stack:'a', barWidth:13, data:s.map(x=>-(x.neg*100).toFixed(0)), itemStyle:{color:css('--neg'), borderRadius:[4,0,0,4]}},
+              {name:'Positive', type:'bar', stack:'a', barWidth:13, data:s.map(x=>+(x.pos*100).toFixed(0)), itemStyle:{color:css('--pos'), borderRadius:[0,4,4,0]},
+               label:{show:true, position:'right', color:css('--muted'), fontSize:10.5, formatter:p=>'n='+s[p.dataIndex].n_samples+(s[p.dataIndex].n_samples<15?' · few samples':'')}}]}); }
+  // vs
+  const comp = allComposites()._overall; const cm = new Map(comp.map(x=>[x.m,x.v]));
+  const pts = sent.filter(x=>cm.has(MID[x.model])).map(x=>({m:MID[x.model], x:cm.get(MID[x.model]), y:x._net*100, s:x}));
+  const ve = sec.querySelector('#r-vs');
+  if (pts.length<3) ve.innerHTML='<div class="empty">Not enough data</div>';
+  else { const c=mk(ve, 360); const xs=pts.map(p=>p.x).sort((a,b)=>a-b); const xm=xs[Math.floor(xs.length/2)];
+    c.setOption({animation:false, grid:{left:8,right:90,top:16,bottom:30,containLabel:true},
+      tooltip:{...tip(), formatter:p=>{const d=p.data.p; return `<b>${esc(M[d.m].name)}</b><br>Benchmarks ${d.x.toFixed(0)} · net positive ${d.y.toFixed(0)}<br>${esc(d.s.summary||'')}`;}},
+      xAxis:{type:'value', name:'Benchmarks (avg. category percentile)', nameLocation:'middle', nameGap:22, nameTextStyle:{color:css('--muted')}, scale:true, ...axisStyle()},
+      yAxis:{type:'value', name:'Net positive %', nameTextStyle:{color:css('--muted')}, ...axisStyle()},
+      series:[{type:'scatter', data:pts.map(p=>({value:[p.x,p.y], p, symbolSize:Math.max(7,Math.min(22,3+2.2*Math.sqrt(p.s.n_samples))), itemStyle:{color:mcolor(p.m), opacity:p.s.n_samples<15?.55:.9}})),
+        label:{show:true, position:'right', fontSize:10.5, color:css('--ink2'), formatter:p=>M[p.data.p.m].name},
+        labelLayout:{hideOverlap:true},
+        markLine:{silent:true, symbol:'none', lineStyle:{color:css('--axis'), type:'solid'}, label:{show:false}, data:[{xAxis:xm},{yAxis:0}]}}]}); }
+  // aspects heat
+  const ae = sec.querySelector('#r-asp');
+  const sa = sent.filter(x=>x.aspects);
+  if (!sa.length) ae.innerHTML='<div class="empty">No data</div>';
+  else { const c=mk(ae, 40+sa.length*20); const data=[];
+    sa.forEach((x,yi)=>ASPECTS.forEach(([k],xi)=>{ const v=x.aspects[k]; data.push([xi, sa.length-1-yi, v==null?'-':v]); }));
+    c.setOption({animation:false, grid:{left:8,right:8,top:22,bottom:4,containLabel:true},
+      tooltip:{...tip(), formatter:p=>`${esc(M[MID[sa[sa.length-1-p.data[1]].model]].name)} · ${ASPECTS[p.data[0]][1]}: ${p.data[2]==='-'?'no evidence':p.data[2]}`},
+      xAxis:{type:'category', position:'top', data:ASPECTS.map(a=>a[1]), axisLabel:{color:css('--ink'),fontSize:11, interval:0, width:Math.max(36,(ae.clientWidth-160)/ASPECTS.length-4), overflow:'truncate'}, axisLine:{show:false}, axisTick:{show:false}},
+      yAxis:{type:'category', data:sa.map(x=>M[MID[x.model]].name).reverse(), axisLabel:{color:css('--ink'),fontSize:11}, axisLine:{show:false}, axisTick:{show:false}},
+      visualMap:{show:false, min:-1, max:1, inRange:{color:[css('--neg'), css('--mid'), css('--pos')]}},
+      series:[{type:'heatmap', data, itemStyle:{borderColor:css('--card'), borderWidth:2}, label:{show:false}}]}); }
+  // openrouter
+  const oe = sec.querySelector('#r-or');
+  const orr = sig.filter(s=>/tokens/.test(s.signal)).sort((a,b)=>b.value-a.value);
+  const seenM = new Set(); const orv = orr.filter(s=>!seenM.has(s.model) && seenM.add(s.model)).slice(0,15);
+  if (!orv.length) oe.innerHTML='<div class="empty">No data</div>';
+  else { const c=mk(oe, 30+orv.length*20);
+    c.setOption({animation:false, grid:{left:8,right:60,top:4,bottom:18,containLabel:true}, tooltip:{...tip(), formatter:p=>`${esc(M[MID[p.data.s.model]].name)}<br>${fmt(p.value)} ${esc(p.data.s.unit)}<br><span style="color:${css('--muted')}">${esc(p.data.s.note||'')} ${esc(p.data.s.date||'')}</span>`},
+      xAxis:{type:'value', ...axisStyle()}, yAxis:{type:'category', data:orv.map(s=>M[MID[s.model]].name).reverse(), ...axisStyle(), axisLabel:{color:css('--ink'),fontSize:11.5}, splitLine:{show:false}},
+      series:[{type:'bar', barWidth:12, data:orv.map(s=>({value:s.unit&&/^B/.test(s.unit)?s.value/1000:s.value, s, itemStyle:{color:mcolor(MID[s.model]), borderRadius:[0,4,4,0]}})).reverse(), label:{show:true, position:'right', color:css('--ink2'), fontSize:10.5, formatter:p=>fmt(p.value)+'T'}}]}); }
+  // arena
+  const are = sec.querySelector('#r-arena'); const abi = BID['lmarena-text'];
+  if (abi==null) are.innerHTML='<div class="empty">No data</div>'; else benchChart(are, abi, rowsF(), 15);
+  // cards
+  const host = sec.querySelector('#r-cards');
+  const SIG = {openrouter_rank_week:v=>`OpenRouter weekly #${v}`, openrouter_tokens_week:v=>`${v}T tokens/week`, degradation_drift:v=>`Nerf-tracker drift ${v>0?'+':''}${(+v).toFixed(3)}`, lmarena_text_rank:v=>`Arena text #${v}`};
+  const sigLine = mid => { const xs = sig.filter(s=>s.model===mid && SIG[s.signal]); const seen=new Set(); return xs.filter(s=>!seen.has(s.signal)&&seen.add(s.signal)).map(s=>`<span title="${esc(s.note||'')}">${SIG[s.signal](s.value)}</span>`).join(' · '); };
+  host.innerHTML = [...sent, ...thin].map(x=>{ const m=M[MID[x.model]]; const sl=sigLine(x.model); const few=x.n_samples<REP_MIN; return `<div class="rc"${few?' style="opacity:.75"':''}><div class="top"><span class="nm">${esc(m.name)}${few?' <span class="badge stale">few samples</span>':''}</span><span class="muted">n=${x.n_samples} · ${esc(x.date||'')}</span></div>${sl?`<div class="muted" style="font-size:11.5px">${sl}</div>`:''}
+    <div class="meter"><i style="width:${x.pos*100}%;background:var(--pos)"></i><i style="width:${(x.neu||0)*100}%;background:var(--mid)"></i><i style="width:${x.neg*100}%;background:var(--neg)"></i></div>
+    <div class="muted" style="font-size:11.5px">${(x.pos*100).toFixed(0)}% positive · ${(x.neg*100).toFixed(0)}% negative · ${esc((x.channels||[]).join(' / '))}</div>
+    <div style="margin:4px 0">${esc(x.summary||'')}</div>
+    <div>${(x.praise||[]).map(t=>`<span class="tag p">+ ${esc(t)}</span>`).join('')}${(x.complaints||[]).map(t=>`<span class="tag n">- ${esc(t)}</span>`).join('')}</div>
+    ${(x.quotes||[]).slice(0,3).map(q=>`<p class="q">"${esc(q.text)}" <a href="${esc(q.url)}" target="_blank">${esc(q.channel||'')} ${esc(q.date||'')}${q.translated?' · translated':''} ↗</a></p>`).join('')}</div>`; }).join('');
+};
+
+// ------------------------------------------------------------------ harness
+const FEAT = {subagents:'Sub-agents',plan_mode:'Plan mode',mcp:'MCP',hooks:'Hooks',skills:'Skills / rules',custom_commands:'Custom cmds',sandbox:'OS sandbox',approvals:'Approvals',checkpoints:'Rollback',background_cloud:'Cloud agents',headless_ci:'CI / scripts',auto_compaction:'Auto compact',multi_model:'Multi-vendor models',codebase_index:'Code index',browser:'Browser',parallel_agents:'Parallel agents'};
+const FORM = {cli:'CLI',ide_ext:'IDE plugin',ide:'IDE',desktop:'Desktop',web:'Web',cloud:'Cloud',mobile:'Mobile',sdk:'SDK',chat:'Chat',harness:'Eval harness',acp:'ACP'};
+const LOCK = {own_models:'Own models only',own_default_plus_compatible:'Own + compatible APIs',multi_vendor_hosted:'Multi-vendor (hosted)',multi_vendor_plus_byok:'Multi-vendor + BYOK',any_byok:'Any / BYOK',vendor_routed:'Vendor picks'};
+R.harness = sec => {
+  const H = D.harness||{}; const hs = H.harnesses||[]; const keys = H.feature_keys||Object.keys(FEAT);
+  const dot = v => v===true?'<span class="dot f-true" title="supported"></span>':v==='partial'?'<span class="dot f-partial" title="partial"></span>':v===false?'<span class="dot f-false" title="not supported"></span>':'<span class="f-null">?</span>';
+  // harness score rows
+  const hr = rowsF().filter(r=>r.h);
+  const byB = new Map(); for (const r of hr){ if(!byB.has(r.b)) byB.set(r.b,[]); byB.get(r.b).push(r); }
+  const opts = [...byB].map(([bi,rs])=>{ const mm=new Map(); for(const r of rs){ if(!mm.has(r.m)) mm.set(r.m,new Set()); mm.get(r.m).add(r.h);} return {bi, n:[...mm.values()].filter(s=>s.size>=2).length}; }).filter(x=>x.n>=1).sort((a,b)=>b.n-a.n);
+  sec.innerHTML = `
+    <h2>Same model, different harness <small>score differences on one benchmark when only the agent harness changes</small>
+      <select id="h-sel">${opts.map(o=>`<option value="${o.bi}">${esc(B[o.bi].name)} (${o.n} models with 2+ harnesses)</option>`).join('')}</select></h2>
+    <div class="card"><div class="chart" id="h-dots"></div></div>
+    <h2>What they share <small>designs most tools have converged on in 2026</small></h2>
+    <div class="card"><ul class="list">${(H.common||[]).map(c=>`<li>${esc(c)}</li>`).join('')}</ul></div>
+    <h2>Differences <small>where they really set themselves apart</small></h2>
+    <div class="diffs">${(H.differences||[]).map(d=>`<div class="diff"><b>${esc(d.axis)}</b>${esc(d.summary)}</div>`).join('')}</div>
+    <h2>Feature matrix <small><span class="dot f-true"></span> supported · <span class="dot f-partial"></span> partial · <span class="dot f-false"></span> not supported · ? unverified</small></h2>
+    <div class="tablewrap"><table class="hm"><thead><tr><th style="min-width:150px">Harness</th><th style="min-width:110px">Form factor</th><th>Open source</th><th style="min-width:90px">Models</th>${keys.map(k=>`<th class="c vh">${esc(FEAT[k]||k)}</th>`).join('')}<th style="min-width:240px">Key difference</th></tr></thead>
+    <tbody>${hs.map(h=>`<tr><td><a href="${esc(h.url||'#')}" target="_blank"><b>${esc(h.name.replace(/\s*\(.*$/,''))}</b></a><div class="muted" style="font-size:11px">${esc(h.vendor||'')}${h.status&&h.status!=='GA'?' · '+esc(h.status):''}</div></td>
+      <td>${esc((h.forms||[]).map(f=>FORM[f]||f).join(' · '))}</td><td>${h.open_source?'✓ '+esc((h.license||'').replace(/\s*\(.*$/,'')):'—'}</td><td>${esc(LOCK[h.model_lockin]||h.model_lockin||'')}</td>
+      ${keys.map(k=>`<td class="c">${dot((h.features||{})[k])}</td>`).join('')}<td>${esc(h.distinct||'')}</td></tr>`).join('')}</tbody></table></div>
+    <details><summary>Notes</summary><ul class="list">${(H.notes||[]).map(n=>`<li>${esc(n)}</li>`).join('')}</ul></details>`;
+  const draw = bi => {
+    const el = sec.querySelector('#h-dots'); el.innerHTML=''; const rs = byB.get(+bi)||[];
+    const mm = new Map(); for (const r of rs){ if(!mm.has(r.m)) mm.set(r.m,new Map()); const o=mm.get(r.m).get(r.h); if(!o||better(r,o,r.b)) mm.get(r.m).set(r.h,r); }
+    const ms = [...mm].filter(([m,hm])=>hm.size>=2).sort((a,b)=>Math.max(...[...a[1].values()].map(r=>r.v))-Math.max(...[...b[1].values()].map(r=>r.v)));
+    const hc = new Map(); for (const [m,hm] of ms) for (const h of hm.keys()) hc.set(h,(hc.get(h)||0)+1);
+    const top = [...hc].sort((a,b)=>b[1]-a[1]).slice(0,7).map(x=>x[0]);
+    const groups = [...top, 'Other'];
+    const syms = ['circle','diamond','triangle','rect','emptyCircle','emptyDiamond','emptyTriangle','emptyRect'];
+    const cols = ['--s1','--s2','--s3','--s4','--s5','--s6','--s7','--muted'].map(css);
+    const names = ms.map(([m])=>M[m].name);
+    const c = mk(el, 50 + ms.length*22);
+    const series = groups.map((g,gi)=>({name:g, type:'scatter', symbol:syms[gi], symbolSize:10, itemStyle:{color:cols[gi], borderColor:css('--card'), borderWidth:1},
+      data: ms.flatMap(([m,hm],yi)=>[...hm].filter(([h])=> g==='Other' ? !top.includes(h) : h===g).map(([h,r])=>({value:[r.v, yi], row:r})))}));
+    series.unshift({type:'custom', silent:true, tooltip:{show:false}, z:0, renderItem:(p,api)=>{ const a=api.coord([api.value(0),api.value(2)]), b=api.coord([api.value(1),api.value(2)]); return {type:'line', shape:{x1:a[0],y1:a[1],x2:b[0],y2:b[1]}, style:{stroke:css('--grid'), lineWidth:2}}; },
+      data: ms.map(([m,hm],yi)=>{ const v=[...hm.values()].map(r=>r.v); return [Math.min(...v), Math.max(...v), yi]; }), encode:{x:[0,1], y:2}});
+    c.setOption({animation:false, legend:{top:0, textStyle:{color:css('--ink2')}, data:groups.filter(g=>series.find(s=>s.name===g&&s.data.length))},
+      grid:{left:8,right:30,top:30,bottom:18,containLabel:true}, tooltip:{...tip(), trigger:'item', formatter:p=>p.data&&p.data.row?rowTip(p.data.row):''},
+      xAxis:{type:'value', scale:true, ...axisStyle()}, yAxis:{type:'category', data:names, ...axisStyle(), axisLabel:{color:css('--ink'),fontSize:11.5}, splitLine:{show:false}}, series});
+    c.on('click', p=>{ if(p.data&&p.data.row) window.open(p.data.row.url,'_blank'); });
+  };
+  const sel = sec.querySelector('#h-sel'); if (opts.length){ sel.onchange=()=>draw(sel.value); draw(opts[0].bi); } else sec.querySelector('#h-dots').innerHTML='<div class="empty">No data</div>';
+};
+
+// ------------------------------------------------------------------ dictionary
+R.dict = sec => {
+  const cats = [...new Set(B.map(b=>b.category))].filter(c=>c!=='meta');
+  sec.innerHTML = `<div class="row"><input type="search" id="d-q" placeholder="Search benchmarks..." style="min-width:220px">
+    <span class="fgroup" id="d-cat"></span><label class="muted" style="font-size:12px"><input type="checkbox" id="d-all"> Include in-house and empty boards</label></div>
+    <div class="tablewrap"><table><thead><tr><th>Benchmark</th><th>Category</th><th style="min-width:220px">Scope (what it tests)</th><th style="min-width:220px">Highlights / caveats</th><th>Size</th><th>Metric</th><th>Status</th><th class="c">Models</th></tr></thead><tbody id="d-body"></tbody></table></div>`;
+  const dc = sec.querySelector('#d-cat'); let cur='all';
+  const draw = () => {
+    const q = sec.querySelector('#d-q').value.trim().toLowerCase(); const all = sec.querySelector('#d-all').checked;
+    const list = B.filter(b=>b.category!=='meta' && (cur==='all'||b.category===cur) && (all || (b.n>=2 && !b.internal)) && (!q || (b.name+b.id+(b.scope||'')+(b.feature||'')).toLowerCase().includes(q)))
+      .sort((a,b)=> RANK_CATS.indexOf(a.category)-RANK_CATS.indexOf(b.category) || b.n-a.n);
+    sec.querySelector('#d-body').innerHTML = list.map(b=>`<tr><td><a href="${esc(b.leaderboard||b.url||'#')}" target="_blank"><b>${esc(b.name)}</b></a></td><td>${esc(CAT_NAME[b.category]||b.category)}</td>
+      <td>${esc(b.scope||'')}</td><td>${esc(b.feature||'')}</td><td>${esc(b.size||'')}</td><td>${esc(b.metric||'')}</td>
+      <td>${b.status?`<span class="badge ${b.status}">${STATUS_LABEL[b.status]||b.status}</span>`:''}${b.internal?' <span class="badge">In-house</span>':''}</td><td class="c">${b.n||''}</td></tr>`).join('') || '<tr><td colspan="8" class="empty">No matches</td></tr>';
+  };
+  dc.innerHTML = ['all',...RANK_CATS.filter(c=>cats.includes(c)),'other'].map(c=>`<span class="chip small ${c==='all'?'on':''}" data-c="${c}">${c==='all'?'All':CAT_NAME[c]}</span>`).join('');
+  dc.querySelectorAll('.chip').forEach(ch=>ch.onclick=()=>{ cur=ch.dataset.c; dc.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on',x===ch)); draw(); });
+  sec.querySelector('#d-q').oninput = draw; sec.querySelector('#d-all').onchange = draw; draw();
+};
+
+// ------------------------------------------------------------------ sources
+R.sources = sec => {
+  const cnt = {}; for (const s of S) cnt[s.type]=(cnt[s.type]||0)+s.rows;
+  const nb = {}; for (const s of S) nb[s.type]=(nb[s.type]||0)+1;
+  const list = [...S].filter(s=>s.rows>0 || s.added_by!=='seed').sort((a,b)=>b.rows-a.rows);
+  sec.innerHTML = `<div class="tiles">${Object.keys(TYPE_LABEL).map(t=>`<div class="tile"><div class="k">${TYPE_LABEL[t]}</div><div class="v">${(cnt[t]||0).toLocaleString('en-US')} scores</div><div class="d">${nb[t]||0} sources</div></div>`).join('')}</div>
+    <p class="sub">Each <code>python3 llm_bench.py update</code> run re-reads these links (official and paper sources every 30 days by default) and Claude extracts the scores; unchanged pages are skipped. Claude backend: ${esc(D.meta.backend||'—')}</p>
+    <div class="tablewrap"><table><thead><tr><th>Source</th><th>Type</th><th>Categories</th><th class="c">Scores</th><th>Last fetched</th><th>Status</th><th>Data endpoint</th></tr></thead><tbody>
+    ${list.map(s=>`<tr><td><a href="${esc(s.url)}" target="_blank">${esc(s.name||s.id)}</a><div class="muted" style="font-size:11px">${esc(s.id)}${s.added_by&&s.added_by!=='seed'?' · '+esc(s.added_by):''}</div></td><td>${esc(TYPE_LABEL[s.type]||s.type||'')}</td>
+      <td>${esc((s.categories||[]).map(c=>CAT_NAME[c]||c).join(', '))}</td><td class="c">${s.rows}</td><td style="white-space:nowrap">${esc(s.last_fetch||'')}</td><td>${esc(s.last_status||'')}</td>
+      <td style="max-width:280px;word-break:break-all">${s.data_url&&/^http/.test(s.data_url)?`<a href="${esc(s.data_url)}" target="_blank">${esc(s.data_url.replace(/^https?:\/\//,'').slice(0,60))}</a>`:'<span class="muted">'+esc((s.data_url||'').slice(0,60))+'</span>'}</td></tr>`).join('')}
+    </tbody></table></div>
+    <details><summary>Data caveats</summary>${Object.entries(D.notes||{}).map(([k,v])=>`<p><b>${esc(k)}</b></p><ul class="list">${(v||[]).map(n=>`<li>${esc(n)}</li>`).join('')}</ul>`).join('')}</details>`;
+};
+
+// ------------------------------------------------------------------ shell
+R.about = sec => {
+  const nModels = M.filter(m=>!m.hidden).length, nSrc = S.filter(s=>s.rows>0).length;
+  const corr = (D.corrections||[]).map(c=>`<div class="corr ${esc(c.type)}"><div class="d">${esc(c.date)} · ${c.type==='error'?'Error in this leaderboard':'Upstream change'}</div>
+    <div><b>What:</b> ${esc(c.what)}</div><div><b>Fix:</b> ${esc(c.fix)}</div></div>`).join('');
+  sec.innerHTML = `<div class="prose">
+  <h2>What this is</h2>
+  <p><b>LLM Standings</b> is a daily leaderboard of leaderboards. Every lab publishes its own benchmark table, and every leaderboard measures
+  something slightly different. LLM Standings collects results from independent leaderboards, papers and vendor reports, keeps a source link
+  for every number, and combines them into one ranking per category. It currently tracks ${nModels} models with scores from ${nSrc} sources.
+  Next to the scores it shows real-world reputation (what users say), a comparison of coding agents ("harnesses"), and a glossary of the benchmarks.</p>
+  <p>It was built by <a href="https://acrab.ai">Acrab AI</a> to answer a practical question for on-device agents: which open model in the
+  ~100B class should you run, and how much do you give up compared with the closed frontier? The <a href="#size" onclick="go('size');return false">Size</a>
+  tab ranks models within each parameter band for exactly that comparison.</p>
+  <h2>What is included</h2>
+  <ul>
+    <li><b>Models:</b> for every vendor and size line (flagship, mid, small, code) the latest two generations. Restricted releases (partners only) are included
+      but marked "(restricted)" and can be hidden. Fine-tunes of other vendors' weights, unreleased code names and on-device models under 5B are left out.</li>
+    <li><b>Sources:</b> independent leaderboards (for example Artificial Analysis, Vals.ai, Epoch AI, Scale Labs, LMArena, Terminal-Bench, Design Arena), community boards,
+      papers, vendor launch posts and model cards, and, as a last resort, aggregator sites. Every score keeps its model, reasoning effort, agent harness,
+      date and a link to the page it came from (see <a href="#sources" onclick="go('sources');return false">Sources</a>).</li>
+    <li><b>Reasoning effort:</b> many models can "think" more or less (none / low / medium / high / max). Scores are stored per effort level; the Effort tab shows how much it matters.</li>
+  </ul>
+  <h2>Which number is shown for a benchmark</h2>
+  <p>Each model gets one score per benchmark. Independent results (third-party and community) win over papers, papers over vendor self-reports, and those over aggregators.
+  Within the same tier the best effort level is used and labelled on the chart. Vendor-reported numbers are marked with <sup>*</sup>; this includes numbers that an independent page relays from the model's own vendor.</p>
+  <h2>How models are ranked</h2>
+  <p>Category rankings (the heatmap, each category tab and the size view) combine many leaderboards in four steps:</p>
+  <ol>
+    <li><b>Percentile per leaderboard.</b> On every board with at least 4 models, each model's rank becomes a percentile from 0 (last) to 100 (first).
+      With the "By score gap" toggle the actual score is used instead, scaled from the board's lowest (0) to highest (100).</li>
+    <li><b>Benchmark families.</b> Versions of the same evaluation (for example several Terminal-Bench or Humanity's Last Exam variants) are averaged into one family, so a benchmark does not count twice because it has two versions.</li>
+    <li><b>One vote per publisher.</b> Within a category, all families from the same publisher (Vals.ai, Artificial Analysis, Scale Labs, ...) are averaged into a single vote; the category score is the average of the votes.
+      Saturated boards count half; boards that are no longer updated, superseded versions and vendors' internal benchmarks do not count.</li>
+    <li><b>Shrinkage.</b> A model needs results from at least 2 families. Its score is pulled toward 50 when it has few results: (score &times; k + 50 &times; 2) / (k + 2), where k is the number of families.
+      Heatmap cells based on fewer than 3 families are faded; hover a cell to see which boards were used.</li>
+  </ol>
+  <p>The overall ranking averages a model's category scores (at least 2 categories). Models covered by only a few publishers can look better or worse than they are, so check the hover details.
+  By default only independent results are used. The <b>Ranking</b> toggles add vendor self-reports, give saturated boards full weight, switch to score gaps, or hide restricted releases.
+  The toggles change rankings only; benchmark charts always show every score, filterable by source type.</p>
+  <h2>Reputation</h2>
+  <p>Posts from the last 30 days on Hacker News, Reddit, GitHub issues and V2EX, plus a web search of Reddit, X, linux.do and Zhihu, are read by Claude, which counts positive, negative and neutral opinions,
+  scores aspects (coding, agents, speed, cost, stability, ...), and keeps short quotes with links. Quotes not written in English are translated and marked "translated"; the original text is kept in the data.
+  Quotes are shown only when civil and on topic: opinions that contain insults or allege misconduct still count, but are not quoted, and summaries describe such claims neutrally with attribution.
+  Models are ordered by net positive share, pulled toward the overall average as if each had 10 extra average opinions; models with fewer than 8 opinions are listed separately.
+  Two usage signals sit beside it: OpenRouter's weekly token ranking and the LiveNerf quality-drift tracker.</p>
+  <h2>How often it is updated</h2>
+  <ul>
+    <li>The data is updated daily; the date of the last update is in the header.</li>
+    <li>Each update re-reads every live leaderboard and re-extracts only pages whose content changed. Vendor launch posts and papers are re-read every 30 days.</li>
+    <li>Each update also searches for new models and new primary sources, refreshes reputation and usage signals, and records what changed in the changelog on the Overview tab.</li>
+    <li>Numbers are extracted by Claude from the page text and must appear literally on the page; model names are matched to a registry of known names.</li>
+  </ul>
+  <h2>Corrections</h2>
+  <p>When we find an error, we fix the data, and log the date, what was wrong and what changed here. We do not silently overwrite old values: previous best scores are kept in dated snapshots.
+  Changes made by a benchmark's own publisher (a new version, a revised dataset) are logged here as well, because they replace data.</p>
+  ${corr || '<p class="empty">No corrections yet.</p>'}
+  <h2>Limits</h2>
+  <ul>
+    <li>Benchmarks measure narrow skills; a higher rank does not mean a model is better for your task.</li>
+    <li>Coverage is uneven: new and smaller models appear on fewer boards, so their rankings are less certain.</li>
+    <li>Leaderboards differ in harness, prompts and effort settings; the Harness and Effort tabs show where that matters.</li>
+    <li>Reputation reflects the people who post online, not all users.</li>
+  </ul>
+  <h2>License and contact</h2>
+  <p>Code is MIT-licensed; the curated data (including data.json) is released under CC BY 4.0. Individual scores remain subject to the terms of
+  their original sources, which are linked from every data point. Charts use Apache ECharts (Apache-2.0).
+  Source, raw data and the full method: <a href="https://github.com/Acrab-Agentic-Labs/llm-standings">github.com/Acrab-Agentic-Labs/llm-standings</a>.
+  To report a wrong score or suggest a source, <a href="https://github.com/Acrab-Agentic-Labs/llm-standings/issues/new/choose">open an issue</a>;
+  other questions: <a href="mailto:yiran.zhang@acrab.ai">yiran.zhang@acrab.ai</a>.</p>
+  <p class="foot">LLM Standings by Acrab AI · data generated ${esc(D.meta.generated||'')}.</p>
+  </div>`;
+};
+function go(tab){ st.tab=tab; document.querySelectorAll('nav.tabs button').forEach(b=>b.classList.toggle('on', b.dataset.t===tab)); show(); window.scrollTo({top:0}); try{ history.replaceState(null,'','#'+tab);}catch(e){} }
+function show(){
+  const main = document.getElementById('main');
+  main.querySelectorAll('section').forEach(s=>s.classList.toggle('on', s.id==='sec-'+st.tab));
+  let sec = document.getElementById('sec-'+st.tab);
+  if (!sec){ sec=document.createElement('section'); sec.id='sec-'+st.tab; sec.className='on'; main.appendChild(sec); dirty[st.tab]=true; }
+  if (dirty[st.tab]){
+    // dispose charts inside this section
+    for (let i=charts.length-1;i>=0;i--){ const c=charts[i]; if (sec.contains(c.getDom())){ c.dispose(); charts.splice(i,1);} }
+    (R[st.tab]||(()=>{}))(sec); dirty[st.tab]=false;
+  } else charts.forEach(c=>{ if(sec.contains(c.getDom())) c.resize(); });
+}
+function refilter(){ _rowsCache=null; _compCache=null; for (const [k] of CATS) dirty[k]=true; show(); }
+function chips(host, items, isOn, onClick){
+  host.insertAdjacentHTML('beforeend', items.map(([k,l])=>`<span class="chip ${isOn(k)?'on':''}" data-k="${esc(k)}">${esc(l)}</span>`).join(''));
+  host.querySelectorAll('.chip').forEach(ch=>ch.onclick=()=>{ onClick(ch.dataset.k, ch); host.querySelectorAll('.chip').forEach(x=>x.classList.toggle('on', isOn(x.dataset.k))); refilter(); });
+}
+function drawFocus(){
+  const host = document.getElementById('f-focus');
+  host.innerHTML = '<span>Pinned</span>' + [...st.focus].map(i=>`<span class="chip focus" data-i="${i}" title="Click to remove">${esc(M[i].name)} ×</span>`).join('') +
+    `<input list="m-all" placeholder="+ Pin a model..."><datalist id="m-all">${M.filter(m=>!st.focus.has(MID[m.id])).map(m=>`<option value="${esc(m.name)}">`).join('')}</datalist>`;
+  host.querySelectorAll('.chip.focus').forEach(c=>c.onclick=()=>{ st.focus.delete(+c.dataset.i); saveFocus(); drawFocus(); refilter(); });
+  const inp = host.querySelector('input');
+  inp.onchange = () => { const m = M.findIndex(x=>x.name===inp.value.trim()); if (m>=0){ st.focus.add(m); saveFocus(); drawFocus(); refilter(); } };
+}
+function init(){
+  document.getElementById('title').textContent = D.meta.title||'LLM Standings';
+  const nScore = ROWS.length;
+  document.getElementById('meta').textContent = `Updated ${D.meta.updated} · ${M.filter(m=>!m.hidden).length} models · ${nScore.toLocaleString('en-US')} scores · ${B.filter(b=>b.n>0).length} benchmarks · ${S.filter(s=>s.rows>0).length} sources`;
+  chips(document.getElementById('f-gen'), [['0','Current'],['1','Last two']], k=>+k===st.gen, k=>{st.gen=+k;});
+  chips(document.getElementById('f-open'), [['all','All'],['closed','Closed'],['open','Open']], k=>k===st.open, k=>{st.open=k;});
+  chips(document.getElementById('f-type'), Object.entries(TYPE_LABEL), k=>st.types.has(k), k=>{ st.types.has(k)?st.types.delete(k):st.types.add(k); if(!st.types.size) st.types.add(k); });
+  chips(document.getElementById('f-size'), SIZE_BANDS, k=>st.sizes.has(k), k=>{
+    if (st.sizes.size===SIZE_BANDS.length) st.sizes=new Set([k]); else { st.sizes.has(k)?st.sizes.delete(k):st.sizes.add(k); if(!st.sizes.size) st.sizes=new Set(SIZE_BANDS.map(x=>x[0])); } });
+  drawFocus();
+  const RKO = [['self','Incl. self-reports'],['sat','Saturated at full weight'],['gap','By score gap'],['hideR','Hide restricted']];
+  const rkOn = k => k==='gap' ? RK.mode==='gap' : k==='hideR' ? RK.hideRestricted : RK[k];
+  chips(document.getElementById('f-rank'), RKO, rkOn, k=>{ if(k==='gap') RK.mode = RK.mode==='gap'?'rank':'gap'; else if(k==='hideR') RK.hideRestricted=!RK.hideRestricted; else RK[k]=!RK[k]; });
+  document.querySelectorAll('#f-rank .chip').forEach(c=>c.title={self:'Also count vendor self-reports and aggregator copies in the rankings (default: independent evals only)',sat:'Count saturated boards at full weight (default: half weight)',gap:'Use score gaps instead of rank positions: 0 = lowest on the board, 100 = highest',hideR:'Hide partner-only models such as Claude Mythos 5.2; they are marked (restricted)'}[c.dataset.k]);
+  const fv = document.getElementById('f-vendor');
+  chips(fv, [['__all','All'], ...VENDORS.map(v=>[v,v])], k=> k==='__all' ? st.vendors.size===VENDORS.length : st.vendors.has(k),
+    k=>{ if(k==='__all'){ st.vendors = st.vendors.size===VENDORS.length? new Set(): new Set(VENDORS); if(!st.vendors.size) st.vendors=new Set(VENDORS); }
+         else if (st.vendors.size===VENDORS.length){ st.vendors=new Set([k]); } else { st.vendors.has(k)?st.vendors.delete(k):st.vendors.add(k); if(!st.vendors.size) st.vendors=new Set(VENDORS);} });
+  const vc = [...fv.querySelectorAll('.chip')]; vc.slice(13).forEach(c=>c.classList.add('xtra'));
+  if (vc.length>13){ const t=document.createElement('span'); t.className='chip small'; t.textContent=`+${vc.length-13} more`; t.onclick=()=>{ fv.classList.toggle('showall'); t.textContent = fv.classList.contains('showall')?'Less':`+${vc.length-13} more`; }; fv.appendChild(t); }
+  const tabs = document.getElementById('tabs');
+  tabs.innerHTML = CATS.map(([k,l,sh])=>`<button data-t="${k}"${sh?` title="${esc(l)}"`:''}>${esc(sh||l)}</button>`).join('');
+  tabs.querySelectorAll('button').forEach(b=>b.onclick=()=>go(b.dataset.t));
+  const h = (location.hash||'').slice(1);
+  go(CATS.some(c=>c[0]===h)?h:'overview');
+  let t; window.addEventListener('resize', ()=>{ clearTimeout(t); t=setTimeout(()=>charts.forEach(c=>c.resize()),150); });
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', refilter);
+}
+init();
+</script>
+</body>
+</html>

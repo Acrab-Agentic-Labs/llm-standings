@@ -1,0 +1,27 @@
+LLM Standings
+Copyright (c) 2026 Acrab AI
+
+Code (llm_bench.py, index.html and other source files) is licensed under the
+MIT License; see LICENSE.
+
+Curated data (data/*.json) and the generated report data (data.js, data.json)
+are licensed under CC BY 4.0; see data/LICENSE. Individual scores remain
+subject to the terms of their original sources, which are linked from every
+data point.
+
+------------------------------------------------------------------------------
+Third-party software
+------------------------------------------------------------------------------
+
+assets/echarts.min.js -- Apache ECharts 5.6.0
+Licensed under the Apache License, Version 2.0; see assets/ECHARTS-LICENSE.
+ECharts includes subcomponents derived from d3.js under the BSD 3-Clause
+License; see assets/LICENSE-d3.
+
+The Apache ECharts NOTICE file reads:
+
+Apache ECharts
+Copyright 2017-2024 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (https://www.apache.org/).

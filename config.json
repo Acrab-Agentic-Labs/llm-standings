@@ -1,0 +1,104 @@
+{
+  "claude": {
+    "backend": "auto",
+    "api_model": "auto",
+    "cli_model": "sonnet",
+    "cli_path": "claude",
+    "max_tokens": 16000,
+    "workers": 4,
+    "web_tools": true,
+    "api_web_search_tool": "web_search_20250305",
+    "api_web_fetch_tool": "web_fetch_20250910",
+    "api_web_fetch_beta": "web-fetch-2025-09-10",
+    "timeout": 900
+  },
+  "fetch": {
+    "timeout": 40,
+    "max_chars": 110000,
+    "min_text_chars": 1200,
+    "workers": 6
+  },
+  "scope": {
+    "max_gen": 1
+  },
+  "update": {
+    "discover": true,
+    "reputation": true,
+    "static_refresh_days": 30,
+    "discover_block_domains": [
+      "benchlm.ai",
+      "llm-stats.com",
+      "benchmarklist.com",
+      "modelgrep.com",
+      "llmgateway.io",
+      "codelifter.com",
+      "datalearner.com",
+      "lmcouncil.ai",
+      "promptzone.com",
+      "evertune.ai",
+      "taskade.com",
+      "gumloop.com"
+    ]
+  },
+  "reputation": {
+    "days": 30,
+    "max_posts_per_model": 60,
+    "use_claude_web": true,
+    "max_models": 40,
+    "channels": [
+      "hn",
+      "reddit",
+      "github",
+      "v2ex"
+    ],
+    "github_repos": [
+      "anthropics/claude-code",
+      "openai/codex",
+      "google-gemini/gemini-cli",
+      "sst/opencode",
+      "MoonshotAI/kimi-cli",
+      "QwenLM/qwen-code"
+    ],
+    "subreddits": [
+      "LocalLLaMA",
+      "ClaudeAI",
+      "OpenAI",
+      "ChatGPTCoding",
+      "singularity",
+      "Bard",
+      "cursor"
+    ]
+  },
+  "signal_sources": [
+    {
+      "id": "openrouter-rankings",
+      "url": "https://openrouter.ai/rankings?view=week",
+      "hint": "Weekly token usage leaderboard. For each model give rank and weekly tokens (in T or B tokens).",
+      "signals": [
+        "openrouter_rank_week",
+        "openrouter_tokens_week"
+      ]
+    },
+    {
+      "id": "livenerf",
+      "url": "https://raw.githubusercontent.com/ninjahawk/livenerf/master/results/daily.csv",
+      "hint": "Daily degradation tracker. Report the latest day's drift estimate vs baseline per model (signal 'degradation_drift', unit 'score delta').",
+      "signals": [
+        "degradation_drift"
+      ]
+    }
+  ],
+  "report": {
+    "title": "LLM Standings",
+    "data_js": "data.js",
+    "data_json": "data.json",
+    "standalone": "dist/llm-standings.html",
+    "focus_models": [
+      "qwen3.8-flash-next",
+      "glm-5.3-flash",
+      "mistral-medium-3.5",
+      "gpt-oss-120b",
+      "nemotron-3.5-super-vl"
+    ]
+  }
+}

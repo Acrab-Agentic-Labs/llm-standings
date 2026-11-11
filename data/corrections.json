@@ -1,0 +1,125 @@
+{
+ "note": "Errors found in this leaderboard's data or method, and upstream benchmark changes that forced data to be replaced. Newest first. Add an entry whenever published data is changed for a reason other than a normal source update.",
+ "entries": [
+  {
+   "date": "2026-11-11",
+   "type": "error",
+   "what": "9 BenchCAD Vision2Code scores that the board had copied from vendor system cards and launch charts were stored as independent results.",
+   "fix": "They are now marked vendor-reported and no longer count in the default ranking. A single score on an independent page can now be marked vendor-reported."
+  },
+  {
+   "date": "2026-11-11",
+   "type": "upstream",
+   "what": "Terminal-Bench released version 4.1: the same 66 tasks with stricter verifiers; existing 4.0 submissions were regraded.",
+   "fix": "4.1 added as a new benchmark. The 4.0 results are kept under the archived 4.0 board; both versions count as one benchmark family in rankings."
+  },
+  {
+   "date": "2026-11-11",
+   "type": "upstream",
+   "what": "Epoch AI revised its MirrorCode scores (for example Claude Opus 5.5 79 to 96) and re-fitted its Capabilities Index again.",
+   "fix": "Rows replaced with the current values."
+  },
+  {
+   "date": "2026-11-10",
+   "type": "error",
+   "what": "Arena vision scores mixed two views of the same leaderboard (raw and style-controlled), so 15 models had two different values.",
+   "fix": "Only the style-controlled values (the leaderboard's default view) are kept; the vision board was re-read from the 2026-11-08 snapshot."
+  },
+  {
+   "date": "2026-11-10",
+   "type": "upstream",
+   "what": "Scale released SWE Atlas v1.1 with a new judge; its scores are not comparable with v1.0.",
+   "fix": "v1.1 added as new benchmarks; the v1.0 boards are kept for reference, marked superseded and excluded from rankings."
+  },
+  {
+   "date": "2026-11-10",
+   "type": "upstream",
+   "what": "Kaggle re-scored the FACTS suite on Nov 6; each model's average now covers only the dimensions it was tested on.",
+   "fix": "FACTS rows replaced with the 7 tracked models that have all four dimensions; 9 older rows for models with partial or no coverage removed."
+  },
+  {
+   "date": "2026-11-10",
+   "type": "upstream",
+   "what": "Epoch AI recomputed its Capabilities Index (ECI); every value moved and one entry (GPT-5.5 Instant) was dropped.",
+   "fix": "All ECI rows replaced with the new values."
+  },
+  {
+   "date": "2026-11-05",
+   "type": "error",
+   "what": "Reputation summaries, tags and changelog lines used loaded wording (for example 'suspected benchmark gaming', 'nerf', 'dumb'), and 16 quotes contained insults or allegations of misconduct.",
+   "fix": "Our own text rewritten in neutral, attributed language; those 16 quotes are no longer shown (the opinions still count in the shares). The quoting policy is in the methodology."
+  },
+  {
+   "date": "2026-11-05",
+   "type": "error",
+   "what": "Changelog 'best-score changes' took the highest value from any source, so vendor self-reported numbers appeared as improvements over independent results.",
+   "fix": "The changelog now picks the best value with the same source priority as the report (independent > paper > vendor > aggregator)."
+  },
+  {
+   "date": "2026-11-05",
+   "type": "error",
+   "what": "On Nov 4 the Scale Labs HLE-Diamond rows for GPT-6.1 Terra (35.7) and DeepSeek V4.1 Flash (20.5) were deleted because the board seemed to have dropped them. The page read was a stale cached copy.",
+   "fix": "Both rows restored. Artificial Analysis, Vals.ai and Scale Labs pages are now always read with a cache-busting parameter."
+  },
+  {
+   "date": "2026-11-04",
+   "type": "upstream",
+   "what": "Artificial Analysis revised the CritPt v2 dataset (Intelligence Index v5.0.1); earlier CritPt v2 values are not comparable.",
+   "fix": "Old CritPt v2 rows removed (73). 17 models re-read on Nov 4, the remaining 25 on Nov 5."
+  },
+  {
+   "date": "2026-11-04",
+   "type": "upstream",
+   "what": "Design Arena changed the evaluation pool of its Blender 3D board.",
+   "fix": "16 rows from the old pool removed; only the new preview data is shown."
+  },
+  {
+   "date": "2026-11-04",
+   "type": "upstream",
+   "what": "CWE-bench moved to v2 (250 tasks, 185 vulnerability classes), not comparable with v1.",
+   "fix": "v1 kept for reference but marked superseded and excluded from rankings."
+  },
+  {
+   "date": "2026-11-02",
+   "type": "error",
+   "what": "Category rankings counted several versions of the same evaluation separately, let one publisher (Vals.ai) dominate the agentic category, and included vendor self-reports by default.",
+   "fix": "New method: versions merged into benchmark families, one vote per publisher, independent results only by default (see 'How models are ranked')."
+  },
+  {
+   "date": "2026-11-02",
+   "type": "error",
+   "what": "Reputation ranking put models with only 1-2 opinions at the top.",
+   "fix": "Shares are now shrunk toward the overall average (prior of 10 opinions) and models with fewer than 8 opinions are listed separately."
+  },
+  {
+   "date": "2026-11-02",
+   "type": "error",
+   "what": "Inkling and Inkling Small were shown as closed models.",
+   "fix": "Marked as open weights (available since July)."
+  },
+  {
+   "date": "2026-11-02",
+   "type": "upstream",
+   "what": "Vals.ai upgraded SAGE to v1.1 with a methodology change.",
+   "fix": "v1.1 scores stored separately from v1."
+  },
+  {
+   "date": "2026-10-28",
+   "type": "error",
+   "what": "Scores for the original 'Muse Spark' and the non-Pro 'MiMo V2.5' were mapped to the different models Muse Spark 1.3 and MiMo V2.5 Pro.",
+   "fix": "7 scores removed; both names added to the ignore list."
+  },
+  {
+   "date": "2026-10-28",
+   "type": "upstream",
+   "what": "Artificial Analysis Intelligence Index moved from v4.3.2 to v5.0 (9 evaluations), not comparable with v4.3.2.",
+   "fix": "Both versions stored separately; v4.3.2 marked superseded and excluded from rankings."
+  },
+  {
+   "date": "2026-10-27",
+   "type": "error",
+   "what": "Initial build: a vendor's self-reported number could be shown instead of an independent result for the same benchmark; ProgramBench mixed two metrics.",
+   "fix": "Source priority added (independent > paper > vendor > aggregator); ProgramBench split into 'fully resolved' and 'almost resolved'."
+  }
+ ]
+}

@@ -1,0 +1,1241 @@
+{
+ "as_of": "2026-10-27",
+ "feature_keys": [
+  "subagents",
+  "plan_mode",
+  "mcp",
+  "hooks",
+  "skills",
+  "custom_commands",
+  "sandbox",
+  "approvals",
+  "checkpoints",
+  "background_cloud",
+  "headless_ci",
+  "auto_compaction",
+  "multi_model",
+  "codebase_index",
+  "browser",
+  "parallel_agents"
+ ],
+ "feature_legend": {
+  "true": "supported",
+  "false": "not supported / deliberately omitted",
+  "partial": "partial / limited / needs plugin",
+  "null": "unverified"
+ },
+ "harnesses": [
+  {
+   "id": "claude-code",
+   "name": "Claude Code",
+   "vendor": "Anthropic",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "cli",
+    "ide_ext",
+    "desktop",
+    "web",
+    "cloud",
+    "mobile",
+    "sdk",
+    "chat"
+   ],
+   "open_source": false,
+   "license": "Proprietary",
+   "model_lockin": "own_models",
+   "models_note": "Claude only (Anthropic API/Bedrock/Vertex/Foundry); can run GLM/Qwen etc. via Anthropic-compatible endpoints (TB4 board lists Claude Code+GLM-5.3)",
+   "pricing": "Subscription Pro $20 / Max $100, $200 / Team / Enterprise; or API per token",
+   "config_files": [
+    "CLAUDE.md (also reads AGENTS.md)",
+    "auto memory",
+    ".claude/ (settings.json, skills/, agents/, commands/)",
+    ".mcp.json"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": true,
+    "mcp": true,
+    "hooks": true,
+    "skills": true,
+    "custom_commands": true,
+    "sandbox": true,
+    "approvals": true,
+    "checkpoints": true,
+    "background_cloud": true,
+    "headless_ci": true,
+    "auto_compaction": true,
+    "multi_model": "partial",
+    "codebase_index": "partial",
+    "browser": true,
+    "parallel_agents": true
+   },
+   "distinct": "Most complete Skills/plugins/Hooks/Agent Teams ecosystem; #1 on the official TB4 board",
+   "url": "https://code.claude.com/docs/en/overview",
+   "source_ids": [
+    "claude-code-docs",
+    "morph-codex-vs-cc",
+    "snorkel-tb4"
+   ]
+  },
+  {
+   "id": "codex",
+   "name": "OpenAI Codex (CLI / IDE / App / Cloud)",
+   "vendor": "OpenAI",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "cli",
+    "ide_ext",
+    "desktop",
+    "web",
+    "cloud",
+    "mobile",
+    "sdk",
+    "chat"
+   ],
+   "open_source": "partial",
+   "license": "Apache-2.0 (CLI); Cloud/App closed source",
+   "model_lockin": "own_default_plus_compatible",
+   "models_note": "GPT by default (GPT-6.1 Sol / GPT-6 Astra / GPT-6 Luna); config.toml can connect Bedrock, gateways, etc. (AA board lists Codex+DeepSeek V4.1 Flash)",
+   "pricing": "ChatGPT subscription Free / Go $8 / Plus $20 / Pro $100–500 / Business; or API key",
+   "config_files": [
+    "AGENTS.md",
+    "~/.codex/config.toml (profiles, permissions)",
+    "requirements.toml (enterprise-managed)",
+    "memories (off by default)"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": true,
+    "mcp": true,
+    "hooks": true,
+    "skills": true,
+    "custom_commands": "partial",
+    "sandbox": true,
+    "approvals": true,
+    "checkpoints": null,
+    "background_cloud": true,
+    "headless_ci": true,
+    "auto_compaction": true,
+    "multi_model": "partial",
+    "codebase_index": false,
+    "browser": true,
+    "parallel_agents": true
+   },
+   "distinct": "Open-source Rust CLI with OS sandbox by default, network-isolated cloud containers, most token-efficient",
+   "url": "https://github.com/openai/codex",
+   "source_ids": [
+    "codex-docs",
+    "codex-readme",
+    "morph-codex-vs-cc",
+    "codex-state-of-play",
+    "imec-harness-cost"
+   ]
+  },
+  {
+   "id": "antigravity",
+   "name": "Google Antigravity (2.0 desktop / IDE / CLI / SDK)",
+   "vendor": "Google",
+   "category": "product",
+   "status": "preview",
+   "forms": [
+    "desktop",
+    "ide",
+    "cli",
+    "sdk"
+   ],
+   "open_source": false,
+   "license": "Proprietary (predecessor Gemini CLI still Apache-2.0; discontinued for individual users from 2026-06-18)",
+   "model_lockin": "multi_vendor_hosted",
+   "models_note": "Mainly Gemini, also hosts Claude Sonnet/Opus and GPT-OSS-120B; no arbitrary BYOK",
+   "pricing": "Free preview for individuals (rate-limited; users report tight weekly limits); enterprise via Gemini Code Assist / Google Cloud",
+   "config_files": [
+    "GEMINI.md / AGENTS.md (IDE 1.20.5+)",
+    ".agents/rules/",
+    ".agents/mcp_config.json",
+    "~/.gemini/antigravity-cli/settings.json",
+    "plugins (skills+hooks+MCP)"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": true,
+    "mcp": true,
+    "hooks": true,
+    "skills": true,
+    "custom_commands": true,
+    "sandbox": true,
+    "approvals": true,
+    "checkpoints": true,
+    "background_cloud": "partial",
+    "headless_ci": true,
+    "auto_compaction": null,
+    "multi_model": true,
+    "codebase_index": null,
+    "browser": true,
+    "parallel_agents": true
+   },
+   "distinct": "Agent Manager parallel orchestration + built-in browser and Artifacts for verification",
+   "url": "https://antigravity.google",
+   "source_ids": [
+    "google-gcli-transition",
+    "gcloud-antigravity-surfaces",
+    "antigravity-cli-docs",
+    "gradually-agy",
+    "wiki-antigravity",
+    "promptshelf-agy"
+   ]
+  },
+  {
+   "id": "github-copilot",
+   "name": "GitHub Copilot (agent mode / coding agent / CLI)",
+   "vendor": "GitHub (Microsoft)",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "ide_ext",
+    "cli",
+    "cloud",
+    "web",
+    "mobile"
+   ],
+   "open_source": "partial",
+   "license": "Proprietary (VS Code Copilot Chat extension is open source)",
+   "model_lockin": "multi_vendor_hosted",
+   "models_note": "Hosts Claude / GPT / Gemini / Grok / Kimi etc., switch in-session with /model; enterprise can BYOK",
+   "pricing": "Free / Pro $10 / Pro+ $39 / Max $100 / Business $19/seat; metered in AI Credits (third-party summary)",
+   "config_files": [
+    ".github/copilot-instructions.md",
+    "AGENTS.md",
+    ".github/agents/*.agent.md",
+    "skills (SKILL.md)",
+    ".github/prompts/*.prompt.md"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": true,
+    "mcp": true,
+    "hooks": true,
+    "skills": true,
+    "custom_commands": true,
+    "sandbox": "partial",
+    "approvals": true,
+    "checkpoints": true,
+    "background_cloud": true,
+    "headless_ci": true,
+    "auto_compaction": true,
+    "multi_model": true,
+    "codebase_index": true,
+    "browser": "partial",
+    "parallel_agents": true
+   },
+   "distinct": "Native integration with Issues/PRs/Actions; cloud agent opens PRs directly",
+   "url": "https://github.com/features/copilot",
+   "source_ids": [
+    "gh-copilot-cli-ga",
+    "morph-cc-vs-copilot",
+    "morph-ai-coding-agent"
+   ]
+  },
+  {
+   "id": "cursor",
+   "name": "Cursor (IDE / Agents window / CLI / Cloud Agents)",
+   "vendor": "Anysphere",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "ide",
+    "cli",
+    "cloud",
+    "web",
+    "mobile",
+    "sdk",
+    "chat"
+   ],
+   "open_source": false,
+   "license": "Proprietary",
+   "model_lockin": "multi_vendor_hosted",
+   "models_note": "In-house Composer 2.5 (default) + hosted Claude/GPT/Gemini/Grok; Auto routes by complexity; can use Bedrock",
+   "pricing": "Hobby free / Pro $20 / Pro+ $60 / Ultra $200 / Teams $40/seat",
+   "config_files": [
+    ".cursor/rules/*.mdc",
+    "AGENTS.md",
+    ".cursor/commands/",
+    ".cursor/hooks.json",
+    ".cursor/worktrees.json",
+    "skills"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": true,
+    "mcp": true,
+    "hooks": true,
+    "skills": true,
+    "custom_commands": true,
+    "sandbox": true,
+    "approvals": true,
+    "checkpoints": true,
+    "background_cloud": true,
+    "headless_ci": true,
+    "auto_compaction": true,
+    "multi_model": true,
+    "codebase_index": true,
+    "browser": true,
+    "parallel_agents": true
+   },
+   "distinct": "IDE + semantic indexing + in-house Composer; local and cloud agents in one",
+   "url": "https://cursor.com",
+   "source_ids": [
+    "cursor-cli-changelog",
+    "havoptic-cursor",
+    "morph-ai-coding-agent"
+   ]
+  },
+  {
+   "id": "devin",
+   "name": "Devin Desktop (formerly Windsurf) / Devin Cloud / Devin CLI",
+   "vendor": "Cognition",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "ide",
+    "cloud",
+    "cli",
+    "web"
+   ],
+   "open_source": false,
+   "license": "Proprietary",
+   "model_lockin": "multi_vendor_hosted",
+   "models_note": "In-house SWE series + frontier models; Fusion dual-model (e.g. Fable 5.1 plans + SWE-2 executes); ACP can run Claude/Codex/OpenCode",
+   "pricing": "Devin Free / Pro $20 / Max $200 / Teams $80+$40/seat (third-party summary)",
+   "config_files": [
+    ".devin/config.toml (command permissions)",
+    ".devin/tasks/",
+    "system_prompt_overrides.json"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": null,
+    "mcp": true,
+    "hooks": null,
+    "skills": null,
+    "custom_commands": "partial",
+    "sandbox": "partial",
+    "approvals": true,
+    "checkpoints": null,
+    "background_cloud": true,
+    "headless_ci": true,
+    "auto_compaction": null,
+    "multi_model": true,
+    "codebase_index": true,
+    "browser": true,
+    "parallel_agents": true
+   },
+   "distinct": "Command Center board manages local/cloud agents; Fusion dual-model",
+   "url": "https://devin.ai",
+   "source_ids": [
+    "btn-devin-desktop",
+    "webref-windsurf",
+    "cryptobriefing-fusion",
+    "benchlm-aa-agents"
+   ]
+  },
+  {
+   "id": "cline",
+   "name": "Cline",
+   "vendor": "Cline Bot Inc.",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "ide_ext",
+    "cli",
+    "desktop",
+    "sdk",
+    "web"
+   ],
+   "open_source": true,
+   "license": "Apache-2.0 (JetBrains plugin not open source)",
+   "model_lockin": "any_byok",
+   "models_note": "Any cloud provider or local model (BYOK), or pay-as-you-go via Cline account",
+   "pricing": "Free + BYOK; Cline pay-as-you-go or ClinePass $9.99/month",
+   "config_files": [
+    ".clinerules/",
+    "AGENTS.md",
+    "workflows (/commands)",
+    "hooks",
+    "skills"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": true,
+    "mcp": true,
+    "hooks": true,
+    "skills": true,
+    "custom_commands": true,
+    "sandbox": false,
+    "approvals": true,
+    "checkpoints": true,
+    "background_cloud": false,
+    "headless_ci": true,
+    "auto_compaction": true,
+    "multi_model": true,
+    "codebase_index": false,
+    "browser": true,
+    "parallel_agents": true
+   },
+   "distinct": "Plan/Act + step-by-step approval, Kanban with parallel worktrees, open-source BYOK",
+   "url": "https://cline.bot",
+   "source_ids": [
+    "cline-readme",
+    "cline-docs",
+    "morph-ai-coding-agent"
+   ]
+  },
+  {
+   "id": "kilo-code",
+   "name": "Kilo Code",
+   "vendor": "Kilo (Kilo-Org)",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "ide_ext",
+    "cli",
+    "cloud",
+    "web"
+   ],
+   "open_source": true,
+   "license": "MIT (CLI derived from OpenCode)",
+   "model_lockin": "any_byok",
+   "models_note": "Kilo Gateway: 500+ models at list price with zero markup, switchable mid-task; BYOK/local also supported",
+   "pricing": "Extension free; gateway at provider list price, zero markup",
+   "config_files": [
+    "AGENTS.md",
+    "rules / skills / commands (paths unverified)"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": true,
+    "mcp": true,
+    "hooks": null,
+    "skills": true,
+    "custom_commands": true,
+    "sandbox": false,
+    "approvals": true,
+    "checkpoints": true,
+    "background_cloud": true,
+    "headless_ci": true,
+    "auto_compaction": true,
+    "multi_model": true,
+    "codebase_index": true,
+    "browser": "partial",
+    "parallel_agents": true
+   },
+   "distinct": "Roo/Cline lineage + OpenCode core; 500+ model gateway with zero markup",
+   "url": "https://kilo.ai",
+   "source_ids": [
+    "kilo-readme",
+    "morph-ai-coding-agent",
+    "roo-sunset"
+   ]
+  },
+  {
+   "id": "opencode",
+   "name": "OpenCode",
+   "vendor": "Anomaly (formerly SST)",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "cli",
+    "desktop",
+    "ide_ext",
+    "web",
+    "sdk"
+   ],
+   "open_source": true,
+   "license": "MIT",
+   "model_lockin": "any_byok",
+   "models_note": "Any provider/local (Ollama, LM Studio) or curated OpenCode Zen",
+   "pricing": "Free; pay your own tokens or Zen pay-as-you-go",
+   "config_files": [
+    "AGENTS.md (falls back to CLAUDE.md)",
+    "opencode.json",
+    ".opencode/agents/",
+    ".opencode/commands/",
+    "skills (SKILL.md)",
+    "JS plugins (30+ events)"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": true,
+    "mcp": true,
+    "hooks": true,
+    "skills": true,
+    "custom_commands": true,
+    "sandbox": false,
+    "approvals": true,
+    "checkpoints": true,
+    "background_cloud": false,
+    "headless_ci": true,
+    "auto_compaction": true,
+    "multi_model": true,
+    "codebase_index": "partial",
+    "browser": false,
+    "parallel_agents": "partial"
+   },
+   "distinct": "Most popular open-source terminal agent; client/server architecture, any model + LSP",
+   "url": "https://opencode.ai",
+   "source_ids": [
+    "opencode-readme",
+    "opencode-compat",
+    "morph-ai-coding-agent",
+    "imec-agents-peeking"
+   ]
+  },
+  {
+   "id": "aider",
+   "name": "Aider",
+   "vendor": "Aider-AI (Paul Gauthier)",
+   "category": "product",
+   "status": "maintenance",
+   "forms": [
+    "cli"
+   ],
+   "open_source": true,
+   "license": "Apache-2.0",
+   "model_lockin": "any_byok",
+   "models_note": "Any model (specified per run)",
+   "pricing": "Free; pay your own tokens",
+   "config_files": [
+    ".aider.conf.yml",
+    "CONVENTIONS.md (loaded via --read)"
+   ],
+   "features": {
+    "subagents": false,
+    "plan_mode": "partial",
+    "mcp": false,
+    "hooks": false,
+    "skills": false,
+    "custom_commands": false,
+    "sandbox": false,
+    "approvals": "partial",
+    "checkpoints": true,
+    "background_cloud": false,
+    "headless_ci": true,
+    "auto_compaction": true,
+    "multi_model": true,
+    "codebase_index": "partial",
+    "browser": false,
+    "parallel_agents": false
+   },
+   "distinct": "Git-native, auto-commits every edit + repo map; maintenance nearly stalled in 2026",
+   "url": "https://aider.chat",
+   "source_ids": [
+    "aider-readme",
+    "morph-ai-coding-agent"
+   ]
+  },
+  {
+   "id": "openhands",
+   "name": "OpenHands (Agent Canvas / CLI / Cloud / SDK)",
+   "vendor": "OpenHands (All Hands AI)",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "web",
+    "cli",
+    "cloud",
+    "sdk"
+   ],
+   "open_source": true,
+   "license": "MIT",
+   "model_lockin": "any_byok",
+   "models_note": "Any LLM; Canvas can also host ACP agents such as Claude Code/Codex/Gemini/Pi/OpenCode",
+   "pricing": "Open source and free; OpenHands Cloud/Enterprise paid",
+   "config_files": [
+    "AGENTS.md",
+    ".openhands/ (skills/microagents, setup.sh)"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": null,
+    "mcp": true,
+    "hooks": null,
+    "skills": true,
+    "custom_commands": null,
+    "sandbox": true,
+    "approvals": true,
+    "checkpoints": null,
+    "background_cloud": true,
+    "headless_ci": true,
+    "auto_compaction": true,
+    "multi_model": true,
+    "codebase_index": false,
+    "browser": true,
+    "parallel_agents": true
+   },
+   "distinct": "Self-hosted Agent Canvas, can orchestrate any ACP agent and automations",
+   "url": "https://github.com/OpenHands/OpenHands",
+   "source_ids": [
+    "openhands-readme"
+   ]
+  },
+  {
+   "id": "amp",
+   "name": "Amp",
+   "vendor": "Amp Inc. (spun off from Sourcegraph in 2025-12)",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "cli",
+    "ide_ext",
+    "web",
+    "mobile"
+   ],
+   "open_source": false,
+   "license": "Proprietary",
+   "model_lockin": "vendor_routed",
+   "models_note": "Vendor picks the model per mode (Smart/Rush/Deep, Oracle, etc.), no model picker; BYOK enterprise only",
+   "pricing": "Pay-as-you-go with zero markup ($5 minimum top-up); free tier closed to new users since mid-2026",
+   "config_files": [
+    "AGENTS.md (multi-level)",
+    ".agents/commands/",
+    "~/.config/amp/"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": false,
+    "mcp": true,
+    "hooks": null,
+    "skills": null,
+    "custom_commands": true,
+    "sandbox": false,
+    "approvals": true,
+    "checkpoints": "partial",
+    "background_cloud": false,
+    "headless_ci": true,
+    "auto_compaction": "partial",
+    "multi_model": false,
+    "codebase_index": false,
+    "browser": "partial",
+    "parallel_agents": "partial"
+   },
+   "distinct": "Vendor picks models; dedicated subagents such as Oracle/Librarian",
+   "url": "https://ampcode.com",
+   "source_ids": [
+    "rywalker-amp",
+    "bitdoze-amp",
+    "morph-ai-coding-agent"
+   ]
+  },
+  {
+   "id": "factory-droid",
+   "name": "Factory Droid",
+   "vendor": "Factory",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "cli",
+    "desktop",
+    "web",
+    "cloud",
+    "ide_ext"
+   ],
+   "open_source": false,
+   "license": "Proprietary",
+   "model_lockin": "multi_vendor_plus_byok",
+   "models_note": "Built-in multi-vendor models; CLI/desktop can connect Anthropic/OpenAI-compatible endpoints (OpenRouter, Ollama, vLLM)",
+   "pricing": "Unverified (subscription + token metering)",
+   "config_files": [
+    "AGENTS.md",
+    ".factory/skills/",
+    "hooks.json",
+    "settings.json (customModels)",
+    ".factory-plugin/"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": true,
+    "mcp": true,
+    "hooks": true,
+    "skills": true,
+    "custom_commands": true,
+    "sandbox": "partial",
+    "approvals": true,
+    "checkpoints": true,
+    "background_cloud": "partial",
+    "headless_ci": true,
+    "auto_compaction": null,
+    "multi_model": true,
+    "codebase_index": null,
+    "browser": null,
+    "parallel_agents": true
+   },
+   "distinct": "Four Autonomy levels + enterprise compliance (air-gapped/EU hosting); droid exec targets CI",
+   "url": "https://factory.ai",
+   "source_ids": [
+    "innfactory-droid",
+    "snorkel-tb20"
+   ]
+  },
+  {
+   "id": "kiro",
+   "name": "Kiro (IDE / CLI / Web)",
+   "vendor": "AWS",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "ide",
+    "cli",
+    "web"
+   ],
+   "open_source": false,
+   "license": "Proprietary",
+   "model_lockin": "multi_vendor_hosted",
+   "models_note": "Auto routing + Claude Sonnet/Opus/Haiku, Qwen3 Coder, DeepSeek, MiniMax, GLM; AWS-hosted, no BYOK",
+   "pricing": "Credits: Free / Pro $20 / Pro+ $40 / Pro Max $100 / Power $200; overage $0.04/credit",
+   "config_files": [
+    ".kiro/steering/",
+    ".kiro/specs/",
+    ".kiro/skills/",
+    "hooks",
+    "Powers (MCP+steering+hooks bundles)"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": true,
+    "mcp": true,
+    "hooks": true,
+    "skills": true,
+    "custom_commands": null,
+    "sandbox": null,
+    "approvals": true,
+    "checkpoints": true,
+    "background_cloud": true,
+    "headless_ci": "partial",
+    "auto_compaction": null,
+    "multi_model": true,
+    "codebase_index": null,
+    "browser": null,
+    "parallel_agents": "partial"
+   },
+   "distinct": "Spec-driven: requirements → design → tasks with staged approval; successor to Q Developer",
+   "url": "https://kiro.dev",
+   "source_ids": [
+    "rywalker-kiro",
+    "amplifying-kiro"
+   ]
+  },
+  {
+   "id": "warp",
+   "name": "Warp (ADE / Warp Agent CLI / Oz)",
+   "vendor": "Warp",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "desktop",
+    "cli",
+    "cloud"
+   ],
+   "open_source": true,
+   "license": "AGPL-3.0 (UI framework crate is MIT); open-sourced 2026-04-28",
+   "model_lockin": "multi_vendor_plus_byok",
+   "models_note": "GPT/Claude/Gemini + open weights (Kimi/MiniMax/Qwen), auto-routing; supports BYOK and custom endpoints",
+   "pricing": "Free / Build $20 / Max $200 / Business $50/seat (credits)",
+   "config_files": [
+    "WARP.md / AGENTS.md",
+    "rules",
+    "MCP"
+   ],
+   "features": {
+    "subagents": null,
+    "plan_mode": true,
+    "mcp": true,
+    "hooks": null,
+    "skills": null,
+    "custom_commands": true,
+    "sandbox": null,
+    "approvals": true,
+    "checkpoints": null,
+    "background_cloud": true,
+    "headless_ci": true,
+    "auto_compaction": null,
+    "multi_model": true,
+    "codebase_index": true,
+    "browser": false,
+    "parallel_agents": true
+   },
+   "distinct": "Terminal as ADE, can host Claude Code/Codex; Oz parallel cloud orchestration",
+   "url": "https://www.warp.dev",
+   "source_ids": [
+    "warp-oss-pr",
+    "warp-github",
+    "amplifying-warp"
+   ]
+  },
+  {
+   "id": "grok-build",
+   "name": "Grok Build",
+   "vendor": "xAI",
+   "category": "product",
+   "status": "beta",
+   "forms": [
+    "cli",
+    "acp"
+   ],
+   "open_source": null,
+   "license": "No open-source statement found",
+   "model_lockin": "own_models",
+   "models_note": "Grok only (grok-build-0.1, Grok 4.7, etc.)",
+   "pricing": "SuperGrok / X Premium+ subscription (beta); or XAI_API_KEY",
+   "config_files": [
+    "AGENTS.md",
+    "plugins / skills / hooks / MCP (compatible out of the box)"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": true,
+    "mcp": true,
+    "hooks": true,
+    "skills": true,
+    "custom_commands": null,
+    "sandbox": "partial",
+    "approvals": true,
+    "checkpoints": null,
+    "background_cloud": null,
+    "headless_ci": true,
+    "auto_compaction": null,
+    "multi_model": false,
+    "codebase_index": null,
+    "browser": null,
+    "parallel_agents": true
+   },
+   "distinct": "xAI's first terminal agent, compatible with CC-style ecosystem, each subagent gets its own worktree",
+   "url": "https://x.ai/news/grok-build-cli",
+   "source_ids": [
+    "xai-grok-build",
+    "havoptic-grok-build",
+    "decoder-grok-build",
+    "snorkel-tb4"
+   ]
+  },
+  {
+   "id": "muse-code",
+   "name": "Muse Code",
+   "vendor": "Meta (Superintelligence Labs)",
+   "category": "product",
+   "status": "beta",
+   "forms": [
+    "cli"
+   ],
+   "open_source": false,
+   "license": "Proprietary",
+   "model_lockin": "own_models",
+   "models_note": "Muse series only (Muse Spark 1.2+ / Muse Wonder), co-trained with the harness",
+   "pricing": "Per token: standard $1.25/$4.25 per million; contributor tier $0.10/$0.20 (data may be used for training)",
+   "config_files": [
+    "AGENTS.md (generated by muse init)",
+    "skills directory (importable from Claude Code/Codex)"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": "partial",
+    "mcp": true,
+    "hooks": true,
+    "skills": true,
+    "custom_commands": null,
+    "sandbox": true,
+    "approvals": true,
+    "checkpoints": "partial",
+    "background_cloud": false,
+    "headless_ci": true,
+    "auto_compaction": null,
+    "multi_model": false,
+    "codebase_index": null,
+    "browser": false,
+    "parallel_agents": true
+   },
+   "distinct": "Co-trained with the model; persistent background subagents + replayable event log",
+   "url": "https://dev.meta.ai",
+   "source_ids": [
+    "channelinsider-muse",
+    "devops-muse",
+    "everydev-muse",
+    "qainsights-muse"
+   ]
+  },
+  {
+   "id": "kimi-code-cli",
+   "name": "Kimi Code CLI",
+   "vendor": "Moonshot AI",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "cli",
+    "ide_ext",
+    "acp"
+   ],
+   "open_source": true,
+   "license": "MIT (TypeScript; old Python Kimi CLI archived)",
+   "model_lockin": "own_default_plus_compatible",
+   "models_note": "Kimi by default (K3, kimi-for-coding); other compatible providers configurable",
+   "pricing": "CLI free; Kimi membership ¥49–699/month or open platform API key",
+   "config_files": [
+    "Config per official docs (AGENTS.md support unverified)"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": "partial",
+    "mcp": true,
+    "hooks": true,
+    "skills": true,
+    "custom_commands": null,
+    "sandbox": null,
+    "approvals": true,
+    "checkpoints": null,
+    "background_cloud": false,
+    "headless_ci": null,
+    "auto_compaction": null,
+    "multi_model": true,
+    "codebase_index": null,
+    "browser": false,
+    "parallel_agents": "partial"
+   },
+   "distinct": "Single binary + pi-tui, supports video input, conversational MCP setup",
+   "url": "https://github.com/MoonshotAI/kimi-code",
+   "source_ids": [
+    "kimi-code-readme",
+    "kimi-cli-archived",
+    "howaiworks-kimi"
+   ]
+  },
+  {
+   "id": "qwen-code",
+   "name": "Qwen Code",
+   "vendor": "Alibaba (Qwen)",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "cli",
+    "desktop",
+    "web",
+    "ide_ext",
+    "sdk",
+    "chat"
+   ],
+   "open_source": true,
+   "license": "Apache-2.0",
+   "model_lockin": "any_byok",
+   "models_note": "OpenAI/Anthropic/Gemini/Qwen protocols, any third-party or local (Ollama/vLLM), switchable at runtime",
+   "pricing": "Free and open source; billed by the connected API",
+   "config_files": [
+    "QWEN.md (derived from Gemini CLI)",
+    ".qwen/ (settings, skills, agents)"
+   ],
+   "features": {
+    "subagents": true,
+    "plan_mode": true,
+    "mcp": true,
+    "hooks": true,
+    "skills": true,
+    "custom_commands": true,
+    "sandbox": true,
+    "approvals": true,
+    "checkpoints": null,
+    "background_cloud": false,
+    "headless_ci": true,
+    "auto_compaction": true,
+    "multi_model": true,
+    "codebase_index": "partial",
+    "browser": "partial",
+    "parallel_agents": true
+   },
+   "distinct": "Gemini CLI fork positioned against Claude Code; multi-protocol + IM channels",
+   "url": "https://github.com/QwenLM/qwen-code",
+   "source_ids": [
+    "qwen-code-readme"
+   ]
+  },
+  {
+   "id": "zed",
+   "name": "Zed (Agent Panel + external ACP agents)",
+   "vendor": "Zed Industries",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "ide"
+   ],
+   "open_source": true,
+   "license": "GPL-3.0 (editor)",
+   "model_lockin": "any_byok",
+   "models_note": "Zed-hosted models or BYOK/local; can host external agents such as Claude/Codex/Gemini/Pi/OpenCode",
+   "pricing": "Free (BYOK/external agents) / Pro $10 / Business $30/seat",
+   "config_files": [
+    ".rules / AGENTS.md / CLAUDE.md and other rules files"
+   ],
+   "features": {
+    "subagents": null,
+    "plan_mode": null,
+    "mcp": true,
+    "hooks": null,
+    "skills": null,
+    "custom_commands": "partial",
+    "sandbox": "partial",
+    "approvals": true,
+    "checkpoints": true,
+    "background_cloud": false,
+    "headless_ci": false,
+    "auto_compaction": null,
+    "multi_model": true,
+    "codebase_index": "partial",
+    "browser": false,
+    "parallel_agents": true
+   },
+   "distinct": "ACP originator: Rust editor hosting any external agent",
+   "url": "https://zed.dev",
+   "source_ids": [
+    "aiagentindex-zed",
+    "morph-ai-coding-agent"
+   ]
+  },
+  {
+   "id": "pi",
+   "name": "Pi (pi coding agent)",
+   "vendor": "Earendil Works (Mario Zechner)",
+   "category": "product",
+   "status": "GA",
+   "forms": [
+    "cli",
+    "sdk"
+   ],
+   "open_source": true,
+   "license": "MIT",
+   "model_lockin": "any_byok",
+   "models_note": "pi-ai unified multi-vendor API; API key or /login subscription",
+   "pricing": "Free; pay your own tokens / subscription",
+   "config_files": [
+    "AGENTS.md",
+    "extensions / skills / prompt templates (Pi packages)"
+   ],
+   "features": {
+    "subagents": false,
+    "plan_mode": false,
+    "mcp": false,
+    "hooks": "partial",
+    "skills": true,
+    "custom_commands": true,
+    "sandbox": false,
+    "approvals": false,
+    "checkpoints": "partial",
+    "background_cloud": false,
+    "headless_ci": true,
+    "auto_compaction": true,
+    "multi_model": true,
+    "codebase_index": false,
+    "browser": false,
+    "parallel_agents": false
+   },
+   "distinct": "Minimal and extensible: deliberately no built-in subagents/plan/permissions, relies on extension packages",
+   "url": "https://pi.dev",
+   "source_ids": [
+    "pi-readme",
+    "imec-harness-cost"
+   ]
+  },
+  {
+   "id": "terminus-2",
+   "name": "Terminus 2",
+   "vendor": "Laude Institute / Harbor (Terminal-Bench team)",
+   "category": "benchmark_scaffold",
+   "status": "active",
+   "forms": [
+    "harness"
+   ],
+   "open_source": true,
+   "license": "Apache-2.0 (Harbor framework)",
+   "model_lockin": "any_byok",
+   "models_note": "Model-agnostic (LiteLLM)",
+   "pricing": "Free",
+   "config_files": [],
+   "features": {
+    "subagents": false,
+    "plan_mode": false,
+    "mcp": false,
+    "hooks": false,
+    "skills": false,
+    "custom_commands": false,
+    "sandbox": "partial",
+    "approvals": false,
+    "checkpoints": false,
+    "background_cloud": false,
+    "headless_ci": true,
+    "auto_compaction": "partial",
+    "multi_model": true,
+    "codebase_index": false,
+    "browser": false,
+    "parallel_agents": false
+   },
+   "distinct": "Neutral TB baseline: gives the model just a tmux session to type into",
+   "url": "https://www.tbench.ai/news/terminus",
+   "source_ids": [
+    "vals-tb21",
+    "snorkel-tb21"
+   ]
+  },
+  {
+   "id": "mini-swe-agent",
+   "name": "mini-swe-agent (v2)",
+   "vendor": "Princeton & Stanford (SWE-bench team)",
+   "category": "benchmark_scaffold",
+   "status": "active",
+   "forms": [
+    "harness",
+    "cli"
+   ],
+   "open_source": true,
+   "license": "MIT",
+   "model_lockin": "any_byok",
+   "models_note": "litellm/openrouter/portkey, any model",
+   "pricing": "Free",
+   "config_files": [
+    "YAML config"
+   ],
+   "features": {
+    "subagents": false,
+    "plan_mode": false,
+    "mcp": false,
+    "hooks": false,
+    "skills": false,
+    "custom_commands": false,
+    "sandbox": "partial",
+    "approvals": false,
+    "checkpoints": false,
+    "background_cloud": false,
+    "headless_ci": true,
+    "auto_compaction": false,
+    "multi_model": true,
+    "codebase_index": false,
+    "browser": false,
+    "parallel_agents": false
+   },
+   "distinct": "~100 lines of Python, bash only; default for SWE-bench bash-only/Vals TB4",
+   "url": "https://github.com/SWE-agent/mini-swe-agent",
+   "source_ids": [
+    "mini-swe-readme",
+    "vals-tb4",
+    "deepswe-v1"
+   ]
+  },
+  {
+   "id": "swe-agent",
+   "name": "SWE-agent",
+   "vendor": "Princeton & Stanford",
+   "category": "benchmark_scaffold",
+   "status": "legacy",
+   "forms": [
+    "harness",
+    "cli"
+   ],
+   "open_source": true,
+   "license": "MIT",
+   "model_lockin": "any_byok",
+   "models_note": "Any model",
+   "pricing": "Free",
+   "config_files": [
+    "YAML config (tool bundles/ACI)"
+   ],
+   "features": {
+    "subagents": false,
+    "plan_mode": false,
+    "mcp": false,
+    "hooks": false,
+    "skills": false,
+    "custom_commands": false,
+    "sandbox": "partial",
+    "approvals": false,
+    "checkpoints": false,
+    "background_cloud": false,
+    "headless_ci": true,
+    "auto_compaction": "partial",
+    "multi_model": true,
+    "codebase_index": false,
+    "browser": false,
+    "parallel_agents": false
+   },
+   "distinct": "Introduced ACI, a purpose-built agent tool interface; superseded by the mini version as default baseline",
+   "url": "https://github.com/SWE-agent/SWE-agent",
+   "source_ids": [
+    "mini-swe-readme"
+   ]
+  }
+ ],
+ "common": [
+  "Unified project instruction files: nearly all read AGENTS.md (Claude Code uses CLAUDE.md and also supports it)",
+  "MCP is now standard (Pi a deliberate exception); plugins = skills+MCP+hooks bundled for distribution",
+  "Agent Skills (SKILL.md) became a cross-tool format, importable between Claude Code/Codex/Muse",
+  "Plan first, then execute: plan mode/spec approval + /goal for long-running task goals",
+  "Parallel subagents + git worktree isolation, multi-agent boards/command centers",
+  "Tiered permission approval + auto/yolo mode; OS-level sandboxing (Seatbelt/bubblewrap) now widespread",
+  "Lifecycle hooks (Pre/PostToolUse) for auditing and guardrails",
+  "Headless -p/exec + SDK for CI; automatic context compaction; local↔cloud session handoff"
+ ],
+ "differences": [
+  {
+   "axis": "Model binding",
+   "summary": "Own models: Claude Code, Codex, Grok Build, Muse Code; multi-vendor hosted: Cursor, Copilot, Kiro; any BYOK: OpenCode, Cline, Pi"
+  },
+  {
+   "axis": "Open source & licensing",
+   "summary": "Open source: Codex CLI, OpenCode, Kilo, Cline, Qwen Code, Pi, Warp (AGPL); closed: Claude Code, Cursor, Antigravity CLI"
+  },
+  {
+   "axis": "Primary form factor",
+   "summary": "Terminal-first: Claude Code, Codex, Grok Build, Pi; IDE-first: Cursor, Kiro, Devin Desktop; orchestration console: OpenHands, Oz"
+  },
+  {
+   "axis": "Security isolation",
+   "summary": "Sandbox by default: Codex, Muse Code; optional/partial: Claude Code, Cursor, Antigravity, Grok Build; approvals only: Cline, Amp; no permission system: Pi"
+  },
+  {
+   "axis": "Context retrieval",
+   "summary": "Semantic indexing: Cursor, Copilot, Kilo, Warp, Devin; agentic search+LSP: Claude Code, OpenCode; repo map: Aider"
+  },
+  {
+   "axis": "Workflow philosophy",
+   "summary": "Spec-driven: Kiro; plan mode: most; vendor-picked models: Amp; minimal, nothing built in: Pi; dual-model plan+execute: Devin Fusion"
+  },
+  {
+   "axis": "Billing model",
+   "summary": "Subscription quota: Claude/ChatGPT/SuperGrok/Kimi; credits: Copilot, Kiro, Warp; zero-markup pay-as-you-go: Amp, Kilo; free BYOK: OpenCode"
+  },
+  {
+   "axis": "Hosting & protocols",
+   "summary": "ACP hosts that run external agents: Zed, Devin Desktop, OpenHands, Warp; Codex can also be called as an MCP server"
+  },
+  {
+   "axis": "Token efficiency",
+   "summary": "imec: on GLM-5.3-Flash, Codex uses about half the output tokens of Claude Code/Pi at a similar success rate; Claude Code has the largest input context"
+  },
+  {
+   "axis": "Eval harness dependence",
+   "summary": "On TB4, swapping the harness for the same model mostly stays within ±3 points; Grok 4.7 scores 8.8 higher in Grok Build, Qwen3.8 Max 11.9 lower in Claude Code"
+  }
+ ],
+ "notes": [
+  "Feature matrix from official docs/READMEs and third-party profiles (2026-10); null = unverified, not unsupported; partial = limited/needs a plugin/only some form factors.",
+  "In harness_scores, cross-harness differences for the same model are confounded by trial count, effort, timeouts, submission date and image differences; they are not pure harness effects.",
+  "TB4 official board (vendor harness) vs Vals (mini-swe-agent): Opus 5.5 64.8 vs 65.15, GPT-6 Astra 58.2 vs 59.6, most gaps ≤3 points; Grok 4.7 Grok Build +8.8, Qwen3.8 Max 0902 in Claude Code −11.9.",
+  "Vals' own runs of GPT-5.5 under the Codex and Factory harnesses score only 57.3% on TB2.1, versus 83.1% for Codex CLI on the official board and 76.4% for Vals' Terminus 2: native harness config/timeout handling strongly affects scores.",
+  "imec: the same open model's success rate under Claude Code/Codex/Pi differs by only 2–3 tasks; on GLM-5.3-Flash, Codex roughly halves output tokens and runtime, while Claude Code uses 1.35–2.5x Codex's input tokens; without blocking git history, scores inflate to 75–97% (the model gets the answers from git log).",
+  "Anthropic's launch table gives Opus 5.5 TB4 66.4% (xhigh) and Sonnet 5.5 70.6% without naming the harness; the official board records 64.8 / 61.8 with the Claude Code harness.",
+  "AA Coding Agent Index scores harness+model combinations; the Devin Fusion CLI row is a two-model combo and cannot be treated as a single-model score.",
+  "2026 status changes: Google replaced the open-source Gemini CLI with the closed Antigravity CLI (shut down for individual users on 2026-06-18); Windsurf renamed to Devin Desktop (2026-06-02) and Cascade retired on 2026-07-01; Roo Code shut down on 2026-05-15 (users moved to Kilo/Cline); Kimi CLI (Python) archived and replaced by Kimi Code CLI (TS); Amp spun off from Sourcegraph; Warp open-sourced under AGPL on 2026-04-28; opencode repo moved to anomalyco; Cursor acquired Continue.",
+  "New entrants: xAI Grok Build (2026-05-25 beta), Meta Muse Code (2026-08-05 beta), Cognition Devin Fusion (planner + executor dual model), Pi (minimal harness, the base of OpenClaw); the AA index also has 'DeepSeek Harness' and Reflection 'Mirror', not listed separately due to insufficient information.",
+  "Not listed separately: Goose (now in the Linux Foundation's AAIF), Junie CLI (JetBrains, LLM-agnostic, TB2.0 71%), Augment/Auggie (completions dropped for non-enterprise plans since 2026-03, Context Engine remains), Crush (FSL-1.1-MIT), Trae Agent, Jules (current status unverified).",
+  "Version reference (third-party): Claude Code v2.1.310, Codex CLI v0.164.0 (both 2026-10-23); Grok Build v1.0.70 (2026-10-23).",
+  "The latest entries in the official SWE-bench Verified board JSON stop at 2026-02, with no scaffold comparison for the current two model generations, so no data was taken.",
+  "Qwen Code README: 7 Qwen Code versions running the same Qwen 3.7 Max on SWE-bench Verified averaged 76.4–77.8%, so iterating the same harness shifts scores by about ±1 point.",
+  "Benchmark id notes: terminal-bench-4 / terminal-bench-2.1 / terminal-bench-2 use different task sets and are not directly comparable; swe-bench-pro-imec64* and swe-bench-pro-pilot10 are subsets, do not mix them with the full SWE-bench Pro; aa-coding-agent-index is in index units.",
+  "distinct/summary length is estimated counting each CJK character as 1 and each ASCII character as 0.5."
+ ],
+ "updated": "2026-10-27"
+}
