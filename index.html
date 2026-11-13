@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>LLM Standings: the leaderboard of leaderboards</title>
-<meta name="description" content="LLM Standings: the leaderboard of leaderboards, built from independent evaluations of large language models. Updated daily.">
+<meta name="description" content="LLM Standings: the leaderboard of leaderboards, built from independent evaluations of large language models. Updated every two days.">
 <style>
 :root{
   color-scheme: light;
@@ -840,7 +840,7 @@ R.about = sec => {
     <div><b>What:</b> ${esc(c.what)}</div><div><b>Fix:</b> ${esc(c.fix)}</div></div>`).join('');
   sec.innerHTML = `<div class="prose">
   <h2>What this is</h2>
-  <p><b>LLM Standings</b> is a daily leaderboard of leaderboards. Every lab publishes its own benchmark table, and every leaderboard measures
+  <p><b>LLM Standings</b> is a leaderboard of leaderboards, updated every two days. Every lab publishes its own benchmark table, and every leaderboard measures
   something slightly different. LLM Standings collects results from independent leaderboards, papers and vendor reports, keeps a source link
   for every number, and combines them into one ranking per category. It currently tracks ${nModels} models with scores from ${nSrc} sources.
   Next to the scores it shows real-world reputation (what users say), a comparison of coding agents ("harnesses"), and a glossary of the benchmarks.</p>
@@ -881,7 +881,7 @@ R.about = sec => {
   Two usage signals sit beside it: OpenRouter's weekly token ranking and the LiveNerf quality-drift tracker.</p>
   <h2>How often it is updated</h2>
   <ul>
-    <li>The data is updated daily; the date of the last update is in the header.</li>
+    <li>The data is updated every two days; the date of the last update is in the header.</li>
     <li>Each update re-reads every live leaderboard and re-extracts only pages whose content changed. Vendor launch posts and papers are re-read every 30 days.</li>
     <li>Each update also searches for new models and new primary sources, refreshes reputation and usage signals, and records what changed in the changelog on the Overview tab.</li>
     <li>Numbers are extracted by Claude from the page text and must appear literally on the page; model names are matched to a registry of known names.</li>

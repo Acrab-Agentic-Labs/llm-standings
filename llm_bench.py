@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-LLM Standings updater (llm_bench) — a daily leaderboard of LLM leaderboards (pure standard library, no pip install needed)
+LLM Standings updater (llm_bench) — a leaderboard of LLM leaderboards (pure standard library, no pip install needed)
 https://github.com/Acrab-Agentic-Labs/llm-standings · code MIT, data CC BY 4.0 · Acrab AI
 
 The page is the static index.html, which loads data.js; this tool only writes the data (data.js + data.json).
@@ -944,7 +944,7 @@ class Updater:
             if nb.get('id') and nb['id'] not in B:
                 txt = ' '.join(str(nb.get(k) or '') for k in ('name', 'scope', 'feature'))
                 nb = {**nb, 'added_by': 'auto', 'added': TODAY,
-                      'internal': bool(nb.get('internal')) or bool(re.search(r'internal|in-house|self-built', txt, re.I)),
+                      'internal': bool(nb.get('internal')) or bool(re.search(r'\b(?:internal|in-house|self-built)\b', txt, re.I)),
                       'leaderboard': nb.get('leaderboard') or (s.get('url') if s.get('type') != 'official' else None)}
                 if nb.get('category') not in CATEGORIES + ['meta']:
                     nb['category'] = 'other'
@@ -1502,7 +1502,7 @@ def update_readme_badges(n_models, n_bench, n_sources):
     if a not in text or b not in text:
         return
     badge = lambda label, msg, color: f'![{label} {msg}](https://img.shields.io/badge/{label}-{msg.replace(" ", "%20")}-{color})'
-    block = ' '.join([badge('updated', 'daily', '4c78a8'), badge('code', 'MIT', '555'), badge('data', 'CC BY 4.0', '555'),
+    block = ' '.join([badge('updated', 'every 2 days', '4c78a8'), badge('code', 'MIT', '555'), badge('data', 'CC BY 4.0', '555'),
                       badge('models', str(n_models), 'd9734e'), badge('benchmarks', str(n_bench), 'd9734e'),
                       badge('sources', str(n_sources), 'd9734e')])
     new = text[:text.index(a) + len(a)] + '\n' + block + '\n' + text[text.index(b):]

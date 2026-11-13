@@ -3,19 +3,19 @@
 # LLM Standings
 
 **The leaderboard of leaderboards, built from independent evaluations.**
-How close is a 100B open model to the frontier? Updated daily.
+How close is a 100B open model to the frontier? Updated every two days.
 
 **[Live leaderboard →](https://acrab-agentic-labs.github.io/llm-standings/)**
 
 <!-- badges:start -->
-![updated daily](https://img.shields.io/badge/updated-daily-4c78a8) ![code MIT](https://img.shields.io/badge/code-MIT-555) ![data CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-555) ![models 107](https://img.shields.io/badge/models-107-d9734e) ![benchmarks 428](https://img.shields.io/badge/benchmarks-428-d9734e) ![sources 182](https://img.shields.io/badge/sources-182-d9734e)
+![updated every 2 days](https://img.shields.io/badge/updated-every%202%20days-4c78a8) ![code MIT](https://img.shields.io/badge/code-MIT-555) ![data CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-555) ![models 109](https://img.shields.io/badge/models-109-d9734e) ![benchmarks 437](https://img.shields.io/badge/benchmarks-437-d9734e) ![sources 191](https://img.shields.io/badge/sources-191-d9734e)
 <!-- badges:end -->
 
 ---
 
 Every lab publishes its own benchmark table, and every leaderboard measures something slightly different. LLM Standings
 collects results from independent leaderboards, papers and vendor reports, keeps a source link for every number, and
-combines them into one ranking per category. It is updated every day.
+combines them into one ranking per category. It is updated every two days.
 
 We built it to answer a practical question for on-device agents: which open model in the ~100B class should you run,
 and how much do you give up compared with the closed frontier?
@@ -31,15 +31,15 @@ The full method, including how saturated and stale benchmarks are handled, is in
 
 ## Snapshot
 
-Overall percentile across categories, independent results only. As of **2026-11-11**; see the [live leaderboard](https://acrab-agentic-labs.github.io/llm-standings/) for today's numbers.
+Overall percentile across categories, independent results only. As of **2026-11-13**; see the [live leaderboard](https://acrab-agentic-labs.github.io/llm-standings/) for today's numbers.
 
 | | Model | Size | Overall | Rank | Evidence |
 |---|---|---|---:|---:|---|
-| Closed frontier | Claude Fable 5.2 | undisclosed | 79.9 | 1 / 85 | 41 evals · 8 categories |
-| Best open model | Kimi K3.1 Pro | 2.8T, 104B active | 65.5 | 12 / 85 | 43 evals · 10 categories |
-| Best open, 40–150B | Qwen3.8 Flash-Next | 125B, 6B active | 55.7 | 24 / 85 | 8 evals · 3 categories |
+| Closed frontier | Claude Fable 5.2 | undisclosed | 81.1 | 1 / 87 | 44 evals · 8 categories |
+| Best open model | Kimi K3.1 Pro | 2.8T, 104B active | 64.5 | 13 / 87 | 46 evals · 10 categories |
+| Best open, 40–150B | Qwen3.8 Flash-Next | 125B, 6B active | 54.4 | 26 / 87 | 11 evals · 4 categories |
 
-Claude Fable 5.2 was released on Nov 9 and has results in 8 of 11 categories so far. Rank 2 is Gemini 4 Carbon (78.8, 5 categories), generally available since Nov 10. Claude Opus 5.5 (76.8, rank 3, 63 evals across all 11 categories) is the closed model with the broadest coverage.
+Claude Fable 5.2 (released Nov 9) has results in 8 of 11 categories. Rank 2 is Gemini 4 Carbon (78.1, 7 categories). Claude Opus 5.5 (77.4, rank 3, 68 evals across all 11 categories) is the closed model with the broadest coverage. Gemini 4 Hydrogen, released on Nov 12, enters at rank 4 (73.7) with results in only 4 categories so far, so its position is less certain.
 
 ## Using the data
 
@@ -65,7 +65,7 @@ If a number is wrong or a source is missing, please [open an issue](https://gith
 
 ```bibtex
 @misc{llmstandings2026,
-  title  = {LLM Standings: A Daily Leaderboard of Leaderboards},
+  title  = {LLM Standings: A Leaderboard of Leaderboards},
   author = {Zhang, Yiran and {Acrab Research}},
   year   = {2026},
   url    = {https://github.com/Acrab-Agentic-Labs/llm-standings}

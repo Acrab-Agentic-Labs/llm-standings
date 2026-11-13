@@ -5,7 +5,7 @@ refreshed, and how errors are corrected. The same text is on the **About** tab o
 
 ## 1. What this is
 
-LLM Standings is a daily leaderboard of leaderboards, built by Acrab AI. It is a single web page that does four things:
+LLM Standings is a leaderboard of leaderboards, built by Acrab AI and updated every two days. It is a single web page that does four things:
 
 - It collects benchmark results for current large language models from many places.
 - It keeps the source of every number.
@@ -138,7 +138,7 @@ Category rankings are used in the heatmap, each category tab and the Size tab. E
 
 ## 6. How often it is updated
 
-- The data is updated daily with `python3 llm_bench.py update`. The header of the report shows the date of the last update.
+- The data is updated every two days with `python3 llm_bench.py update`. The header of the report shows the date of the last update.
 - Each update does the following:
   1. **Discovers** new models and new primary sources, such as launch posts, model cards and new independent leaderboards. Aggregator sites are blocklisted.
   2. **Re-reads every live leaderboard.**
@@ -159,10 +159,13 @@ Category rankings are used in the heatmap, each category tab and the Size tab. E
 - Old values are not silently overwritten: earlier best scores remain in the dated snapshots and the changelog.
 - Changes made by a benchmark's own publisher, such as a new version or a revised dataset, are logged too, because they replace data.
 
-**Log** (as of 2026-11-11; the live list is in `data/corrections.json`):
+**Log** (as of 2026-11-13; the live list is in `data/corrections.json`):
 
 | Date | Type | What was wrong / changed | Fix |
 |---|---|---|---|
+| 2026-11-13 | Error | ARC-AGI-3 scores under ARC Prize's Provider Adapter harness were stored only for the three newest entries (Claude Fable 5.2, Gemini 4 Argon, Gemini 4 Carbon). For older entries only the Standard-harness score was stored, so the best scores were not comparable across models. | Provider Adapter rows added for every model that has them on ARC Prize's result pages. The best ARC-AGI-3 score changed for six models (for example GPT-6 Astra 62.7 to 99.9, GPT-6.1 Sol 52.7 to 96.4, Claude Sonnet 5.5 24.3 to 72.4). |
+| 2026-11-13 | Upstream | Epoch AI re-fitted its Capabilities Index after adding Gemini 4 Carbon (every value moved slightly, for example Claude Fable 5.2 174.24 to 173.44). Its model pages also show higher GPQA Diamond values for Claude Fable 5.2 (94 to 96) and Claude Opus 5.5 (91 to 94). | ECI rows replaced with the current values; the two GPQA Diamond rows updated. |
+| 2026-11-11 | Error | RoboDojo Sim, a public robot-manipulation benchmark, was labelled an in-house benchmark, because its description said that Anthropic's results were run internally. | The label is removed and the official RoboDojo leaderboard is now tracked as a source. Anthropic's own runs stay marked vendor-reported. No default ranking changed. |
 | 2026-11-11 | Error | 9 BenchCAD Vision2Code scores that the board had copied from vendor system cards and launch charts were stored as independent results. | They are now marked vendor-reported and no longer count in the default ranking. A single score on an independent page can now be marked vendor-reported. |
 | 2026-11-11 | Upstream | Terminal-Bench released version 4.1: the same 66 tasks with stricter verifiers; existing 4.0 submissions were regraded. | 4.1 added as a new benchmark. The 4.0 results are kept under the archived 4.0 board; both versions count as one benchmark family in rankings. |
 | 2026-11-11 | Upstream | Epoch AI revised its MirrorCode scores (for example Claude Opus 5.5 79 to 96) and re-fitted its Capabilities Index again. | Rows replaced with the current values. |

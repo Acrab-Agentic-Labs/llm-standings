@@ -2,6 +2,24 @@
  "note": "Errors found in this leaderboard's data or method, and upstream benchmark changes that forced data to be replaced. Newest first. Add an entry whenever published data is changed for a reason other than a normal source update.",
  "entries": [
   {
+   "date": "2026-11-13",
+   "type": "error",
+   "what": "ARC-AGI-3 scores under ARC Prize's Provider Adapter harness were stored only for the three newest entries (Claude Fable 5.2, Gemini 4 Argon, Gemini 4 Carbon). For older entries only the Standard-harness score was stored, so the best scores were not comparable across models.",
+   "fix": "Provider Adapter rows added for every model that has them on ARC Prize's result pages. The best ARC-AGI-3 score changed for six models (for example GPT-6 Astra 62.7 to 99.9, GPT-6.1 Sol 52.7 to 96.4, Claude Sonnet 5.5 24.3 to 72.4)."
+  },
+  {
+   "date": "2026-11-13",
+   "type": "upstream",
+   "what": "Epoch AI re-fitted its Capabilities Index after adding Gemini 4 Carbon (every value moved slightly, for example Claude Fable 5.2 174.24 to 173.44). Its model pages also show higher GPQA Diamond values for Claude Fable 5.2 (94 to 96) and Claude Opus 5.5 (91 to 94).",
+   "fix": "ECI rows replaced with the current values; the two GPQA Diamond rows updated."
+  },
+  {
+   "date": "2026-11-11",
+   "type": "error",
+   "what": "RoboDojo Sim, a public robot-manipulation benchmark, was labelled an in-house benchmark, because its description said that Anthropic's results were run internally.",
+   "fix": "The label is removed and the official RoboDojo leaderboard is now tracked as a source. Anthropic's own runs stay marked vendor-reported. No default ranking changed."
+  },
+  {
    "date": "2026-11-11",
    "type": "error",
    "what": "9 BenchCAD Vision2Code scores that the board had copied from vendor system cards and launch charts were stored as independent results.",

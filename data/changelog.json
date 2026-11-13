@@ -1,6 +1,221 @@
 {
- "updated": "2026-11-11",
+ "updated": "2026-11-13",
  "entries": [
+  {
+   "date": "2026-11-13",
+   "kind": "highlight",
+   "text": "New model: Gemini 4 Hydrogen (Google, released 11-12, $1.50 / $7.50 per 1M tokens, 1M context). First independent results: Artificial Analysis Intelligence Index 54 at xhigh (51 at high), Vals Index 68.49, Arena WebDev 1704.2 and Text 1490.4, Plotly DataAnalyticsBench 43 of 43"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "highlight",
+   "text": "New model: ERNIE 5.5 Flash Preview (Baidu, 280B total / 14B active, API only for now; Baidu says the weights will follow under Apache 2.0). First scores: Design Arena Website 1268 and Game Dev 1257"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "highlight",
+   "text": "Correction: ARC-AGI-3 results under ARC Prize's Provider Adapter harness are now stored for every model that has them, not only for the three newest entries. The best ARC-AGI-3 score changes for six models, for example GPT-6 Astra 62.7 → 99.9, GPT-6.1 Sol 52.7 → 96.4 and Claude Sonnet 5.5 24.3 → 72.4"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "highlight",
+   "text": "New boards: TIS-100 Bench (16 models; record proximity GPT-6 Astra 78.0, Claude Opus 5.5 77.2, Gemini 4 Argon 76.2) and four more Vals boards: Immigration Bench (Claude Fable 5.1 75.44), CUA-bench (GPT-6 Astra 19.17), Robo-bench (GPT-6.1 Sol 28.33) and Time Horizon Index: KSP (Claude Opus 5.5 91.33)"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "highlight",
+   "text": "Claude Fable 5.2 reaches more boards: #1 on Parallel's search leaderboard (80.1) and on Artificial Analysis' full-HLE page (74.3 at max), #2 on Kaggle Game Arena (546), GPQA Diamond 96 on Epoch; Design Arena Website 1303 → 1353"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "highlight",
+   "text": "Gemini 4 Carbon enters Epoch's Capabilities Index at 169.8, second to Claude Fable 5.2 (173.4 after a re-fit, was 174.2), and leads Kaggle's FACTS suite (78.4; the board now lists 23 models). Artificial Analysis shows a lower cost per task for it (high: $7.76 → $5.48)"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "highlight",
+   "text": "Scale's SWE Atlas v1.1 now covers 28 tracked models (was 16): Claude Fable 5.2 80.5, Claude Opus 5.5 77.4; Claude Fable 5.1 moved from 74.1 to 76.4 on the board. The Remote Labor Index adds DeepSeek V4.1 Flash at 9.58"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "highlight",
+   "text": "Reputation: Claude Fable 5.2 sample 82 → 106 (45% positive, 52% negative); first entry for Gemini 4 Carbon (10 opinions, 55% positive). OpenRouter weekly: DeepSeek V4.1 Flash #1 (55.8T tokens), Hy4 #2 (20.3T); GPT-6.1 Sol and GLM-5.3 enter the top 10"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "summary",
+   "text": "This update: 262 new scores, 406 best-score changes"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_scores",
+   "text": "ERNIE 5.5 Flash Preview gets its first scores (2)"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_scores",
+   "text": "Gemini 4 Hydrogen gets its first scores (31)"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_scores",
+   "text": "Spark X2.6 gets its first scores (1)"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_bench",
+   "text": "New benchmark: Vals Immigration Bench (24 models)"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_bench",
+   "text": "New benchmark: TIS-100 Bench (record proximity) (16 models)"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_bench",
+   "text": "New benchmark: Vals Time Horizon Index: KSP (10 models)"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_bench",
+   "text": "New benchmark: Vals CUA-bench (9 models)"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_bench",
+   "text": "New benchmark: Vals Robo-bench (7 models)"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_bench",
+   "text": "New benchmark: Agents' Last Exam v1.1 (rubric score) (1 model)"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_bench",
+   "text": "+3 more new benchmarks: Multimodal Knowledge Agent (MKA), SWE-sweep, Vending-Bench 2"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "chg",
+   "text": "Claude Haiku 5.5 · ARC-AGI-3: 0.5 → 2.8"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "chg",
+   "text": "Grok 4.7 · ARC-AGI-3: 1.8 → 10"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "chg",
+   "text": "Gemini 3.8 Flash · ARC-AGI-3: 10.4 → 35"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "chg",
+   "text": "Claude Sonnet 5.5 · ARC-AGI-3: 24.3 → 72.4"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "chg",
+   "text": "GPT-6.1 Sol · ARC-AGI-3: 52.7 → 96.4"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "chg",
+   "text": "GPT-6 Astra · ARC-AGI-3: 62.7 → 99.9"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "chg",
+   "text": "GLM-5.3 Flash · OpenRouter weekly tokens: 13.8 → 12"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "chg",
+   "text": "Claude Fable 5.1 · SWE Atlas v1.1 – Codebase QnA: 73.4 → 79"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "chg",
+   "text": "Claude Fable 5.2 · Design Arena · Website: 1303 → 1353"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "chg",
+   "text": "Claude Sonnet 5.5 · SWE Atlas v1.1 – Codebase QnA: 71.8 → 74.2"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "chg",
+   "text": "Claude Opus 5.5 · GPQA Diamond: 91 → 94"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "chg",
+   "text": "GPT-5.6 Terra · Kaggle Game Arena (unified): 192 → 198"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_source",
+   "text": "New source: Vals – Time Horizon Index: KSP",
+   "url": "https://www.vals.ai/benchmarks/time_horizon_index"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_source",
+   "text": "New source: Vals – Robo-bench",
+   "url": "https://www.vals.ai/benchmarks/robo_bench"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_source",
+   "text": "New source: Vals – CUA-bench",
+   "url": "https://www.vals.ai/benchmarks/cua_bench"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_source",
+   "text": "New source: Vals – Immigration Bench",
+   "url": "https://www.vals.ai/benchmarks/immigration"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_source",
+   "text": "New source: Unisound - U2-Flash model page",
+   "url": "https://maas.unisound.com/models/u2-flash"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_source",
+   "text": "New source: TIS-100 Bench (Wincon Research)",
+   "url": "https://tis-100.wincon.dev/"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_source",
+   "text": "New source: Google - Introducing Gemini 4 Hydrogen",
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_source",
+   "text": "New source: Google DeepMind - Gemini 4 Hydrogen model card",
+   "url": "https://deepmind.google/models/model-cards/gemini-4-hydrogen/"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_model",
+   "text": "New model: ERNIE 5.5 Flash Preview (Baidu)",
+   "url": "https://ernie.baidu.com/release/ernie-5-5-flash-preview/"
+  },
+  {
+   "date": "2026-11-13",
+   "kind": "new_model",
+   "text": "New model: Gemini 4 Hydrogen (Google)",
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+  },
   {
    "date": "2026-11-11",
    "kind": "highlight",
@@ -43,8 +258,19 @@
   },
   {
    "date": "2026-11-11",
+   "kind": "highlight",
+   "text": "RoboDojo Sim (robot control in simulation): the official leaderboard is now tracked. Its agent track lists GPT-6 Astra at 22.5% average success, run by the RoboDojo team; the 64.9% for Claude Fable 5.2 is Anthropic's own run and stays marked vendor-reported"
+  },
+  {
+   "date": "2026-11-11",
    "kind": "summary",
-   "text": "This update: 180 new scores, 355 best-score changes"
+   "text": "This update: 182 new scores, 355 best-score changes"
+  },
+  {
+   "date": "2026-11-11",
+   "kind": "new_source",
+   "text": "New source: RoboDojo leaderboard (AI MMLab Club)",
+   "url": "https://robodojo-benchmark.com/leaderboard"
   },
   {
    "date": "2026-11-11",
