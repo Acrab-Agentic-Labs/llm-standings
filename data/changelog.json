@@ -1,6 +1,161 @@
 {
- "updated": "2026-11-13",
+ "updated": "2026-11-15",
  "entries": [
+  {
+   "date": "2026-11-15",
+   "kind": "highlight",
+   "text": "Status: Inkling 2 Small (Thinking Machines, 594B total / 17B active) now has open weights: Apache-2.0 on Hugging Face since 11-12, according to the dated update on its launch post. Its model card adds vendor-reported results (BrowseComp 90.2, DeepSearchQA 90.9); the Terminal-Bench 4.1 board lists it at 13.0"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "highlight",
+   "text": "Terminal-Bench 4.1 board grows from 20 to 38 tracked entries (42 on the board): Claude Fable 5.2 enters at 65.8, level with Claude Opus 5.5; also new are Kimi K3.1 Pro 59.7, GPT-6.1 Terra 53.3, Claude Haiku 5.5 40.0, DeepSeek V4.1 Flash 38.5 and Hy4 37.9"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "highlight",
+   "text": "New boards: Vals Financial Coaching Bench (24 models: Claude Opus 5.5 76.16, Claude Fable 5.1 75.71, Qwen3.8 Max 75.58), Vals Vibe Code Bench 1-100 v1.1 (8 models: Gemini 4 Carbon 49.73, Claude Opus 5.5 30.95; it replaces v1) and Deepnote's Agent Initiative Benchmark (12 models, score 0-10: GPT-6 Astra 8.97, GPT-6.1 Sol 8.65, Claude Fable 5.2 8.17)"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "highlight",
+   "text": "Gemini 4 Hydrogen is generally available, according to Google's Gemini API changelog of 11-12. New results: Kaggle FACTS 78.0 (third of 23), CWE-bench v2 68.1 (pass@1), Design Arena 3D 1423, Website 1321 and Game Dev 1351. Prices added: U2 Flash $0.085 / $0.17 per 1M tokens (Unisound's limited-time rate) and Mercury 3 $0.20 / $0.70 (list price)"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "highlight",
+   "text": "ARC Prize: results added for eight tracked models that had none, among them GPT-5.6 Sol (ARC-AGI-2 92.5), GPT-6 Sol (ARC-AGI-2 89.6; ARC-AGI-3 23.0 with the Provider Adapter harness), GPT-5.6 Terra (83.9) and Inkling (36.5). ARC-AGI-1 scores added for seven more models (Claude Opus 5.5 98.5)"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "highlight",
+   "text": "Lech Mazur's creative story-writing board was recomputed with four new writers: Claude Fable 5.2 enters first at 3.687, ahead of Claude Fable 5.1 (3.745 → 3.636); Hy4 2.211, Gemini 4 Carbon 1.752, Step 5 Preview -0.103. Design Arena 3D: GPT-6 Astra 1524 → 1536, Claude Fable 5.2 1518 → 1499"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "highlight",
+   "text": "Corrections: Vals no longer lists the Muse Wonder Full entry on CyberOffense (47.2), so the row was removed. Two vendor-reported PostTrainBench results labelled v1.2 (Kimi K3.1 Pro 36.5, Inkling 2 Small 31.9) moved from the v1.1 board to v1.2. RoboDojo's agent leaderboard now averages four dimensions, without Open (GPT-6 Astra 20.36%, DeepSeek V4.1 Flash 0.84%, GPT-5.5 0.42%); these are stored as a separate benchmark"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "highlight",
+   "text": "Reputation: Claude Fable 5.2 sample 106 → 123 (43% positive, 54% negative; the new reports include eight from the Claude Code issue tracker); Gemini 4 Carbon 10 → 15 (60% positive); first entry for Gemini 4 Hydrogen (11 opinions, 73% positive). OpenRouter weekly: DeepSeek V4.1 Flash #1 (56.9T tokens), Hy4 #2 (19.8T); MiMo-V2.6-Flash enters the top 10 and GLM-5.3 leaves it"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "summary",
+   "text": "This update: 109 new scores, 228 best-score changes"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "new_bench",
+   "text": "New benchmark: Vals Financial Coaching Bench (24 models)"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "new_bench",
+   "text": "New benchmark: Agent Initiative Benchmark (Deepnote) (12 models)"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "new_bench",
+   "text": "New benchmark: Vals Vibe Code Bench 1-100 v1.1 (8 models)"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "new_bench",
+   "text": "New benchmark: RoboDojo Sim · Agent track (Avg. w/o Open) (3 models)"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "chg",
+   "text": "Gemini 3.8 Flash · Lech Mazur Creative Story-Writing: 0.081 → -0.075"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "chg",
+   "text": "Qwen3.8 Max · Lech Mazur Creative Story-Writing: 0.116 → -0.052"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "chg",
+   "text": "MiniMax M3 · Lech Mazur Creative Story-Writing: -0.143 → -0.294"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "chg",
+   "text": "Grok 4.7 · Lech Mazur Creative Story-Writing: 0.351 → 0.183"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "chg",
+   "text": "DeepSeek V4 Pro · Lech Mazur Creative Story-Writing: 0.441 → 0.258"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "chg",
+   "text": "Muse Spark 1.3 · Lech Mazur Creative Story-Writing: 0.5 → 0.34"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "chg",
+   "text": "GLM-5.2 · Lech Mazur Creative Story-Writing: 0.412 → 0.291"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "chg",
+   "text": "DeepSeek V4.1 Flash · Lech Mazur Creative Story-Writing: -0.55 → -0.697"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "chg",
+   "text": "Gemini 4 Argon · Lech Mazur Creative Story-Writing: 0.719 → 0.551"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "chg",
+   "text": "Qwen3.8 27B · Lech Mazur Creative Story-Writing: -0.703 → -0.866"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "chg",
+   "text": "MiMo-V2.5-Pro · Lech Mazur Creative Story-Writing: -0.723 → -0.848"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "chg",
+   "text": "MiMo-V2.6-Pro · Lech Mazur Creative Story-Writing: 1.52 → 1.318"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "new_source",
+   "text": "New source: Vals – Vibe Code Bench 1-100 v1.1",
+   "url": "https://www.vals.ai/benchmarks/vcb-1-100-v1-1"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "new_source",
+   "text": "New source: Vals – Financial Coaching Bench",
+   "url": "https://www.vals.ai/benchmarks/financial-coaching-bench"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "new_source",
+   "text": "New source: Thinking Machines - Inkling 2 Small model card (Hugging Face)",
+   "url": "https://huggingface.co/thinkingmachines/Inkling-2-Small"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "new_source",
+   "text": "New source: Agent Initiative Benchmark (Deepnote Research)",
+   "url": "https://deepnote.com/research/benchmark"
+  },
+  {
+   "date": "2026-11-15",
+   "kind": "status",
+   "text": "Inkling 2 Small now open weights",
+   "url": "https://thinkingmachines.ai/news/inkling-2-small/"
+  },
   {
    "date": "2026-11-13",
    "kind": "highlight",

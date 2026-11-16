@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13",
+ "updated": "2026-11-15",
  "models": [
   {
    "id": "qwen3.8-27b",
@@ -739,12 +739,12 @@
     "jt-4-1-flash-236b-a21b"
    ],
    "tier": "mid",
-   "url": "https://artificialanalysis.ai/es/models/jt-4-1-flash-236b-a21b-non-reasoning",
+   "url": "https://artificialanalysis.ai/models/jt-4-1-flash-236b-a21b",
    "params_total_b": 236,
    "params_active_b": 21,
    "arch": "moe",
    "params_url": "https://artificialanalysis.ai/es/models/jt-4-1-flash-236b-a21b-non-reasoning",
-   "note": "No official China Mobile model page found; size from AA (name + FAQ '236B'), AA marks it proprietary (no public weights), context 262k (FAQ says 260k), no API provider listed. AA lists a Non-reasoning variant; a reasoning variant is unconfirmed, so efforts left [].",
+   "note": "No official China Mobile model page found; size from Artificial Analysis (236B total / 21B active), which marks it proprietary, with no public API and a 262k context. Artificial Analysis first listed a non-reasoning variant with the release date 2026-07-09; since November 2026 its entry is a reasoning model with the release date 2026-11-11 (Intelligence Index v5.0.1: 19). No China Mobile announcement of a November release was found; the vendor presented JT4.1 at the World Artificial Intelligence Conference on 2026-07-17 (C114).",
    "hidden": false,
    "added_by": "round2",
    "line": "mid"
@@ -3171,7 +3171,7 @@
    "params_active_b": 2.5,
    "arch": "moe (49 layers: 2 dense + 47 MoE, 256 routed experts top-6 + 1 shared; 35 sliding-window + 14 full-attention)",
    "url": "https://huggingface.co/RecursiveSI/flint",
-   "note": "Apache 2.0 open-weight local coding model; reasoning on (no effort levels); OpenRouter free only (no paid price yet); HF repo created 2026-10-21 - slightly before the window but missing from registry; OpenRouter New&Trending #2 (171B tokens)",
+   "note": "Apache 2.0 open-weight local coding model; reasoning on (no effort levels); OpenRouter free only (no paid price yet); Hugging Face repository created 2026-10-21; OpenRouter New&Trending #2 (171B tokens)",
    "search_terms": [
     "Recursive Flint",
     "Flint 40B"
@@ -3185,9 +3185,9 @@
    "gen": 0,
    "efforts": [],
    "default_effort": null,
-   "price_in": null,
-   "price_out": null,
-   "context": null,
+   "price_in": 0.2,
+   "price_out": 0.7,
+   "context": 1000000,
    "hidden": false,
    "arch": null,
    "params_note": "Diffusion LLM",
@@ -3199,14 +3199,15 @@
    "tier": "mid",
    "params_total_b": null,
    "params_active_b": null,
-   "url": "https://www.inceptionlabs.ai",
+   "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
    "aliases": [
     "Mercury 3",
     "inception/mercury-3"
    ],
    "line": "mid",
    "added_by": "import",
-   "added": "2026-10-28"
+   "added": "2026-10-28",
+   "note": "Diffusion LLM from Inception, announced 2026-10-19 ('Diffusion at Scale: Introducing Mercury 3'). Inception's model documentation lists $0.20 / $0.70 per 1M input / output tokens (cached input $0.02), 50% off at launch ($0.10 / $0.35), and a 1M-token context window for chat; API id mercury-3. Weights are not public."
   },
   {
    "family": "Solar Mini 4",
@@ -3413,7 +3414,7 @@
    "params_active_b": 48,
    "arch": "moe",
    "url": "https://huggingface.co/meituan-longcat/LongCat-2.5",
-   "note": "Native multimodal MoE, 1.6T total (~48B active; HF safetensors metadata 1.78T), built for long-horizon agentic coding; trained on Chinese domestic chips, W4A4 expert quantization (W4A4KV8 variant), hybrid thinking on/off. API release 2026-11-02 (HN launch thread 50337716). MIT-licensed weights on Hugging Face meituan-longcat/LongCat-2.5 and LongCat-2.5-W4A4: repo created 2026-11-04, shards uploaded 11-04/11-05, model card finalised 2026-11-05 ~08:13Z and updated 11-09 (public and ungated as of 2026-11-10; exact go-public time not visible). Price $0.30/$1.20 per 1M and 1M context/131K output per llm-stats. Replaces longcat-2.0 as Meituan flagship. LongCat-2.5-Preview (different checkpoint, API since 2026-09-25) not aliased.",
+   "note": "Native multimodal MoE, 1.6T total (~48B active; HF safetensors metadata 1.78T), built for long-horizon agentic coding; trained on Chinese domestic chips, W4A4 expert quantization (W4A4KV8 variant), hybrid thinking on/off. API release 2026-11-02 (HN launch thread 50337716). MIT-licensed weights on Hugging Face meituan-longcat/LongCat-2.5 and LongCat-2.5-W4A4: repo created 2026-11-04, shards uploaded 11-04/11-05, model card finalised 2026-11-05 ~08:13Z and updated 11-09 (public and ungated as of 2026-11-10; exact go-public time not visible). Price $0.30/$1.20 per 1M and 1M context/131K output per llm-stats. Replaces longcat-2.0 as Meituan flagship. LongCat-2.5-Preview (a different checkpoint, API since 2026-09-25) is a separate model and is not tracked.",
    "added_by": "import",
    "added": "2026-11-04",
    "hidden": false
@@ -3614,7 +3615,7 @@
    "gen": 0,
    "line": "small",
    "released": "2026-11-05",
-   "open_weights": false,
+   "open_weights": true,
    "efforts": [],
    "default_effort": null,
    "price_in": 0.3,
@@ -3624,9 +3625,12 @@
     "Inkling 2 Small",
     "Inkling 2 Small (XHigh)",
     "Inkling 2 Small (free)",
+    "Inkling Small 2",
     "Inkling-2-Small",
+    "Thinking Machines: Inkling 2 Small",
     "Thinking Machines: Inkling 2 Small (free)",
     "inkling-2-small",
+    "thinkingmachines/Inkling-2-Small-MXFP8",
     "thinkingmachines/inkling-2-small",
     "thinkingmachines/inkling-2-small:free",
     "thinkingmachines_inkling-2-small"
@@ -3636,7 +3640,7 @@
    "params_active_b": 17,
    "arch": "moe",
    "url": "https://thinkingmachines.ai/news/inkling-2-small/",
-   "note": "Second-generation Inkling: 594B total / 17B active MoE with image input (292M vision encoder based on Perception Encoder) and variable reasoning effort (launch evals at effort 0.99 = xhigh). Released 2026-11-05 on Tinker for sampling and fine-tuning under Tinker terms; serverless inference beta $0.30/$1.00 per 1M (cached input $0.03) with 64K/256K context tiers; model card context up to 1M tokens. Listed on OpenRouter as thinkingmachines/inkling-2-small:free since 2026-11-09 (free of charge, 1,048,576 context, Thinking Machines as the only provider). Weights were promised under Apache-2.0 'next week' after external safety testing; they are still not on Hugging Face (thinkingmachines org) as of 2026-11-13 and the launch post has no update. Replaces Inkling Small (266B-A12B) in the vendor's small line.",
+   "note": "Second-generation Inkling: 594B total / 17B active MoE (48 layers, 8 of 384 experts per token) with image input (292M vision encoder based on Perception Encoder) and variable reasoning effort (launch evals at effort 0.99 = xhigh). Released 2026-11-05 on Tinker for sampling and fine-tuning; serverless inference beta $0.30/$1.00 per 1M (cached input $0.03) with 64K/256K context tiers; model card context up to 1M tokens. Open weights under Apache-2.0 on Hugging Face since 2026-11-12, after external safety testing, per the dated update on the launch post: thinkingmachines/Inkling-2-Small (NVFP4 main checkpoint) and Inkling-2-Small-MXFP8. On OpenRouter as thinkingmachines/inkling-2-small ($0.30/$1.00) and :free (1,048,576 context, Thinking Machines as the only provider). Replaces Inkling Small (266B-A12B) in the vendor's small line.",
    "hidden": false,
    "added_by": "import",
    "added": "2026-11-10"
@@ -3657,8 +3661,12 @@
    "context": 1000000,
    "aliases": [
     "Ling 3.2 Flash",
+    "Ling 3.2 Flash (free)",
     "Ling-3.2-Flash",
     "Ling-3.2-flash",
+    "inclusionAI: Ling 3.2 Flash (free)",
+    "inclusionai/ling-3.2-flash",
+    "inclusionai/ling-3.2-flash:free",
     "ling-3.2-flash"
    ],
    "tier": "flagship",
@@ -3666,7 +3674,7 @@
    "params_active_b": 25,
    "arch": "moe",
    "url": "https://developer.ant-ling.com/en/docs/getting-started/changelog",
-   "note": "Native multimodal successor of Ling 3.1 Flash at the same size (560B total / 25B active): text, image and video input, 1M context; aimed at complex visual understanding, multimodal long-horizon agents, 3D understanding and interaction, and medical multimodal tasks. Launched 2026-11-05 (Ant Ling changelog v2.0.6) in the chat interface and through OpenAI- and Anthropic-compatible APIs, free for the first two weeks; no list price published. No weights on Hugging Face (inclusionAI) as of 2026-11-11 and no open-weight plan stated. Released before this run's 11-09..11-11 window; earlier runs missed it. new_generation is left false because InclusionAI's flagship line holds two families (Ling and Ring).",
+   "note": "Native multimodal successor of Ling 3.1 Flash at the same size (560B total / 25B active): text, image and video input, 1M context; aimed at complex visual understanding, multimodal long-horizon agents, 3D understanding and interaction, and medical multimodal tasks. Launched 2026-11-05 (Ant Ling changelog v2.0.6) in the chat interface and through OpenAI- and Anthropic-compatible APIs, free for the first two weeks; no list price published. On OpenRouter since 2026-11-13 as inclusionai/ling-3.2-flash:free (free of charge, 1M context, text and image input, up to 200 images per request, Ant Digital as the only provider). No public weights on Hugging Face (inclusionAI) as of 2026-11-15 and no open-weight plan in the changelog; OpenRouter's page links a Hugging Face repository inclusionAI/Ling-3.2-flash that is not publicly listed.",
    "hidden": false,
    "added_by": "import",
    "added": "2026-11-11"
@@ -3698,7 +3706,7 @@
    "params_active_b": 30,
    "arch": "moe",
    "url": "https://www.globaltimes.cn/page/202610/1372798.shtml",
-   "note": "Cloud flagship of iFLYTEK's Spark X2.6 device-cloud series, announced 2026-10-22 at the iFLYTEK 1024 Global Developer Festival: 293B total / about 30B active MoE, 1M context, trained on iFLYTEK's domestic compute; successor of Spark X2.5 (September 2026). API on the iFLYTEK Xingchen MaaS platform (maas.xfyun.cn): list price RMB 1.5/6 per 1M tokens (about US$0.21/0.85 at 7.05 RMB/USD), launch discount RMB 0.9/3.6 (about US$0.13/0.51), cached input RMB 0.08. Weights of the cloud model are not public; only the on-device Spark-X2.6-4B and -1.7B (below the 5B cut-off) are open under Apache-2.0 on Hugging Face (org XHToken, GitHub XHToken/Spark-X2.6). Some coverage (Global Times) calls the release 'open-sourced' without separating the two. Company-reported results only (ranked first on SWE Pro and SWE Multilingual, second on SWE Verified; no scores published). The Arena WebDev entry 'Spark-X2.6' (1484.8 on 2026-11-10) is presumably this cloud model. Vendor confirmed as iFLYTEK from the press release and Chinese tech press; the label 'synlan' was not found in any source, and Arena's organisation field could not be read. Released before this run's window; added because the maintainers asked for it to be checked.",
+   "note": "Cloud flagship of iFLYTEK's Spark X2.6 device-cloud series, announced 2026-10-22 at the iFLYTEK 1024 Global Developer Festival: 293B total / about 30B active MoE, 1M context, trained on iFLYTEK's domestic compute; successor of Spark X2.5 (September 2026). API on the iFLYTEK Xingchen MaaS platform (maas.xfyun.cn): list price RMB 1.5/6 per 1M tokens (about US$0.21/0.85 at 7.05 RMB/USD), launch discount RMB 0.9/3.6 (about US$0.13/0.51), cached input RMB 0.08. Weights of the cloud model are not public; only the on-device Spark-X2.6-4B and -1.7B (below the 5B cut-off) are open under Apache-2.0 on Hugging Face (org XHToken, GitHub XHToken/Spark-X2.6). Some coverage (Global Times) calls the release 'open-sourced' without separating the two. Company-reported results only (ranked first on SWE Pro and SWE Multilingual, second on SWE Verified; no scores published). On the Arena WebDev leaderboard as 'Spark-X2.6' under the organisation 'synlan' (license 'Proprietary'): Synlan Technology Pte. Ltd. is iFLYTEK's wholly-owned subsidiary in Singapore, according to a 2024 press release and its Huawei Cloud Marketplace seller page.",
    "hidden": false,
    "added_by": "import",
    "added": "2026-11-11"
@@ -3717,8 +3725,8 @@
     "high",
     "max"
    ],
-   "price_in": null,
-   "price_out": null,
+   "price_in": 0.085,
+   "price_out": 0.17,
    "context": 1000000,
    "aliases": [
     "U2 Flash",
@@ -3730,7 +3738,7 @@
    "params_active_b": 10,
    "arch": "moe",
    "url": "https://maas.unisound.com/models/u2-flash",
-   "note": "Unisound (HKEX 09678) released U2-Flash on 2026-09-15, according to same-day reports of the company's announcement (Caiwen, Zhitong Finance): a sparse MoE model with about 266B total / about 10B active parameters, post-trained from the company's U2 base model. Unisound's model page lists a 1M context window, 128K maximum output, text input and output, and four thinking levels (none/low/high/max), served through its MaaS platform with OpenAI- and Anthropic-compatible APIs. Price is still not confirmed by a vendor page: QbitAI (2026-09-17) reported a limited-time rate of RMB 0.6 / 1.2 per 1M input / output tokens (described as 60% of list; cached input RMB 0.12) and free quota from Sep 15 to 30, and called the context 512K at that time. Vendor-reported scores on the model page: DeepSWE v1.1 64.6, SWE-Bench Pro 61.6, TerminalBench 3.0 24.3, HMMT Feb. 2026 97.1, IMOAnswerBench 90.3, GPQA-Diamond 92.4. Also on the Arena WebDev leaderboard (organisation 'unisound', license 'Proprietary').",
+   "note": "Unisound (HKEX 09678) released U2-Flash on 2026-09-15, according to same-day reports of the company's announcement (Caiwen, Zhitong Finance): a sparse MoE model with about 266B total / about 10B active parameters, post-trained from the company's U2 base model. Unisound's model page lists a 1M context window, 128K maximum output, text input and output, and four thinking levels (none/low/high/max), served through its MaaS platform with OpenAI- and Anthropic-compatible APIs. Unisound's pricing page (maas.unisound.com/docs/price/overview) lists RMB 0.6 / 1.2 per 1M input / output tokens and RMB 0.06 for cached input (about US$0.085 / 0.17 at 7.05 RMB/USD), labelled a limited-time 60% rate with no end date; that implies a list price of RMB 1 / 2 (about US$0.14 / 0.28). Vendor-reported scores on the model page: DeepSWE v1.1 64.6, SWE-Bench Pro 61.6, TerminalBench 3.0 24.3, HMMT Feb. 2026 97.1, IMOAnswerBench 90.3, GPQA-Diamond 92.4. Also on the Arena WebDev leaderboard (organisation 'unisound', license 'Proprietary').",
    "hidden": false,
    "added_by": "import",
    "added": "2026-11-11"
@@ -3774,7 +3782,7 @@
    "params_active_b": null,
    "arch": null,
    "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
-   "note": "Released 2026-11-12 ('Introducing Gemini 4 Hydrogen'): the workhorse model of the Gemini 4 family, positioned as the upgrade for teams migrating from Gemini 3.8 Flash. Rolling out the same day in the Gemini API (Google AI Studio, Android Studio), Gemini for business, Google Antigravity (paid AI Pro and Ultra), Gemini in Sheets, the Gemini app model picker and Google Search; also on OpenRouter as google/gemini-4-hydrogen. $1.50/$7.50 per 1M tokens, flat across the 1M window (the same as Gemini 3.8 Flash's non-introductory price; OpenRouter batch variant $0.75/$3.75). Combined input-output window up to 1M tokens (OpenRouter lists 1,048,576); 64K default synchronous output, up to 1M with background long decode. Thinking levels low/medium/high (default)/xhigh; text, image, audio and video input; knowledge cutoff March 2026 per the model card. The post does not say whether this is a preview or a GA release. Antigravity's new Orchestrator pairs it with Gemini 4 Carbon.",
+   "note": "Released 2026-11-12 ('Introducing Gemini 4 Hydrogen'): the workhorse model of the Gemini 4 family, positioned as the upgrade for teams migrating from Gemini 3.8 Flash. Generally available from day one: Google's Gemini API changelog of 2026-11-12 lists gemini-4-hydrogen as 'generally available (GA)', with free-tier access. Rolled out the same day in the Gemini API (Google AI Studio, Android Studio), Gemini for business, Google Antigravity (paid AI Pro and Ultra), Gemini in Sheets, the Gemini app model picker and Google Search; also on OpenRouter as google/gemini-4-hydrogen. $1.50/$7.50 per 1M tokens, flat across the 1M window (the same as Gemini 3.8 Flash's non-introductory price; no introductory discount; Vertex AI lists the same global rate, $1.65/$8.25 on non-global endpoints and $0.75/$3.75 for batch). Combined input-output window up to 1M tokens (OpenRouter lists 1,048,576); 64K default synchronous output, up to 1M with background long decode. Thinking levels low/medium/high (default)/xhigh; text, image, audio and video input; knowledge cutoff March 2026 per the model card. Antigravity's new Orchestrator pairs it with Gemini 4 Carbon.",
    "added_by": "import",
    "added": "2026-11-13",
    "hidden": false
@@ -3850,6 +3858,10 @@
   "SWE-2 Flash",
   "Ultramarine 1 Flash",
   "aion-3.5",
-  "space-bunny-alpha"
+  "space-bunny-alpha",
+  "Edge0-145B",
+  "Edge0-120B",
+  "Edge0",
+  "Qwen3.8-27B-antislop"
  ]
 }
