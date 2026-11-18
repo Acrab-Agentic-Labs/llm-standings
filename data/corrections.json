@@ -2,6 +2,12 @@
  "note": "Errors found in this leaderboard's data or method, and upstream benchmark changes that forced data to be replaced. Newest first. Add an entry whenever published data is changed for a reason other than a normal source update.",
  "entries": [
   {
+   "date": "2026-11-17",
+   "type": "error",
+   "what": "The description of the archived Vals Vibe Code Bench 1-100 (v1) read '100 tiered tasks building apps from scratch'. Vals' page describes scenarios that start from a working application and extend it through up to ten dependent requests, with 50 test and 50 validation scenarios.",
+   "fix": "Description rewritten from Vals' archived page. No score changed; the board has been superseded by v1.1 since 2026-11-13."
+  },
+  {
    "date": "2026-11-15",
    "type": "upstream",
    "what": "Vals no longer lists the Muse Wonder Full entry (shown as 'Meta Wonder', 47.2%) on its CyberOffense board; the board went from eight rows to seven without a change note.",
@@ -164,5 +170,5 @@
    "fix": "Source priority added (independent > paper > vendor > aggregator); ProgramBench split into 'fully resolved' and 'almost resolved'."
   }
  ],
- "updated": "2026-11-15"
+ "updated": "2026-11-17"
 }

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15",
+ "updated": "2026-11-17",
  "models": [
   {
    "id": "qwen3.8-27b",
@@ -72,7 +72,7 @@
    "name": "Qwen3.8 Max",
    "vendor": "Alibaba",
    "family": "Qwen3.8",
-   "gen": 0,
+   "gen": 1,
    "released": "2026-09-02",
    "open_weights": true,
    "efforts": [
@@ -210,7 +210,7 @@
    "name": "Qwen3.7 Max",
    "vendor": "Alibaba",
    "family": "Qwen3.7",
-   "gen": 1,
+   "gen": 2,
    "released": "2026-05-19",
    "open_weights": false,
    "efforts": [],
@@ -3202,12 +3202,13 @@
    "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
    "aliases": [
     "Mercury 3",
+    "Mercury 3 Preview",
     "inception/mercury-3"
    ],
    "line": "mid",
    "added_by": "import",
    "added": "2026-10-28",
-   "note": "Diffusion LLM from Inception, announced 2026-10-19 ('Diffusion at Scale: Introducing Mercury 3'). Inception's model documentation lists $0.20 / $0.70 per 1M input / output tokens (cached input $0.02), 50% off at launch ($0.10 / $0.35), and a 1M-token context window for chat; API id mercury-3. Weights are not public."
+   "note": "Diffusion LLM from Inception, announced 2026-10-19 ('Diffusion at Scale: Introducing Mercury 3'). Inception's model documentation lists $0.20 / $0.70 per 1M input / output tokens (cached input $0.02), 50% off at launch ($0.10 / $0.35), and a 1M-token context window for chat; API id mercury-3. Weights are not public. Inception's documentation (docs.inceptionlabs.ai) carries a notice that the Mercury API is winding down: it remains fully available through 2026-12-28, after which access to the service and to data submitted to the platform ends."
   },
   {
    "family": "Solar Mini 4",
@@ -3446,7 +3447,7 @@
    "params_active_b": null,
    "arch": "moe",
    "url": "https://www.tencent.com/tencent-launches-hy4-joining-the-ranks-of-the-worlds-leading-open-source-ai-models/",
-   "note": "Official Hy4 (successor of Hy4 preview), released 2026-11-04: first Hunyuan model with vision + computer use; 770B MoE per Caixin/ChainCatcher (active count not restated; preview was 770B-A49B). Weights + system card promised 'in the coming days' but still not on Hugging Face (tencent org) as of 2026-11-13. API id hy4 (TokenHub, OpenRouter tencent/hy4): list price RMB 6/18 per 1M (~US$0.90/2.70 per Tencent; OpenRouter list $0.834/$2.501), unchanged from preview; 50% promotional discount on TokenHub/OpenRouter to 2026-12-31 (OpenRouter now bills $0.417/$1.2505). After launch-day rate limiting Tencent expanded Hy4 inference capacity tenfold and raised free quotas (announced 2026-11-05). 1M context, 64K max output. Hy4 Flash announced as coming soon.",
+   "note": "Official Hy4 (successor of Hy4 preview), released 2026-11-04: first Hunyuan model with vision + computer use; 770B MoE per Caixin/ChainCatcher (active count not restated; preview was 770B-A49B). Weights + system card promised 'in the coming days' but still not on Hugging Face (tencent org) as of 2026-11-17; OpenRouter's page links a Hugging Face repository tencent/Hy4 that is not publicly listed. API id hy4 (TokenHub, OpenRouter tencent/hy4): list price RMB 6/18 per 1M (~US$0.90/2.70 per Tencent; OpenRouter list $0.834/$2.501), unchanged from preview; 50% promotional discount on TokenHub/OpenRouter to 2026-12-31 (OpenRouter now bills $0.417/$1.2505). After launch-day rate limiting Tencent expanded Hy4 inference capacity tenfold and raised free quotas (announced 2026-11-05). 1M context, 64K max output. Hy4 flash, a smaller model of the family (224B total / 12B active), followed on 2026-11-16.",
    "added_by": "import",
    "added": "2026-11-05",
    "hidden": false
@@ -3476,7 +3477,7 @@
    "params_active_b": 64.78,
    "arch": "dense",
    "url": "https://www.ricursive.com/ripple",
-   "note": "Trained from scratch by Ricursive Intelligence (chip-design AI lab; not the 'Recursive' Flint vendor): dense 80-layer, d_model 5120, 12T pretraining tokens, up to 1M context; Apache-2.0 weights on HF ricursiveAI/Ripple-65B-Preview (BF16, also NVFP4/DFlash2 variants; HF created 2026-11-04). Claims US open-weight SOTA on Terminal-Bench 2.1 (80.52). Hosted on Together, GMI, OpenRouter ($0.20/$0.60 per 1M; OpenRouter now lists 1,048,576 context, up from 16,384 at launch).",
+   "note": "Trained from scratch by Ricursive Intelligence (chip-design AI lab; not the 'Recursive' Flint vendor): dense 80-layer, d_model 5120, 12T pretraining tokens, up to 1M context; Apache-2.0 weights on HF ricursiveAI/Ripple-65B-Preview (BF16, also NVFP4/DFlash2 variants; HF created 2026-11-04). Claims US open-weight SOTA on Terminal-Bench 2.1 (80.52). Ricursive's page lists Hugging Face, Together AI, GMI Cloud, OpenRouter and Fireworks as hosts and states no price of its own. On OpenRouter (1,048,576 context, up from 16,384 at launch) Together and GMI Cloud charge $0.20/$0.60 per 1M; Prime Intellect lists $0.10/$0.30.",
    "added_by": "import",
    "added": "2026-11-05",
    "hidden": false
@@ -3818,6 +3819,112 @@
    "note": "Baidu's product-update post of 2026-11-11 introduces ERNIE 5.5 Flash Preview as the first post-trained model built on its ERNIE 5.5 Flash Base checkpoint (a pretraining checkpoint on Hugging Face since 2026-11-05, not tracked): 280B total / 14B active parameters, 1M-token context, text-only. API on Baidu Qianfan; listed on OpenRouter as baidu/ernie-5.5-flash-preview:free since 2026-11-10 UTC (free of charge, 1,024,000 context, up to 921,600 output). No list price published. Baidu says the weights will be open-sourced under Apache 2.0 'soon'; on 2026-11-13 the baidu organisation on Hugging Face holds only the two Flash-Base repositories.",
    "added_by": "import",
    "added": "2026-11-13",
+   "hidden": false
+  },
+  {
+   "id": "qwen4-max",
+   "name": "Qwen4-Max",
+   "vendor": "Alibaba",
+   "family": "Qwen4",
+   "gen": 0,
+   "line": "flagship",
+   "released": "2026-11-16",
+   "open_weights": false,
+   "efforts": [
+    "none",
+    "low",
+    "high",
+    "xhigh"
+   ],
+   "default_effort": "high",
+   "price_in": 1.5,
+   "price_out": 4.5,
+   "context": 1000000,
+   "aliases": [
+    "Qwen 4 Max",
+    "Qwen4 Max",
+    "Qwen4-Max",
+    "Qwen: Qwen4 Max",
+    "alibaba_qwen4-max",
+    "qwen/qwen4-max",
+    "qwen4-max"
+   ],
+   "tier": "flagship",
+   "params_total_b": 2400,
+   "params_active_b": 71,
+   "arch": "moe",
+   "url": "https://qwen.ai/blog?id=qwen4-max",
+   "note": "First flagship of Alibaba's Qwen4 series (launch post 'Qwen4-Max: Your New Teammate Has Arrived'). Artificial Analysis gives the release date as 2026-11-16, Vals AI as 2026-11-15. The launch post states a 2.4T-parameter backbone with 71B parameters activated per token plus 328B N-gram embedding parameters, native vision and a 1M-token context window. Alibaba Cloud Model Studio lists the API id qwen4-max: 1,000,000-token context, up to 131,072 output tokens (262,144 for thinking and answer combined), reasoning effort low / high / xhigh (default high), $1.50 / $4.50 per 1M input / output tokens in the Singapore (international) region and $1.413 / $4.24 in the other listed regions. Weights are not public; the post says smaller Qwen4 models will be released as open source. Also listed on OpenRouter as qwen/qwen4-max. A preview, qwen4-max-preview, was offered through Alibaba's Token Plan from 2026-11-11. Successor of Qwen3.8 Max in Alibaba's flagship line.",
+   "added_by": "import",
+   "added": "2026-11-17",
+   "hidden": false
+  },
+  {
+   "id": "hy4-flash",
+   "name": "Hy4 flash",
+   "vendor": "Tencent",
+   "family": "Hy4",
+   "gen": 0,
+   "line": "mid",
+   "released": "2026-11-16",
+   "open_weights": false,
+   "efforts": [],
+   "default_effort": null,
+   "price_in": 0.07,
+   "price_out": 0.281,
+   "context": 1048576,
+   "aliases": [
+    "Hunyuan Hy4 flash",
+    "Hy4 Flash",
+    "Hy4 flash",
+    "Hy4-Flash",
+    "Hy4-flash",
+    "Tencent Hy4 flash",
+    "Tencent: Hy4 flash",
+    "hy4-flash",
+    "tencent/hy4-flash",
+    "tencent_hy4-flash"
+   ],
+   "tier": "mid",
+   "params_total_b": 224,
+   "params_active_b": 12,
+   "arch": "moe",
+   "url": "https://www.tencent.com/tencent-launches-hy4-flash-to-power-high-speed-cost-efficient-ai-deployment-for-everyday-workflows/",
+   "note": "Smaller, lower-cost model of the Hy4 family, released 2026-11-16 ('Tencent Launches Hy4 flash'): 224B total parameters including 64B Engram parameters, 12B active; hybrid attention, LatentMoE and Engram; multimodal input; context up to 1M tokens. Tencent states list prices of about US$0.070 / US$0.281 per 1M input / output tokens (cached input US$0.003; RMB 0.5 / 2 according to press reports), with 50% off on Tencent Cloud TokenHub until 2026-11-30. Available on TokenHub, WorkBuddy, Yuanbao, WeCom, QQ, ima and Marvis; on OpenRouter as tencent/hy4-flash since 2026-11-16 (1,048,576 context, billed at $0.035 / $0.1405 per 1M). Weights are not public; Tencent says it plans to open-source the model. Tencent's post reports its WorkIndex evaluation and seven public agent benchmarks only as charts.",
+   "added_by": "import",
+   "added": "2026-11-17",
+   "hidden": false
+  },
+  {
+   "id": "raon-1-mini-preview",
+   "name": "Raon-1 mini preview",
+   "vendor": "KRAFTON",
+   "family": "Raon-1",
+   "gen": 0,
+   "line": "small",
+   "released": "2026-10-21",
+   "open_weights": true,
+   "efforts": [],
+   "default_effort": null,
+   "price_in": null,
+   "price_out": null,
+   "context": 262144,
+   "aliases": [
+    "KRAFTON/Raon-1-mini-preview",
+    "Raon-1 mini",
+    "Raon-1 mini preview",
+    "Raon-1 mini preview (30B-A4B)",
+    "Raon-1-mini-preview",
+    "raon-1-mini-preview"
+   ],
+   "tier": "small",
+   "params_total_b": 28.8,
+   "params_active_b": 4.3,
+   "arch": "moe",
+   "url": "https://huggingface.co/KRAFTON/Raon-1-mini-preview",
+   "note": "Preview release of KRAFTON AI's Raon-1 mini, a 30B-A4B MoE language model (28.8B total / 4.3B active parameters) that the model card describes as designed and trained from scratch: 25 layers (18 Raon Delta Attention linear-attention layers and 7 gated MLA layers), 6 of 128 routed experts plus 1 shared expert per token, text only, built-in thinking mode, 262,144-token context. Apache-2.0 weights on Hugging Face (access on request, approved automatically) with MXFP8, NVFP4, GGUF and MLX checkpoints and a DFlash2 draft model; released 2026-10-21 according to press reports (Byline Network, Digital Today). KRAFTON offers a free playground for a limited time and a hosted API under separate terms; no price is published. The card says specifications and results may change before the final version.",
+   "added_by": "import",
+   "added": "2026-11-17",
    "hidden": false
   }
  ],

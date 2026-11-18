@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15",
+ "updated": "2026-11-17",
  "benchmarks": [
   {
    "id": "3jsbench",
@@ -4951,9 +4951,9 @@
    "id": "vals-vibe-code-1-100",
    "name": "Vals Vibe Code Bench 1-100",
    "category": "webdev",
-   "scope": "100 tiered tasks building apps from scratch",
-   "feature": "Earlier version with finer difficulty tiers; archived by Vals when v1.1 was released on 2026-11-13",
-   "size": null,
+   "scope": "Extending a working application through up to ten dependent requests, given in order and without technical details",
+   "feature": "Scenario score = consecutive iterations passed / iterations planned; the benchmark score is the mean across scenarios. Archived by Vals when v1.1 was released on 2026-11-13; v1.1 updates the prompts, workflows and failure-review policy",
+   "size": "50 test scenarios (plus 50 validation scenarios)",
    "metric": "% score",
    "higher_better": true,
    "status": "new",
