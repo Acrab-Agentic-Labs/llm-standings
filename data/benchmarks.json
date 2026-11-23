@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17",
+ "updated": "2026-11-20",
  "benchmarks": [
   {
    "id": "3jsbench",
@@ -6495,6 +6495,54 @@
    "added": "2026-11-15",
    "internal": false,
    "leaderboard": "https://robodojo-benchmark.com/leaderboard"
+  },
+  {
+   "id": "surge-sudo-l7",
+   "name": "sudo L7 (Surge AI)",
+   "category": "coding",
+   "scope": "60 software-engineering assignments written by professional engineers, most of them in private production repositories of real companies plus open-source projects; the expected output can be code, an architectural analysis, a rollout plan or a recommendation not to make the change",
+   "feature": "Grader models score each agent's work against expert-written, task-specific rubrics across eight dimensions of engineering behaviour, with unit tests and static analysis as evidence; the board shows the share of assignments a model succeeded on; harness and number of runs not stated",
+   "size": "60 tasks",
+   "metric": "% of assignments succeeded",
+   "higher_better": true,
+   "status": "new",
+   "url": "https://surgehq.ai/benchmarks/sudo-l7",
+   "leaderboard": "https://surgehq.ai/benchmarks/sudo-l7",
+   "added_by": "auto",
+   "added": "2026-11-20",
+   "internal": false
+  },
+  {
+   "id": "surge-dayjob-tax",
+   "name": "DAYJOB: Tax (Surge AI)",
+   "category": "agentic",
+   "scope": "50 professional tax assignments spanning 1,789 files (individual returns, partnerships, estates, international taxation): agents investigate client records, find issues the client may have overlooked and produce the tax work",
+   "feature": "Pass rate: share of attempts that reach a 95% rubric threshold; harness and number of runs not stated on the board",
+   "size": "50 assignments",
+   "metric": "% of attempts passed (95% rubric threshold)",
+   "higher_better": true,
+   "status": "new",
+   "url": "https://surgehq.ai/benchmarks/dayjob-tax",
+   "leaderboard": "https://surgehq.ai/benchmarks/dayjob-tax",
+   "added_by": "auto",
+   "added": "2026-11-20",
+   "internal": false
+  },
+  {
+   "id": "vals-autoform-hard",
+   "name": "Vals Autoform-Hard",
+   "category": "reasoning",
+   "scope": "Agents formalizing graduate- and research-level mathematics in Lean 4 (with Mathlib); slice of Meta FAIR's AutoformBench",
+   "feature": "Share of 56 tasks accepted by clean-room grading; one attempt per task, 3-hour limit, $200 cost cap; same agent harness for all models",
+   "size": "56 tasks",
+   "metric": "% tasks solved",
+   "higher_better": true,
+   "status": "new",
+   "url": "https://www.vals.ai/benchmarks/autoform_hard",
+   "added_by": "auto",
+   "added": "2026-11-20",
+   "internal": false,
+   "leaderboard": "https://www.vals.ai/benchmarks/autoform_hard"
   }
  ]
 }

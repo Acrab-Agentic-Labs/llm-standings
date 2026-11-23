@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17",
+ "updated": "2026-11-20",
  "sources": [
   {
    "id": "3jsbench",
@@ -16,7 +16,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -85,11 +85,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 9
+   "rows": 148
   },
   {
    "id": "aa-comparisons-r2",
@@ -111,11 +111,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 1
+   "rows": 9
   },
   {
    "id": "aa-evals",
@@ -140,11 +140,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
-   "last_status": "unchanged",
+   "last_fetch": "2026-11-20",
+   "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 1
+   "rows": 4
   },
   {
    "id": "aa-jt-4.1-flash",
@@ -182,12 +182,12 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "data_url_env": "ARTIFICIAL_ANALYSIS_API_KEY",
    "last_via": "import",
-   "rows": 3
+   "rows": 12
   },
   {
    "id": "aa-methodology",
@@ -558,11 +558,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 12
+   "rows": 40
   },
   {
    "id": "arena-hf-dataset",
@@ -638,11 +638,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
-   "last_status": "unchanged",
+   "last_fetch": "2026-11-20",
+   "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 89
+   "rows": 105
   },
   {
    "id": "benchlm-aa-agents",
@@ -985,7 +985,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -1126,7 +1126,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -1167,11 +1167,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 225
+   "rows": 211
   },
   {
    "id": "devdigest-step-5-preview",
@@ -1353,7 +1353,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import"
@@ -1395,8 +1395,8 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
-   "last_status": "unchanged",
+   "last_fetch": "2026-11-20",
+   "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
    "rows": 60
@@ -1418,8 +1418,8 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
-   "last_status": "unchanged",
+   "last_fetch": "2026-11-20",
+   "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
    "rows": 14
@@ -1440,7 +1440,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import"
@@ -1460,7 +1460,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -1481,7 +1481,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -1502,7 +1502,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -2200,7 +2200,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -2221,7 +2221,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -2243,11 +2243,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
-   "last_status": "unchanged",
+   "last_fetch": "2026-11-20",
+   "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 20
+   "rows": 21
   },
   {
    "id": "kagi-llm-bench",
@@ -2264,7 +2264,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -2405,7 +2405,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": "1d97ad6af56c3cc92f0cd5edb7e5cce8682c5757",
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -2426,7 +2426,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": "35ee1c3d735c6836bd905b1ebb22ce7614b2695e",
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -2447,11 +2447,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": "3bf04a525fb55c2228c323539a7bb4a1fccf4de1",
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 70
+   "rows": 74
   },
   {
    "id": "lechmazur-writing",
@@ -2468,11 +2468,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": "4e6e4d28fc872bd8f802e3ad078bae4ac3e4cb5c",
-   "last_fetch": "2026-11-17",
-   "last_status": "unchanged",
+   "last_fetch": "2026-11-20",
+   "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 40
+   "rows": 42
   },
   {
    "id": "ling-3.0-flash-hf",
@@ -2724,11 +2724,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 75
+   "rows": 269
   },
   {
    "id": "longbench-v2",
@@ -3765,7 +3765,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
@@ -3826,7 +3826,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import"
@@ -3847,8 +3847,8 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
-   "last_status": "ok",
+   "last_fetch": "2026-11-20",
+   "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
    "rows": 45
@@ -4252,11 +4252,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 191
+   "rows": 165
   },
   {
    "id": "scale-mcp-atlas",
@@ -4273,7 +4273,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -4294,7 +4294,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -4316,7 +4316,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -4338,7 +4338,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -4360,7 +4360,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -4401,7 +4401,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -4543,7 +4543,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import"
@@ -4564,7 +4564,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -4626,7 +4626,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -4689,7 +4689,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import"
@@ -4728,7 +4728,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -4769,7 +4769,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -4791,11 +4791,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 42
+   "rows": 46
   },
   {
    "id": "tencent-hy3-github",
@@ -4855,7 +4855,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -4934,7 +4934,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -4955,11 +4955,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
-   "last_status": "unchanged",
+   "last_fetch": "2026-11-20",
+   "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 30
+   "rows": 33
   },
   {
    "id": "vals-code-migration",
@@ -4976,7 +4976,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -4997,7 +4997,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5018,11 +5018,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 41
+   "rows": 45
   },
   {
    "id": "vals-gpqa",
@@ -5039,7 +5039,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5060,11 +5060,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 39
+   "rows": 43
   },
   {
    "id": "vals-index",
@@ -5083,11 +5083,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 38
+   "rows": 42
   },
   {
    "id": "vals-ioi",
@@ -5104,7 +5104,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5125,7 +5125,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5146,11 +5146,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 69
+   "rows": 73
   },
   {
    "id": "vals-legalbench",
@@ -5167,7 +5167,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5188,7 +5188,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5212,11 +5212,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 35
+   "rows": 24
   },
   {
    "id": "vals-multimodal-index",
@@ -5233,7 +5233,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5254,7 +5254,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5275,7 +5275,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5297,7 +5297,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5318,7 +5318,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5339,7 +5339,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5360,7 +5360,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5382,7 +5382,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5404,7 +5404,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5426,11 +5426,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 58
+   "rows": 62
   },
   {
    "id": "vals-terminal-bench-science",
@@ -5447,11 +5447,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
-   "last_status": "unchanged",
+   "last_fetch": "2026-11-20",
+   "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 40
+   "rows": 43
   },
   {
    "id": "vals-vibe-code",
@@ -5470,11 +5470,11 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": null,
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "ok",
    "refresh": "live",
    "last_via": "import",
-   "rows": 73
+   "rows": 77
   },
   {
    "id": "vectara",
@@ -5491,7 +5491,7 @@
    "added": "2026-10-27",
    "added_by": "seed",
    "last_hash": "76f015346e69300df0c43d7695c11372eee793ef",
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_status": "unchanged",
    "refresh": "live",
    "last_via": "import",
@@ -5794,7 +5794,7 @@
    "added_by": "import",
    "last_hash": null,
    "last_status": "unchanged",
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
    "rows": 28
   },
@@ -5879,10 +5879,10 @@
    "added": "2026-11-02",
    "added_by": "import",
    "last_hash": null,
-   "last_status": "unchanged",
-   "last_fetch": "2026-11-17",
+   "last_status": "ok",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
-   "rows": 42
+   "rows": 60
   },
   {
    "id": "nanbeige4.3-33b-hf",
@@ -5922,8 +5922,8 @@
    "added": "2026-11-04",
    "added_by": "import",
    "last_hash": null,
-   "last_status": "unchanged",
-   "last_fetch": "2026-11-17",
+   "last_status": "ok",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
    "rows": 27
   },
@@ -5990,9 +5990,9 @@
    "added_by": "import",
    "last_hash": null,
    "last_status": "ok",
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
-   "rows": 94
+   "rows": 98
   },
   {
    "id": "r40-kimi-k31-audit",
@@ -6255,7 +6255,7 @@
    "added_by": "import",
    "last_hash": null,
    "last_status": "unchanged",
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
    "rows": 23
   },
@@ -6277,7 +6277,7 @@
    "added_by": "import",
    "last_hash": null,
    "last_status": "unchanged",
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
    "rows": 7
   },
@@ -6297,10 +6297,10 @@
    "added": "2026-11-11",
    "added_by": "import",
    "last_hash": null,
-   "last_status": "unchanged",
-   "last_fetch": "2026-11-17",
+   "last_status": "ok",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
-   "rows": 20
+   "rows": 22
   },
   {
    "id": "robodojo-leaderboard",
@@ -6318,7 +6318,7 @@
    "added_by": "import",
    "last_hash": null,
    "last_status": "unchanged",
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
    "rows": 3
   },
@@ -6383,7 +6383,7 @@
    "added_by": "import",
    "last_hash": null,
    "last_status": "unchanged",
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
    "rows": 16
   },
@@ -6427,7 +6427,7 @@
    "added_by": "import",
    "last_hash": null,
    "last_status": "unchanged",
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
    "rows": 26
   },
@@ -6449,7 +6449,7 @@
    "added_by": "import",
    "last_hash": null,
    "last_status": "unchanged",
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
    "rows": 9
   },
@@ -6470,10 +6470,10 @@
    "added": "2026-11-13",
    "added_by": "import",
    "last_hash": null,
-   "last_status": "unchanged",
-   "last_fetch": "2026-11-17",
+   "last_status": "ok",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
-   "rows": 7
+   "rows": 11
   },
   {
    "id": "vals-time-horizon-ksp",
@@ -6492,7 +6492,7 @@
    "added_by": "import",
    "last_hash": null,
    "last_status": "unchanged",
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
    "rows": 10
   },
@@ -6513,7 +6513,7 @@
    "added_by": "import",
    "last_hash": null,
    "last_status": "unchanged",
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
    "rows": 24
   },
@@ -6556,7 +6556,7 @@
    "added_by": "import",
    "last_hash": null,
    "last_status": "unchanged",
-   "last_fetch": "2026-11-17",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
    "rows": 27
   },
@@ -6578,10 +6578,10 @@
    "added": "2026-11-15",
    "added_by": "import",
    "last_hash": null,
-   "last_status": "unchanged",
-   "last_fetch": "2026-11-17",
+   "last_status": "ok",
+   "last_fetch": "2026-11-20",
    "last_via": "import",
-   "rows": 8
+   "rows": 11
   },
   {
    "id": "krafton-raon-1-mini-preview-hf",
@@ -6605,6 +6605,87 @@
    "last_fetch": "2026-11-17",
    "last_via": "import",
    "rows": 13
+  },
+  {
+   "id": "surge-sudo-l7",
+   "name": "sudo L7 (Surge AI)",
+   "url": "https://surgehq.ai/benchmarks/sudo-l7",
+   "type": "third_party",
+   "refresh": "live",
+   "categories": [
+    "coding"
+   ],
+   "extract_hint": "Leaderboard list: provider and model name, effort label and one percentage per model (share of the 60 assignments succeeded). Effort labels: 'Adaptive/Max' and 'Max reasoning' = max, 'xHigh reasoning' = xhigh, 'High reasoning' = high. Every row shows rank 1; rows are ordered by score. No date, harness or confidence interval on the page. Method: https://surgehq.ai/blog/sudo-l7 (tasks written by professional engineers, mostly in private production repositories; grader models score against expert rubrics across eight dimensions). Store the score under surge-sudo-l7.",
+   "enabled": true,
+   "added": "2026-11-20",
+   "added_by": "import",
+   "last_hash": null,
+   "last_status": "ok",
+   "last_fetch": "2026-11-20",
+   "last_via": "import",
+   "rows": 25
+  },
+  {
+   "id": "surge-dayjob-tax",
+   "name": "DAYJOB: Tax (Surge AI)",
+   "url": "https://surgehq.ai/benchmarks/dayjob-tax",
+   "type": "third_party",
+   "refresh": "live",
+   "categories": [
+    "agentic"
+   ],
+   "extract_hint": "Leaderboard table: rank (ties share a rank), model, effort label, score = % of attempts passed at a 95% rubric threshold on 50 professional tax assignments (1,789 files). Effort labels as on Surge's other boards ('Adaptive/Max' and 'Max reasoning' = max, 'xHigh reasoning' = xhigh, 'High reasoning' = high). No date or harness on the page. Launch post: https://surgehq.ai/blog (2026-10-27). Store the score under surge-dayjob-tax.",
+   "enabled": true,
+   "added": "2026-11-20",
+   "added_by": "import",
+   "last_hash": null,
+   "last_status": "ok",
+   "last_fetch": "2026-11-20",
+   "last_via": "import",
+   "rows": 26
+  },
+  {
+   "id": "gdm-gemini-4-neon-card",
+   "name": "Google DeepMind - Gemini 4 Neon model card",
+   "url": "https://deepmind.google/models/model-cards/gemini-4-neon/",
+   "type": "official",
+   "refresh": "static",
+   "categories": [
+    "coding",
+    "agentic",
+    "reasoning",
+    "multimodal",
+    "long_context",
+    "safety"
+   ],
+   "extract_hint": "Model card published 2026-11-18. Evaluation table, columns Category | Benchmark | Notes | Gemini 4 Neon | Claude Opus 5.5 | GPT-6.2 Sol; store the Neon column only. Methodology PDF: https://storage.googleapis.com/deepmind-media/gemini/gemini_4_neon_model_evaluation.pdf (highest thinking setting unless stated; FrontierCode 2.0 at high). Google's own runs: SWE-sweep (provider harness Antigravity CLI v1.5.9 and mini-swe-agent), Agents' Last Exam v1.1, Terminal-Bench-Science 0.1, Chartography, LVBench, GraphWalks, SEC-bench Pro, WebExploitBench v1.2 (no id). Relayed: AA Index, Vals Index, Terminal-Bench 4.1 (AA run), FrontierCode 2.0, AutomationBench, RiemannBench, HLE-Diamond, MKA, CWE-bench v2; CursorBench 4.1 from Cursor (no id). Knowledge cutoff March 2026.",
+   "enabled": true,
+   "added": "2026-11-20",
+   "added_by": "import",
+   "last_hash": null,
+   "last_status": "ok",
+   "last_fetch": "2026-11-20",
+   "last_via": "import",
+   "rows": 11
+  },
+  {
+   "id": "vals-autoform-hard",
+   "name": "Vals – Autoform-Hard",
+   "url": "https://www.vals.ai/benchmarks/autoform_hard",
+   "type": "third_party",
+   "refresh": "live",
+   "categories": [
+    "reasoning"
+   ],
+   "extract_hint": "CDN-cached: add ?refresh=<date>. Table Rank | Model | Accuracy | Cost / Task (8 rows on 2026-11-20; updated 11/18/2026). Accuracy = share of 56 Lean 4 formalization tasks (from the 100-task validation set of Meta FAIR's AutoformBench, audited by Vals) accepted by clean-room grading; one attempt, 3-hour limit, $200 cap; same agent harness for every model (store harness null); effort not stated. Benchmark id vals-autoform-hard.",
+   "enabled": true,
+   "added": "2026-11-20",
+   "added_by": "import",
+   "last_hash": null,
+   "last_status": "ok",
+   "last_fetch": "2026-11-20",
+   "last_via": "import",
+   "rows": 8
   }
  ]
 }

@@ -159,10 +159,12 @@ Category rankings are used in the heatmap, each category tab and the Size tab. E
 - Old values are not silently overwritten: earlier best scores remain in the dated snapshots and the changelog.
 - Changes made by a benchmark's own publisher, such as a new version or a revised dataset, are logged too, because they replace data.
 
-**Log** (as of 2026-11-17; the live list is in `data/corrections.json`):
+**Log** (as of 2026-11-20; the live list is in `data/corrections.json`):
 
 | Date | Type | What was wrong / changed | Fix |
 |---|---|---|---|
+| 2026-11-20 | Upstream | Epoch AI re-fit its Epoch Capabilities Index when it added GPT-6.2 Astra; 57 of the 59 stored values for tracked models moved by up to 0.3 points (for example Claude Fable 5.2 173.44 to 173.50, GPT-6 Astra 169.0 to 169.2). | Rows replaced with the current values. |
+| 2026-11-20 | Upstream | Lech Mazur's creative story-writing board was re-scored after three writers were added; every stored value moved down by 0.06 to 0.20 (for example Claude Fable 5.2 3.687 to 3.564, Claude Opus 5.5 3.555 to 3.355). | Rows replaced with the current values. |
 | 2026-11-17 | Error | The description of the archived Vals Vibe Code Bench 1-100 (v1) read '100 tiered tasks building apps from scratch'. Vals' page describes scenarios that start from a working application and extend it through up to ten dependent requests, with 50 test and 50 validation scenarios. | Description rewritten from Vals' archived page. No score changed; the board has been superseded by v1.1 since 2026-11-13. |
 | 2026-11-15 | Upstream | Vals no longer lists the Muse Wonder Full entry (shown as 'Meta Wonder', 47.2%) on its CyberOffense board; the board went from eight rows to seven without a change note. | The row was removed. The six other stored values are unchanged. |
 | 2026-11-15 | Upstream | RoboDojo changed the average on its agent leaderboard on 2026-11-14: it is now the mean of four dimensions, without the Open dimension. The earlier five-dimension averages (GPT-6 Astra 22.48%, GPT-5.5 0.88%) are no longer shown. | The new averages are stored under a separate benchmark (GPT-6 Astra 20.36%, DeepSeek V4.1 Flash 0.84%, GPT-5.5 0.42%). The earlier values are kept under RoboDojo Sim with their date. Neither board counts in the default ranking (fewer than four independent models). |

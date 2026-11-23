@@ -1,6 +1,190 @@
 {
- "updated": "2026-11-17",
+ "updated": "2026-11-20",
  "entries": [
+  {
+   "date": "2026-11-20",
+   "kind": "highlight",
+   "text": "New models: GPT-6.2 Astra and GPT-6.2 Sol (OpenAI, released 11-17; $8 / $40 and $2 / $10 per 1M tokens). First results for GPT-6.2 Astra: Epoch Capabilities Index 174.17 (first), Artificial Analysis Intelligence Index 62, Vals Index 67.66, Terminal-Bench 4.1 62.1, ARC-AGI-2 95.8 and first on Lech Mazur's story-writing board (4.302). GPT-6.2 Sol: AA Index 57, Vals Index 66.06, Terminal-Bench 4.1 61.5"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "highlight",
+   "text": "New model: Gemini 4 Neon (Google, released 11-18; $3 / $15 per 1M tokens; Google places it between Gemini 4 Carbon and Gemini 4 Hydrogen and its model card says it is adapted from Carbon). First results: Vals Index 70.87 (second, behind Claude Fable 5.2 at 71.31), AA Index 61, NYT Connections 99.1, Design Arena 3D 1502 and Arena Text 1512.9"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "highlight",
+   "text": "Status: Hy4 and Hy4 flash (Tencent) now have open weights on Hugging Face under the Tencent Hy License. Hy4's model card gives 770B total / 49B active parameters; Hy4 flash's card gives 220B total including 64B Engram parameters and 12B active (Tencent's launch post said 224B)"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "highlight",
+   "text": "New boards: Surge AI's sudo L7 (60 engineering assignments, 25 tracked models: Claude Fable 5.2 52.2, Claude Sonnet 5.5 50.6, Claude Opus 5.5 46.1) and DAYJOB: Tax (50 tax assignments, 26 models: Claude Fable 5.2 15.6, Gemini 4 Neon 12.8), and Vals Autoform-Hard (56 Lean 4 formalization tasks, 8 models: GPT-6.2 Astra 87.50, Claude Fable 5.2 85.71)"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "highlight",
+   "text": "Arena moved all four boards to its 11-19 snapshot: Claude Fable 5.2 leads WebDev (1823.4) and Gemini 4 Carbon leads Text (1527.0). Hy4 flash gets its first independent results on Vals (Vals Index 50.78, Terminal-Bench 4.0 15.15) and Design Arena 3D (1216); Qwen4-Max enters Design Arena Game Dev at 1408"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "highlight",
+   "text": "Scale Labs' HLE Diamond adds GPT-6.1 Sol (53.60), Kimi K3.1 Pro (29.70) and Claude Haiku 5.5 (21.10); CWE-bench v2 (results as of 11-18) adds Gemini 4 Carbon, Claude Sonnet 5.5 and GPT-6.1 Terra. Epoch re-fit its Capabilities Index and Lech Mazur re-scored the story-writing board; both are logged as upstream changes"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "highlight",
+   "text": "Reputation: Gemini 4 Carbon sample 15 → 59 (63% positive; slow responses are the most common complaint), Gemini 4 Hydrogen 13 → 31 (78% positive), Claude Fable 5.2 145 → 171 (39% positive, 58% negative; 19 of the reports come from the Claude Code issue tracker). OpenRouter weekly (data through 11-18): Hy4 flash enters at #2 (46.6T tokens) behind DeepSeek V4.1 Flash (62.1T); GLM-5.3 and GPT-6.1 Sol leave the top 10"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "summary",
+   "text": "This update: 254 new scores, 474 best-score changes"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "new_scores",
+   "text": "Gemini 4 Neon gets its first scores (43)"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "new_scores",
+   "text": "GPT-6.2 Astra gets its first scores (58)"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "new_scores",
+   "text": "GPT-6.2 Sol gets its first scores (46)"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "new_bench",
+   "text": "New benchmark: DAYJOB: Tax (Surge AI) (26 models)"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "new_bench",
+   "text": "New benchmark: sudo L7 (Surge AI) (25 models)"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "new_bench",
+   "text": "New benchmark: Vals Autoform-Hard (8 models)"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "chg",
+   "text": "Qwen3.8 Max · Lech Mazur Creative Story-Writing: -0.052 → -0.174"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "chg",
+   "text": "Gemini 3.8 Flash · Lech Mazur Creative Story-Writing: -0.075 → -0.157"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "chg",
+   "text": "Grok 4.7 · Lech Mazur Creative Story-Writing: 0.183 → 0.029"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "chg",
+   "text": "Step 5 Preview · Lech Mazur Creative Story-Writing: -0.103 → -0.185"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "chg",
+   "text": "DeepSeek V4 Pro · Lech Mazur Creative Story-Writing: 0.258 → 0.14"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "chg",
+   "text": "GLM-5.2 · Lech Mazur Creative Story-Writing: 0.291 → 0.182"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "chg",
+   "text": "MiniMax M3 · Lech Mazur Creative Story-Writing: -0.294 → -0.389"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "chg",
+   "text": "Muse Spark 1.3 · Lech Mazur Creative Story-Writing: 0.34 → 0.234"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "chg",
+   "text": "A.X-K2 · AutomationBench-AA: 2 → 2.5"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "chg",
+   "text": "Hy4 · OpenRouter weekly tokens: 16 → 13"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "chg",
+   "text": "Gemini 4 Argon · Lech Mazur Creative Story-Writing: 0.551 → 0.454"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "chg",
+   "text": "DeepSeek V4.1 Flash · Lech Mazur Creative Story-Writing: -0.697 → -0.797"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "new_source",
+   "text": "New source: Vals – Autoform-Hard",
+   "url": "https://www.vals.ai/benchmarks/autoform_hard"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "new_source",
+   "text": "New source: Google DeepMind - Gemini 4 Neon model card",
+   "url": "https://deepmind.google/models/model-cards/gemini-4-neon/"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "new_source",
+   "text": "New source: DAYJOB: Tax (Surge AI)",
+   "url": "https://surgehq.ai/benchmarks/dayjob-tax"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "new_source",
+   "text": "New source: sudo L7 (Surge AI)",
+   "url": "https://surgehq.ai/benchmarks/sudo-l7"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "status",
+   "text": "Hy4 flash now open weights",
+   "url": null
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "status",
+   "text": "Hy4 now open weights",
+   "url": null
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "new_model",
+   "text": "New model: Gemini 4 Neon (Google)",
+   "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "new_model",
+   "text": "New model: GPT-6.2 Sol (OpenAI)",
+   "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol"
+  },
+  {
+   "date": "2026-11-20",
+   "kind": "new_model",
+   "text": "New model: GPT-6.2 Astra (OpenAI)",
+   "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol"
+  },
   {
    "date": "2026-11-17",
    "kind": "highlight",

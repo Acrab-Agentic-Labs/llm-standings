@@ -2,6 +2,18 @@
  "note": "Errors found in this leaderboard's data or method, and upstream benchmark changes that forced data to be replaced. Newest first. Add an entry whenever published data is changed for a reason other than a normal source update.",
  "entries": [
   {
+   "date": "2026-11-20",
+   "type": "upstream",
+   "what": "Epoch AI re-fit its Epoch Capabilities Index when it added GPT-6.2 Astra; 57 of the 59 stored values for tracked models moved by up to 0.3 points (for example Claude Fable 5.2 173.44 to 173.50, GPT-6 Astra 169.0 to 169.2).",
+   "fix": "Rows replaced with the current values."
+  },
+  {
+   "date": "2026-11-20",
+   "type": "upstream",
+   "what": "Lech Mazur's creative story-writing board was re-scored after three writers were added; every stored value moved down by 0.06 to 0.20 (for example Claude Fable 5.2 3.687 to 3.564, Claude Opus 5.5 3.555 to 3.355).",
+   "fix": "Rows replaced with the current values."
+  },
+  {
    "date": "2026-11-17",
    "type": "error",
    "what": "The description of the archived Vals Vibe Code Bench 1-100 (v1) read '100 tiered tasks building apps from scratch'. Vals' page describes scenarios that start from a working application and extend it through up to ten dependent requests, with 50 test and 50 validation scenarios.",
@@ -170,5 +182,5 @@
    "fix": "Source priority added (independent > paper > vendor > aggregator); ProgramBench split into 'fully resolved' and 'almost resolved'."
   }
  ],
- "updated": "2026-11-17"
+ "updated": "2026-11-20"
 }
