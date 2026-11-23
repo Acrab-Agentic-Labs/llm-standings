@@ -1,6 +1,134 @@
 {
- "updated": "2026-11-20",
+ "updated": "2026-11-23",
  "entries": [
+  {
+   "date": "2026-11-23",
+   "kind": "highlight",
+   "text": "New model: Inkling 2 Mini (Thinking Machines, released 2026-11-20), an open-weights (Apache-2.0) mixture-of-experts model with 26.4B total and 3.4B active parameters. Independent boards already list it: Vals Index 46.46%, Artificial Analysis Intelligence Index 20, ARC-AGI-2 49.3% (ARC Prize, XHigh), Arena Text 1366.9."
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "highlight",
+   "text": "New board: Surge AI's DAYJOB: Law (71 legal assignments, 25 tracked models). GPT-6.2 Astra leads at 41.4% of attempts passed, ahead of GPT-6 Astra (36.6%) and GPT-6.2 Sol (32.7%); Claude Fable 5.2 has 26.5%."
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "highlight",
+   "text": "Epoch AI re-fit its Capabilities Index and added Gemini 4 Hydrogen (166.81). Claude Fable 5.2 (173.4) now leads GPT-6.2 Astra (172.82, down from 174.17)."
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "highlight",
+   "text": "Arena Text, WebDev and Creative Writing moved to the 2026-11-22 snapshot. Design Arena Game Dev: Claude Fable 5.2 rose from 1392 to 1536 and Gemini 4 Carbon from 1325 to 1410."
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "highlight",
+   "text": "Terminal-Bench 4.1 adds Hy4 flash at 11.8% (mini-swe-agent); Scale's Remote Labor Index adds Gemini 4 Carbon at 20.0%; Artificial Analysis lists Gemini 4 Argon's cost per task at $9.95 (was $4.97)."
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "highlight",
+   "text": "OpenRouter weekly ranking (data through 2026-11-21): DeepSeek V4.1 Flash stays first; Hy4 flash is now sixth with 6.51T tokens (46.6T in the previous snapshot); Kimi K3.1 Pro re-enters the top 10."
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "highlight",
+   "text": "Reputation: first entries for Gemini 4 Neon (12 opinions, mostly positive), GPT-6.2 Astra (21, mostly negative, instruction-following complaints) and GPT-6.2 Sol (16, mixed to negative); Claude Fable 5.2 now 187 opinions."
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "summary",
+   "text": "This update: 108 new scores, 401 best-score changes"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "new_scores",
+   "text": "Inkling 2 Mini gets its first scores (62)"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "new_bench",
+   "text": "New benchmark: DAYJOB: Law (Surge AI) (25 models)"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "chg",
+   "text": "Hy4 flash · OpenRouter weekly tokens: 46.6 → 6.51"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "chg",
+   "text": "Step 5 Preview · OpenRouter weekly tokens: 6.39 → 3.84"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "chg",
+   "text": "MiniMax M3.1 Flash · OpenRouter weekly tokens: 3.67 → 4.2"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "chg",
+   "text": "Claude Fable 5.2 · Design Arena · Game Dev: 1392 → 1536"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "chg",
+   "text": "Claude Opus 5.5 · OpenRouter weekly tokens: 7.63 → 7.06"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "chg",
+   "text": "GLM-5.3 Flash · OpenRouter weekly tokens: 10.9 → 11.6"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "chg",
+   "text": "Gemini 4 Carbon · Design Arena · Game Dev: 1325 → 1410"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "chg",
+   "text": "MiMo-V2.6-Flash · OpenRouter weekly tokens: 4.05 → 3.83"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "chg",
+   "text": "Claude Sonnet 5.5 · Design Arena · Game Dev: 1373 → 1427"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "chg",
+   "text": "Gemini 4 Carbon · Design Arena · 3D Design: 1412 → 1465"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "chg",
+   "text": "Solar Pro 4 · DataAnalyticsBench (Plotly): 27 → 28"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "chg",
+   "text": "Gemini 4 Carbon · Design Arena · Website: 1304 → 1334"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "new_source",
+   "text": "New source: Thinking Machines - Inkling 2 Mini launch post",
+   "url": "https://thinkingmachines.ai/news/inkling-2-mini/"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "new_source",
+   "text": "New source: DAYJOB: Law (Surge AI)",
+   "url": "https://surgehq.ai/benchmarks/dayjob-law"
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "new_model",
+   "text": "New model: Inkling 2 Mini (Thinking Machines)",
+   "url": "https://thinkingmachines.ai/news/inkling-2-mini/"
+  },
   {
    "date": "2026-11-20",
    "kind": "highlight",

@@ -2,6 +2,12 @@
  "note": "Errors found in this leaderboard's data or method, and upstream benchmark changes that forced data to be replaced. Newest first. Add an entry whenever published data is changed for a reason other than a normal source update.",
  "entries": [
   {
+   "date": "2026-11-23",
+   "type": "upstream",
+   "what": "Epoch AI re-fit its Epoch Capabilities Index when it added Gemini 4 Hydrogen; 47 of the 56 stored values for tracked models moved, by up to 1.35 points (GPT-6.2 Astra 174.17 to 172.82, Claude Fable 5.2 173.5 to 173.4).",
+   "fix": "Rows replaced with the current values."
+  },
+  {
    "date": "2026-11-20",
    "type": "upstream",
    "what": "Epoch AI re-fit its Epoch Capabilities Index when it added GPT-6.2 Astra; 57 of the 59 stored values for tracked models moved by up to 0.3 points (for example Claude Fable 5.2 173.44 to 173.50, GPT-6 Astra 169.0 to 169.2).",

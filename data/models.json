@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20",
+ "updated": "2026-11-23",
  "models": [
   {
    "id": "qwen3.8-27b",
@@ -3743,7 +3743,7 @@
    "params_active_b": 10,
    "arch": "moe",
    "url": "https://maas.unisound.com/models/u2-flash",
-   "note": "Unisound (HKEX 09678) released U2-Flash on 2026-09-15, according to same-day reports of the company's announcement (Caiwen, Zhitong Finance): a sparse MoE model with about 266B total / about 10B active parameters, post-trained from the company's U2 base model. Unisound's model page lists a 1M context window, 128K maximum output, text input and output, and four thinking levels (none/low/high/max), served through its MaaS platform with OpenAI- and Anthropic-compatible APIs. Unisound's pricing page (maas.unisound.com/docs/price/overview) lists RMB 0.6 / 1.2 per 1M input / output tokens and RMB 0.02 for cache hits (about US$0.085 / 0.17 at 7.05 RMB/USD), labelled a limited-time 60% rate with no end date; that implies a list price of RMB 1 / 2 (about US$0.14 / 0.28). Vendor-reported scores on the model page: DeepSWE v1.1 64.6, SWE-Bench Pro 61.6, TerminalBench 3.0 24.3, HMMT Feb. 2026 97.1, IMOAnswerBench 90.3, GPQA-Diamond 92.4. Also on the Arena WebDev leaderboard (organisation 'unisound', license 'Proprietary').",
+   "note": "Unisound (HKEX 09678) released U2-Flash on 2026-09-15 (same-day reports by Caiwen and Zhitong Finance): sparse MoE with about 266B total / about 10B active parameters, post-trained from the company's U2 base model. The model page (maas.unisound.com/models/u2-flash) now presents U2-Flash-1118 under the same API id u2-flash, announced 2026-11-18: the first multimodal U2-Flash (image input for charts, reports and screenshots), stronger tool use and long-horizon agent execution (asynchronous agent RL), 1M context, 256K maximum output, several thinking-intensity levels. Listed price unchanged at RMB 0.6 / 1.2 per 1M input / output tokens (about US$0.085 / 0.17) with RMB 0.02 for cache hits, labelled a limited-time discount. Vendor-reported U2-Flash-1118 scores: DeepSWE v1.1 75.2 (U2-Flash 64.6), SWE-Bench Pro 62.5, TerminalBench 4.0 35.5, GPQA-Diamond 93.9, HMMT Feb. 2026 97, BabyVision 92.5. Also on the Arena WebDev leaderboard (organisation 'unisound', license 'Proprietary').",
    "hidden": false,
    "added_by": "import",
    "added": "2026-11-11"
@@ -4030,6 +4030,38 @@
    "note": "Released 2026-11-18 ('Introducing Gemini 4 Neon'). Google positions it between Gemini 4 Carbon (hardest, long-horizon work) and Gemini 4 Hydrogen (fast everyday work); the model card (published 2026-11-18) says it is adapted from Gemini 4 Carbon. Rolling out in the Gemini API (Google AI Studio), Gemini for business, Google Antigravity (paid AI Pro and Ultra) and the Gemini app (AI Pro and Ultra); cyber defenders get access through the Fairwind program. $3 per 1M input tokens ($0.15 cached) and $15 per 1M output tokens; 1M-token combined input-output window (OpenRouter lists 1,048,576), 64K default synchronous output, up to 1M with background long decode; four thinking levels (low, medium, high as default, xhigh); text, image, audio and video input; knowledge cutoff March 2026 per the model card. Also on OpenRouter as google/gemini-4-neon. According to 9to5Google it replaces Gemini 4 Argon and Gemini 3.1 Pro in the Gemini app.",
    "added_by": "import",
    "added": "2026-11-20",
+   "hidden": false
+  },
+  {
+   "id": "inkling-2-mini",
+   "name": "Inkling 2 Mini",
+   "vendor": "Thinking Machines",
+   "family": "Inkling 2",
+   "gen": 0,
+   "line": "small",
+   "released": "2026-11-20",
+   "open_weights": true,
+   "efforts": [],
+   "default_effort": null,
+   "price_in": null,
+   "price_out": null,
+   "context": 1000000,
+   "aliases": [
+    "Inkling 2 Mini",
+    "Inkling-2-Mini",
+    "Thinking Machines: Inkling 2 Mini",
+    "inkling-2-mini",
+    "thinkingmachines/Inkling-2-Mini",
+    "thinkingmachines/inkling-2-mini"
+   ],
+   "tier": "small",
+   "params_total_b": 26.4,
+   "params_active_b": 3.4,
+   "arch": "moe",
+   "url": "https://thinkingmachines.ai/news/inkling-2-mini/",
+   "note": "Smallest Inkling 2 model, released 2026-11-20 ('Inkling 2 Mini'): a looped MoE transformer with 26.4B total / 3.4B active parameters (5.4B effective active per token, since layers 6-17 of 24 run three times; 8 of 128 experts per layer, pruned from 384). Text and image input, text output, context up to 1M tokens per the Hugging Face model card. Apache-2.0 weights on Hugging Face (thinkingmachines/Inkling-2-Mini) in mixed NVFP4/MXFP8 (~20 GB); available on Tinker for inference and fine-tuning, plus SGLang, vLLM and Ollama. Thinking Machines publishes no API price; on OpenRouter as thinkingmachines/inkling-2-mini since 2026-11-21 via third-party providers (Prime Intellect $0.075 / $0.30 per 1M, io.net $0.080 / $0.35; 1M context). Sits below Inkling 2 Small (594B-A17B) in the vendor's small line; does not replace it.",
+   "added_by": "import",
+   "added": "2026-11-23",
    "hidden": false
   }
  ],

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20",
+ "updated": "2026-11-23",
  "benchmarks": [
   {
    "id": "3jsbench",
@@ -6543,6 +6543,22 @@
    "added": "2026-11-20",
    "internal": false,
    "leaderboard": "https://www.vals.ai/benchmarks/autoform_hard"
+  },
+  {
+   "id": "surge-dayjob-law",
+   "name": "DAYJOB: Law (Surge AI)",
+   "category": "agentic",
+   "scope": "71 legal assignments written by practicing lawyers (corporate transactions, litigation, criminal defense, employment, IP, estates) over 2,638 synthetic files (903 MB, up to 160 per assignment): contract review, due diligence, research memos",
+   "feature": "Share of attempts that pass the assignment rubric; harness and number of runs not stated",
+   "size": "71 assignments",
+   "metric": "% of attempts passed",
+   "higher_better": true,
+   "status": "new",
+   "url": "https://surgehq.ai/benchmarks/dayjob-law",
+   "leaderboard": "https://surgehq.ai/benchmarks/dayjob-law",
+   "internal": false,
+   "added_by": "auto",
+   "added": "2026-11-23"
   }
  ]
 }

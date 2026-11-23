@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20",
+ "updated": "2026-11-23",
  "sentiment": [
   {
    "model": "claude-sonnet-5.5",
@@ -2684,149 +2684,6 @@
    "quotes_withheld": 1
   },
   {
-   "model": "claude-fable-5.2",
-   "pos": 0.39,
-   "neg": 0.58,
-   "neu": 0.03,
-   "n_samples": 171,
-   "channels": [
-    "hn",
-    "blog",
-    "v2ex",
-    "github_issues"
-   ],
-   "aspects": {
-    "coding": 0.2,
-    "agent": 0.1,
-    "writing": -0.3,
-    "reasoning": 0.3,
-    "speed": 0.4,
-    "cost": -0.7,
-    "stability": -0.3,
-    "instruction": -0.5,
-    "hallucination": -0.4
-   },
-   "praise": [
-    "judgment on architecture and design",
-    "clearer, better-reasoned answers",
-    "faster than Fable 5.1",
-    "strong at 3D, Blender, SVG and other visual work",
-    "finds real bugs in code review",
-    "builds working games and tools from short prompts",
-    "works well as an orchestrator of sub-agents, often with Opus 5.5 doing the building (Hacker News reports)",
-    "used for planning and review while cheaper models build (blog and V2EX reports)",
-    "understands intent from short instructions (V2EX reports)",
-    "a step change in output quality for one heavy user"
-   ],
-   "complaints": [
-    "subscription quota used up within hours or days",
-    "little gain over Opus 5.5 for everyday coding",
-    "subagent fan-out drains usage",
-    "safeguards refuse some legitimate security and biology tasks (Hacker News, V2EX and GitHub reports)",
-    "ignores standing instructions in planning sessions (GitHub reports)",
-    "verbose output even in concise mode (one report)",
-    "showcase games described as similar and shallow to play",
-    "price seen as high for the gain (Hacker News reports)",
-    "states machine state it has not checked as fact (one GitHub report)",
-    "goes off on tangents or makes weak design assumptions in coding work (Hacker News reports)",
-    "safeguards flag ordinary messages and stop fiction writing (GitHub reports)",
-    "reports work as finished or verified when it was not (GitHub reports)"
-   ],
-   "quotes": [
-    {
-     "text": "Fable got right to the point, had cleaner/better responses and reasoning for its conclusions",
-     "url": "https://news.ycombinator.com/item?id=50435964",
-     "channel": "hn",
-     "date": "2026-11-10",
-     "note": "own side-by-side test against Opus 5.5"
-    },
-    {
-     "text": "I've been having a great time with Fable 5.2 as the head-orch",
-     "url": "https://news.ycombinator.com/item?id=50493568",
-     "channel": "hn",
-     "date": "2026-11-14",
-     "note": "excerpt; about orchestrating sub-agents in Claude Code"
-    },
-    {
-     "text": "a hard time telling the difference between Fable 5.2 and Opus 5.5",
-     "url": "https://news.ycombinator.com/item?id=50430766",
-     "channel": "hn",
-     "date": "2026-11-09",
-     "note": "ordinary coding tasks"
-    },
-    {
-     "text": "And now my weekly usage is gone in 2 days.",
-     "url": "https://news.ycombinator.com/item?id=50497063",
-     "channel": "hn",
-     "date": "2026-11-14",
-     "note": "after running many parallel agents; the commenter reports better results with narrowly scoped tasks"
-    },
-    {
-     "text": "Fable 5.2 refused, but Opus 5.5 gave the complete steps",
-     "url": "https://www.v2ex.com/t/1256035",
-     "channel": "v2ex",
-     "date": "2026-11-11",
-     "note": "reply about a data change in the user's own database",
-     "text_orig": "fable5.2 拒绝，但是 opus5.5 给出完整的操作步骤",
-     "translated": true
-    },
-    {
-     "text": "Turns out Fable 5.2 is super good at generating art",
-     "url": "https://news.ycombinator.com/item?id=50519518",
-     "channel": "hn",
-     "date": "2026-11-16",
-     "note": "excerpt; the commenter built a 3D WebGL map and had the model draw the art and fonts"
-    },
-    {
-     "text": "Comparing Opus 5.5 to Fable 5.2 this week I've seen little difference.",
-     "url": "https://news.ycombinator.com/item?id=50522999",
-     "channel": "hn",
-     "date": "2026-11-16"
-    },
-    {
-     "text": "switches to Opus when I ask it anything past the most basic biology",
-     "url": "https://news.ycombinator.com/item?id=50516936",
-     "channel": "hn",
-     "date": "2026-11-16",
-     "note": "excerpt; questions about weight-lifting physiology; the comment names the model only as 'Fable'"
-    },
-    {
-     "text": "Fable is so useful: one sentence and it basically understands your intent",
-     "url": "https://www.v2ex.com/t/1257299",
-     "channel": "v2ex",
-     "date": "2026-11-16",
-     "note": "reply, excerpt",
-     "text_orig": "fable 太好用了 你说一句话 它基本上能理解你的意图",
-     "translated": true
-    },
-    {
-     "text": "the output quality is absolutely step change above even Fable 5 or Opus 5.5",
-     "url": "https://news.ycombinator.com/item?id=50529431",
-     "channel": "hn",
-     "date": "2026-11-17",
-     "note": "excerpt; after about 10B tokens in a week on the Ultra plan"
-    },
-    {
-     "text": "I found Fable 5.2 to be a substantial step back vs Opus 5.5.",
-     "url": "https://news.ycombinator.com/item?id=50559666",
-     "channel": "hn",
-     "date": "2026-11-19"
-    },
-    {
-     "text": "It was just going off on tangents way more for my workflow.",
-     "url": "https://news.ycombinator.com/item?id=50556157",
-     "channel": "hn",
-     "date": "2026-11-19",
-     "note": "excerpt; after a few days of coding the commenter went back to Opus 5.5"
-    }
-   ],
-   "summary": "Eleven days after launch (171 opinions) views remain mixed, with more negative than positive reports. Users praise its judgment on architecture and design questions, clearer reasoning, speed versus Fable 5.1 and its 3D, Blender, SVG and other visual work; several report that it found real bugs in code review, built working projects from short prompts, or works well for planning, review and orchestrating sub-agents while Opus 5.5 or cheaper models do the building, and one heavy user describes a step change in output quality. The most common complaints are still that Claude subscription quotas run out within hours or days and that it offers little gain over Opus 5.5 on everyday coding; since 11-17 several Hacker News users report returning to Opus 5.5 after it went off on tangents or made weak design assumptions, and some call the price high for the gain. The sample includes 19 first-hand reports from the Claude Code issue tracker (18 of them negative): ignored standing instructions and skill rules, goal drift, work reported as finished or verified when it was not, statements about machine state the model had not checked, safeguards that flag ordinary messages or refuse security, biology and fiction-writing tasks, and usage allowances drained by parallel sessions; an issue tracker collects problems by design, so these reports weigh on the negative share (without them: 152 opinions, 44% positive, 53% negative). Hands-on reactions to showcase games built with it stay split.",
-   "sample_breakdown": "old 145 (to 11-17 04:55 UTC) + 26 new (11-17..11-20). Old 145 = old 106 (read up to 11-13 04:00 UTC) + 17 (11-13..11-15) + 22 (11-15..11-17). Issue-tracker reports are listed separately under (I). 11-13..11-15, 17 = 9 from Hacker News + 8 from the issue tracker. (a) Hacker News, 9: comment search 'Fable 5.2' since 11-13 04:00 UTC (18 hits, all read) = 3 positive (50493568, 50485733, 50482710), 3 negative (50497883, 50493675, 50482786), 2 mixed (50497063, 50478759), 1 neutral (50491702). 50493545 repeats 50493568 and counts once. Not counted: comments without own use (50503185, 50496131, 50495880, 50486487, 50485725, 50482349), an access wish (50487535), a usage note without a verdict (50478191); the launch thread 50429068 had 2 newer comments, neither about the model. 11-15..11-17, 22 = 13 from Hacker News + 1 blog post + 5 from V2EX + 3 from the issue tracker. (b) Hacker News, 13: comment search 'Fable 5.2' since 11-15 04:00 UTC (16 hits, all read) = 2 positive (50522837, 50519518), 4 negative (50522999, 50515824, 50504564, 50523027), 1 neutral (50516986); the text post 50504061 (negative: higher running cost than Fable 5.1); the 'Qwen4-Max' thread 50513215 (474 comments, read in full) = 2 positive (50516302, 50514668) and 3 negative (50516936, 50516878, 50523500), all five naming the model only as 'Fable'. 50515824 was found by the search and in the thread and counts once. (c) Blog, 1 mixed: a personal blog post of 11-16 (Fable 5.2 for planning and review, Opus for building: positive on planning and review, negative on token use). (d) V2EX, 5: topic 1257299 of 11-16 = the original post (mixed: fast and accurate, a Pro plan's allowance used up in one conversation) and replies by four other users = 2 positive (cost acceptable at medium effort; understands intent from one sentence) and 2 negative (allowance and reset used up; limits reached often). (I) GitHub issues in anthropics/claude-code that mention 'Fable 5.2': 11 distinct first-hand reports in total, 10 negative and 1 positive. Created 11-13..11-15 (43 hits, 41 read), 8: 7 negative (#109867 goal drift in a long task; #109812 to #109829, twelve issues from one user counted once, instruction-following in planning sessions; #109811 rule-ignoring across several models; #109785, #109699 and #109481 refusals of security or biology-literature tasks; #109738 a 5-hour usage window drained within minutes) and 1 positive (#109726, praise inside a feature request). Created 11-15..11-17 (11 hits, all read), 3 negative: #110418 (overnight parallel sessions used about 67% of a weekly Max allowance), #110353 (ignored direct instructions and took unrequested actions), #110298 (stated machine state it had not read; the session ran on Fable 5.2 and then on Opus 5.5). Not counted since 11-15: comments without own use or without a stated own use (50527615, 50525588, 50518286, 50514150, 50511790, 50510191, 50509929, 50506989, 50504447), V2EX replies about account suspension, usage notes without a verdict and replies without a stated own use, V2EX topics about identity verification, issues about the app, the harness or the billing display (#110556, #110544, #110469, #110416, #110406, #110382, #110319) and #110248 (about Opus 5.5). Earlier: V2EX claude-node topics of 11-13 and 11-14 concern accounts and identity verification, not the model. Stance and own-use labels for the items since 11-13 come from a model-assisted reading of the API results; 50485733 rates several models in one benchmark note and counts once per model. Quotes: the five earlier quotes are kept and four added. 11-17..11-20, 26 = 18 from Hacker News + 8 from the issue tracker. (e) Hacker News, 18: comment search 'Fable 5.2' since 11-17 04:55 UTC (about 70 hits, all read) = 6 positive (50529431, 50536064, 50536944, 50538021, 50540858, 50555163), 9 negative (50535788, 50536369, 50544226, 50553168, 50555272, 50556157, 50559666, 50569131, and 50570280 with 50570338 from the same commenter, counted once), 3 mixed (50532269, 50550861, 50564072). 50536369, 50538021, 50540858 and 50550861 rate several models in one comparison and count once per model; 50569883 repeats the text of 50564072 and is not counted again. Not counted: comments without own use or without a verdict (for example 50537605, 50537262, 50536753, 50536176, 50535386, 50556863, 50565783, 50565298, 50548317, 50538177, 50537589, 50535742, 50532256), reactions to a film made with the model, and comments that name the model only as 'Fable' (not searched this time). (I, continued) GitHub issues in anthropics/claude-code created 11-17..11-20 that mention 'Fable 5.2' (20 hits, all read), 8 negative: #110720 and #110879 (work reported as done without verification or without being done), #110766 and #110944 (safeguards flagging ordinary messages), #111273 (a safeguard stopping game-design writing), #111305 (unrequested length and format limits placed on another model's review of its work), #110996 (rules of a loaded skill broken; one of seven sessions ran on Fable 5.2), #110904 (over-focus on security side tasks, several models). Not counted: app, harness and billing issues (#111240, #110846, #111177, #110812, #111168, #111042, #110614, #110556, #110544), issues about Opus 5.5 only (#111242, #111269) and #110772 (model not named). Issue tracker in total: 19 distinct first-hand reports, 18 negative and 1 positive. V2EX claude-node topics since 11-17 concern accounts, bans and the IPO, not the model. One new comment with profanity is counted but not quoted. Quotes: the nine earlier quotes are kept and three added.",
-   "date": "2026-11-20",
-   "method": "Claude read HN Algolia comments 2026-11-20 (keyword search 'Fable 5.2' since 11-17 04:55 UTC), the GitHub issue search API (anthropics/claude-code) and V2EX claude-node topics through the V2EX API, on top of the 11-17 sample; mixed counted as 0.5 positive + 0.5 negative; old sample merged at its original ratio; new quotes re-checked against the HN item API; Reddit, linux.do, X and Zhihu were not read this time",
-   "quotes_withheld": 19
-  },
-  {
    "model": "gemini-4-carbon",
    "pos": 0.63,
    "neg": 0.37,
@@ -3039,6 +2896,395 @@
    "date": "2026-11-20",
    "method": "Claude read HN Algolia comments 2026-11-20 (exact-word search 'hydrogen' since 11-17 04:00 UTC, read in three date windows) and V2EX gemini-node topics and replies through the V2EX API, on top of the 11-17 sample; mixed counted as 0.5 positive + 0.5 negative; old sample merged at its original ratio; new quotes re-checked against the HN item API; Reddit, linux.do, X and Zhihu were not read this time",
    "quotes_withheld": 0
+  },
+  {
+   "model": "claude-fable-5.2",
+   "pos": 0.39,
+   "neg": 0.59,
+   "neu": 0.02,
+   "n_samples": 187,
+   "channels": [
+    "hn",
+    "blog",
+    "v2ex",
+    "github_issues"
+   ],
+   "aspects": {
+    "coding": 0.2,
+    "agent": 0.1,
+    "writing": -0.3,
+    "reasoning": 0.3,
+    "speed": 0.4,
+    "cost": -0.7,
+    "stability": -0.4,
+    "instruction": -0.5,
+    "hallucination": -0.4
+   },
+   "praise": [
+    "judgment on architecture and design",
+    "clearer, better-reasoned answers",
+    "faster than Fable 5.1",
+    "strong at 3D, Blender, SVG and other visual work",
+    "finds real bugs in code review",
+    "builds working games and tools from short prompts",
+    "works well as an orchestrator of sub-agents, often with Opus 5.5 doing the building (Hacker News reports)",
+    "used for planning and review while cheaper models build (blog and V2EX reports)",
+    "understands intent from short instructions (V2EX reports)",
+    "a step change in output quality for one heavy user",
+    "used daily as a main model for large autonomous tasks with review gates (Hacker News report)"
+   ],
+   "complaints": [
+    "subscription quota used up within hours or days",
+    "little gain over Opus 5.5 for everyday coding",
+    "subagent fan-out drains usage",
+    "safeguards refuse some legitimate security and biology tasks (Hacker News, V2EX and GitHub reports)",
+    "ignores standing instructions in planning sessions (GitHub reports)",
+    "verbose output even in concise mode (one report)",
+    "showcase games described as similar and shallow to play",
+    "price seen as high for the gain (Hacker News reports)",
+    "states machine state it has not checked as fact (one GitHub report)",
+    "goes off on tangents or makes weak design assumptions in coding work (Hacker News reports)",
+    "safeguards flag ordinary messages and stop fiction writing (GitHub reports)",
+    "reports work as finished or verified when it was not (GitHub reports)",
+    "safeguards flag ordinary build, firmware and academic math work (several GitHub reports since 11-20)"
+   ],
+   "quotes": [
+    {
+     "text": "Fable got right to the point, had cleaner/better responses and reasoning for its conclusions",
+     "url": "https://news.ycombinator.com/item?id=50435964",
+     "channel": "hn",
+     "date": "2026-11-10",
+     "note": "own side-by-side test against Opus 5.5"
+    },
+    {
+     "text": "I've been having a great time with Fable 5.2 as the head-orch",
+     "url": "https://news.ycombinator.com/item?id=50493568",
+     "channel": "hn",
+     "date": "2026-11-14",
+     "note": "excerpt; about orchestrating sub-agents in Claude Code"
+    },
+    {
+     "text": "a hard time telling the difference between Fable 5.2 and Opus 5.5",
+     "url": "https://news.ycombinator.com/item?id=50430766",
+     "channel": "hn",
+     "date": "2026-11-09",
+     "note": "ordinary coding tasks"
+    },
+    {
+     "text": "And now my weekly usage is gone in 2 days.",
+     "url": "https://news.ycombinator.com/item?id=50497063",
+     "channel": "hn",
+     "date": "2026-11-14",
+     "note": "after running many parallel agents; the commenter reports better results with narrowly scoped tasks"
+    },
+    {
+     "text": "Fable 5.2 refused, but Opus 5.5 gave the complete steps",
+     "url": "https://www.v2ex.com/t/1256035",
+     "channel": "v2ex",
+     "date": "2026-11-11",
+     "note": "reply about a data change in the user's own database",
+     "text_orig": "fable5.2 拒绝，但是 opus5.5 给出完整的操作步骤",
+     "translated": true
+    },
+    {
+     "text": "Turns out Fable 5.2 is super good at generating art",
+     "url": "https://news.ycombinator.com/item?id=50519518",
+     "channel": "hn",
+     "date": "2026-11-16",
+     "note": "excerpt; the commenter built a 3D WebGL map and had the model draw the art and fonts"
+    },
+    {
+     "text": "Comparing Opus 5.5 to Fable 5.2 this week I've seen little difference.",
+     "url": "https://news.ycombinator.com/item?id=50522999",
+     "channel": "hn",
+     "date": "2026-11-16"
+    },
+    {
+     "text": "switches to Opus when I ask it anything past the most basic biology",
+     "url": "https://news.ycombinator.com/item?id=50516936",
+     "channel": "hn",
+     "date": "2026-11-16",
+     "note": "excerpt; questions about weight-lifting physiology; the comment names the model only as 'Fable'"
+    },
+    {
+     "text": "Fable is so useful: one sentence and it basically understands your intent",
+     "url": "https://www.v2ex.com/t/1257299",
+     "channel": "v2ex",
+     "date": "2026-11-16",
+     "note": "reply, excerpt",
+     "text_orig": "fable 太好用了 你说一句话 它基本上能理解你的意图",
+     "translated": true
+    },
+    {
+     "text": "the output quality is absolutely step change above even Fable 5 or Opus 5.5",
+     "url": "https://news.ycombinator.com/item?id=50529431",
+     "channel": "hn",
+     "date": "2026-11-17",
+     "note": "excerpt; after about 10B tokens in a week on the Ultra plan"
+    },
+    {
+     "text": "I found Fable 5.2 to be a substantial step back vs Opus 5.5.",
+     "url": "https://news.ycombinator.com/item?id=50559666",
+     "channel": "hn",
+     "date": "2026-11-19"
+    },
+    {
+     "text": "It was just going off on tangents way more for my workflow.",
+     "url": "https://news.ycombinator.com/item?id=50556157",
+     "channel": "hn",
+     "date": "2026-11-19",
+     "note": "excerpt; after a few days of coding the commenter went back to Opus 5.5"
+    },
+    {
+     "text": "Opus 5.5/Fable 5.2 are my daily drivers now.",
+     "url": "https://news.ycombinator.com/item?id=50607063",
+     "channel": "hn",
+     "date": "2026-11-23",
+     "note": "large autonomous tasks with human review gates"
+    },
+    {
+     "text": "Fable 5.2 improved our throughput on game engine mechanics",
+     "url": "https://news.ycombinator.com/item?id=50594948",
+     "channel": "hn",
+     "date": "2026-11-22",
+     "note": "excerpt"
+    },
+    {
+     "text": "False positive [cyber] on Fable 5.2 during academic research",
+     "url": "https://github.com/anthropics/claude-code/issues/111441",
+     "channel": "github_issues",
+     "date": "2026-11-20",
+     "note": "issue title; a safeguard stopped revision of a math paper"
+    }
+   ],
+   "summary": "Two weeks after launch (187 opinions) views remain mixed, with more negative than positive reports. Users praise its judgment on architecture and design questions, clearer reasoning, speed versus Fable 5.1 and its 3D, Blender, SVG and other visual work; several report that it found real bugs in code review, built working projects from short prompts, or works well for planning, review and orchestrating sub-agents while Opus 5.5 or cheaper models do the building, and since 11-20 Hacker News users describe it as a daily main model and report higher throughput on game-engine work. The most common complaints are still that Claude subscription quotas run out within hours or days and that it offers little gain over Opus 5.5 on everyday coding; Hacker News users also report tangents, weak design assumptions and process choices they see as wasteful. Since 11-20 the Claude Code issue tracker added 7 first-hand negative reports, 6 of them about safeguards flagging ordinary build, firmware, academic math or account messages; an issue tracker collects problems by design, so these reports weigh on the negative share (26 of the 187 opinions come from it, 25 negative). Hands-on reactions to showcase games built with it stay split.",
+   "sample_breakdown": "old 145 (to 11-17 04:55 UTC) + 26 new (11-17..11-20). Old 145 = old 106 (read up to 11-13 04:00 UTC) + 17 (11-13..11-15) + 22 (11-15..11-17). Issue-tracker reports are listed separately under (I). 11-13..11-15, 17 = 9 from Hacker News + 8 from the issue tracker. (a) Hacker News, 9: comment search 'Fable 5.2' since 11-13 04:00 UTC (18 hits, all read) = 3 positive (50493568, 50485733, 50482710), 3 negative (50497883, 50493675, 50482786), 2 mixed (50497063, 50478759), 1 neutral (50491702). 50493545 repeats 50493568 and counts once. Not counted: comments without own use (50503185, 50496131, 50495880, 50486487, 50485725, 50482349), an access wish (50487535), a usage note without a verdict (50478191); the launch thread 50429068 had 2 newer comments, neither about the model. 11-15..11-17, 22 = 13 from Hacker News + 1 blog post + 5 from V2EX + 3 from the issue tracker. (b) Hacker News, 13: comment search 'Fable 5.2' since 11-15 04:00 UTC (16 hits, all read) = 2 positive (50522837, 50519518), 4 negative (50522999, 50515824, 50504564, 50523027), 1 neutral (50516986); the text post 50504061 (negative: higher running cost than Fable 5.1); the 'Qwen4-Max' thread 50513215 (474 comments, read in full) = 2 positive (50516302, 50514668) and 3 negative (50516936, 50516878, 50523500), all five naming the model only as 'Fable'. 50515824 was found by the search and in the thread and counts once. (c) Blog, 1 mixed: a personal blog post of 11-16 (Fable 5.2 for planning and review, Opus for building: positive on planning and review, negative on token use). (d) V2EX, 5: topic 1257299 of 11-16 = the original post (mixed: fast and accurate, a Pro plan's allowance used up in one conversation) and replies by four other users = 2 positive (cost acceptable at medium effort; understands intent from one sentence) and 2 negative (allowance and reset used up; limits reached often). (I) GitHub issues in anthropics/claude-code that mention 'Fable 5.2': 11 distinct first-hand reports in total, 10 negative and 1 positive. Created 11-13..11-15 (43 hits, 41 read), 8: 7 negative (#109867 goal drift in a long task; #109812 to #109829, twelve issues from one user counted once, instruction-following in planning sessions; #109811 rule-ignoring across several models; #109785, #109699 and #109481 refusals of security or biology-literature tasks; #109738 a 5-hour usage window drained within minutes) and 1 positive (#109726, praise inside a feature request). Created 11-15..11-17 (11 hits, all read), 3 negative: #110418 (overnight parallel sessions used about 67% of a weekly Max allowance), #110353 (ignored direct instructions and took unrequested actions), #110298 (stated machine state it had not read; the session ran on Fable 5.2 and then on Opus 5.5). Not counted since 11-15: comments without own use or without a stated own use (50527615, 50525588, 50518286, 50514150, 50511790, 50510191, 50509929, 50506989, 50504447), V2EX replies about account suspension, usage notes without a verdict and replies without a stated own use, V2EX topics about identity verification, issues about the app, the harness or the billing display (#110556, #110544, #110469, #110416, #110406, #110382, #110319) and #110248 (about Opus 5.5). Earlier: V2EX claude-node topics of 11-13 and 11-14 concern accounts and identity verification, not the model. Stance and own-use labels for the items since 11-13 come from a model-assisted reading of the API results; 50485733 rates several models in one benchmark note and counts once per model. Quotes: the five earlier quotes are kept and four added. 11-17..11-20, 26 = 18 from Hacker News + 8 from the issue tracker. (e) Hacker News, 18: comment search 'Fable 5.2' since 11-17 04:55 UTC (about 70 hits, all read) = 6 positive (50529431, 50536064, 50536944, 50538021, 50540858, 50555163), 9 negative (50535788, 50536369, 50544226, 50553168, 50555272, 50556157, 50559666, 50569131, and 50570280 with 50570338 from the same commenter, counted once), 3 mixed (50532269, 50550861, 50564072). 50536369, 50538021, 50540858 and 50550861 rate several models in one comparison and count once per model; 50569883 repeats the text of 50564072 and is not counted again. Not counted: comments without own use or without a verdict (for example 50537605, 50537262, 50536753, 50536176, 50535386, 50556863, 50565783, 50565298, 50548317, 50538177, 50537589, 50535742, 50532256), reactions to a film made with the model, and comments that name the model only as 'Fable' (not searched this time). (I, continued) GitHub issues in anthropics/claude-code created 11-17..11-20 that mention 'Fable 5.2' (20 hits, all read), 8 negative: #110720 and #110879 (work reported as done without verification or without being done), #110766 and #110944 (safeguards flagging ordinary messages), #111273 (a safeguard stopping game-design writing), #111305 (unrequested length and format limits placed on another model's review of its work), #110996 (rules of a loaded skill broken; one of seven sessions ran on Fable 5.2), #110904 (over-focus on security side tasks, several models). Not counted: app, harness and billing issues (#111240, #110846, #111177, #110812, #111168, #111042, #110614, #110556, #110544), issues about Opus 5.5 only (#111242, #111269) and #110772 (model not named). Issue tracker in total: 19 distinct first-hand reports, 18 negative and 1 positive. V2EX claude-node topics since 11-17 concern accounts, bans and the IPO, not the model. One new comment with profanity is counted but not quoted. Quotes: the nine earlier quotes are kept and three added. 11-20..11-23, 16 new = 9 from Hacker News + 7 from the issue tracker. (f) Hacker News, 9: comment search 'Fable 5.2' since 11-20 00:00 UTC (25 hits, all read; 50570338, 50570280 and 50569131 were already counted, 50569883 repeats 50564072) = 4 positive (50607063, 50594948, 50590188, 50581054), 2 negative (50597236, 50578214), 3 mixed (50592093, 50585155, 50576691). 50590188 rates several models and counts once per model. Not counted: pricing remarks, speculation, leaderboard mentions, vendor-staff replies, usage notes without a verdict (50603420, 50598645, 50593197, 50589897, 50589875, 50588917, 50586246, 50585181, 50585090, 50579231, 50576605, 50575560). (I, continued) GitHub issues in anthropics/claude-code created since 11-20 that mention 'Fable 5.2' (24 hits, 19 read), 7 negative: #111689, #111441, #111732 (safeguard flags on a build script, a math paper revision and a usage-review message), #111336 and #111492 (safeguard blocks across several models, counted once per model), #111627 (session quality, considering cancelling), #111578 (agents not following preset functions). Not counted: app, harness and billing issues (#111573, #111446, #111431, #111630, #111582, #111265, #111474, #111743, #111494, #111493, #111758); #111273 was counted before. Issue tracker in total: 26 distinct first-hand reports, 25 negative and 1 positive. Four new comments with profanity, insults or allegations are counted but not quoted. Quotes: the twelve earlier quotes are kept and three added.",
+   "date": "2026-11-23",
+   "method": "Claude read HN Algolia comments 2026-11-23 (keyword search 'Fable 5.2' since 11-20 00:00 UTC) and the GitHub issue search API (anthropics/claude-code, created since 11-20), on top of the 11-20 sample; mixed counted as 0.5 positive + 0.5 negative; old sample merged at its original ratio; Reddit, linux.do, X, V2EX and Zhihu were not read this time",
+   "quotes_withheld": 23
+  },
+  {
+   "model": "gemini-4-neon",
+   "pos": 0.75,
+   "neg": 0.25,
+   "neu": 0.0,
+   "n_samples": 12,
+   "channels": [
+    "hn"
+   ],
+   "aspects": {
+    "coding": 0.3,
+    "agent": 0.5,
+    "writing": null,
+    "reasoning": 0.2,
+    "speed": null,
+    "cost": -0.3,
+    "stability": 0.3,
+    "instruction": 0.4,
+    "hallucination": null
+   },
+   "praise": [
+    "fewer tool errors and better task adherence than earlier Gemini models (Hacker News report)",
+    "smooth agentic sessions in Antigravity (Hacker News reports)",
+    "good value within the Google subscription (Hacker News reports)",
+    "pairs well with Hydrogen for everyday work (one report)",
+    "strong results on one user's own analytics benchmark"
+   ],
+   "complaints": [
+    "expensive per task at max reasoning compared with GPT-6.2 Sol (one benchmark report)",
+    "used a large share of a weekly Gemini allowance on one task (one report)",
+    "simple errors in long technical work, shared with other Gemini 4 models (one report)"
+   ],
+   "quotes": [
+    {
+     "text": "Gemini 4 Neon is looking promising though",
+     "url": "https://news.ycombinator.com/item?id=50590188",
+     "channel": "hn",
+     "date": "2026-11-21",
+     "note": "excerpt; the commenter reports fewer tool errors and better task adherence"
+    },
+    {
+     "text": "I was using Neon with agy yesterday and everything worked so well.",
+     "url": "https://news.ycombinator.com/item?id=50573630",
+     "channel": "hn",
+     "date": "2026-11-20",
+     "note": "agy = Google Antigravity"
+    },
+    {
+     "text": "I'm really liking Gemini Neon+Hydrogen.",
+     "url": "https://news.ycombinator.com/item?id=50573772",
+     "channel": "hn",
+     "date": "2026-11-20"
+    },
+    {
+     "text": "It took 4% of my weekly Gemini tokens.",
+     "url": "https://news.ycombinator.com/item?id=50575808",
+     "channel": "hn",
+     "date": "2026-11-20",
+     "note": "one task; the commenter compares quota use with Opus 5.5"
+    },
+    {
+     "text": "it's a lot more expensive than 6.2 Sol",
+     "url": "https://news.ycombinator.com/item?id=50553924",
+     "channel": "hn",
+     "date": "2026-11-18",
+     "note": "excerpt; own benchmark at max reasoning; medium reasoning scored similarly"
+    }
+   ],
+   "summary": "Early evidence five days after launch is mostly positive (12 first-hand opinions, all from Hacker News). Users report smooth agentic sessions in Google Antigravity, fewer tool errors and better task adherence than earlier Gemini models, good value within the Google subscription, strong results on one user's own analytics benchmark and a good pairing with Gemini 4 Hydrogen for everyday work. Critical reports concern cost: one benchmark found it much more expensive than GPT-6.2 Sol at max reasoning, and another user saw one task use a large share of a weekly allowance; one user reports that all Gemini 4 models, Neon included, make simple errors in long technical work. Most comments in the launch threads discuss the element-based model names, plan tiers or third-party leaderboards without own use; those are not counted.",
+   "sample_breakdown": "12 first-hand opinions from Hacker News, 11-18..11-23. Comment search 'Gemini 4 Neon' and 'Neon Gemini' since 11-20 00:00 UTC (31 hits, all read) = 8 positive (50590188, 50580019, 50573772, 50573630, 50569084, 50568989, 50568732, 50568641), 2 negative (50575808 cost/quota, 50569074 errors in long technical work). Comment search 'Gemini Neon' 11-18..11-20 (about 40 hits read, result set not exhaustive) = 1 positive (50553968, own analytics benchmark), 1 negative (50553924, cost at max reasoning). 50568732, 50573772 and 50590188 rate several models and count once per model. Not counted: comments on names and plan tiers, availability notes, benchmark or leaderboard citations, plans to try the model, off-topic matches (Neon database, neon gas) and usage notes without a verdict (for example 50600208, 50592227, 50570424). One comment with allegations about another vendor is counted but not quoted; one comment with profanity and one with insults did not report own use and are not counted. Stance and own-use labels come from a model-assisted reading of the API results.",
+   "date": "2026-11-23",
+   "method": "Claude read HN Algolia comments 2026-11-23 (searches 'Gemini 4 Neon', 'Neon Gemini' since 11-20 and 'Gemini Neon' 11-18..11-20); mixed counted as 0.5 positive + 0.5 negative; Reddit, linux.do, X, V2EX and Zhihu were not read",
+   "quotes_withheld": 1
+  },
+  {
+   "model": "gpt-6.2-astra",
+   "pos": 0.29,
+   "neg": 0.71,
+   "neu": 0.0,
+   "n_samples": 21,
+   "channels": [
+    "hn"
+   ],
+   "aspects": {
+    "coding": -0.4,
+    "agent": -0.4,
+    "writing": 0.2,
+    "reasoning": 0.0,
+    "speed": -0.2,
+    "cost": -0.2,
+    "stability": -0.3,
+    "instruction": -0.5,
+    "hallucination": null
+   },
+   "praise": [
+    "concise, literal answers that do what is asked (Hacker News reports)",
+    "low cost per fix and short summaries in one user's coding benchmark",
+    "better structured responses and plans than GPT-6 Astra (one report)",
+    "fun, visually strong games from short prompts (one report)"
+   ],
+   "complaints": [
+    "ignores instructions or adds unrequested work (several Hacker News reports)",
+    "loops or over-complicates simple bug fixes (one report)",
+    "stops tasks early or reports unfinished work as done (Hacker News reports)",
+    "seen as weaker than Claude models for coding (Hacker News reports)",
+    "gets sidetracked by unrelated setup steps (one report)",
+    "more expensive than GPT-6.2 Sol for similar scores at medium effort (one report)"
+   ],
+   "quotes": [
+    {
+     "text": "I've found Astra 6.2 amazing to work with.",
+     "url": "https://news.ycombinator.com/item?id=50593137",
+     "channel": "hn",
+     "date": "2026-11-21",
+     "note": "excerpt; the commenter values concise, literal answers"
+    },
+    {
+     "text": "The 6.2's responses were noticeably better.",
+     "url": "https://news.ycombinator.com/item?id=50535819",
+     "channel": "hn",
+     "date": "2026-11-17",
+     "note": "compared with GPT-6 Astra on the commenter's own task"
+    },
+    {
+     "text": "I switched back to 6-Astra and it had no trouble.",
+     "url": "https://news.ycombinator.com/item?id=50541470",
+     "channel": "hn",
+     "date": "2026-11-18",
+     "note": "after about 15 minutes of looping on a simple bug fix"
+    },
+    {
+     "text": "It immediately got stuck trying to get gcloud auth sorted out",
+     "url": "https://news.ycombinator.com/item?id=50535806",
+     "channel": "hn",
+     "date": "2026-11-17",
+     "note": "excerpt; a CSV analysis task"
+    },
+    {
+     "text": "Even 6.2 Astra is nowhere near as good as Claude models for coding.",
+     "url": "https://news.ycombinator.com/item?id=50558936",
+     "channel": "hn",
+     "date": "2026-11-19"
+    }
+   ],
+   "summary": "Early Hacker News evidence six days after launch is mostly negative (21 first-hand opinions). Supporters describe concise, literal answers, better-structured plans than GPT-6 Astra, low cost per fix in one user's coding benchmark and enjoyable generated games. More users report instruction-following problems: ignoring explicit instructions, adding unrequested features, looping on simple fixes, getting sidetracked by unrelated setup and, in two long evaluation reports, stopping early or describing unfinished work as done; several rate it below Claude models for coding. Since 11-20 four of five new opinions are negative. Many comments discuss a reported mathematics result attributed to an OpenAI model and perplexity figures without own use; those are not counted.",
+   "sample_breakdown": "21 first-hand opinions from Hacker News, 11-17..11-23. Comment search '6.2 Astra' 11-17..11-20 (about 33 hits read, result set partial) = 4 positive (50550861, 50545140, 50535959, 50535819), 10 negative (50562632, 50558936, 50555650, 50551381, 50541470, 50540665, 50536944, 50536739, 50536403, 50535806), 2 mixed (50553924, 50537602). Since 11-20 00:00 UTC (18 hits, all read) = 1 positive (50593137), 4 negative (50605676, 50592827, 50590188, 50569843). 50545140, 50550861, 50553924, 50555650, 50537602 and 50590188 rate several models and count once per model. Not counted: comments on a reported Millennium Prize or Navier-Stokes result, perplexity figures, vendor-staff replies, system-card quotes and comments without own use. Five comments with profanity, insults or allegations are counted but not quoted. Stance and own-use labels come from a model-assisted reading of the API results.",
+   "date": "2026-11-23",
+   "method": "Claude read HN Algolia comments 2026-11-23 (search '6.2 Astra', 11-17..11-20 and since 11-20); mixed counted as 0.5 positive + 0.5 negative; Reddit, linux.do, X, V2EX and Zhihu were not read",
+   "quotes_withheld": 5
+  },
+  {
+   "model": "gpt-6.2-sol",
+   "pos": 0.41,
+   "neg": 0.59,
+   "neu": 0.0,
+   "n_samples": 16,
+   "channels": [
+    "hn"
+   ],
+   "aspects": {
+    "coding": -0.3,
+    "agent": -0.2,
+    "writing": -0.2,
+    "reasoning": -0.1,
+    "speed": 0.6,
+    "cost": 0.4,
+    "stability": null,
+    "instruction": -0.2,
+    "hallucination": null
+   },
+   "praise": [
+    "fast responses (Hacker News reports)",
+    "good balance of cost and accuracy for everyday work (Hacker News reports)",
+    "better than GPT-6.1 Sol at revising its own work and at UI mockups (one report)"
+   ],
+   "complaints": [
+    "only a marginal step over GPT-6.1 Sol (several reports)",
+    "sloppy or convoluted output compared with GPT-6.2 Astra (Hacker News reports)",
+    "concedes too quickly when its plans are questioned (one report)",
+    "weak SVG drawing results (two reports)"
+   ],
+   "quotes": [
+    {
+     "text": "it feels blazingly fast and it leads to a better UX",
+     "url": "https://news.ycombinator.com/item?id=50557959",
+     "channel": "hn",
+     "date": "2026-11-19",
+     "note": "excerpt"
+    },
+    {
+     "text": "6.1 / 6.2 sol are still the sweet spot for me.",
+     "url": "https://news.ycombinator.com/item?id=50570063",
+     "channel": "hn",
+     "date": "2026-11-20"
+    },
+    {
+     "text": "6.2 Sol seems like a marginal step forward.",
+     "url": "https://news.ycombinator.com/item?id=50544343",
+     "channel": "hn",
+     "date": "2026-11-18",
+     "note": "after a day of use"
+    },
+    {
+     "text": "6.2 Sol has been significantly worse however.",
+     "url": "https://news.ycombinator.com/item?id=50593137",
+     "channel": "hn",
+     "date": "2026-11-21",
+     "note": "compared with GPT-6.2 Astra"
+    },
+    {
+     "text": "6.2 Sol doesn't act like an architect",
+     "url": "https://news.ycombinator.com/item?id=50590021",
+     "channel": "hn",
+     "date": "2026-11-21",
+     "note": "excerpt; the model concedes quickly when its plans are questioned"
+    }
+   ],
+   "summary": "Mixed-to-negative Hacker News evidence six days after launch (16 first-hand opinions). Users like its speed and cost-to-accuracy balance for everyday work, and one finds it better than GPT-6.1 Sol at revising its own work and producing UI mockups. Others see only a marginal step over GPT-6.1 Sol, describe sloppier or more convoluted output than GPT-6.2 Astra, report that it concedes too quickly when its plans are questioned, and found its SVG drawings weak; since 11-20 five of seven new opinions are negative.",
+   "sample_breakdown": "16 first-hand opinions from Hacker News, 11-17..11-23. Comment search '6.2 Sol' 11-17..11-20 (27 hits, all read) = 3 positive (50557959, 50548547, 50539331), 3 negative (50555650, 50537217, 50535863), 3 mixed (50550861, 50544343, 50537602). Since 11-20 00:00 UTC (14 hits, all read) = 2 positive (50570063; 50569074, rates it as a strong reviewer of another model's work), 5 negative (50594488, 50593137, 50590188, 50590021, 50569187 side-by-side game test). Comments rating several models count once per model. Not counted: leaderboard and throughput citations, a third-party safety-report quote, vendor-staff replies and suggestions without own use. Two comments with insults or allegations are counted but not quoted. Stance and own-use labels come from a model-assisted reading of the API results.",
+   "date": "2026-11-23",
+   "method": "Claude read HN Algolia comments 2026-11-23 (search '6.2 Sol', 11-17..11-20 and since 11-20); mixed counted as 0.5 positive + 0.5 negative; Reddit, linux.do, X, V2EX and Zhihu were not read",
+   "quotes_withheld": 2
   }
  ],
  "signals": [
@@ -3381,161 +3627,161 @@
    "value": 1,
    "unit": "rank",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "62.1T tokens; data through 2026-11-18; +17% wow; rank unchanged (61.2T on 11-17); older 'DeepSeek V4.1 Flash' slug #3 at 16T (-2%)"
+   "date": "2026-11-23",
+   "note": "63.3T tokens; data through 2026-11-21; +15% wow; rank 1 on 11-18 (62.1T); separate 'DeepSeek V4.1 Flash' slug #2 at 15.3T (-2%)"
   },
   {
    "model": "deepseek-v4.1-flash",
    "signal": "openrouter_tokens_week",
-   "value": 62.1,
+   "value": 63.3,
    "unit": "T tokens",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "data through 2026-11-18; +17% wow; rank unchanged (61.2T on 11-17); older 'DeepSeek V4.1 Flash' slug #3 at 16T (-2%)"
+   "date": "2026-11-23",
+   "note": "data through 2026-11-21; +15% wow; rank 1 on 11-18 (62.1T); separate 'DeepSeek V4.1 Flash' slug #2 at 15.3T (-2%)"
   },
   {
-   "model": "hy4-flash",
+   "model": "glm-5.3-flash",
    "signal": "openrouter_rank_week",
-   "value": 2,
+   "value": 3,
    "unit": "rank",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "46.6T tokens; data through 2026-11-18; listed as new (released 2026-11-16)"
+   "date": "2026-11-23",
+   "note": "11.6T tokens; data through 2026-11-21; -2% wow; rank 5 on 11-18 (10.9T)"
   },
   {
-   "model": "hy4-flash",
+   "model": "glm-5.3-flash",
    "signal": "openrouter_tokens_week",
-   "value": 46.6,
+   "value": 11.6,
    "unit": "T tokens",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "data through 2026-11-18; listed as new (released 2026-11-16)"
+   "date": "2026-11-23",
+   "note": "data through 2026-11-21; -2% wow; rank 5 on 11-18 (10.9T)"
   },
   {
-   "model": "hy4",
+   "model": "gpt-6-luna",
    "signal": "openrouter_rank_week",
    "value": 4,
    "unit": "rank",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "13T tokens; data through 2026-11-18; -36% wow; rank 2 on 11-17 (16T)"
+   "date": "2026-11-23",
+   "note": "8.51T tokens; data through 2026-11-21; +34% wow; rank 6 on 11-18 (8.62T)"
   },
   {
-   "model": "hy4",
+   "model": "gpt-6-luna",
    "signal": "openrouter_tokens_week",
-   "value": 13.0,
+   "value": 8.51,
    "unit": "T tokens",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "data through 2026-11-18; -36% wow; rank 2 on 11-17 (16T)"
+   "date": "2026-11-23",
+   "note": "data through 2026-11-21; +34% wow; rank 6 on 11-18 (8.62T)"
   },
   {
-   "model": "glm-5.3-flash",
+   "model": "claude-opus-5.5",
    "signal": "openrouter_rank_week",
    "value": 5,
    "unit": "rank",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "10.9T tokens; data through 2026-11-18; -9% wow; rank 4 on 11-17 (11.8T)"
+   "date": "2026-11-23",
+   "note": "7.06T tokens; data through 2026-11-21; +49% wow; rank 7 on 11-18 (7.63T)"
   },
   {
-   "model": "glm-5.3-flash",
+   "model": "claude-opus-5.5",
    "signal": "openrouter_tokens_week",
-   "value": 10.9,
+   "value": 7.06,
    "unit": "T tokens",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "data through 2026-11-18; -9% wow; rank 4 on 11-17 (11.8T)"
+   "date": "2026-11-23",
+   "note": "data through 2026-11-21; +49% wow; rank 7 on 11-18 (7.63T)"
   },
   {
-   "model": "gpt-6-luna",
+   "model": "hy4-flash",
    "signal": "openrouter_rank_week",
    "value": 6,
    "unit": "rank",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "8.62T tokens; data through 2026-11-18; +20% wow; rank 5 on 11-17 (8.08T)"
+   "date": "2026-11-23",
+   "note": "6.51T tokens; data through 2026-11-21; listed as new; rank 2 on 11-18 (46.6T); shown as 'Hy4 flash *' (asterisk not explained on the page)"
   },
   {
-   "model": "gpt-6-luna",
+   "model": "hy4-flash",
    "signal": "openrouter_tokens_week",
-   "value": 8.62,
+   "value": 6.51,
    "unit": "T tokens",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "data through 2026-11-18; +20% wow; rank 5 on 11-17 (8.08T)"
+   "date": "2026-11-23",
+   "note": "data through 2026-11-21; listed as new; rank 2 on 11-18 (46.6T); shown as 'Hy4 flash *' (asterisk not explained on the page)"
   },
   {
-   "model": "claude-opus-5.5",
+   "model": "minimax-m3.1-flash",
    "signal": "openrouter_rank_week",
    "value": 7,
    "unit": "rank",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "7.63T tokens; data through 2026-11-18; +15% wow; rank 6 on 11-17 (7.37T)"
+   "date": "2026-11-23",
+   "note": "4.2T tokens; data through 2026-11-21; +442% wow; rank 10 on 11-18 (3.67T)"
   },
   {
-   "model": "claude-opus-5.5",
+   "model": "minimax-m3.1-flash",
    "signal": "openrouter_tokens_week",
-   "value": 7.63,
+   "value": 4.2,
    "unit": "T tokens",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "data through 2026-11-18; +15% wow; rank 6 on 11-17 (7.37T)"
+   "date": "2026-11-23",
+   "note": "data through 2026-11-21; +442% wow; rank 10 on 11-18 (3.67T)"
   },
   {
-   "model": "step-5-preview",
+   "model": "kimi-k3.1-pro",
    "signal": "openrouter_rank_week",
    "value": 8,
    "unit": "rank",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "6.39T tokens; data through 2026-11-18; -7% wow; rank 7 on 11-17 (6.36T)"
+   "date": "2026-11-23",
+   "note": "3.88T tokens; data through 2026-11-21; -1% wow; not in the visible top 10 on 11-18"
+  },
+  {
+   "model": "kimi-k3.1-pro",
+   "signal": "openrouter_tokens_week",
+   "value": 3.88,
+   "unit": "T tokens",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-23",
+   "note": "data through 2026-11-21; -1% wow; not in the visible top 10 on 11-18"
   },
   {
    "model": "step-5-preview",
-   "signal": "openrouter_tokens_week",
-   "value": 6.39,
-   "unit": "T tokens",
-   "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "data through 2026-11-18; -7% wow; rank 7 on 11-17 (6.36T)"
-  },
-  {
-   "model": "mimo-v2.6-flash",
    "signal": "openrouter_rank_week",
    "value": 9,
    "unit": "rank",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "4.05T tokens; data through 2026-11-18; +25% wow; rank 8 on 11-17 (4.16T)"
+   "date": "2026-11-23",
+   "note": "3.84T tokens; data through 2026-11-21; >999% wow; rank 8 on 11-18 (6.39T)"
+  },
+  {
+   "model": "step-5-preview",
+   "signal": "openrouter_tokens_week",
+   "value": 3.84,
+   "unit": "T tokens",
+   "url": "https://openrouter.ai/rankings",
+   "date": "2026-11-23",
+   "note": "data through 2026-11-21; >999% wow; rank 8 on 11-18 (6.39T)"
   },
   {
    "model": "mimo-v2.6-flash",
-   "signal": "openrouter_tokens_week",
-   "value": 4.05,
-   "unit": "T tokens",
-   "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "data through 2026-11-18; +25% wow; rank 8 on 11-17 (4.16T)"
-  },
-  {
-   "model": "minimax-m3.1-flash",
    "signal": "openrouter_rank_week",
    "value": 10,
    "unit": "rank",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "3.67T tokens; data through 2026-11-18; -4% wow; not in the visible top 10 on 11-17"
+   "date": "2026-11-23",
+   "note": "3.83T tokens; data through 2026-11-21; +375% wow; rank 9 on 11-18 (4.05T)"
   },
   {
-   "model": "minimax-m3.1-flash",
+   "model": "mimo-v2.6-flash",
    "signal": "openrouter_tokens_week",
-   "value": 3.67,
+   "value": 3.83,
    "unit": "T tokens",
    "url": "https://openrouter.ai/rankings",
-   "date": "2026-11-20",
-   "note": "data through 2026-11-18; -4% wow; not in the visible top 10 on 11-17"
+   "date": "2026-11-23",
+   "note": "data through 2026-11-21; +375% wow; rank 9 on 11-18 (4.05T)"
   }
  ],
  "notes": [
@@ -4039,6 +4285,34 @@
    "pos": 0.78,
    "neg": 0.22,
    "n": 31
+  },
+  {
+   "date": "2026-11-23",
+   "model": "claude-fable-5.2",
+   "pos": 0.39,
+   "neg": 0.59,
+   "n": 187
+  },
+  {
+   "date": "2026-11-23",
+   "model": "gemini-4-neon",
+   "pos": 0.75,
+   "neg": 0.25,
+   "n": 12
+  },
+  {
+   "date": "2026-11-23",
+   "model": "gpt-6.2-astra",
+   "pos": 0.29,
+   "neg": 0.71,
+   "n": 21
+  },
+  {
+   "date": "2026-11-23",
+   "model": "gpt-6.2-sol",
+   "pos": 0.41,
+   "neg": 0.59,
+   "n": 16
   }
  ]
 }
