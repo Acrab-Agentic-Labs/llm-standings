@@ -9,6 +9,11 @@
   {
    "date": "2026-11-23",
    "kind": "highlight",
+   "text": "New model: GLM-5.4 (Z.ai), released to GLM Coding Plan subscribers on 2026-11-23 with vision input and, according to Z.ai, stronger coding performance. There is no public API, open weights or benchmark result yet, so it has no scores."
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "highlight",
    "text": "New board: Surge AI's DAYJOB: Law (71 legal assignments, 25 tracked models). GPT-6.2 Astra leads at 41.4% of attempts passed, ahead of GPT-6 Astra (36.6%) and GPT-6.2 Sol (32.7%); Claude Fable 5.2 has 26.5%."
   },
   {
@@ -35,6 +40,12 @@
    "date": "2026-11-23",
    "kind": "highlight",
    "text": "Reputation: first entries for Gemini 4 Neon (12 opinions, mostly positive), GPT-6.2 Astra (21, mostly negative, instruction-following complaints) and GPT-6.2 Sol (16, mixed to negative); Claude Fable 5.2 now 187 opinions."
+  },
+  {
+   "date": "2026-11-23",
+   "kind": "new_model",
+   "text": "New model: GLM-5.4 (Z.ai)",
+   "url": "https://x.com/Zai_org/status/2124719658074825004"
   },
   {
    "date": "2026-11-23",

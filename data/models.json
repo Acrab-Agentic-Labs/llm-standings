@@ -4063,6 +4063,39 @@
    "added_by": "import",
    "added": "2026-11-23",
    "hidden": false
+  },
+  {
+   "id": "glm-5.4",
+   "name": "GLM-5.4",
+   "vendor": "Z.ai",
+   "family": "GLM-5.4",
+   "gen": 0,
+   "line": "flagship",
+   "released": "2026-11-23",
+   "open_weights": false,
+   "efforts": [],
+   "default_effort": null,
+   "price_in": null,
+   "price_out": null,
+   "context": 1000000,
+   "aliases": [
+    "GLM 5.4",
+    "GLM-5.4",
+    "glm-5.4"
+   ],
+   "tier": "flagship",
+   "params_total_b": null,
+   "params_active_b": null,
+   "arch": null,
+   "url": "https://x.com/Zai_org/status/2124719658074825004",
+   "note": "Announced on 2026-11-23 in a post by Z.ai's Zixuan Li that Z.ai reposted on X: 'GLM-5.4 is now available to all GLM Coding Plan users', with new vision capabilities and stronger all-round coding performance; users with weekly quotas get 50% more GLM-5.4 quota than with GLM-5.3. IT Home (2026-11-23) reports the model name glm-5.4 in the Coding Plan and a model-list entry labelled 1M context and vision. As of 2026-11-23 Z.ai has published no standard API price, model card, weights, parameter count or benchmark results; Z.ai's GLM releases before it had open weights.",
+   "search_terms": [
+    "GLM-5.4",
+    "GLM 5.4"
+   ],
+   "added_by": "import",
+   "added": "2026-11-23",
+   "hidden": false
   }
  ],
  "ignored_names": [

@@ -8,7 +8,7 @@ How close is a 100B open model to the frontier? Updated every two days.
 **[Live leaderboard →](https://acrab-agentic-labs.github.io/llm-standings/)**
 
 <!-- badges:start -->
-![updated every 2 days](https://img.shields.io/badge/updated-every%202%20days-4c78a8) ![code MIT](https://img.shields.io/badge/code-MIT-555) ![data CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-555) ![models 115](https://img.shields.io/badge/models-115-d9734e) ![benchmarks 446](https://img.shields.io/badge/benchmarks-446-d9734e) ![sources 202](https://img.shields.io/badge/sources-202-d9734e)
+![updated every 2 days](https://img.shields.io/badge/updated-every%202%20days-4c78a8) ![code MIT](https://img.shields.io/badge/code-MIT-555) ![data CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-555) ![models 116](https://img.shields.io/badge/models-116-d9734e) ![benchmarks 446](https://img.shields.io/badge/benchmarks-446-d9734e) ![sources 202](https://img.shields.io/badge/sources-202-d9734e)
 <!-- badges:end -->
 
 ---
