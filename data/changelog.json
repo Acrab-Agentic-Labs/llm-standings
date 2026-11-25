@@ -1,6 +1,158 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "entries": [
+  {
+   "date": "2026-11-25",
+   "kind": "highlight",
+   "text": "New models: Ling-3.2-air (InclusionAI, open weights under MIT, 124B total / 5.5B active parameters) and Kolibri 1.1 (Aleph Alpha, German-English, open weights under Apache-2.0, 75.1B total / 3.44B active), both released on 2026-11-23. Artificial Analysis gives Ling-3.2-air 23 on its Intelligence Index; Kolibri 1.1 so far has only results reported by Aleph Alpha."
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "highlight",
+   "text": "ERNIE 5.5 Flash Preview (Baidu) now has open weights: Baidu published them on Hugging Face on 2026-11-23 under Apache-2.0, which covers the Preview weights only."
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "highlight",
+   "text": "Artificial Analysis moved its Intelligence Index to v5.0.2: Terminal-Bench 4.1 replaces 4.0 and FrontierCode 2.0 was regraded. Gemini 4 Neon (xhigh) rises from 61 to 62, Gemini 4 Argon (high) from 50 to 51 and Kimi K3.1 Pro from 46 to 47."
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "highlight",
+   "text": "New board: Vals AI's Vibe Code Bench v1.1.1, which replaces v1.1 with stricter grading (every substep of a test must pass). Claude Fable 5.2 leads at 83.52%, ahead of Claude Sonnet 5.5 (80.88%) and Gemini 4 Neon (80.23%). Vals also re-scored its Vals Index: all values are lower, and Claude Fable 5.2 stays first at 70.06."
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "highlight",
+   "text": "Kaggle Game Arena adds Gemini 4 Neon, Gemini 4 Hydrogen, GPT-6.2 Astra and GPT-6.2 Sol. On the chess board Gemini 4 Neon leads with 1791, ahead of Gemini 4 Carbon (1651) and GPT-6.2 Astra (1585)."
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "highlight",
+   "text": "Reputation: Gemini 4 Neon now has 26 first-hand opinions, 83% positive; Inkling 2 Mini gets its first entry (25 opinions, 56% positive; users praise its coding results for its size and report overthinking and slow local generation). On OpenRouter, Hy4 flash moves to #2 for the week with 23.5T tokens."
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "summary",
+   "text": "This update: 116 new scores, 265 best-score changes"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "new_scores",
+   "text": "Kolibri 1.1 gets its first scores (13)"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "new_scores",
+   "text": "Ling-3.2-air gets its first scores (12)"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "new_bench",
+   "text": "New benchmark: Vibe Code Bench v1.1.1 (47 models)"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "chg",
+   "text": "Hy4 flash · OpenRouter weekly tokens: 6.51 → 23.5"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "chg",
+   "text": "Inkling · Terminal-Bench 4.1: 0 → 1.5"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "chg",
+   "text": "Qwen4-Max · sudo L7 (Surge AI): 15.6 → 22.8"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "chg",
+   "text": "Gemini 4 Argon · GDP.pdf (Surge AI): 22 → 25.6"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "chg",
+   "text": "Kimi K3.1 Pro · Terminal-Bench 4.1: 59.7 → 68.2"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "chg",
+   "text": "GLM-5.3 Flash · OpenRouter weekly tokens: 11.6 → 12.9"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "chg",
+   "text": "Inkling · Artificial Analysis Intelligence Index v5.0: 12 → 13"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "chg",
+   "text": "GPT-6.2 Astra · Terminal-Bench 4.1: 62.1 → 66.2"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "chg",
+   "text": "Muse Spark Open · Vals Index v2.2: 48.57 → 45.43"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "chg",
+   "text": "Claude Opus 5.5 · OpenRouter weekly tokens: 7.06 → 6.61"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "chg",
+   "text": "MiniMax M3.1 Flash · OpenRouter weekly tokens: 4.2 → 4.45"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "chg",
+   "text": "DeepSeek V4.1 Flash · OpenRouter weekly tokens: 63.3 → 66.8"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "new_source",
+   "text": "New source: Vals AI – Vibe Code Bench v1.1.1",
+   "url": "https://www.vals.ai/benchmarks/vibe-code-v1-1-1"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "new_source",
+   "text": "New source: Kolibri 1.1 model card",
+   "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1.1"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "new_source",
+   "text": "New source: Ling-3.2-air model card",
+   "url": "https://huggingface.co/inclusionAI/Ling-3.2-air"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "new_source",
+   "text": "New source: ERNIE 5.5 Flash Preview model card",
+   "url": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Preview"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "status",
+   "text": "ERNIE 5.5 Flash Preview now open weights",
+   "url": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Preview"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "new_model",
+   "text": "New model: Kolibri 1.1 (Aleph Alpha)",
+   "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1.1"
+  },
+  {
+   "date": "2026-11-25",
+   "kind": "new_model",
+   "text": "New model: Ling-3.2-air (InclusionAI (Ant Group))",
+   "url": "https://huggingface.co/inclusionAI/Ling-3.2-air"
+  },
   {
    "date": "2026-11-23",
    "kind": "highlight",
@@ -1966,12 +2118,6 @@
    "kind": "new_model",
    "text": "New model: Claude Haiku 5.5",
    "url": "https://www.anthropic.com/claude-haiku-5-5"
-  },
-  {
-   "date": "2026-10-06",
-   "kind": "new_model",
-   "text": "New model: Mistral Large 4",
-   "url": "https://mistral.ai/news/mistral-large-4/"
   }
  ]
 }

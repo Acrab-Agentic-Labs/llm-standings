@@ -8,7 +8,7 @@ How close is a 100B open model to the frontier? Updated every two days.
 **[Live leaderboard →](https://acrab-agentic-labs.github.io/llm-standings/)**
 
 <!-- badges:start -->
-![updated every 2 days](https://img.shields.io/badge/updated-every%202%20days-4c78a8) ![code MIT](https://img.shields.io/badge/code-MIT-555) ![data CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-555) ![models 116](https://img.shields.io/badge/models-116-d9734e) ![benchmarks 446](https://img.shields.io/badge/benchmarks-446-d9734e) ![sources 202](https://img.shields.io/badge/sources-202-d9734e)
+![updated every 2 days](https://img.shields.io/badge/updated-every%202%20days-4c78a8) ![code MIT](https://img.shields.io/badge/code-MIT-555) ![data CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-555) ![models 118](https://img.shields.io/badge/models-118-d9734e) ![benchmarks 447](https://img.shields.io/badge/benchmarks-447-d9734e) ![sources 206](https://img.shields.io/badge/sources-206-d9734e)
 <!-- badges:end -->
 
 ---
@@ -31,15 +31,15 @@ The full method, including how saturated and stale benchmarks are handled, is in
 
 ## Snapshot
 
-Overall percentile across categories, independent results only. As of **2026-11-23**; see the [live leaderboard](https://acrab-agentic-labs.github.io/llm-standings/) for today's numbers.
+Overall percentile across categories, independent results only. As of **2026-11-25**; see the [live leaderboard](https://acrab-agentic-labs.github.io/llm-standings/) for today's numbers.
 
 | | Model | Size | Overall | Rank | Evidence |
 |---|---|---|---:|---:|---|
-| Closed frontier | Claude Fable 5.2 | undisclosed | 80.8 | 1 / 92 | 55 evals · 9 categories |
-| Best open model | Kimi K3.1 Pro | 2.8T, 104B active | 60.6 | 17 / 92 | 56 evals · 10 categories |
-| Best open, 40–150B | Qwen3.8 Flash-Next | 125B, 6B active | 53.6 | 27 / 92 | 11 evals · 4 categories |
+| Closed frontier | Claude Fable 5.2 | undisclosed | 80.7 | 1 / 93 | 55 evals · 9 categories |
+| Best open model | Kimi K3.1 Pro | 2.8T, 104B active | 60.8 | 17 / 93 | 56 evals · 10 categories |
+| Best open, 40–150B | Qwen3.8 Flash-Next | 125B, 6B active | 51.6 | 30 / 93 | 11 evals · 4 categories |
 
-Claude Fable 5.2 (released Nov 9) leads with results in 9 of 11 categories. Claude Opus 5.5 is second (76.2, 74 evals across all 11 categories). Gemini 4 Neon, released on Nov 18, is third (75.9) with results in 8 categories, just ahead of GPT-6.2 Astra (75.3, 9 categories).
+Claude Fable 5.2 (released Nov 9) leads with results in 9 of 11 categories. Gemini 4 Neon, released on Nov 18, is now second (76.8) with results in 8 categories, ahead of Claude Opus 5.5 (75.8, 74 evals across all 11 categories) and GPT-6.2 Astra (75.3, 9 categories).
 
 ## Using the data
 

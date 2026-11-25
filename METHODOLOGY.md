@@ -159,10 +159,12 @@ Category rankings are used in the heatmap, each category tab and the Size tab. E
 - Old values are not silently overwritten: earlier best scores remain in the dated snapshots and the changelog.
 - Changes made by a benchmark's own publisher, such as a new version or a revised dataset, are logged too, because they replace data.
 
-**Log** (as of 2026-11-23; the live list is in `data/corrections.json`):
+**Log** (as of 2026-11-25; the live list is in `data/corrections.json`):
 
 | Date | Type | What was wrong / changed | Fix |
 |---|---|---|---|
+| 2026-11-25 | Upstream | Vals AI re-scored its Vals Index (v2.2) on 2026-11-21, when Vibe Code Bench v1.1.1 became its coding component; all 43 stored values moved down, by 0.09 to 3.14 points (Claude Fable 5.2 71.31 to 70.06). | Rows replaced with the current values. |
+| 2026-11-25 | Upstream | Arena relabeled the Gemini 4 Neon and Gemini 4 Hydrogen WebDev entries from High to xHigh effort (same entries, similar vote counts). | The two High rows were removed; the entries are stored once, as xhigh. |
 | 2026-11-23 | Upstream | Epoch AI re-fit its Epoch Capabilities Index when it added Gemini 4 Hydrogen; 47 of the 56 stored values for tracked models moved, by up to 1.35 points (GPT-6.2 Astra 174.17 to 172.82, Claude Fable 5.2 173.5 to 173.4). | Rows replaced with the current values. |
 | 2026-11-20 | Upstream | Epoch AI re-fit its Epoch Capabilities Index when it added GPT-6.2 Astra; 57 of the 59 stored values for tracked models moved by up to 0.3 points (for example Claude Fable 5.2 173.44 to 173.50, GPT-6 Astra 169.0 to 169.2). | Rows replaced with the current values. |
 | 2026-11-20 | Upstream | Lech Mazur's creative story-writing board was re-scored after three writers were added; every stored value moved down by 0.06 to 0.20 (for example Claude Fable 5.2 3.687 to 3.564, Claude Opus 5.5 3.555 to 3.355). | Rows replaced with the current values. |

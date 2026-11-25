@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "models": [
   {
    "id": "qwen3.8-27b",
@@ -2581,8 +2581,11 @@
     "Sarvam 105B",
     "Sarvam 105B (high)",
     "Sarvam-105B",
+    "Sarvam-105B-1711",
     "sarvam-105b",
-    "sarvamai/sarvam-105b"
+    "sarvam-105b-1711",
+    "sarvamai/sarvam-105b",
+    "sarvamai/sarvam-105b-1711"
    ],
    "tier": "mid",
    "url": "https://www.sarvam.ai/blogs/sarvam-30b-105b",
@@ -2590,7 +2593,7 @@
    "params_active_b": 10.3,
    "arch": "moe",
    "params_url": "https://huggingface.co/sarvamai/sarvam-105b",
-   "note": "MLA-style attention MoE, 128 experts top-8 + 1 shared; HF metadata 106B; Apache 2.0; announced 2026-02-18 (India AI Impact Summit), weights/blog 2026-03-06. API docs name reasoning_effort 'low' (default) or None; AA lists a '(high)' variant.",
+   "note": "MLA-style attention MoE, 128 experts top-8 + 1 shared; HF metadata 106B; Apache 2.0; announced 2026-02-18 (India AI Impact Summit), weights/blog 2026-03-06. API docs name reasoning_effort 'low' (default) or None; AA lists a '(high)' variant. Sarvam released an updated open-weight checkpoint, Sarvam-105B-1711, on 2026-11-22 (Apache 2.0; NVFP4 and BF16 repositories on Hugging Face): the blog describes long-context training to 160K tokens while the model card serves 131,072, and gives about $0.15 per 1M blended tokens on its Token Factory (INR 10 input / INR 25 output).",
    "hidden": false,
    "added_by": "round2",
    "line": "mid"
@@ -3800,7 +3803,7 @@
    "gen": 0,
    "line": "mid",
    "released": "2026-11-11",
-   "open_weights": false,
+   "open_weights": true,
    "efforts": [],
    "default_effort": null,
    "price_in": null,
@@ -3811,6 +3814,7 @@
     "ERNIE 5.5 Flash Preview",
     "ERNIE-5.5-Flash-Preview",
     "ERNIE-5.5-Flash-Preview (free)",
+    "baidu/ERNIE-5.5-Flash-Preview",
     "baidu/ernie-5.5-flash-preview",
     "baidu/ernie-5.5-flash-preview:free",
     "ernie-5.5-flash-preview"
@@ -3819,8 +3823,8 @@
    "params_total_b": 280,
    "params_active_b": 14,
    "arch": "moe",
-   "url": "https://ernie.baidu.com/release/ernie-5-5-flash-preview/",
-   "note": "Baidu's product-update post of 2026-11-11 introduces ERNIE 5.5 Flash Preview as the first post-trained model built on its ERNIE 5.5 Flash Base checkpoint (a pretraining checkpoint on Hugging Face since 2026-11-05, not tracked): 280B total / 14B active parameters, 1M-token context, text-only. API on Baidu Qianfan; listed on OpenRouter as baidu/ernie-5.5-flash-preview:free since 2026-11-10 UTC (free of charge, 1,024,000 context, up to 921,600 output). No list price published. Baidu says the weights will be open-sourced under Apache 2.0 'soon'; on 2026-11-13 the baidu organisation on Hugging Face holds only the two Flash-Base repositories.",
+   "url": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Preview",
+   "note": "Baidu's product-update post of 2026-11-11 introduces ERNIE 5.5 Flash Preview as the first post-trained model built on its ERNIE 5.5 Flash Base checkpoint (not tracked): 280B total / 14B active parameters (Hugging Face metadata 300B), 1M-token context (1,048,576), text-only, reasoning always on. Weights published on Hugging Face and ModelScope on 2026-11-23 (baidu/ERNIE-5.5-Flash-Preview, default FP8 with MXFP4 experts, plus FP8 and BF16 repositories) under Apache 2.0, which covers the Preview weights only; the Base model keeps its own license. The card calls it an intermediate post-training checkpoint with post-training ongoing. API on Baidu Qianfan; listed on OpenRouter as baidu/ernie-5.5-flash-preview:free since 2026-11-10 UTC (free of charge, 1,024,000 context, Baidu Qianfan the only provider). No list price published by Baidu.",
    "added_by": "import",
    "added": "2026-11-13",
    "hidden": false
@@ -4087,14 +4091,80 @@
    "params_total_b": null,
    "params_active_b": null,
    "arch": null,
-   "url": "https://x.com/Zai_org/status/2124719658074825004",
-   "note": "Announced on 2026-11-23 in a post by Z.ai's Zixuan Li that Z.ai reposted on X: 'GLM-5.4 is now available to all GLM Coding Plan users', with new vision capabilities and stronger all-round coding performance; users with weekly quotas get 50% more GLM-5.4 quota than with GLM-5.3. IT Home (2026-11-23) reports the model name glm-5.4 in the Coding Plan and a model-list entry labelled 1M context and vision. As of 2026-11-23 Z.ai has published no standard API price, model card, weights, parameter count or benchmark results; Z.ai's GLM releases before it had open weights.",
+   "url": "https://z.ai/blog/glm-5.4",
+   "note": "Announced 2026-11-23 for all GLM Coding Plan users (post by Z.ai's Zixuan Li, reposted by Z.ai on X; users with weekly quotas get 50% more GLM-5.4 quota than with GLM-5.3). Z.ai's launch post 'Toward Generalized Coding with Our First Loop Transformer' (z.ai/blog/glm-5.4) and its developer documentation describe GLM-5.4 as Z.ai's latest flagship and the first built on its Loop Transformer architecture: 1M-token context, up to 128K output tokens, video, image, text and file input. Also offered in Z.ai Chat. The documentation says the Model API will be available after a security assessment; as of 2026-11-25 no API price, weights, parameter count or GLM-5.4 benchmark results are published (the post's only table is an ablation on a separate 30B model). Z.ai's GLM releases before it had open weights.",
    "search_terms": [
     "GLM-5.4",
     "GLM 5.4"
    ],
    "added_by": "import",
    "added": "2026-11-23",
+   "hidden": false
+  },
+  {
+   "id": "ling-3.2-air",
+   "name": "Ling-3.2-air",
+   "vendor": "InclusionAI (Ant Group)",
+   "family": "Ling 3.2",
+   "gen": 0,
+   "line": "mid",
+   "released": "2026-11-23",
+   "open_weights": true,
+   "efforts": [],
+   "default_effort": null,
+   "price_in": null,
+   "price_out": null,
+   "context": 262144,
+   "aliases": [
+    "Ling 3.2 Air",
+    "Ling 3.2 air",
+    "Ling-3.2-air",
+    "inclusionAI/Ling-3.2-air",
+    "ling-3.2-air"
+   ],
+   "tier": "mid",
+   "params_total_b": 124,
+   "params_active_b": 5.5,
+   "arch": "moe",
+   "url": "https://huggingface.co/inclusionAI/Ling-3.2-air",
+   "note": "Open-weight native multimodal model (text, image and video input) from Ant Group's Ling team; Hugging Face repository created 2026-11-23 under the MIT license. The card gives 124B total / 5.5B active parameters (Hugging Face metadata 128B): hybrid-linear MoE with 35 KDA and 7 gated MLA layers, 512 routed experts (8 active) plus 1 shared; same architecture as Ling-3.0-flash-VL. Recommended serving context 262,144 tokens (SGLang). No hosted API or price listed. Card-reported results: AutomationBench-AA 61%, Terminal-Bench 4.0 27%, AA-Briefcase v1.1 1340, Artificial Analysis Intelligence Index v5.0.1 23.",
+   "added_by": "import",
+   "added": "2026-11-25",
+   "hidden": false
+  },
+  {
+   "id": "kolibri-1.1",
+   "name": "Kolibri 1.1",
+   "vendor": "Aleph Alpha",
+   "family": "Kolibri",
+   "gen": 0,
+   "line": "mid",
+   "released": "2026-11-23",
+   "open_weights": true,
+   "efforts": [
+    "none",
+    "low",
+    "medium",
+    "high"
+   ],
+   "default_effort": null,
+   "price_in": null,
+   "price_out": null,
+   "context": 262144,
+   "aliases": [
+    "Aleph-Alpha/Kolibri-1.1",
+    "Kolibri 1.1",
+    "Kolibri-1.1",
+    "kolibri-1.1"
+   ],
+   "tier": "mid",
+   "params_total_b": 75.1,
+   "params_active_b": 3.44,
+   "arch": "moe",
+   "url": "https://huggingface.co/Aleph-Alpha/Kolibri-1.1",
+   "note": "German-English MoE reasoning model from Aleph Alpha, released 2026-11-23 per its model card: 75.1B total / 3.44B active parameters, continued training from a Kolibri 1 mid-training checkpoint (Aleph Alpha's own model, released 2026-10-03, 78B, not tracked). Context 262,144 tokens native, up to 1,048,576 (the card recommends at most 262,144 for complex tasks); reasoning_effort none/low/medium/high. Apache-2.0 weights on Hugging Face (license covers weights and configuration files). No hosted API price published.",
+   "added_by": "import",
+   "added": "2026-11-25",
    "hidden": false
   }
  ],

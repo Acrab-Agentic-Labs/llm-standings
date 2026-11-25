@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "benchmarks": [
   {
    "id": "3jsbench",
@@ -4974,7 +4974,8 @@
    "status": "active",
    "url": "https://www.vals.ai/benchmarks/vibe-code",
    "leaderboard": "https://www.vals.ai/benchmarks/vibe-code",
-   "internal": false
+   "internal": false,
+   "superseded_by": "vibe-code-bench-v1.1.1"
   },
   {
    "id": "vibe-v2",
@@ -6559,6 +6560,21 @@
    "internal": false,
    "added_by": "auto",
    "added": "2026-11-23"
+  },
+  {
+   "id": "vibe-code-bench-v1.1.1",
+   "name": "Vibe Code Bench v1.1.1",
+   "category": "webdev",
+   "scope": "Building complete web apps from scratch from natural-language requirements (end-to-end app-building tasks)",
+   "leaderboard": "https://www.vals.ai/benchmarks/vibe-code-v1-1-1",
+   "feature": "Upgraded grader: a second judge model reviews each failed check against recorded evidence; an app passes a test only when every substep succeeds (v1.1 accepted 90%)",
+   "metric": "% UI tests passed (avg over apps)",
+   "higher_better": true,
+   "status": "new",
+   "url": "https://www.vals.ai/benchmarks/vibe-code-v1-1-1",
+   "added_by": "auto",
+   "added": "2026-11-25",
+   "internal": false
   }
  ]
 }

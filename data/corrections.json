@@ -2,6 +2,18 @@
  "note": "Errors found in this leaderboard's data or method, and upstream benchmark changes that forced data to be replaced. Newest first. Add an entry whenever published data is changed for a reason other than a normal source update.",
  "entries": [
   {
+   "date": "2026-11-25",
+   "type": "upstream",
+   "what": "Vals AI re-scored its Vals Index (v2.2) on 2026-11-21, when Vibe Code Bench v1.1.1 became its coding component; all 43 stored values moved down, by 0.09 to 3.14 points (Claude Fable 5.2 71.31 to 70.06).",
+   "fix": "Rows replaced with the current values."
+  },
+  {
+   "date": "2026-11-25",
+   "type": "upstream",
+   "what": "Arena relabeled the Gemini 4 Neon and Gemini 4 Hydrogen WebDev entries from High to xHigh effort (same entries, similar vote counts).",
+   "fix": "The two High rows were removed; the entries are stored once, as xhigh."
+  },
+  {
    "date": "2026-11-23",
    "type": "upstream",
    "what": "Epoch AI re-fit its Epoch Capabilities Index when it added Gemini 4 Hydrogen; 47 of the 56 stored values for tracked models moved, by up to 1.35 points (GPT-6.2 Astra 174.17 to 172.82, Claude Fable 5.2 173.5 to 173.4).",
@@ -188,5 +200,5 @@
    "fix": "Source priority added (independent > paper > vendor > aggregator); ProgramBench split into 'fully resolved' and 'almost resolved'."
   }
  ],
- "updated": "2026-11-20"
+ "updated": "2026-11-25"
 }
